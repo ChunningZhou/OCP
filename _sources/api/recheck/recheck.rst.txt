@@ -1,0 +1,6 @@
+recheck
+=======
+
+.. automodule:: recheck
+   :members:
+   :show-inheritance:

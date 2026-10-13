@@ -1,0 +1,6 @@
+siphash
+=======
+
+.. automodule:: primitives.siphash
+   :members:
+   :show-inheritance:

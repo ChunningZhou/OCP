@@ -1,0 +1,6 @@
+forro
+=====
+
+.. automodule:: primitives.forro
+   :members:
+   :show-inheritance:

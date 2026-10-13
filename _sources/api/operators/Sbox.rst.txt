@@ -1,0 +1,6 @@
+Sbox
+====
+
+.. automodule:: operators.Sbox
+   :members:
+   :show-inheritance:

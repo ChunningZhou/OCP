@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>capabilities.implementation_capabilities &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/capabilities/implementation_capabilities';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../capabilities.html" class="nav-link">capabilities</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">capabilities.implementation_capabilities</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for capabilities.implementation_capabilities</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Which languages a cipher&#39;s implementation can be emitted in, built in, and KAT-checked in.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">ast</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">implementations.implementations</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">imp</span>
+
+<span class="c1"># What a toolchain leaves behind beside the emitted source.</span>
+<span class="n">BUILD_PRODUCTS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="s2">&quot;dll&quot;</span><span class="p">)</span>
+
+<span class="c1"># Per language: artifact extension, toolchain probe (None when nothing has to be installed), and</span>
+<span class="c1"># KAT entry point. Whether that entry point checks anything is derived, not declared.</span>
+<span class="n">_LANGUAGES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;py&quot;</span><span class="p">,</span> <span class="s2">&quot;probe&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="s2">&quot;test_implementation_python&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;probe&quot;</span><span class="p">:</span> <span class="s2">&quot;is_c_compiler_available&quot;</span><span class="p">,</span> <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="s2">&quot;test_implementation_c&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;verilog&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;sv&quot;</span><span class="p">,</span> <span class="s2">&quot;probe&quot;</span><span class="p">:</span> <span class="s2">&quot;is_verilog_compiler_available&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="s2">&quot;test_implementation_verilog&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;rust&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;rs&quot;</span><span class="p">,</span> <span class="s2">&quot;probe&quot;</span><span class="p">:</span> <span class="s2">&quot;is_rust_compiler_available&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="s2">&quot;test_implementation_rust&quot;</span><span class="p">},</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_tester_returns</span><span class="p">(</span><span class="n">tester_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The values the tester can return, read from its source; a computed one reads as ``&quot;expr&quot;``.</span>
+
+<span class="sd">    Only returning ``None`` means it checks nothing, which is how ``automated_kat`` is decided.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">imp</span><span class="p">,</span> <span class="n">tester_name</span><span class="p">))</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Constant</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;expr&quot;</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Return</span><span class="p">)}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_tester_runs_artifact</span><span class="p">(</span><span class="n">tester_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether the tester actually executes what was emitted, read from its source.</span>
+
+<span class="sd">    A toolchain on PATH says a thing can be built, not that it runs here, and these are separate</span>
+<span class="sd">    facts: ``test_implementation_c`` hands the compiled binary to ``subprocess.run``,</span>
+<span class="sd">    ``test_implementation_python`` evaluates the generated module, and</span>
+<span class="sd">    ``test_implementation_verilog`` prints the command it would use and runs nothing.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">imp</span><span class="p">,</span> <span class="n">tester_name</span><span class="p">))</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Call</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="s2">&quot;attr&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;check_output&quot;</span><span class="p">,</span> <span class="s2">&quot;Popen&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;evaluate_&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<div class="viewcode-block" id="languages">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.languages">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">languages</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{language: {...}}`` for every declared language, at repository level.</span>
+
+<span class="sd">    Five questions kept apart on purpose: ``emits`` (the dispatch writes it),</span>
+<span class="sd">    ``compiler_available`` (the tool is on PATH, ``None`` when nothing can be emitted),</span>
+<span class="sd">    ``runs_artifact`` (the tester executes what was emitted rather than describing how to),</span>
+<span class="sd">    ``automated_kat`` (the tester compares against a vector -- **False for verilog**, whose tester</span>
+<span class="sd">    prints a command and returns ``None``), and ``kat_returns`` (``True`` matched, ``False`` did</span>
+<span class="sd">    not, ``None`` skipped or unchecked). Having a tester is not having been verified.</span>
+
+<span class="sd">    For one cipher use ``cipher_languages``: an operator can support fewer languages than this.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">_LANGUAGES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">emits</span> <span class="o">=</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">imp</span><span class="o">.</span><span class="n">IMPLEMENTED_LANGUAGES</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">emits</span><span class="p">:</span>
+            <span class="n">available</span><span class="p">,</span> <span class="n">tool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;probe&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">available</span><span class="p">,</span> <span class="n">tool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">None</span>      <span class="c1"># python needs nothing installed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">available</span><span class="p">,</span> <span class="n">tool</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">imp</span><span class="p">,</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;probe&quot;</span><span class="p">])()</span>
+        <span class="n">returns</span> <span class="o">=</span> <span class="n">_tester_returns</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;tester&quot;</span><span class="p">])</span>
+        <span class="n">report</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;extension&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;emits&quot;</span><span class="p">:</span> <span class="n">emits</span><span class="p">,</span>
+            <span class="s2">&quot;compiler_available&quot;</span><span class="p">:</span> <span class="n">available</span><span class="p">,</span>
+            <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="n">tool</span><span class="p">,</span>
+            <span class="c1"># None, like compiler_available, when there is no artifact for a tester to check.</span>
+            <span class="s2">&quot;automated_kat&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">returns</span> <span class="o">!=</span> <span class="p">{</span><span class="kc">None</span><span class="p">})</span> <span class="k">if</span> <span class="n">emits</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="c1"># Separate from compiler_available: built is not run. False for verilog, whose tester</span>
+            <span class="c1"># prints the command and executes nothing.</span>
+            <span class="s2">&quot;runs_artifact&quot;</span><span class="p">:</span> <span class="n">_tester_runs_artifact</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;tester&quot;</span><span class="p">]),</span>
+            <span class="s2">&quot;kat_returns&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">repr</span><span class="p">),</span>
+            <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;tester&quot;</span><span class="p">],</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">report</span></div>
+
+
+
+<div class="viewcode-block" id="cipher_languages">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.cipher_languages">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cipher_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The languages every operator of ``cipher`` declares, intersected.</span>
+
+<span class="sd">    Walks what emission walks, not the model scope. 7 of 32 ciphers lose verilog this way.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">supported</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">function</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">round_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">function</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">function</span><span class="o">.</span><span class="n">nbr_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">function</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">round_index</span><span class="p">][</span><span class="n">layer</span><span class="p">]:</span>
+                    <span class="n">declared</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cons</span><span class="p">),</span> <span class="s2">&quot;SUPPORTED_IMPLEMENTATIONS&quot;</span><span class="p">,</span> <span class="p">())</span> <span class="ow">or</span> <span class="p">())</span>
+                    <span class="k">if</span> <span class="n">declared</span><span class="p">:</span>
+                        <span class="n">supported</span> <span class="o">=</span> <span class="n">declared</span> <span class="k">if</span> <span class="n">supported</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">supported</span> <span class="o">&amp;</span> <span class="n">declared</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">supported</span> <span class="ow">or</span> <span class="p">())</span></div>
+
+
+
+<div class="viewcode-block" id="feasible_languages">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.feasible_languages">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">feasible_languages</span><span class="p">(</span><span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">require_compiler</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">require_kat</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The languages an implementation can be emitted in; without ``cipher``, repository-wide.</span>
+
+<span class="sd">    ``require_compiler`` also demands the build tool, ``require_kat`` a tester that compares.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">allowed</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">cipher</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">set</span><span class="p">(</span><span class="n">cipher_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;emits&quot;</span><span class="p">]</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">allowed</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;compiler_available&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">require_compiler</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;automated_kat&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">require_kat</span><span class="p">)]</span></div>
+
+
+
+<div class="viewcode-block" id="source_extensions">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.source_extensions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">source_extensions</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{language: extension}`` for the source file each language emits.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;extension&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">_LANGUAGES</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span></div>
+
+
+
+<div class="viewcode-block" id="artifact_extensions">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.artifact_extensions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">artifact_extensions</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sources and build products together; ``source_extensions()`` alone to pick a source file.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">source_extensions</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">BUILD_PRODUCTS</span><span class="p">)))</span></div>
+
+
+
+<span class="c1"># One code per thing that can stand in the way, so a consumer branches on a value rather than on</span>
+<span class="c1"># English. `host` marks the ones that describe this machine and not the repository.</span>
+<span class="n">BLOCKERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;unknown_language&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;not a language this layer knows&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;not_implemented&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;declared but generate_implementation raises&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;operators_lack_language&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;an operator of this cipher does not declare it&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;no_toolchain&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;no build tool on PATH here&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;no_automated_kat&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;the tester compares nothing and returns None&quot;</span><span class="p">},</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="language_report">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.language_report">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">language_report</span><span class="p">(</span><span class="n">language</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{language, available, blockers: [...], ...}`` -- **every** reason, not just the first.</span>
+
+<span class="sd">    ``explain_language`` used to stop at the first problem, so AES and verilog reported only that</span>
+<span class="sd">    the operators do not declare it; fixing that would have revealed a missing toolchain, and then</span>
+<span class="sd">    a tester that checks nothing. Three separate facts behind one message.</span>
+
+<span class="sd">    Each blocker carries a ``code`` from ``BLOCKERS`` to branch on and a ``host`` flag: a missing</span>
+<span class="sd">    toolchain says something about this machine, the other four about the repository.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="n">languages</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">entry</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="n">language</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;known&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;blockers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s2">&quot;unknown_language&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                  <span class="n">detail</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;expected one of </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">_LANGUAGES</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)]}</span>
+    <span class="n">blockers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;emits&quot;</span><span class="p">]:</span>
+        <span class="n">blockers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s2">&quot;not_implemented&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                             <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;generate_implementation raises for it&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">cipher</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">language</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cipher_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">):</span>
+        <span class="n">blockers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s2">&quot;operators_lack_language&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                             <span class="n">detail</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cipher</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s operators declare only &quot;</span>
+                                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cipher_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;emits&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;compiler_available&quot;</span><span class="p">]:</span>
+        <span class="n">blockers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s2">&quot;no_toolchain&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                             <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;no build tool on PATH; the artifact would be written and &quot;</span>
+                                   <span class="s2">&quot;never checked against a test vector&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;emits&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;automated_kat&quot;</span><span class="p">]:</span>
+        <span class="n">blockers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s2">&quot;no_automated_kat&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                             <span class="n">detail</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">entry</span><span class="p">[</span><span class="s1">&#39;tester&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> returns None on every path&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="n">language</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span><span class="p">:</span> <span class="ow">not</span> <span class="n">blockers</span><span class="p">,</span> <span class="s2">&quot;known&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;blockers&quot;</span><span class="p">:</span> <span class="n">blockers</span><span class="p">,</span> <span class="s2">&quot;emits&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;emits&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;compiler_available&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;compiler_available&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;automated_kat&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;automated_kat&quot;</span><span class="p">]}</span></div>
+
+
+
+<div class="viewcode-block" id="explain_language">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.explain_language">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">explain_language</span><span class="p">(</span><span class="n">language</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Why ``language`` cannot be used; ``&quot;&quot;`` when it can. A rendering of ``language_report``.</span>
+
+<span class="sd">    Lists every blocker rather than the first, so solving one does not reveal another.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="n">language_report</span><span class="p">(</span><span class="n">language</span><span class="p">,</span> <span class="n">cipher</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">report</span><span class="p">[</span><span class="s2">&quot;available&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">listed</span> <span class="o">=</span> <span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">b</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">b</span><span class="p">[</span><span class="s1">&#39;detail&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">report</span><span class="p">[</span><span class="s2">&quot;blockers&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[ERROR] Language </span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> cannot be used: </span><span class="si">{</span><span class="n">listed</span><span class="si">}</span><span class="s2">.&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="read_write_asymmetry">
+<a class="viewcode-back" href="../../api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.read_write_asymmetry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_write_asymmetry</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The one trap the signatures hide, which no other function here reports.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;generate_implementation(prim, filename, ...) writes where the caller says; &quot;</span>
+            <span class="s2">&quot;test_implementation_*(cipher, cipher_name, ...) reads &quot;</span>
+            <span class="s2">&quot;_generated_path(cipher_name, ext). Pass a filename whose stem is cipher_name, or &quot;</span>
+            <span class="s2">&quot;the tester looks in the wrong place.&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

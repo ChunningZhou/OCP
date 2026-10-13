@@ -1,0 +1,15 @@
+operators
+=========
+
+Operators used to build cipher models.
+
+.. toctree::
+   :maxdepth: 1
+
+   operators/AESround
+   operators/SHACAL2BooleanFunctions
+   operators/Sbox
+   operators/boolean_operators
+   operators/matrix
+   operators/modular_operators
+   operators/operators

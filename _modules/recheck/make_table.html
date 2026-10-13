@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recheck.make_table &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/recheck/make_table';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">recheck.make_table</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for recheck.make_table</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Emitting the LaTeX body of the published-bounds table straight from the claim files.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># See reference/run.py: lets this run as `python reference/make_table.py` as well as `-m`.</span>
+<span class="n">_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">_ROOT</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_ROOT</span><span class="p">))</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">recheck.cross_check</span><span class="w"> </span><span class="kn">import</span> <span class="n">version_label</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">recheck.claim</span><span class="w"> </span><span class="kn">import</span> <span class="n">RESULTS_LOG</span><span class="p">,</span> <span class="n">data_glob</span><span class="p">,</span> <span class="n">load</span>
+
+<span class="c1"># Filename prefix -&gt; the bibliography key its source is cited by. A prefix mapped to None has no</span>
+<span class="c1"># entry yet and is emitted as a \needbib placeholder, which NEEDBIB must then name.</span>
+<span class="n">CITE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># SPECK</span>
+    <span class="s2">&quot;liu2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:journals/tit/LiuLJW21&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fu2016_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:conf/fse/FuWGSH16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zhang2018_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:conf/isw/ZhangSCH18&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;xu2024_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:journals/istr/XuXTQ24&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;liu2016_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:conf/acns/LiuWR16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;yao2015_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:conf/isw/Yao0W15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;huang2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:journals/scn/HuangW20&quot;</span><span class="p">,</span>
+    <span class="c1"># PRESENT and GIFT</span>
+    <span class="s2">&quot;zhou2019_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Zhou, Zhang, Ding, Xiang, ToSC 2019(4)</span>
+    <span class="s2">&quot;sun2021_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:journals/tosc/SunWW21&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sun2021b_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Sun, Wang, Wang, improved GIFT-64 attacks</span>
+    <span class="s2">&quot;wang2008_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Wang, differential cryptanalysis of PRESENT</span>
+    <span class="s2">&quot;zhu2019_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>           <span class="c1"># Zhu, Dong, Yu, CT-RSA 2019</span>
+    <span class="s2">&quot;chen2019_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Chen, Zong, Dong, ICICS 2019</span>
+    <span class="s2">&quot;li2019_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>            <span class="c1"># Li, Wu, Zhang, Zhang</span>
+    <span class="s2">&quot;gift_designers_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>    <span class="c1"># Banik et al., CHES 2017</span>
+    <span class="s2">&quot;tian2016_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Tian et al., 16-round differential attack on PRESENT</span>
+    <span class="s2">&quot;emami2014_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>         <span class="c1"># Emami et al., PRESENT-80 related-key security</span>
+    <span class="s2">&quot;present_designers_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># Bogdanov et al., CHES 2007</span>
+    <span class="s2">&quot;zhao2018_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Zhao et al., GIFT-64 differential paths</span>
+    <span class="s2">&quot;ji2020_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>            <span class="c1"># Ji et al., related-key rectangle attacks on GIFT</span>
+    <span class="s2">&quot;cao2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:journals/access/CaoZ19&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zong2021_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Zong et al., key-recovery-friendly GIFT-128</span>
+    <span class="c1"># SIMON, Simeck and LBlock</span>
+    <span class="s2">&quot;liu2017_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>           <span class="c1"># Liu, Li, Wang, optimal SIMON-like DIFFERENTIAL trails</span>
+    <span class="s2">&quot;liu2017lin_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>        <span class="c1"># Liu, Li, Wang, SIMON-like security against LINEAR cryptanalysis</span>
+    <span class="s2">&quot;yang2017_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>          <span class="c1"># Yang et al., LBlock related-key bound</span>
+    <span class="s2">&quot;shw2014_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>           <span class="c1"># Sun, Hu, Wang, Wang, Qiao et al., ePrint 2014/747</span>
+    <span class="c1"># SPONGENT, RECTANGLE, TWINE and Ascon</span>
+    <span class="s2">&quot;bao2015_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>           <span class="c1"># Bao et al., speeding up the search for optimal characteristics</span>
+    <span class="s2">&quot;elhirch2022_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>       <span class="c1"># El Hirch et al., improved Ascon trail bounds</span>
+    <span class="s2">&quot;erlacher2022_&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>      <span class="c1"># Erlacher, Mendel, Eichlseder, Ascon bounds</span>
+    <span class="s2">&quot;dobraunig2015_&quot;</span><span class="p">:</span> <span class="s2">&quot;DBLP:conf/asiacrypt/DobraunigEM15&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">NEEDBIB</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;zhou2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;ZZDX19&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sun2021b_&quot;</span><span class="p">:</span> <span class="s2">&quot;SunWanWan21b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wang2008_&quot;</span><span class="p">:</span> <span class="s2">&quot;Wang08&quot;</span><span class="p">,</span> <span class="s2">&quot;zhu2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;ZhuDonYu19&quot;</span><span class="p">,</span> <span class="s2">&quot;chen2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;CheZonDon19&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;li2019_&quot;</span><span class="p">:</span> <span class="s2">&quot;LiWuZhaZha19&quot;</span><span class="p">,</span> <span class="s2">&quot;gift_designers_&quot;</span><span class="p">:</span> <span class="s2">&quot;GIFTdesign&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tian2016_&quot;</span><span class="p">:</span> <span class="s2">&quot;Tian16&quot;</span><span class="p">,</span> <span class="s2">&quot;emami2014_&quot;</span><span class="p">:</span> <span class="s2">&quot;Emami14&quot;</span><span class="p">,</span> <span class="s2">&quot;present_designers_&quot;</span><span class="p">:</span> <span class="s2">&quot;PRESENTdesign&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zhao2018_&quot;</span><span class="p">:</span> <span class="s2">&quot;Zhao18&quot;</span><span class="p">,</span> <span class="s2">&quot;ji2020_&quot;</span><span class="p">:</span> <span class="s2">&quot;JiZZD20&quot;</span><span class="p">,</span> <span class="s2">&quot;zong2021_&quot;</span><span class="p">:</span> <span class="s2">&quot;Zong21&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;liu2017_&quot;</span><span class="p">:</span> <span class="s2">&quot;LiuLiWang17a&quot;</span><span class="p">,</span> <span class="s2">&quot;liu2017lin_&quot;</span><span class="p">:</span> <span class="s2">&quot;LiuLiWang17b&quot;</span><span class="p">,</span> <span class="s2">&quot;yang2017_&quot;</span><span class="p">:</span> <span class="s2">&quot;Yang17&quot;</span><span class="p">,</span> <span class="s2">&quot;shw2014_&quot;</span><span class="p">:</span> <span class="s2">&quot;SHWWQM14&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bao2015_&quot;</span><span class="p">:</span> <span class="s2">&quot;Bao15&quot;</span><span class="p">,</span> <span class="s2">&quot;elhirch2022_&quot;</span><span class="p">:</span> <span class="s2">&quot;ElHirch22&quot;</span><span class="p">,</span> <span class="s2">&quot;erlacher2022_&quot;</span><span class="p">:</span> <span class="s2">&quot;Erlacher22&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Longest prefix first, so &quot;sun2021b_&quot; is not swallowed by &quot;sun2021_&quot;.</span>
+<span class="n">ORDER</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">CITE</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ANALYSES</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;differential&quot;</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;hull&quot;</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)]</span>
+<span class="n">LABEL</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">):</span> <span class="s2">&quot;differential characteristic&quot;</span><span class="p">,</span>
+         <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;differential&quot;</span><span class="p">):</span> <span class="s2">&quot;differential (clustered)&quot;</span><span class="p">,</span>
+         <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span> <span class="s2">&quot;minimum active S-boxes, differential&quot;</span><span class="p">,</span>
+         <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">):</span> <span class="s2">&quot;linear characteristic&quot;</span><span class="p">,</span>
+         <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;hull&quot;</span><span class="p">):</span> <span class="s2">&quot;linear hull&quot;</span><span class="p">,</span>
+         <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span> <span class="s2">&quot;minimum active S-boxes, linear&quot;</span><span class="p">}</span>
+
+<span class="c1"># Which claim directories make one table, and which state widths to list in order.</span>
+<span class="c1"># Each cipher lists the targets to print, in order, as (version label, how to show it). The</span>
+<span class="c1"># version label is what `version_label` makes of the claim&#39;s `version` kwarg: &quot;&quot; when the</span>
+<span class="c1"># primitive takes none, &quot;64&quot; for a permutation, &quot;64-128&quot; for a block cipher (block, key).</span>
+<span class="n">CIPHERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;speck&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;SPECK&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;32&quot;</span><span class="p">,</span> <span class="s2">&quot;SPECK32&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;48&quot;</span><span class="p">,</span> <span class="s2">&quot;SPECK48&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;64&quot;</span><span class="p">,</span> <span class="s2">&quot;SPECK64&quot;</span><span class="p">),</span>
+                        <span class="p">(</span><span class="s2">&quot;96&quot;</span><span class="p">,</span> <span class="s2">&quot;SPECK96&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;128&quot;</span><span class="p">,</span> <span class="s2">&quot;SPECK128&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;present&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;PRESENT&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;PRESENT&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;64-80&quot;</span><span class="p">,</span> <span class="s2">&quot;PRESENT-80 (RK)&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;gift&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;GIFT&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;64&quot;</span><span class="p">,</span> <span class="s2">&quot;GIFT-64&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;128&quot;</span><span class="p">,</span> <span class="s2">&quot;GIFT-128&quot;</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s2">&quot;64-128&quot;</span><span class="p">,</span> <span class="s2">&quot;GIFT-64 (RK)&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;128-128&quot;</span><span class="p">,</span> <span class="s2">&quot;GIFT-128 (RK)&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;simon&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;SIMON&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;32&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMON32&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;48&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMON48&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;64&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMON64&quot;</span><span class="p">),</span>
+                        <span class="p">(</span><span class="s2">&quot;96&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMON96&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;128&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMON128&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;simeck&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Simeck&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;32&quot;</span><span class="p">,</span> <span class="s2">&quot;Simeck32&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;48&quot;</span><span class="p">,</span> <span class="s2">&quot;Simeck48&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;64&quot;</span><span class="p">,</span> <span class="s2">&quot;Simeck64&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;lblock&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;LBlock&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;LBlock&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;64-80&quot;</span><span class="p">,</span> <span class="s2">&quot;LBlock (RK)&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;spongent&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;SPONGENT&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;88&quot;</span><span class="p">,</span> <span class="s2">&quot;SPONGENT-88&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;136&quot;</span><span class="p">,</span> <span class="s2">&quot;SPONGENT-136&quot;</span><span class="p">),</span>
+                              <span class="p">(</span><span class="s2">&quot;176&quot;</span><span class="p">,</span> <span class="s2">&quot;SPONGENT-176&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;240&quot;</span><span class="p">,</span> <span class="s2">&quot;SPONGENT-240&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;rectangle&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;RECTANGLE&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;RECTANGLE&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;twine&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;TWINE&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;TWINE&quot;</span><span class="p">)]),</span>
+    <span class="s2">&quot;ascon&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Ascon&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Ascon&quot;</span><span class="p">)]),</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">prefix_of</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">ORDER</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">prefix</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cite</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">CITE</span><span class="p">[</span><span class="n">prefix</span><span class="p">]</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">cite</span><span class="se">{{</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">}}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">key</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">needbib</span><span class="se">{{</span><span class="si">{</span><span class="n">NEEDBIB</span><span class="p">[</span><span class="n">prefix</span><span class="p">]</span><span class="si">}</span><span class="se">}}</span><span class="s2">&quot;</span>
+
+
+<div class="viewcode-block" id="gather">
+<a class="viewcode-back" href="../../api/recheck/make_table.html#recheck.make_table.gather">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gather</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;(analysis, model, version, relation, prefix) -&gt; {rounds: value}, and the files behind each.</span>
+
+<span class="sd">    ``sources`` is what lets the OCP column be filled: the replay log records a result per</span>
+<span class="sd">    (claim file, round), while a row here may merge several files under one citation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">groups</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+    <span class="n">skipped</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">pattern</span><span class="p">)):</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+        <span class="n">claim</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">claim</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;bound&quot;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix_of</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;source&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">skipped</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">claim</span><span class="p">[</span><span class="s2">&quot;analysis&quot;</span><span class="p">],</span> <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">),</span>
+               <span class="n">version_label</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;kwargs&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">)),</span>
+               <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;relation&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">),</span> <span class="n">prefix</span><span class="p">)</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">):</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">claim</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+        <span class="n">sources</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">groups</span><span class="p">,</span> <span class="n">sources</span><span class="p">,</span> <span class="n">skipped</span></div>
+
+
+
+<div class="viewcode-block" id="replayed">
+<a class="viewcode-back" href="../../api/recheck/make_table.html#recheck.make_table.replayed">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">replayed</span><span class="p">(</span><span class="n">log</span><span class="o">=</span><span class="n">RESULTS_LOG</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;(claim filename, rounds) -&gt; the optimum OCP found, from the replay log.</span>
+
+<span class="sd">    Reads the ``optimum`` field rather than the check&#39;s prose. A record written before that field</span>
+<span class="sd">    existed is skipped, so its row shows ``--`` until the claim is replayed again; the alternative,</span>
+<span class="sd">    parsing &quot;optimum 30.0 = claimed 30&quot;, pins the table to one wording of a sentence.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">found</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">record</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;optimum&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rounds&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">found</span><span class="p">[(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s2">&quot;file&quot;</span><span class="p">]),</span> <span class="n">record</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">])]</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s2">&quot;optimum&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">found</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fmt</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<div class="viewcode-block" id="ranges">
+<a class="viewcode-back" href="../../api/recheck/make_table.html#recheck.make_table.ranges">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ranges</span><span class="p">(</span><span class="n">rounds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Collapse a sorted round list into &#39;1--10&#39; or &#39;3, 5--7&#39; form.&quot;&quot;&quot;</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">prev</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="n">prev</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="n">r</span>
+            <span class="k">continue</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">--</span><span class="si">{</span><span class="n">prev</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="n">start</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">r</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">--</span><span class="si">{</span><span class="n">prev</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="n">start</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">)</span></div>
+
+
+
+<span class="n">REL</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;&lt;=&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">le$</span><span class="se">\\</span><span class="s2">,&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">ge$</span><span class="se">\\</span><span class="s2">,&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="ocp_series">
+<a class="viewcode-back" href="../../api/recheck/make_table.html#recheck.make_table.ocp_series">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ocp_series</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">found</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The OCP column for one row: its own optima, ``--`` per round not replayed yet.</span>
+
+<span class="sd">    ``None`` when no round of the row has been replayed, which the caller renders as a single</span>
+<span class="sd">    ``---`` rather than a row of dashes as long as the claimed series.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">got</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">((</span><span class="n">found</span><span class="p">[(</span><span class="n">f</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="ow">in</span> <span class="n">found</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">order</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">got</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fmt</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;--&quot;</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">got</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rows</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sources</span><span class="p">,</span> <span class="n">versions</span><span class="p">,</span> <span class="n">found</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">analysis</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">ANALYSES</span><span class="p">:</span>
+        <span class="n">block</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">version</span><span class="p">,</span> <span class="n">display</span> <span class="ow">in</span> <span class="n">versions</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="n">kv</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">!=</span> <span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+                    <span class="k">continue</span>
+                <span class="n">relation</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">key</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                <span class="n">order</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+                <span class="n">series</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fmt</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">order</span><span class="p">)</span>
+                <span class="n">block</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">display</span><span class="si">}</span><span class="s2"> &amp; </span><span class="si">{</span><span class="n">ranges</span><span class="p">(</span><span class="n">order</span><span class="p">)</span><span class="si">}</span><span class="s2"> &amp; </span><span class="si">{</span><span class="n">REL</span><span class="p">[</span><span class="n">relation</span><span class="p">]</span><span class="si">}{</span><span class="n">series</span><span class="si">}</span><span class="s2"> &amp; &quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ocp_series</span><span class="p">(</span><span class="n">sources</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="w"> </span><span class="n">order</span><span class="p">,</span><span class="w"> </span><span class="n">found</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;---&#39;</span><span class="si">}</span><span class="s2"> &amp; &quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cite</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">block</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">LABEL</span><span class="p">[(</span><span class="n">analysis</span><span class="p">,</span> <span class="n">model</span><span class="p">)],</span> <span class="n">block</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">render</span><span class="p">(</span><span class="n">cipher</span><span class="p">):</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">versions</span> <span class="o">=</span> <span class="n">CIPHERS</span><span class="p">[</span><span class="n">cipher</span><span class="p">]</span>
+    <span class="n">groups</span><span class="p">,</span> <span class="n">sources</span><span class="p">,</span> <span class="n">skipped</span> <span class="o">=</span> <span class="n">gather</span><span class="p">(</span><span class="n">data_glob</span><span class="p">(</span><span class="n">cipher</span><span class="p">))</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="n">replayed</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">begin</span><span class="si">{tabular}</span><span class="s2">{llp{0.38</span><span class="se">\\</span><span class="s2">textwidth}ll}&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">toprule&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Version &amp; Rounds &amp; Claimed &amp; OCP &amp; Reference </span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="n">sources</span><span class="p">,</span> <span class="n">versions</span><span class="p">,</span> <span class="n">found</span><span class="p">):</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">midrule&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">multicolumn</span><span class="se">{{</span><span class="s2">5</span><span class="se">}}{{</span><span class="s2">l</span><span class="se">}}{{\\</span><span class="s2">emph</span><span class="se">{{</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="se">}}}}</span><span class="s2"> </span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">cmidrule(lr){1-5}&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">bottomrule&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">end</span><span class="si">{tabular}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">),</span> <span class="n">skipped</span>
+
+
+<span class="n">BEGIN</span> <span class="o">=</span> <span class="s2">&quot;% BEGIN generated by reference/make_table.py -- edits here are overwritten&quot;</span>
+<span class="n">END</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">% E</span><span class="s2">ND generated&quot;</span>
+
+
+<div class="viewcode-block" id="inject">
+<a class="viewcode-back" href="../../api/recheck/make_table.html#recheck.make_table.inject">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">inject</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Replace the generated block inside ``path`` in place, leaving the prose around it alone.</span>
+
+<span class="sd">    The table body lives in the section file rather than beside it, so the appendix is one file per</span>
+<span class="sd">    cipher; the markers are what keeps it regenerable. A file without them is rejected rather than</span>
+<span class="sd">    appended to, since guessing where the table belongs would silently produce a wrong document.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">body</span><span class="p">,</span> <span class="n">skipped</span> <span class="o">=</span> <span class="n">render</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">BEGIN</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">END</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: expected exactly one </span><span class="si">{</span><span class="n">BEGIN</span><span class="si">!r}</span><span class="s2"> ... </span><span class="si">{</span><span class="n">END</span><span class="si">!r}</span><span class="s2"> block.&quot;</span><span class="p">)</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">BEGIN</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">rest</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">END</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">head</span> <span class="o">+</span> <span class="n">BEGIN</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">END</span> <span class="o">+</span> <span class="n">tail</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">body</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">skipped</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">which</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;speck&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">rows_written</span><span class="p">,</span> <span class="n">skipped</span> <span class="o">=</span> <span class="n">inject</span><span class="p">(</span><span class="n">which</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">rows_written</span><span class="si">}</span><span class="s2"> rows&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">,</span> <span class="n">skipped</span> <span class="o">=</span> <span class="n">render</span><span class="p">(</span><span class="n">which</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">skipped</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;% not published claims, excluded: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">skipped</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

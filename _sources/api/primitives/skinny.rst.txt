@@ -1,0 +1,6 @@
+skinny
+======
+
+.. automodule:: primitives.skinny
+   :members:
+   :show-inheritance:

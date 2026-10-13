@@ -1,0 +1,9 @@
+visualisations
+==============
+
+Visualization of primitives, distinguishers, and attacks.
+
+.. toctree::
+   :maxdepth: 1
+
+   visualisations/visualisations

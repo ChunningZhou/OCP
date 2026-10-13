@@ -1,0 +1,6 @@
+rocca
+=====
+
+.. automodule:: primitives.rocca
+   :members:
+   :show-inheritance:

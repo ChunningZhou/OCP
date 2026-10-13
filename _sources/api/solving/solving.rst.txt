@@ -1,0 +1,6 @@
+solving
+=======
+
+.. automodule:: solving.solving
+   :members:
+   :show-inheritance:

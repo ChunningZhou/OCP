@@ -1,0 +1,20 @@
+tools
+=====
+
+Assorted internal tools used across OCP.
+
+.. toctree::
+   :maxdepth: 1
+
+   tools/milp_search
+   tools/minimize_logic
+   tools/model_configuration
+   tools/model_constraints
+   tools/model_objective
+   tools/model_templates
+   tools/operator_constraints
+   tools/paths
+   tools/polyhedron
+   tools/resource_monitor
+   tools/sat_search
+   tools/sbox_division_trails

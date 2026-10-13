@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>primitives.salsa &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/primitives/salsa';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">primitives.salsa</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for primitives.salsa</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Salsa20: the Salsa20 permutation and its keyed variant.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">primitives.primitives</span><span class="w"> </span><span class="kn">import</span> <span class="n">Permutation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.modular_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModAdd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.boolean_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">XOR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">Equal</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">variables.variables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">var</span>
+
+
+<span class="c1"># The Salsa internal permutation</span>
+<div class="viewcode-block" id="Salsa_permutation">
+<a class="viewcode-back" href="../../api/primitives/salsa.html#primitives.salsa.Salsa_permutation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Salsa_permutation</span><span class="p">(</span><span class="n">Permutation</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the Salsa internal permutation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name of the permutation</span>
+<span class="sd">            s_input: Input state</span>
+<span class="sd">            s_output: Output state</span>
+<span class="sd">            nbr_rounds: Number of rounds</span>
+<span class="sd">            represent_mode: Integer specifying the mode of representation used for encoding the permutation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">nbr_rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">nbr_rounds</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">nbr_layers</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1"># 1 for each of the 12 operations in 1 quarter round</span>
+            <span class="n">nbr_words</span> <span class="o">=</span> <span class="mi">16</span> <span class="c1"># Words in the state of Salsa</span>
+            <span class="n">nbr_temp_words</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># Temporary words to store the internal states</span>
+            <span class="n">word_bitsize</span> <span class="o">=</span> <span class="mi">32</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="p">[</span><span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">])</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+
+            <span class="n">TW</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">]</span>
+ 
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>  
+                <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># Even rounds are row rounds</span>
+                    <span class="n">QR1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+                    <span class="n">QR2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+                    <span class="n">QR3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+                    <span class="n">QR4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Odd rounds are column rounds</span>
+                    <span class="n">QR1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+                    <span class="n">QR2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">QR3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+                    <span class="n">QR4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+
+                <span class="c1"># 4 quarter rounds in parallel </span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] The represent_mode </span><span class="si">{</span><span class="n">represent_mode</span><span class="si">}</span><span class="s2"> is not supported for Salsa_permutation.&quot;</span><span class="p">)</span>
+                                     
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_test_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rounds</span> <span class="o">==</span> <span class="mi">20</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Test vectors from https://cr.yp.to/snuffle/salsafamily-20071225.pdf</span>
+            <span class="n">IN</span> <span class="o">=</span> <span class="p">[</span>  <span class="mh">0x61707865</span><span class="p">,</span> <span class="mh">0x04030201</span><span class="p">,</span> <span class="mh">0x08070605</span><span class="p">,</span> <span class="mh">0x0c0b0a09</span><span class="p">,</span>
+                    <span class="mh">0x100f0e0d</span><span class="p">,</span> <span class="mh">0x3320646e</span><span class="p">,</span> <span class="mh">0x01040103</span><span class="p">,</span> <span class="mh">0x06020905</span><span class="p">,</span>
+                    <span class="mh">0x00000007</span><span class="p">,</span> <span class="mh">0x00000000</span><span class="p">,</span> <span class="mh">0x79622d32</span><span class="p">,</span> <span class="mh">0x14131211</span><span class="p">,</span>
+                    <span class="mh">0x18171615</span><span class="p">,</span> <span class="mh">0x1c1b1a19</span><span class="p">,</span> <span class="mh">0x201f1e1d</span><span class="p">,</span> <span class="mh">0x6b206574</span><span class="p">]</span>        
+            <span class="n">OUT</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x58318d3e</span><span class="p">,</span> <span class="mh">0x0292df4f</span><span class="p">,</span> <span class="mh">0xa28d8215</span><span class="p">,</span> <span class="mh">0xa1aca723</span><span class="p">,</span>
+                    <span class="mh">0x697a34c7</span><span class="p">,</span> <span class="mh">0xf2f00ba8</span><span class="p">,</span> <span class="mh">0x63e9b0a1</span><span class="p">,</span> <span class="mh">0x27250e3a</span><span class="p">,</span>
+                    <span class="mh">0xb1c7f1f3</span><span class="p">,</span> <span class="mh">0x62066edc</span><span class="p">,</span> <span class="mh">0x66d3ccf1</span><span class="p">,</span> <span class="mh">0xb0365cf3</span><span class="p">,</span>
+                    <span class="mh">0x091ad09e</span><span class="p">,</span> <span class="mh">0x64f0c40f</span><span class="p">,</span> <span class="mh">0xd60d95ea</span><span class="p">,</span> <span class="mh">0x00be78c9</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">IN</span><span class="p">],</span> <span class="n">OUT</span><span class="p">])</span></div>
+
+    
+
+<span class="k">def</span><span class="w"> </span><span class="nf">SALSA_PERMUTATION</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span> 
+    <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;in&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)],</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="n">my_permutation</span> <span class="o">=</span> <span class="n">Salsa_permutation</span><span class="p">(</span><span class="s2">&quot;SALSA_PERM&quot;</span><span class="p">,</span> <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="n">represent_mode</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">gen_test_vectors</span><span class="p">(</span><span class="n">rounds</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">post_initialization</span><span class="p">(</span><span class="n">copy_operator</span><span class="o">=</span><span class="n">copy_operator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_permutation</span>    
+    
+
+
+
+<span class="c1"># The Salsa permutation to generate the key stream</span>
+<div class="viewcode-block" id="Salsa_keypermutation">
+<a class="viewcode-back" href="../../api/primitives/salsa.html#primitives.salsa.Salsa_keypermutation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Salsa_keypermutation</span><span class="p">(</span><span class="n">Permutation</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the Salsa internal permutation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name of the permutation</span>
+<span class="sd">            s_input: Input state</span>
+<span class="sd">            s_output: Output state</span>
+<span class="sd">            nbr_rounds: Number of rounds</span>
+<span class="sd">            represent_mode: Integer specifying the mode of representation used for encoding the permutation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">nbr_rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">nbr_rounds</span> <span class="o">=</span> <span class="mi">21</span> <span class="c1"># 21st round is used add the initial state to obtain the final key stream</span>
+            <span class="n">nbr_layers</span> <span class="o">=</span> <span class="mi">13</span> <span class="c1"># 1 for each of the 12 operations in 1 quarter round</span>
+            <span class="n">nbr_words</span> <span class="o">=</span> <span class="mi">16</span> <span class="c1"># Words in the state of Salsa</span>
+            <span class="n">nbr_temp_words</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># To retain the initial input for adding with final state to obtain the key stream</span>
+            <span class="n">word_bitsize</span> <span class="o">=</span> <span class="mi">32</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="p">[</span><span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">])</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+
+            <span class="n">TW</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">]</span> <span class="c1"># Temporary words to store the internal states</span>
+        
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>  
+                <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># Even rounds are row rounds</span>
+                    <span class="n">QR1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+                    <span class="n">QR2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+                    <span class="n">QR3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+                    <span class="n">QR4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Odd rounds are column rounds</span>
+                    <span class="n">QR1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+                    <span class="n">QR2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">QR3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+                    <span class="n">QR4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+                
+                <span class="c1"># In the first round copy the initial word to temporary words</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">InIndex</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">]]</span>
+                    <span class="n">OutIndex</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Equal&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Equal</span><span class="p">,</span> <span class="n">InIndex</span><span class="p">,</span> <span class="n">OutIndex</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;Identity&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">21</span><span class="p">:</span>
+                    <span class="n">InIndex</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">26</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">35</span><span class="p">]]</span>
+                    <span class="n">OutIndex</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="n">InIndex</span><span class="p">,</span> <span class="n">OutIndex</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">nbr_layers</span><span class="p">):</span>
+                        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Identity&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                        <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># 4 quarter rounds in parallel</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR3&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;Add4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ModAdd</span><span class="p">,</span> <span class="p">[[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="n">QR4</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">3</span><span class="p">]]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">RotationLayer</span><span class="p">(</span><span class="s2">&quot;Rot4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">]]])</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;XOR4&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">TW</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">TW</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">]]],</span> <span class="p">[</span><span class="n">QR1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">QR4</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] The represent_mode </span><span class="si">{</span><span class="n">represent_mode</span><span class="si">}</span><span class="s2"> is not supported for Salsa_keypermutation.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_test_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rounds</span> <span class="o">==</span> <span class="mi">21</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Test vectors from https://cr.yp.to/snuffle/salsafamily-20071225.pdf</span>
+            <span class="n">IN</span> <span class="o">=</span> <span class="p">[</span>  <span class="mh">0x61707865</span><span class="p">,</span> <span class="mh">0x04030201</span><span class="p">,</span> <span class="mh">0x08070605</span><span class="p">,</span> <span class="mh">0x0c0b0a09</span><span class="p">,</span>
+                    <span class="mh">0x100f0e0d</span><span class="p">,</span> <span class="mh">0x3320646e</span><span class="p">,</span> <span class="mh">0x01040103</span><span class="p">,</span> <span class="mh">0x06020905</span><span class="p">,</span>
+                    <span class="mh">0x00000007</span><span class="p">,</span> <span class="mh">0x00000000</span><span class="p">,</span> <span class="mh">0x79622d32</span><span class="p">,</span> <span class="mh">0x14131211</span><span class="p">,</span>
+                    <span class="mh">0x18171615</span><span class="p">,</span> <span class="mh">0x1c1b1a19</span><span class="p">,</span> <span class="mh">0x201f1e1d</span><span class="p">,</span> <span class="mh">0x6b206574</span><span class="p">]</span>
+            <span class="n">OUT</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0xb9a205a3</span><span class="p">,</span> <span class="mh">0x0695e150</span><span class="p">,</span> <span class="mh">0xaa94881a</span><span class="p">,</span> <span class="mh">0xadb7b12c</span><span class="p">,</span>
+                    <span class="mh">0x798942d4</span><span class="p">,</span> <span class="mh">0x26107016</span><span class="p">,</span> <span class="mh">0x64edb1a4</span><span class="p">,</span> <span class="mh">0x2d27173f</span><span class="p">,</span>
+                    <span class="mh">0xb1c7f1fa</span><span class="p">,</span> <span class="mh">0x62066edc</span><span class="p">,</span> <span class="mh">0xe035fa23</span><span class="p">,</span> <span class="mh">0xc4496f04</span><span class="p">,</span>
+                    <span class="mh">0x2131e6b3</span><span class="p">,</span> <span class="mh">0x810bde28</span><span class="p">,</span> <span class="mh">0xf62cb407</span><span class="p">,</span> <span class="mh">0x6bdede3d</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">IN</span><span class="p">],</span> <span class="n">OUT</span><span class="p">])</span></div>
+
+    
+<span class="k">def</span><span class="w"> </span><span class="nf">SALSA_KEYPERMUTATION</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span> 
+    <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;in&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)],</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="n">my_permutation</span> <span class="o">=</span> <span class="n">Salsa_keypermutation</span><span class="p">(</span><span class="s2">&quot;SALSA_KEYPERM&quot;</span><span class="p">,</span> <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="n">represent_mode</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">gen_test_vectors</span><span class="p">(</span><span class="n">rounds</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">post_initialization</span><span class="p">(</span><span class="n">copy_operator</span><span class="o">=</span><span class="n">copy_operator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_permutation</span>    
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

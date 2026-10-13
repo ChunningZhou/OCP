@@ -1,0 +1,1261 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solving.solving &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/solving/solving';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">solving.solving</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for solving.solving</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides tools for solving MILP/SAT models. Supports multiple solvers and configurations.</span>
+<span class="sd">    - MILP solvers: Gurobi, SCIP</span>
+<span class="sd">    - SAT solvers: PySAT, OR-Tools CPSAT, external DIMACS binaries (e.g., PRS, CaDiCaL, CryptoMiniSat, Kissat)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">import_module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_spec</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shutil</span><span class="w"> </span><span class="kn">import</span> <span class="n">which</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.resource_monitor</span><span class="w"> </span><span class="kn">import</span> <span class="n">RuntimeResourceMonitor</span>
+
+
+<span class="n">DEFAULT_MILP_SOLVER</span> <span class="o">=</span> <span class="s2">&quot;GUROBI&quot;</span>
+<span class="n">DEFAULT_SAT_BACKEND</span> <span class="o">=</span> <span class="s2">&quot;PySAT&quot;</span>
+<span class="n">MILP_SOLVERS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;GUROBI&quot;</span><span class="p">,</span> <span class="s2">&quot;SCIP&quot;</span><span class="p">)</span>
+<span class="n">PYSAT_SOLVERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Cadical103&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cadical153&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cadical195&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CryptoMinisat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Gluecard3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Gluecard4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Glucose3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Glucose4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Lingeling&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MapleChrono&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MapleCM&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Maplesat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mergesat3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Minicard&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Minisat22&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MinisatGH&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">PYSAT_SOLVER_NAME_MAP</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PYSAT_SOLVERS</span><span class="p">}</span>
+
+<span class="c1"># External SAT solvers run as standalone binaries on a DIMACS .cnf file.</span>
+<span class="n">EXTERNAL_SAT_SOLVERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;PRS&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">cfg</span><span class="p">:</span> <span class="p">[</span>
+        <span class="n">cfg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;prs&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;--mode=0&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;--threads=</span><span class="si">{</span><span class="n">cfg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;threads&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--preprocess_threads=1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--breakid_threads=1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--kissat_sup_threads=1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--kissat_mab_prop_threads=1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--sbva_threads=1&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;CaDiCaL&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">cfg</span><span class="p">:</span> <span class="p">[</span><span class="n">cfg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;cadical&quot;</span><span class="p">)],</span>
+    <span class="s2">&quot;CryptoMiniSat&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">cfg</span><span class="p">:</span> <span class="p">[</span><span class="n">cfg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;cryptominisat5&quot;</span><span class="p">)],</span>
+    <span class="s2">&quot;Kissat&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">cfg</span><span class="p">:</span> <span class="p">[</span><span class="n">cfg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;kissat&quot;</span><span class="p">)],</span>
+<span class="p">}</span>
+<span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">}</span>
+
+<span class="n">SAT_SOLVERS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">PYSAT_SOLVERS</span><span class="p">,</span> <span class="s2">&quot;ORTools&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_printable_config</span><span class="p">(</span><span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return config_solver without the bulky resource_usage entry, for the settings echo line.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="s2">&quot;resource_usage&quot;</span><span class="p">}</span>
+
+
+<span class="n">_NATIVE_PROBE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gurobipy&quot;</span><span class="p">:</span> <span class="s2">&quot;gurobipy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pyscipopt&quot;</span><span class="p">:</span> <span class="s2">&quot;pyscipopt&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pysat&quot;</span><span class="p">:</span> <span class="s2">&quot;pysolvers&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ortools&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">_PROBE_CACHE</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_module_loads</span><span class="p">(</span><span class="n">module_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether ``module_name`` can actually be imported; cached. Any failure counts as no.</span>
+
+<span class="sd">    Not just ``ImportError``: a compiled extension that cannot be mapped raises ``OSError`` from</span>
+<span class="sd">    ``dlopen``, and a mismatched build can raise almost anything.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">module_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_PROBE_CACHE</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+            <span class="n">_PROBE_CACHE</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">_PROBE_CACHE</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">_PROBE_CACHE</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_modules_available</span><span class="p">(</span><span class="o">*</span><span class="n">module_names</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``(available, probed)`` for the named modules: on disk, and loadable where that is cheap.</span>
+
+<span class="sd">    ``find_spec`` first, so the import cost is only paid for what is installed. ``probed`` names</span>
+<span class="sd">    the module imported to confirm it, or is ``None`` when the answer rests on ``find_spec``</span>
+<span class="sd">    alone, a distinction the caller needs, since the two came apart on this machine.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">probed</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">module_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">find_spec</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="n">probe</span> <span class="o">=</span> <span class="n">_NATIVE_PROBE</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">probe</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_module_loads</span><span class="p">(</span><span class="n">probe</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">probe</span>
+        <span class="n">probed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">probe</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">probed</span><span class="p">)</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_external_binary_available</span><span class="p">(</span><span class="n">solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True if the registered external solver&#39;s binary is on $PATH (registry default name).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">which</span><span class="p">(</span><span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">[</span><span class="n">solver</span><span class="p">]({})[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_backend_status</span><span class="p">(</span><span class="n">available</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">implemented</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">probed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build a solver-backend capability entry.</span>
+
+<span class="sd">    ``probed`` names the compiled extension that was imported to confirm it, or stays ``None``</span>
+<span class="sd">    when ``available`` rests on the package merely being present. A consumer that treats those</span>
+<span class="sd">    two as the same thing is the reason this field exists.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;available&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">available</span><span class="p">),</span>
+        <span class="s2">&quot;implemented&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">implemented</span><span class="p">),</span>
+        <span class="s2">&quot;probed&quot;</span><span class="p">:</span> <span class="n">probed</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">solvers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">status</span><span class="p">[</span><span class="s2">&quot;solvers&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">solvers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">status</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_probed_status</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A backend entry for a Python package, carrying how its availability was established.&quot;&quot;&quot;</span>
+    <span class="n">available</span><span class="p">,</span> <span class="n">probed</span> <span class="o">=</span> <span class="n">_modules_available</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_backend_status</span><span class="p">(</span><span class="n">available</span><span class="p">,</span> <span class="n">probed</span><span class="o">=</span><span class="n">probed</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="solver_capabilities">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solver_capabilities">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solver_capabilities</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Which optional solver backends are usable here, and how that was established.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;GUROBI&quot;</span><span class="p">:</span> <span class="n">_probed_status</span><span class="p">(</span><span class="s2">&quot;gurobipy&quot;</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="s2">&quot;GUROBI&quot;</span><span class="p">)),</span>
+            <span class="s2">&quot;SCIP&quot;</span><span class="p">:</span> <span class="n">_probed_status</span><span class="p">(</span><span class="s2">&quot;pyscipopt&quot;</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;SCIP&quot;</span><span class="p">,)),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;PySAT&quot;</span><span class="p">:</span> <span class="n">_probed_status</span><span class="p">(</span><span class="s2">&quot;pysat&quot;</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">PYSAT_SOLVERS</span><span class="p">)),</span>
+            <span class="s2">&quot;ORTools&quot;</span><span class="p">:</span> <span class="n">_probed_status</span><span class="p">(</span><span class="s2">&quot;ortools&quot;</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;ORTools&quot;</span><span class="p">,)),</span>
+            <span class="s2">&quot;External&quot;</span><span class="p">:</span> <span class="n">_backend_status</span><span class="p">(</span>
+                <span class="nb">any</span><span class="p">(</span><span class="n">_external_binary_available</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">),</span>
+                <span class="n">solvers</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">),</span>
+            <span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="n">DEFAULT_MILP_SOLVER</span><span class="p">,</span>
+            <span class="s2">&quot;sat&quot;</span><span class="p">:</span> <span class="n">DEFAULT_SAT_BACKEND</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span></div>
+
+
+
+<div class="viewcode-block" id="normalize_milp_solver_name">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.normalize_milp_solver_name">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_milp_solver_name</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalize a MILP solver name to a supported value (&#39;GUROBI&#39;/&#39;SCIP&#39;), raising on unknown.&quot;&quot;&quot;</span>
+    <span class="n">solver_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">solver_name</span> <span class="o">==</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DEFAULT_MILP_SOLVER</span>
+    <span class="k">if</span> <span class="n">solver_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">MILP_SOLVERS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Unsupported solver: &#39;</span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">&#39;. Supported: &#39;GUROBI&#39; (DEFAULT), &#39;SCIP&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">solver_name</span></div>
+
+
+
+<div class="viewcode-block" id="normalize_sat_solver_name">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.normalize_sat_solver_name">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_sat_solver_name</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalize a SAT solver name to a supported value, raising on unknown.</span>
+
+<span class="sd">    ``backend`` selects the solving engine explicitly and takes precedence over</span>
+<span class="sd">    name-based matching. This disambiguates solver names shared by more than one</span>
+<span class="sd">    backend (e.g. PySAT&#39;s &quot;CryptoMinisat&quot; vs the external &quot;CryptoMiniSat&quot; binary,</span>
+<span class="sd">    identical once lowercased): set ``backend=&quot;pysat&quot;`` or ``backend=&quot;external&quot;``</span>
+<span class="sd">    to pick. With ``backend=None`` the name is matched against the PySAT names</span>
+<span class="sd">    first (preserving historical behaviour), then the external registry.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">solver_text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">backend</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;pysat&quot;</span><span class="p">,</span> <span class="s2">&quot;external&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Unsupported backend: &#39;</span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2">&#39;. Supported: &#39;pysat&#39;, &#39;external&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;external&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">[</span><span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;[ERROR] Unsupported external solver: &#39;</span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">&#39;. Supported: &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">)</span>
+            <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;DEFAULT&quot;</span>
+    <span class="k">if</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;ortools&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;ORTools&quot;</span>
+    <span class="k">if</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">PYSAT_SOLVER_NAME_MAP</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] &#39;</span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">&#39; matches both PySAT and an external solver; using PySAT. &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;Set config_solver[&#39;backend&#39;] = &#39;external&#39; to use the external binary.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">PYSAT_SOLVER_NAME_MAP</span><span class="p">[</span><span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">[</span><span class="n">solver_text</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;[ERROR] Unsupported solver: &#39;</span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">&#39;. Supported: ORTools, DEFAULT, &quot;</span>
+        <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PYSAT_SOLVERS</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">))</span>
+        <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_solver_available">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.is_solver_available">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_solver_available</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return whether a configured solver route is both installed and implemented.</span>
+
+<span class="sd">    ``backend`` (&#39;pysat&#39;/&#39;external&#39;) disambiguates SAT solver names shared by both</span>
+<span class="sd">    backends, as in :func:`normalize_sat_solver_name`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">capabilities</span> <span class="o">=</span> <span class="n">solver_capabilities</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solver_name</span> <span class="o">=</span> <span class="n">normalize_milp_solver_name</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">backend_entry</span> <span class="o">=</span> <span class="n">capabilities</span><span class="p">[</span><span class="s2">&quot;milp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">solver_name</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solver_name</span> <span class="o">=</span> <span class="n">normalize_sat_solver_name</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">solver_name</span> <span class="o">==</span> <span class="s2">&quot;DEFAULT&quot;</span> <span class="ow">or</span> <span class="n">solver_name</span> <span class="ow">in</span> <span class="n">PYSAT_SOLVERS</span><span class="p">:</span>
+            <span class="n">backend_entry</span> <span class="o">=</span> <span class="n">capabilities</span><span class="p">[</span><span class="s2">&quot;sat&quot;</span><span class="p">][</span><span class="s2">&quot;PySAT&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">solver_name</span> <span class="o">==</span> <span class="s2">&quot;ORTools&quot;</span><span class="p">:</span>
+            <span class="n">backend_entry</span> <span class="o">=</span> <span class="n">capabilities</span><span class="p">[</span><span class="s2">&quot;sat&quot;</span><span class="p">][</span><span class="s2">&quot;ORTools&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">solver_name</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_external_binary_available</span><span class="p">(</span><span class="n">solver_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">backend_entry</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported solver kind: </span><span class="si">{</span><span class="n">kind</span><span class="si">!r}</span><span class="s2">. Supported: &#39;milp&#39;, &#39;sat&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">backend_entry</span> <span class="ow">and</span> <span class="n">backend_entry</span><span class="p">[</span><span class="s2">&quot;available&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">backend_entry</span><span class="p">[</span><span class="s2">&quot;implemented&quot;</span><span class="p">])</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_load_gurobi</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import and return the ``gurobipy`` module, or ``None`` if it is unavailable.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;gurobipy&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_load_scip_model</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import and return PySCIPOpt&#39;s ``Model`` class, or ``None`` if it is unavailable.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pyscipopt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Model</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_scip_error_types</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the exception types SCIP may raise (generic fallbacks if PySCIPOpt is unavailable).&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">scip_module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pyscipopt&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">)</span>
+    <span class="n">scip_error</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">scip_module</span><span class="p">,</span> <span class="s2">&quot;SCIPError&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">(</span><span class="n">scip_error</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">)</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_load_pysat</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import and return PySAT&#39;s ``(CNF, Solver)``, or ``(None, None)`` if it is unavailable.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pysat.formula&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CNF</span><span class="p">,</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pysat.solvers&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Solver</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_load_ortools_cpsat</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import and return OR-Tools&#39; ``cp_model`` module, or ``None`` if it is unavailable.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;ortools.sat.python.cp_model&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ImportError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="c1"># ------------------------------ Solver Versions ------------------------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_module_version</span><span class="p">(</span><span class="n">module_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a module&#39;s ``__version__`` string (&#39;not installed&#39; / &#39;unknown&#39; when unavailable).&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;not installed&quot;</span>
+    <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;__version__&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_milp_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resolve the MILP solver (Gurobi / SCIP) version string for ``config_solver`` (no printing).&quot;&quot;&quot;</span>
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_milp_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;GUROBI&quot;</span><span class="p">:</span>
+        <span class="n">gurobipy</span> <span class="o">=</span> <span class="n">_load_gurobi</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">gurobipy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;gurobipy not installed&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Gurobi &quot;</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">part</span><span class="p">)</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">gurobipy</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;gurobipy &quot;</span> <span class="o">+</span> <span class="n">_module_version</span><span class="p">(</span><span class="s2">&quot;gurobipy&quot;</span><span class="p">)</span>
+    <span class="n">scip_model</span> <span class="o">=</span> <span class="n">_load_scip_model</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">scip_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;pyscipopt not installed&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;SCIP &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">scip_model</span><span class="p">()</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
+    <span class="k">except</span> <span class="n">_scip_error_types</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s2">&quot;pyscipopt &quot;</span> <span class="o">+</span> <span class="n">_module_version</span><span class="p">(</span><span class="s2">&quot;pyscipopt&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_pysat_solver_version</span><span class="p">(</span><span class="n">solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Best-effort version of a PySAT-bundled solver (python-sat release; pycryptosat for CryptoMinisat).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;crypto&quot;</span> <span class="ow">in</span> <span class="n">solver</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="n">crypto_version</span> <span class="o">=</span> <span class="n">_module_version</span><span class="p">(</span><span class="s2">&quot;pycryptosat&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">crypto_version</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;not installed&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;pycryptosat &quot;</span> <span class="o">+</span> <span class="n">crypto_version</span>
+    <span class="k">return</span> <span class="s2">&quot;bundled with python-sat &quot;</span> <span class="o">+</span> <span class="n">_module_version</span><span class="p">(</span><span class="s2">&quot;pysat&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_external_solver_version</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Query an external solver binary for its version string.</span>
+
+<span class="sd">    Runs the binary with common version flags and returns the first non-empty</span>
+<span class="sd">    output line. Falls back to a descriptive message if the binary is missing or</span>
+<span class="sd">    does not report a version.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Reuse the registry builder to resolve the binary path (honours &quot;solver_bin&quot;).</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">[</span><span class="n">solver</span><span class="p">](</span><span class="n">config_solver</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">flag</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;--version&quot;</span><span class="p">,</span> <span class="s2">&quot;-version&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">binary</span><span class="p">,</span> <span class="n">flag</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;binary &#39;</span><span class="si">{</span><span class="n">binary</span><span class="si">}</span><span class="s2">&#39; not found on PATH&quot;</span>
+        <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">TimeoutExpired</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">proc</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># e.g. &quot;invalid option &#39;--version&#39;&quot; also contains &quot;version&quot;</span>
+            <span class="k">continue</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span> <span class="ow">or</span> <span class="n">proc</span><span class="o">.</span><span class="n">stderr</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">ln</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+        <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;version&quot;</span> <span class="ow">in</span> <span class="n">ln</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;version[:\s]+([0-9][\w.\-]*)&#39;</span><span class="p">,</span> <span class="n">ln</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">m</span> <span class="k">else</span> <span class="p">(</span><span class="n">ln</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;c &quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">ln</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;unknown&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_sat_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resolve the SAT solver (PySAT-bundled, OR-Tools CPSAT, or external binary) version string (no printing).&quot;&quot;&quot;</span>
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_sat_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">),</span>
+                                       <span class="n">backend</span><span class="o">=</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;ORTools&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;OR-Tools &quot;</span> <span class="o">+</span> <span class="n">_module_version</span><span class="p">(</span><span class="s2">&quot;ortools&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">solver</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_external_solver_version</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_pysat_solver_version</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>  <span class="c1"># &quot;DEFAULT&quot; and every PySAT solver</span>
+
+
+<div class="viewcode-block" id="get_solver_version">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.get_solver_version">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_solver_version</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Report (print and return) the concrete solver name and version for a &#39;milp&#39;/&#39;sat&#39; route.&quot;&quot;&quot;</span>
+    <span class="n">config_solver</span> <span class="o">=</span> <span class="n">config_solver</span> <span class="ow">or</span> <span class="p">{}</span>
+    <span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_milp_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">))</span>
+        <span class="n">version</span> <span class="o">=</span> <span class="n">_milp_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_sat_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">),</span>
+                                           <span class="n">backend</span><span class="o">=</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">))</span>
+        <span class="n">version</span> <span class="o">=</span> <span class="n">_sat_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported solver kind: </span><span class="si">{</span><span class="n">kind</span><span class="si">!r}</span><span class="s2">. Supported: &#39;milp&#39;, &#39;sat&#39;.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2"> solver: </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> | version: </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="n">kind</span><span class="p">,</span> <span class="s2">&quot;solver&quot;</span><span class="p">:</span> <span class="n">solver</span><span class="p">,</span> <span class="s2">&quot;solver_version&quot;</span><span class="p">:</span> <span class="n">version</span><span class="p">}</span></div>
+
+
+
+<div class="viewcode-block" id="solve_milp">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_milp">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_milp</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Solve a MILP model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename (str): Path to the MILP model file.</span>
+<span class="sd">        config_solver (dict):</span>
+<span class="sd">            - solver: solver name (e.g. &quot;GUROBI&quot;, &quot;SCIP&quot;).</span>
+<span class="sd">            - solution_number: The number of solutions to find (default: 1).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A list of solutions. Each solution is represented as a dictionary mapping variable names to their values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">config_solver</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">config_solver</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config_solver</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid config_solver: </span><span class="si">{</span><span class="n">config_solver</span><span class="si">}</span><span class="s2">. Expected a dictionary or None.&quot;</span><span class="p">)</span>
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_milp_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">))</span>
+    <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solver&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">solver</span>
+    <span class="k">if</span> <span class="s2">&quot;solver_version&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="p">:</span>  <span class="c1"># resolve once (guard: setdefault would recompute every call)</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solver_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_milp_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Solving MILP model with settings: </span><span class="si">{</span><span class="n">_printable_config</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">monitor</span> <span class="o">=</span> <span class="n">RuntimeResourceMonitor</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">monitor</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;GUROBI&quot;</span><span class="p">:</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="n">solve_milp_gurobi</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;SCIP&quot;</span><span class="p">:</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="n">solve_milp_scip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="c1"># Normalize a missing-backend None to [] so callers always get a list.</span>
+        <span class="k">return</span> <span class="n">solutions</span> <span class="k">if</span> <span class="n">solutions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;resource_usage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">time_start</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">config_solver</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;solving_time&quot;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>  <span class="c1"># per-call trace; total = sum(solving_time)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] solve #</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">config_solver</span><span class="p">[</span><span class="s1">&#39;solving_time&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">elapsed</span><span class="si">}</span><span class="s2"> s | cumulative solver time: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">config_solver</span><span class="p">[</span><span class="s1">&#39;solving_time&#39;</span><span class="p">]),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="solve_milp_gurobi">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_milp_gurobi">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_milp_gurobi</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solve a MILP model using Gurobi; raise if gurobipy is unavailable.&quot;&quot;&quot;</span>
+    <span class="n">gp</span> <span class="o">=</span> <span class="n">_load_gurobi</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">gp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;[ERROR] gurobipy can&#39;t be loaded. Install it: pip install gurobipy&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="c1"># Load the model from file.</span>
+        <span class="c1"># Set Parameters provided by Gurobi. Example: TimeLimit, SolutionLimit, PoolSearchMode, PoolSolutions, MIPFocus, etc.</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="n">solution_number</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solution_number&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">solution_number</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">solution_number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">PoolSearchMode</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">PoolSolutions</span> <span class="o">=</span> <span class="n">solution_number</span>
+        <span class="c1"># Solve the model</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
+        <span class="n">sol_count</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;SolCount&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">gp</span><span class="o">.</span><span class="n">GurobiError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[ERROR] Check your Gurobi license, visit https://gurobi.com/unrestricted for more information&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="c1"># Return a list of solutions</span>
+    <span class="c1"># Case 1: No solution found</span>
+    <span class="k">if</span> <span class="n">sol_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Found no solution from Gurobi.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="c1"># Case 2: Single optimal solution found</span>
+    <span class="k">elif</span> <span class="n">solution_number</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="p">,</span> <span class="s2">&quot;PoolSearchMode&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="o">.</span><span class="n">VarName</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">X</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">getVars</span><span class="p">()}</span>
+        <span class="n">sol</span><span class="p">[</span><span class="s2">&quot;obj_fun_value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">ObjVal</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Found 1 solution from Gurobi.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">sol</span><span class="p">]</span>
+
+    <span class="c1"># Case 3: Multiple solutions found</span>
+    <span class="k">elif</span> <span class="n">solution_number</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="p">,</span> <span class="s2">&quot;PoolSearchMode&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sol_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">SolCount</span><span class="p">):</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">SolutionNumber</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">sol</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="o">.</span><span class="n">VarName</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">Xn</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">getVars</span><span class="p">()}</span>
+            <span class="n">sol</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;obj_fun_value&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">PoolObjVal</span><span class="p">})</span>
+            <span class="n">sol_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> solution(s) from Gurobi.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sol_list</span></div>
+
+
+
+<div class="viewcode-block" id="solve_milp_scip">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_milp_scip">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_milp_scip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solve a MILP model using SCIP; raise if PySCIPOpt is unavailable.&quot;&quot;&quot;</span>
+    <span class="n">Model</span> <span class="o">=</span> <span class="n">_load_scip_model</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">Model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;[ERROR] PySCIPOpt can&#39;t be loaded. Install it: pip install pyscipopt&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">readProblem</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="c1"># Set Parameters provided by SCIP. TO DO MORE</span>
+        <span class="k">if</span> <span class="s2">&quot;time_limit&quot;</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="p">:</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">setRealParam</span><span class="p">(</span><span class="s2">&quot;limits/time&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;time_limit&quot;</span><span class="p">])</span>
+        <span class="n">solution_number</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solution_number&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">solution_number</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">solution_number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># TO DO: support multiple solutions</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[WARNING] It currently does not support finding multiple solutions ... returning only one solution&quot;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">setIntParam</span><span class="p">(</span><span class="s2">&quot;limits/solutions&quot;</span><span class="p">,</span> <span class="n">solution_number</span><span class="p">)</span>
+        <span class="c1"># Solve the model</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
+        <span class="n">sol_count</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getNSols</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">_scip_error_types</span><span class="p">()</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] SCIP solver error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> ... skipping test&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="c1"># Return a list of solutions</span>
+    <span class="k">if</span> <span class="n">sol_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Found no solution from SCIP.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getBestSol</span><span class="p">()</span>
+        <span class="n">sol_dic</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">getSolVal</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">getVars</span><span class="p">()}</span>
+        <span class="n">sol_dic</span><span class="p">[</span><span class="s2">&quot;obj_fun_value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getSolObjVal</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Found 1 solution from SCIP.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">sol_dic</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="solve_sat">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_sat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_sat</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Solve a SAT problem (DIMACS CNF ``filename``).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename (str): Path to the CNF file.</span>
+<span class="sd">        variable_map (dict): Mapping of variable names to their DIMACS integer ids.</span>
+<span class="sd">        config_solver (dict):</span>
+<span class="sd">            - solver: solver name (e.g. &quot;DEFAULT&quot;, &quot;ORTools&quot;, &quot;Cadical103&quot;,</span>
+<span class="sd">                or an external binary: &quot;PRS&quot;, &quot;CaDiCaL&quot;, &quot;CryptoMiniSat&quot;, &quot;Kissat&quot;).</span>
+<span class="sd">            - backend (optional): &quot;pysat&quot; or &quot;external&quot;; disambiguates solver names</span>
+<span class="sd">                shared by both backends (e.g. PySAT &quot;CryptoMinisat&quot; vs the external</span>
+<span class="sd">                &quot;CryptoMiniSat&quot; binary). See :func:`normalize_sat_solver_name`.</span>
+<span class="sd">            - solution_number: The number of solutions to find (default: 1).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Up to ``solution_number`` solutions, each a dict mapping variable names to 0/1;</span>
+<span class="sd">            an empty list if unsatisfiable. An unloadable backend raises an exception.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">config_solver</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">config_solver</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config_solver</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid config_solver: </span><span class="si">{</span><span class="n">config_solver</span><span class="si">}</span><span class="s2">. Expected a dictionary or None.&quot;</span><span class="p">)</span>
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">normalize_sat_solver_name</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">),</span>
+                                       <span class="n">backend</span><span class="o">=</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">))</span>
+    <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solver&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">solver</span>
+    <span class="k">if</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">solver</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVER_NAME_MAP</span><span class="p">:</span>
+        <span class="c1"># Record the resolved engine for ambiguous names, so downstream re-normalization</span>
+        <span class="c1"># (e.g. the version lookup below) does not re-print the disambiguation notice.</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;backend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;external&quot;</span> <span class="k">if</span> <span class="n">solver</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span> <span class="k">else</span> <span class="s2">&quot;pysat&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;solver_version&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="p">:</span>  <span class="c1"># resolve once (guard: setdefault would recompute every call)</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solver_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_sat_solver_version</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Solving SAT model with settings: </span><span class="si">{</span><span class="n">_printable_config</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">monitor</span> <span class="o">=</span> <span class="n">RuntimeResourceMonitor</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">monitor</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">solver</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">PYSAT_SOLVERS</span><span class="p">):</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="n">solve_sat_pysat</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;ORTools&quot;</span><span class="p">:</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="n">solve_sat_cpsat</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">solver</span> <span class="ow">in</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="p">:</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="n">solve_sat_external</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">solutions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Normalize a None to [] so callers always get a list (parity with solve_milp).</span>
+        <span class="k">return</span> <span class="n">solutions</span> <span class="k">if</span> <span class="n">solutions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;resource_usage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">time_start</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">config_solver</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;solving_time&quot;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>  <span class="c1"># per-call trace; total = sum(solving_time)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] solve #</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">config_solver</span><span class="p">[</span><span class="s1">&#39;solving_time&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">elapsed</span><span class="si">}</span><span class="s2"> s | cumulative solver time: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">config_solver</span><span class="p">[</span><span class="s1">&#39;solving_time&#39;</span><span class="p">]),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="solve_sat_pysat">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_sat_pysat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_sat_pysat</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solve a SAT model (DIMACS CNF ``filename``) with PySAT.</span>
+
+<span class="sd">    Shared arguments as in :func:`solve_sat`. Returns up to ``solution_number``</span>
+<span class="sd">    ``{variable_name: 0/1}`` solutions; raise if PySAT is unavailable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CNF</span><span class="p">,</span> <span class="n">Solver</span> <span class="o">=</span> <span class="n">_load_pysat</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">CNF</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">Solver</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;[ERROR] pysat can&#39;t be loaded. Install it: pip install python-sat&quot;</span><span class="p">)</span>
+
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">)</span>
+    <span class="n">solution_number</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solution_number&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">trail_var_nums</span> <span class="o">=</span> <span class="n">_resolve_block_projection</span><span class="p">(</span><span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="n">cnf</span> <span class="o">=</span> <span class="n">CNF</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">solver</span> <span class="o">==</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span>
+        <span class="n">pysat_solver</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pysat_solver</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">pysat_solver</span><span class="o">.</span><span class="n">append_formula</span><span class="p">(</span><span class="n">cnf</span><span class="o">.</span><span class="n">clauses</span><span class="p">)</span>
+
+        <span class="n">sol_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">solution_number</span> <span class="ow">and</span> <span class="n">pysat_solver</span><span class="o">.</span><span class="n">solve</span><span class="p">():</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pysat_solver</span><span class="o">.</span><span class="n">get_model</span><span class="p">())</span>
+            <span class="n">sol_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_solution_from_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">))</span>
+            <span class="n">block_clause</span> <span class="o">=</span> <span class="n">_projected_block_clause</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">trail_var_nums</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">block_clause</span><span class="p">:</span>
+                <span class="k">break</span>  <span class="c1"># nothing to block -&gt; the same solution would be re-found forever</span>
+            <span class="n">pysat_solver</span><span class="o">.</span><span class="n">add_clause</span><span class="p">(</span><span class="n">block_clause</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">pysat_solver</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> solution(s) from PySAT.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol_list</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_read_dimacs_clauses</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a DIMACS CNF file into a list of integer clauses (dropping the trailing 0).&quot;&quot;&quot;</span>
+    <span class="n">clauses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span> <span class="ow">or</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">literals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+            <span class="k">if</span> <span class="n">literals</span> <span class="ow">and</span> <span class="n">literals</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">literals</span> <span class="o">=</span> <span class="n">literals</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">literals</span><span class="p">:</span>
+                <span class="n">clauses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">literals</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clauses</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_resolve_block_projection</span><span class="p">(</span><span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the DIMACS ids the blocking clause is projected onto</span>
+<span class="sd">    (``config_solver[&quot;trail_var_names&quot;]``, or every named variable by default).</span>
+
+<span class="sd">    Without a projection every full model differs, so enumeration would return</span>
+<span class="sd">    trivially distinct assignments; projecting onto the trail variables</span>
+<span class="sd">    enumerates distinct trails.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">trail_var_names</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;trail_var_names&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">trail_var_names</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">variable_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">present</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">trail_var_names</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variable_map</span><span class="p">]</span>
+    <span class="n">dropped</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">trail_var_names</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">present</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dropped</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] </span><span class="si">{</span><span class="n">dropped</span><span class="si">}</span><span class="s2"> of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">trail_var_names</span><span class="p">)</span><span class="si">}</span><span class="s2"> trail_var_names are not in the model &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(unconstrained variables); dropping them from the block.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">present</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;None of the supplied trail_var_names exist in the model; &quot;</span>
+                         <span class="s2">&quot;cannot build a projected block clause.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">variable_map</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">present</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_solution_from_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map a set of signed DIMACS literals back to a ``{variable_name: 0/1}`` solution.&quot;&quot;&quot;</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">variable_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="p">:</span>
+            <span class="n">sol</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="o">-</span><span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="p">:</span>
+            <span class="n">sol</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">sol</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_projected_block_clause</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">trail_var_nums</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Negate the projected assignment; an empty clause means nothing to block (caller stops).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">model</span> <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="n">trail_var_nums</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="solve_sat_cpsat">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_sat_cpsat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_sat_cpsat</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solve a SAT model (DIMACS CNF ``filename``) with Google OR-Tools CP-SAT.</span>
+
+<span class="sd">    Shared arguments as in :func:`solve_sat`. Returns up to ``solution_number``</span>
+<span class="sd">    ``{variable_name: 0/1}`` solutions; raise if OR-Tools CP-SAT is unavailable.</span>
+<span class="sd">    Known difference: multi-solution enumeration is callback-based and does not</span>
+<span class="sd">    project blocking clauses onto ``trail_var_names`` (unlike the PySAT/external backends).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cp_model</span> <span class="o">=</span> <span class="n">_load_ortools_cpsat</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">cp_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;[ERROR] ortools can&#39;t be loaded. Install it: pip install ortools&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Creates the model</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">cp_model</span><span class="o">.</span><span class="n">CpModel</span><span class="p">()</span>
+
+    <span class="c1"># Creates the variables (the CNF is numeric, so index Boolean variables by DIMACS id).</span>
+    <span class="n">clauses</span> <span class="o">=</span> <span class="n">_read_dimacs_clauses</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">boolean_var_map</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="p">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">lit</span><span class="p">)</span> <span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">clauses</span> <span class="k">for</span> <span class="n">lit</span> <span class="ow">in</span> <span class="n">clause</span><span class="p">}</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">variable_map</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="n">boolean_var_map</span><span class="p">[</span><span class="n">var_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">new_bool_var</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x</span><span class="si">{</span><span class="n">var_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Add constraints</span>
+    <span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">clauses</span><span class="p">:</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">add_bool_or</span><span class="p">([</span><span class="n">boolean_var_map</span><span class="p">[</span><span class="o">-</span><span class="n">lit</span><span class="p">]</span><span class="o">.</span><span class="n">Not</span><span class="p">()</span> <span class="k">if</span> <span class="n">lit</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">boolean_var_map</span><span class="p">[</span><span class="n">lit</span><span class="p">]</span> <span class="k">for</span> <span class="n">lit</span> <span class="ow">in</span> <span class="n">clause</span><span class="p">])</span>
+
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">cp_model</span><span class="o">.</span><span class="n">CpSolver</span><span class="p">()</span>
+    <span class="n">solver</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">num_workers</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">config_solver</span> <span class="o">=</span> <span class="n">config_solver</span> <span class="ow">or</span> <span class="p">{}</span>
+    <span class="n">solution_number</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solution_number&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">sol_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">solution_number</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cp_model</span><span class="o">.</span><span class="n">OPTIMAL</span><span class="p">,</span> <span class="n">cp_model</span><span class="o">.</span><span class="n">FEASIBLE</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">variable_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">sol</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">boolean_var_map</span><span class="p">[</span><span class="n">var_id</span><span class="p">])</span>
+            <span class="n">sol_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> solution(s) from OR-Tools CP-SAT.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sol_list</span>
+
+    <span class="k">elif</span> <span class="n">solution_number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">class</span><span class="w"> </span><span class="nc">VarArraySolutionPrinter</span><span class="p">(</span><span class="n">cp_model</span><span class="o">.</span><span class="n">CpSolverSolutionCallback</span><span class="p">):</span>
+            <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">boolean_var_map</span><span class="p">,</span> <span class="n">solution_number</span><span class="p">):</span>
+                <span class="n">cp_model</span><span class="o">.</span><span class="n">CpSolverSolutionCallback</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">variable_map</span> <span class="o">=</span> <span class="n">variable_map</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">boolean_var_map</span> <span class="o">=</span> <span class="n">boolean_var_map</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">solution_number</span> <span class="o">=</span> <span class="n">solution_number</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">solutions</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">on_solution_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solutions</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solution_number</span><span class="p">:</span>
+                    <span class="k">return</span>
+                <span class="n">sol</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variable_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">sol</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boolean_var_map</span><span class="p">[</span><span class="n">var_id</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">solutions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+
+        <span class="n">solution_printer</span> <span class="o">=</span> <span class="n">VarArraySolutionPrinter</span><span class="p">(</span><span class="n">variable_map</span><span class="p">,</span> <span class="n">boolean_var_map</span><span class="p">,</span> <span class="n">solution_number</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">SearchForAllSolutions</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">solution_printer</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">solution_printer</span><span class="o">.</span><span class="n">solutions</span><span class="p">)</span><span class="si">}</span><span class="s2"> solution(s) from OR-Tools CP-SAT.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solution_printer</span><span class="o">.</span><span class="n">solutions</span>
+    <span class="k">return</span> <span class="n">sol_list</span></div>
+
+
+
+<div class="viewcode-block" id="solve_sat_external">
+<a class="viewcode-back" href="../../api/solving/solving.html#solving.solving.solve_sat_external">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_sat_external</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solve a SAT model (DIMACS CNF ``filename``) with an external binary registered in EXTERNAL_SAT_SOLVERS.</span>
+
+<span class="sd">    Shared arguments as in :func:`solve_sat`. Extra ``config_solver`` keys:</span>
+<span class="sd">        - solver_bin: binary path/name overriding the registry default (optional).</span>
+<span class="sd">        - solver-specific keys read by the registry builder (e.g. ``threads`` for PRS).</span>
+
+<span class="sd">    Returns up to ``solution_number`` ``{variable_name: 0/1}`` solutions, or ``None``</span>
+<span class="sd">    if the solver binary is unavailable; the list is empty (or cut short) on UNSAT or timeout.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">solver</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">)</span>
+    <span class="n">build_args</span> <span class="o">=</span> <span class="n">EXTERNAL_SAT_SOLVERS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">build_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] &#39;</span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">&#39; is not a registered external solver ... skipping.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">timeout</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;time_limit&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">solution_number</span> <span class="o">=</span> <span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solution_number&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">trail_var_nums</span> <span class="o">=</span> <span class="n">_resolve_block_projection</span><span class="p">(</span><span class="n">variable_map</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="n">base_cmd</span> <span class="o">=</span> <span class="n">build_args</span><span class="p">(</span><span class="n">config_solver</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">config_solver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra_args&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+
+    <span class="c1"># Only enumeration needs a WORKING COPY of the CNF (the original file is untouched):</span>
+    <span class="c1"># split off the &#39;p cnf&#39; header so the clause count can be rewritten with the blocks.</span>
+    <span class="k">if</span> <span class="n">solution_number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">cnf_lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="n">header_idx</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cnf_lines</span><span class="p">)</span> <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;p cnf&quot;</span><span class="p">)),</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">header_idx</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> has no &#39;p cnf&#39; header ... skipping.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">nv</span><span class="p">,</span> <span class="n">nc</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cnf_lines</span><span class="p">[</span><span class="n">header_idx</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">cnf_lines</span><span class="p">[</span><span class="n">header_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>        <span class="c1"># the clause lines</span>
+
+    <span class="n">work_path</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>       <span class="c1"># accumulated blocking clauses (one per solution found)</span>
+    <span class="n">sol_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">solution_number</span><span class="p">:</span>
+            <span class="c1"># First run uses the original file; later runs use the working copy with blocks.</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">base_cmd</span> <span class="o">+</span> <span class="p">[</span><span class="n">filename</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">blocks</span> <span class="k">else</span> <span class="n">work_path</span><span class="p">]</span>
+
+            <span class="c1"># A timeout stops enumeration; already-found solutions (if any) are still</span>
+            <span class="c1"># returned. A missing binary means the backend is unavailable -&gt; None</span>
+            <span class="c1"># (it can only happen on the first call, before any solution is found).</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">TimeoutExpired</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> timed out after </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2">s ... stopping enumeration.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> binary not found at &#39;</span><span class="si">{</span><span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; ... skipping.&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">None</span>
+
+            <span class="c1"># Parse the standard DIMACS competition output (s-line + v model lines).</span>
+            <span class="n">status</span><span class="p">,</span> <span class="n">literals</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;s &quot;</span><span class="p">):</span>
+                    <span class="n">status</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;v &quot;</span><span class="p">):</span>
+                    <span class="n">literals</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">tok</span><span class="p">)</span> <span class="k">for</span> <span class="n">tok</span> <span class="ow">in</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+            <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">&quot;SATISFIABLE&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] UNSAT reached.&quot;</span> <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;UNSATISFIABLE&quot;</span>
+                      <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;[INFO] </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> returned status &#39;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&#39; ... stopping.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+
+            <span class="c1"># Set of signed literals (drop the terminating 0). A SATISFIABLE status with no</span>
+            <span class="c1"># model means the solver did not print its assignment -&gt; guard against a silent</span>
+            <span class="c1"># empty solution rather than returning garbage.</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lit</span> <span class="k">for</span> <span class="n">lit</span> <span class="ow">in</span> <span class="n">literals</span> <span class="k">if</span> <span class="n">lit</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> reported SATISFIABLE but emitted no model (v-lines); &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;ensure it is invoked to print the assignment ... stopping.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+
+            <span class="n">sol_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_solution_from_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">variable_map</span><span class="p">))</span>
+
+            <span class="c1"># Block this (projected) assignment so the next run yields a different trail.</span>
+            <span class="n">block_clause</span> <span class="o">=</span> <span class="n">_projected_block_clause</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">trail_var_nums</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">block_clause</span><span class="p">:</span>
+                <span class="k">break</span>  <span class="c1"># nothing to block -&gt; the same solution would be re-found forever</span>
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">block_clause</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">solution_number</span><span class="p">:</span>  <span class="c1"># rebuild the working copy with the blocks</span>
+                <span class="k">if</span> <span class="n">work_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">fd</span><span class="p">,</span> <span class="n">work_path</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkstemp</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;ext_sat_&quot;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s2">&quot;.cnf&quot;</span><span class="p">,</span>
+                                                     <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+                    <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p cnf </span><span class="si">{</span><span class="n">nv</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">nc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">bc</span> <span class="ow">in</span> <span class="n">blocks</span><span class="p">:</span>
+                        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bc</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; 0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">work_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">work_path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">work_path</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sol_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> solution(s) from </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol_list</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+operators
+=========
+
+.. automodule:: operators.operators
+   :members:
+   :show-inheritance:

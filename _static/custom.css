@@ -1,0 +1,48 @@
+/* OCP brand colors. Scope to html[data-theme=...] to match (and override) the
+   pydata-sphinx-theme, which defines these variables under the same selectors. */
+html:not([data-theme]),
+html[data-theme="light"] {
+    --pst-color-primary: #1f5578;          /* academic deep blue: links, active nav */
+    --pst-color-secondary: #e08a2e;        /* warm accent: buttons, highlights */
+    --pst-color-primary-highlight: #143c56;
+}
+
+/* Dark mode: slightly lighter tints so text stays readable on dark backgrounds. */
+html[data-theme="dark"] {
+    --pst-color-primary: #6cb6e3;
+    --pst-color-secondary: #f0a94e;
+}
+
+/* Layout: give both sidebars the SAME fixed width. Percentages resolve against
+   different parents (primary -> .bd-container, secondary -> .bd-main), so use rem
+   to make the left and right columns equal on every page. */
+.bd-sidebar-primary {
+    width: 12rem;
+}
+.bd-sidebar-secondary {
+    width: 12rem;
+}
+.bd-main .bd-content .bd-article-container {
+    max-width: 75em;
+}
+
+/* API sidebar: make the expand/collapse chevron actually work. In this pydata
+   build the submodule <ul> is rendered as a sibling of the <details> toggle
+   (not inside it), so the native <details> open/close only flips the chevron and
+   never hides the list. Tie the list's visibility to the toggle state: hide the
+   <ul> whenever its <details> is collapsed. The initial open state is set by the
+   theme (only the current module is open), so this collapses everything except
+   the current module and lets clicking the chevron expand/collapse each one. */
+.bd-sidebar-primary li.toctree-l1:has(> details:not([open])) > ul {
+    display: none;
+}
+
+/* Feature cards on the landing page: subtle lift on hover. */
+.sd-card {
+    border-radius: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sd-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}

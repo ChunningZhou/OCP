@@ -1,0 +1,6 @@
+SHACAL2BooleanFunctions
+=======================
+
+.. automodule:: operators.SHACAL2BooleanFunctions
+   :members:
+   :show-inheritance:

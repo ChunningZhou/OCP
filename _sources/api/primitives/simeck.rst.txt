@@ -1,0 +1,6 @@
+simeck
+======
+
+.. automodule:: primitives.simeck
+   :members:
+   :show-inheritance:

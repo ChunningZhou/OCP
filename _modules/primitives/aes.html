@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>primitives.aes &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/primitives/aes';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">primitives.aes</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for primitives.aes</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;AES: the AES round permutation and the full AES block cipher (128-bit block; 128/192/256-bit key).&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">primitives.primitives</span><span class="w"> </span><span class="kn">import</span> <span class="n">Permutation</span><span class="p">,</span> <span class="n">Block_cipher</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.Sbox</span><span class="w"> </span><span class="kn">import</span> <span class="n">AES_Sbox</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.boolean_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">XOR</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">variables.variables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">var</span>
+
+
+<span class="c1"># The AES internal permutation</span>
+<div class="viewcode-block" id="AES_permutation">
+<a class="viewcode-back" href="../../api/primitives/aes.html#primitives.aes.AES_permutation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AES_permutation</span><span class="p">(</span><span class="n">Permutation</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the AES internal permutation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name of the permutation</span>
+<span class="sd">            version: Bit size of the permutation</span>
+<span class="sd">            s_input: Input state</span>
+<span class="sd">            s_output: Output state</span>
+<span class="sd">            nbr_rounds: Number of rounds</span>
+<span class="sd">            represent_mode: Integer specifying the mode of representation used for encoding the permutation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">nbr_rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="mi">10</span>
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] The represent_mode </span><span class="si">{</span><span class="n">represent_mode</span><span class="si">}</span><span class="s2"> is not supported for AES_permutation.&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="p">[</span><span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">])</span>
+        <span class="n">full_rounds</span> <span class="o">=</span> <span class="mi">10</span>
+
+        <span class="n">S</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+        <span class="n">constant_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_rounds_constant_table</span><span class="p">()</span>
+
+        <span class="c1"># create constraints</span>
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SboxLayer</span><span class="p">(</span><span class="s2">&quot;SB&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">AES_Sbox</span><span class="p">)</span> <span class="c1"># Sbox layer</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">PermutationLayer</span><span class="p">(</span><span class="s2">&quot;SR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span> <span class="c1"># Shiftrows layer</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">full_rounds</span><span class="p">:</span> <span class="n">S</span><span class="o">.</span><span class="n">MatrixLayer</span><span class="p">(</span><span class="s2">&quot;aes_matrix&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">]],</span> <span class="s2">&quot;0x1B&quot;</span><span class="p">)</span>  <span class="c1">#Mixcolumns layer</span>
+                <span class="k">else</span><span class="p">:</span> <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">AddConstantLayer</span><span class="p">(</span><span class="s2">&quot;AC&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;xor&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">*</span><span class="mi">16</span><span class="p">,</span> <span class="n">constant_table</span><span class="p">)</span>  <span class="c1"># Constant layer. The constants are derived from the Rcon table</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_rounds_constant_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># For the AES permutation we add an extra round-constant addition to enhance security.</span>
+        <span class="c1"># The round constants are taken from the Rcon table of the AES design document (FIPS-197).</span>
+        <span class="n">constant_table</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">nbr_rounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nbr_rounds</span>
+        <span class="n">Rcon</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x01000000</span><span class="p">,</span> <span class="mh">0x02000000</span><span class="p">,</span> <span class="mh">0x04000000</span><span class="p">,</span> <span class="mh">0x08000000</span><span class="p">,</span> <span class="mh">0x10000000</span><span class="p">,</span> <span class="mh">0x20000000</span><span class="p">,</span> <span class="mh">0x40000000</span><span class="p">,</span> <span class="mh">0x80000000</span><span class="p">,</span> <span class="mh">0x1B000000</span><span class="p">,</span> <span class="mh">0x36000000</span><span class="p">]</span>
+        <span class="c1"># If more than 10 rounds are needed, extend Rcon by GF(2^8) doubling (xtime) of the previous constant.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Rcon</span><span class="p">),</span> <span class="n">nbr_rounds</span><span class="p">):</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">24</span><span class="o">&amp;</span><span class="mh">0xff</span>
+            <span class="n">rc</span> <span class="o">=</span> <span class="p">((</span><span class="n">prev</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">^</span> <span class="mh">0x11B</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">prev</span> <span class="o">&amp;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="k">else</span> <span class="p">(</span><span class="n">prev</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">Rcon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rc</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">constant_table</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">24</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">16</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constant_table</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_test_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> <span class="c1"># test vectors</span>
+        <span class="k">if</span> <span class="n">rounds</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">IN</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">]</span>
+            <span class="n">OUT</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x97</span><span class="p">,</span> <span class="mh">0xaf</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x97</span><span class="p">,</span> <span class="mh">0xaf</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x97</span><span class="p">,</span> <span class="mh">0xaf</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x97</span><span class="p">,</span> <span class="mh">0xaf</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">IN</span><span class="p">],</span> <span class="n">OUT</span><span class="p">])</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">AES_PERMUTATION</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;in&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)],</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="n">my_permutation</span> <span class="o">=</span> <span class="n">AES_permutation</span><span class="p">(</span><span class="s2">&quot;AES_PERM&quot;</span><span class="p">,</span> <span class="n">my_input</span><span class="p">,</span> <span class="n">my_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="n">represent_mode</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">gen_test_vectors</span><span class="p">(</span><span class="n">rounds</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">my_permutation</span><span class="o">.</span><span class="n">post_initialization</span><span class="p">(</span><span class="n">copy_operator</span><span class="o">=</span><span class="n">copy_operator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_permutation</span>
+
+
+<span class="c1"># The AES block cipher</span>
+<div class="viewcode-block" id="AES_block_cipher">
+<a class="viewcode-back" href="../../api/primitives/aes.html#primitives.aes.AES_block_cipher">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AES_block_cipher</span><span class="p">(</span><span class="n">Block_cipher</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">p_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">c_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the AES block cipher.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Cipher name</span>
+<span class="sd">            version: (p_bitsize, k_bitsize), e.g., (128, 128)</span>
+<span class="sd">            p_input: Plaintext input</span>
+<span class="sd">            k_input: Key input</span>
+<span class="sd">            c_output: Ciphertext output</span>
+<span class="sd">            nbr_rounds: Number of rounds (optional)</span>
+<span class="sd">            represent_mode: Integer specifying the mode of representation used for encoding the cipher.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">p_bitsize</span><span class="p">,</span> <span class="n">k_bitsize</span> <span class="o">=</span> <span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">version</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">full_rounds</span> <span class="o">=</span> <span class="p">{</span><span class="mi">128</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">192</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">256</span><span class="p">:</span> <span class="mi">14</span><span class="p">}</span>   <span class="c1"># keyed on the key size; the block size is fixed</span>
+        <span class="k">if</span> <span class="n">p_bitsize</span> <span class="o">!=</span> <span class="mi">128</span> <span class="ow">or</span> <span class="n">k_bitsize</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_rounds</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for AES_block_cipher. Expected one of &quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">[[</span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">sorted</span><span class="p">(</span><span class="n">full_rounds</span><span class="p">)]</span><span class="si">}</span><span class="s2">: the block size is fixed to 128.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nbr_rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">nbr_rounds</span> <span class="o">=</span> <span class="n">full_rounds</span><span class="p">[</span><span class="n">k_bitsize</span><span class="p">]</span>
+        <span class="n">nbr_rounds</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] For </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, after </span><span class="si">{</span><span class="n">nbr_rounds</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> round transformations, there is still a final AddRoundKey layer. Hence, the internal modeling round number is set to </span><span class="si">{</span><span class="n">nbr_rounds</span><span class="si">}</span><span class="s2">. Please keep this in mind when interpreting subsequent relative files.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">128</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="n">k_bitsize</span> <span class="o">/</span> <span class="n">p_bitsize</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+                <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="n">k_perm</span> <span class="o">=</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+                <span class="n">full_rounds</span><span class="o">=</span><span class="mi">11</span>
+            <span class="k">elif</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">192</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="n">k_bitsize</span> <span class="o">/</span> <span class="n">p_bitsize</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+                <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="n">k_perm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mf">1.5</span><span class="p">),</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+                <span class="n">full_rounds</span><span class="o">=</span><span class="mi">13</span>
+            <span class="k">elif</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">256</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span><span class="p">),</span> <span class="p">(</span><span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="n">k_bitsize</span> <span class="o">/</span> <span class="n">p_bitsize</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+                <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="n">k_perm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">28</span><span class="p">]</span>
+                <span class="n">full_rounds</span><span class="o">=</span><span class="mi">15</span>
+            <span class="n">nk</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">k_bitsize</span><span class="o">/</span><span class="mi">32</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] The represent_mode </span><span class="si">{</span><span class="n">represent_mode</span><span class="si">}</span><span class="s2"> is not supported for AES_block_cipher.&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">p_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">c_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="p">[</span><span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span><span class="p">],</span> <span class="p">[</span><span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span><span class="p">],</span> <span class="p">[</span><span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span><span class="p">])</span>
+
+        <span class="n">S</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+        <span class="n">KS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">]</span>
+        <span class="n">SK</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;SUBKEYS&quot;</span><span class="p">]</span>
+
+        <span class="n">constant_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_rounds_constant_table</span><span class="p">()</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="n">matrix_index</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">]]</span>
+
+        <span class="c1"># create constraints</span>
+        <span class="k">if</span> <span class="n">represent_mode</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># subkeys extraction</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">128</span><span class="p">:</span> <span class="n">extracted_bits</span> <span class="o">=</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">192</span><span class="p">:</span> <span class="n">extracted_bits</span> <span class="o">=</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">(</span><span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">16</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span> <span class="o">+</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="nb">int</span><span class="p">((</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">8</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">256</span><span class="p">:</span> <span class="n">extracted_bits</span> <span class="o">=</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="nb">int</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">KS</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="nb">int</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)][</span><span class="mi">0</span><span class="p">][</span><span class="mi">16</span><span class="p">:</span><span class="mi">32</span><span class="p">]</span>
+                <span class="n">SK</span><span class="o">.</span><span class="n">ExtractionLayer</span><span class="p">(</span><span class="s2">&quot;SK_EX&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)],</span> <span class="n">extracted_bits</span><span class="p">)</span>
+
+            <span class="c1"># key schedule</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k_nbr_rounds</span><span class="p">):</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">PermutationLayer</span><span class="p">(</span><span class="s2">&quot;K_P&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k_perm</span><span class="p">)</span> <span class="c1"># Permutation layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">SboxLayer</span><span class="p">(</span><span class="s2">&quot;K_SB&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">AES_Sbox</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">([</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span> <span class="c1"># Sbox layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">AddConstantLayer</span><span class="p">(</span><span class="s2">&quot;K_C&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;xor&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="p">)]</span><span class="o">+</span><span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="n">constant_table</span><span class="p">)</span>  <span class="c1"># Constant layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">*</span><span class="n">nk</span><span class="o">+</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># XOR layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">16</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                <span class="k">if</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">192</span><span class="p">:</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">16</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">20</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">20</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">k_nbr_rounds</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">nbr_rounds</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)):</span>
+                            <span class="n">KS</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">8</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                            <span class="n">KS</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="o">-</span><span class="n">j</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+
+                <span class="k">elif</span> <span class="n">k_bitsize</span><span class="o">==</span><span class="mi">256</span><span class="p">:</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">PermutationLayer</span><span class="p">(</span><span class="s2">&quot;K_P&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">)]</span><span class="o">+</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">])</span> <span class="c1"># Permutation layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SboxLayer</span><span class="p">(</span><span class="s2">&quot;K_SB&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">AES_Sbox</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">([</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span> <span class="c1"># Sbox layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">20</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">20</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">28</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="n">KS</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;K_XOR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">28</span><span class="p">)],</span>  <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">32</span><span class="p">)])</span> <span class="c1"># XOR layer</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">k_nbr_rounds</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">nbr_rounds</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
+                            <span class="n">KS</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                            <span class="n">KS</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+
+            <span class="c1"># Internal permutation</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="p">):</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">AddRoundKeyLayer</span><span class="p">(</span><span class="s2">&quot;ARK&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="n">SK</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)])</span>  <span class="c1"># AddRoundKey layer</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">SboxLayer</span><span class="p">(</span><span class="s2">&quot;SB&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">AES_Sbox</span><span class="p">)</span> <span class="c1"># Sbox layer</span>
+                <span class="n">S</span><span class="o">.</span><span class="n">PermutationLayer</span><span class="p">(</span><span class="s2">&quot;SR&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span> <span class="c1"># Shiftrows layer</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="p">(</span><span class="n">nbr_rounds</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># the final round omits MixColumns. To analyze a reduced-round AES (keeping MixColumns in every round), replace nbr_rounds with full_rounds here so the omission only happens at the true last AES round.</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">MatrixLayer</span><span class="p">(</span><span class="s2">&quot;aes_matrix&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">matrix_index</span><span class="p">,</span> <span class="s2">&quot;0x1B&quot;</span><span class="p">)</span>  <span class="c1"># Mixcolumns layer</span>
+                <span class="k">else</span><span class="p">:</span> <span class="c1"># In the final round, MixColumn is omitted</span>
+                    <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Identity layer</span>
+            <span class="n">S</span><span class="o">.</span><span class="n">AddRoundKeyLayer</span><span class="p">(</span><span class="s2">&quot;ARK&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="n">SK</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)])</span>  <span class="c1"># AddRoundKey layer</span>
+            <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+            <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+            <span class="n">S</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>     <span class="c1"># Identity layer</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_rounds_constant_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">constant_table</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">Rcon</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x01000000</span><span class="p">,</span> <span class="mh">0x02000000</span><span class="p">,</span> <span class="mh">0x04000000</span><span class="p">,</span> <span class="mh">0x08000000</span><span class="p">,</span> <span class="mh">0x10000000</span><span class="p">,</span> <span class="mh">0x20000000</span><span class="p">,</span> <span class="mh">0x40000000</span><span class="p">,</span> <span class="mh">0x80000000</span><span class="p">,</span> <span class="mh">0x1B000000</span><span class="p">,</span> <span class="mh">0x36000000</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="p">):</span>
+            <span class="n">constant_table</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">24</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">16</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">,</span> <span class="n">Rcon</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">constant_table</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_test_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># test vectors</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="n">rounds</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span> <span class="c1"># https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf</span>
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x32</span><span class="p">,</span> <span class="mh">0x43</span><span class="p">,</span> <span class="mh">0xf6</span><span class="p">,</span> <span class="mh">0xa8</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x5a</span><span class="p">,</span> <span class="mh">0x30</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">,</span> <span class="mh">0x98</span><span class="p">,</span> <span class="mh">0xa2</span><span class="p">,</span> <span class="mh">0xe0</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">]</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x2b</span><span class="p">,</span> <span class="mh">0x7e</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0xae</span><span class="p">,</span> <span class="mh">0xd2</span><span class="p">,</span> <span class="mh">0xa6</span><span class="p">,</span> <span class="mh">0xab</span><span class="p">,</span> <span class="mh">0xf7</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0xcf</span><span class="p">,</span> <span class="mh">0x4f</span><span class="p">,</span> <span class="mh">0x3c</span><span class="p">]</span>
+            <span class="n">ciphertext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x39</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">,</span> <span class="mh">0x84</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mh">0xdc</span><span class="p">,</span> <span class="mh">0x9</span><span class="p">,</span> <span class="mh">0xfb</span><span class="p">,</span> <span class="mh">0xdc</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x85</span><span class="p">,</span> <span class="mh">0x97</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0x6a</span><span class="p">,</span> <span class="mh">0xb</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">key</span><span class="p">],</span> <span class="n">ciphertext</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">192</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="n">rounds</span> <span class="o">==</span> <span class="mi">12</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span> <span class="c1"># https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/AES_Core192.pdf</span>
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x6B</span><span class="p">,</span> <span class="mh">0xC1</span><span class="p">,</span> <span class="mh">0xBE</span><span class="p">,</span> <span class="mh">0xE2</span><span class="p">,</span> <span class="mh">0x2E</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="mh">0x9F</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span> <span class="mh">0xE9</span><span class="p">,</span> <span class="mh">0x3D</span><span class="p">,</span> <span class="mh">0x7E</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x93</span><span class="p">,</span> <span class="mh">0x17</span><span class="p">,</span> <span class="mh">0x2A</span><span class="p">]</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0xB0</span><span class="p">,</span> <span class="mh">0xF7</span><span class="p">,</span> <span class="mh">0xDA</span><span class="p">,</span> <span class="mh">0x0E</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x52</span><span class="p">,</span> <span class="mh">0xC8</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xF3</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0xE5</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0xF8</span><span class="p">,</span> <span class="mh">0xEA</span><span class="p">,</span> <span class="mh">0xD2</span><span class="p">,</span> <span class="mh">0x52</span><span class="p">,</span> <span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6B</span><span class="p">,</span> <span class="mh">0x7B</span><span class="p">]</span>
+            <span class="n">ciphertext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xbd</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x4f</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x6e</span><span class="p">,</span> <span class="mh">0x45</span><span class="p">,</span> <span class="mh">0xf2</span><span class="p">,</span> <span class="mh">0x5f</span><span class="p">,</span> <span class="mh">0xf7</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">,</span> <span class="mh">0xa2</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x57</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span> <span class="mh">0xa5</span><span class="p">,</span> <span class="mh">0xcc</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">key</span><span class="p">],</span> <span class="n">ciphertext</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="n">rounds</span> <span class="o">==</span> <span class="mi">14</span> <span class="ow">or</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span> <span class="c1"># https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/AES_Core256.pdf</span>
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x6B</span><span class="p">,</span> <span class="mh">0xC1</span><span class="p">,</span> <span class="mh">0xBE</span><span class="p">,</span> <span class="mh">0xE2</span><span class="p">,</span> <span class="mh">0x2E</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="mh">0x9F</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span> <span class="mh">0xE9</span><span class="p">,</span> <span class="mh">0x3D</span><span class="p">,</span> <span class="mh">0x7E</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x93</span><span class="p">,</span> <span class="mh">0x17</span><span class="p">,</span> <span class="mh">0x2A</span><span class="p">]</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x3D</span><span class="p">,</span> <span class="mh">0xEB</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0xCA</span><span class="p">,</span> <span class="mh">0x71</span><span class="p">,</span> <span class="mh">0xBE</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0xAE</span><span class="p">,</span> <span class="mh">0xF0</span><span class="p">,</span>  <span class="mh">0x85</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x81</span><span class="p">,</span> <span class="mh">0x1F</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">,</span> <span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x3B</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mh">0xD7</span><span class="p">,</span> <span class="mh">0x2D</span><span class="p">,</span> <span class="mh">0x98</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xA3</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0xDF</span><span class="p">,</span> <span class="mh">0xF4</span><span class="p">]</span>
+            <span class="n">ciphertext</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xf3</span><span class="p">,</span> <span class="mh">0xee</span><span class="p">,</span> <span class="mh">0xd1</span><span class="p">,</span> <span class="mh">0xbd</span><span class="p">,</span> <span class="mh">0xb5</span><span class="p">,</span> <span class="mh">0xd2</span><span class="p">,</span> <span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0x3c</span><span class="p">,</span> <span class="mh">0x6</span><span class="p">,</span> <span class="mh">0x4b</span><span class="p">,</span> <span class="mh">0x5a</span><span class="p">,</span> <span class="mh">0x7e</span><span class="p">,</span> <span class="mh">0x3d</span><span class="p">,</span> <span class="mh">0xb1</span><span class="p">,</span> <span class="mh">0x81</span><span class="p">,</span> <span class="mh">0xf8</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">key</span><span class="p">],</span> <span class="n">ciphertext</span><span class="p">])</span></div>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">AES_BLOCKCIPHER</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">],</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">my_plaintext</span><span class="p">,</span> <span class="n">my_key</span><span class="p">,</span> <span class="n">my_ciphertext</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;in&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)],</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="n">version</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">]))],</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="n">my_cipher</span> <span class="o">=</span> <span class="n">AES_block_cipher</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AES</span><span class="si">{</span><span class="n">version</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">my_plaintext</span><span class="p">,</span> <span class="n">my_key</span><span class="p">,</span> <span class="n">my_ciphertext</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="n">represent_mode</span><span class="p">)</span>
+    <span class="n">my_cipher</span><span class="o">.</span><span class="n">gen_test_vectors</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">my_cipher</span><span class="o">.</span><span class="n">post_initialization</span><span class="p">(</span><span class="n">copy_operator</span><span class="o">=</span><span class="n">copy_operator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_cipher</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

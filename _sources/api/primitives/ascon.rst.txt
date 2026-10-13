@@ -1,0 +1,6 @@
+ascon
+=====
+
+.. automodule:: primitives.ascon
+   :members:
+   :show-inheritance:

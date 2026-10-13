@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>primitives.primitives &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/primitives/primitives';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">primitives.primitives</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for primitives.primitives</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Base classes for cipher primitives.</span>
+
+<span class="sd">A Permutation / Block_cipher / Stream_cipher is a round- and layer-structured composition of</span>
+<span class="sd">variables and operators, from which OCP derives implementations, figures, and MILP/SAT models.&quot;&quot;&quot;</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">variables.variables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">var</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.matrix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">GF2Linear_Trans</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.boolean_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConstantXOR</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.modular_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConstantAdd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">round_nb</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">round_nb</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_require_count</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="n">noun</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">!=</span> <span class="n">expected</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">context</span><span class="si">}</span><span class="s2">: expected </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># ********************* LAYERED_FUNCTION ********************* #</span>
+<span class="c1"># Class that represents a layered function object, i.e. a collection of functions that will be updated through a certain number of rounds each composed of a certain number of layers</span>
+<span class="c1"># This object will contain the list of variables representing the functions at each stage of the computation</span>
+<span class="c1"># This object will contain the list of constraints linking the variables together</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Layered_Function</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>                      <span class="c1"># name of the function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>                    <span class="c1"># label for display when refering that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">=</span> <span class="n">nbr_rounds</span>          <span class="c1"># number of rounds in that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_layers</span> <span class="o">=</span> <span class="n">nbr_layers</span>          <span class="c1"># number of layers per round in that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_words</span> <span class="o">=</span> <span class="n">nbr_words</span>            <span class="c1"># number of words in that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_temp_words</span> <span class="o">=</span> <span class="n">nbr_temp_words</span>  <span class="c1"># number of temporary words in that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word_bitsize</span> <span class="o">=</span> <span class="n">word_bitsize</span>      <span class="c1"># number of bits per word in that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vars</span> <span class="o">=</span> <span class="p">[]</span>                        <span class="c1"># list of variables for that function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>                 <span class="c1"># list of constraints for that function</span>
+
+        <span class="c1"># list of variables for that function (indexed with vars[r][l][n] where r is the round number, l the layer number, n the word number)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vars</span> <span class="o">=</span> <span class="p">[[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+        <span class="c1"># list of constraints for that function (indexed with constraints[r][l][n] where r is the round number, l the layer number, n the constraint number)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span> <span class="o">=</span> <span class="p">[[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+        <span class="c1"># create variables</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">word_bitsize</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">generateID</span><span class="p">(</span><span class="s1">&#39;v&#39;</span> <span class="o">+</span> <span class="n">label</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_words</span> <span class="o">+</span> <span class="n">nbr_temp_words</span><span class="p">)]</span>
+
+        <span class="c1"># create initial constraints</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nbr_rounds</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">nbr_layers</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">Equal</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">nbr_layers</span><span class="p">][</span><span class="n">j</span><span class="p">]],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]],</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="s1">&#39;LINK_EQ_&#39;</span> <span class="o">+</span> <span class="n">label</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_words</span> <span class="o">+</span> <span class="n">nbr_temp_words</span><span class="p">)]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_total_words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbr_words</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbr_temp_words</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_add_equal_constraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">in_var</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_var</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">id_position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">in_var</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">out_var</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">in_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">position</span><span class="p">]</span>
+            <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">position</span><span class="p">]</span>
+        <span class="n">constraint_id</span> <span class="o">=</span> <span class="n">generateID</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;_EQ&quot;</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">position</span> <span class="k">if</span> <span class="n">id_position</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">id_position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">Equal</span><span class="p">([</span><span class="n">in_var</span><span class="p">],</span> <span class="p">[</span><span class="n">out_var</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">constraint_id</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_display</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">representation</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;Name: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; / nbr_words: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; / word_bitsize: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word_bitsize</span><span class="p">),</span>
+                <span class="s2">&quot;Vars: [&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">))])</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Constraints: [&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">))])</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">representation</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">,</span> <span class="n">output_func</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>   <span class="c1"># method that displays in details the function</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_display</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output_func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output_func</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of an Sbox, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the Sbox operator &quot;sbox_operator&quot;. Only the positions where mask=1 will have the Sbox applied, the rest being just identity</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">SboxLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">sbox_operator</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a layer &quot;name&quot; of an Sbox, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the Sbox operator &quot;sbox_operator&quot;.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            sbox_operator (callable): Operator to apply as the S-box.</span>
+<span class="sd">            mask (list, optional): List indicating which positions to apply the S-box (1) or identity (0).</span>
+<span class="sd">                - If mask is None, S-box is applied to all positions.</span>
+<span class="sd">                - If mask is provided, S-box is applied where mask[i] = 1, identity where mask[i] = 0.</span>
+<span class="sd">                Example: mask = [1, 0, 1], S-box is applied to positions 0 and 2, identity to position 1.</span>
+<span class="sd">            index (list of lists, optional): Index mapping that specifies how input and output variables are grouped for S-box application.</span>
+<span class="sd">                - If index is None, S-box is applied to each variable individually.</span>
+<span class="sd">                - If index is provided, S-box is applied according to the specified grouping in index. This allows flexible grouping of variables for S-box operations.</span>
+<span class="sd">                Example: index = [[0,1,2,3], [4,5,6,7]] apply S-box to variables at positions 0-3 and 4-7 respectively.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bitsize</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">n_words</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span><span class="o">/</span><span class="n">bitsize</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_words</span><span class="o">/</span><span class="n">bitsize</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="o">&lt;</span><span class="n">n_words</span><span class="p">:</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n_words</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_words</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">in_vars</span><span class="p">,</span> <span class="n">out_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sbox_operator</span><span class="p">(</span><span class="n">in_vars</span><span class="p">,</span> <span class="n">out_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bitsize</span><span class="p">):</span>
+                        <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">j</span><span class="o">*</span><span class="n">bitsize</span><span class="o">+</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">*</span><span class="n">bitsize</span><span class="o">+</span><span class="n">i</span><span class="p">]</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="o">*</span><span class="n">bitsize</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">,</span> <span class="n">id_position</span><span class="o">=</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_words</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">():</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+                <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sbox_operator</span><span class="p">([</span><span class="n">in_var</span><span class="p">],</span> <span class="p">[</span><span class="n">out_var</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a Permutation, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the permutation &quot;permutation&quot;.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">PermutationLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">permutation</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a layer &quot;name&quot; of a Permutation, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the permutation &quot;permutation&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            permutation (list): List defining the permutation. Each element at index j indicates the position from which the value should be taken for position j in the output.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">permutation</span><span class="p">)</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">():</span> <span class="n">permutation</span> <span class="o">=</span> <span class="n">permutation</span> <span class="o">+</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">permutation</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">())]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">permutation</span><span class="p">)):</span>
+            <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">permutation</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of Rotation, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;. Each rot is a list of rotation executions, each execution is composed of three elements plus an optional fourth: [direction, amount, index_in, (index_out)]. A rotation execution will take the word of the state located at position &quot;index_in&quot;, apply the rotation direction &quot;direction&quot; and amount &quot;amount&quot; and place it in state located at position &quot;index_out&quot; (if defined, &quot;index_in&quot; otherwise). The state words receiving no rotation are applied identity.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">RotationLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a layer &quot;name&quot; of Rotation, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            rot (list): A list of rotation executions, each execution is composed of three elements plus an optional fourth: [direction, amount, index_in, (index_out)]. A rotation execution will take the word of the function located at position &quot;index_in&quot;, apply the rotation direction &quot;direction&quot; and amount &quot;amount&quot; and place it in function located at position &quot;index_out&quot; (if defined, &quot;index_in&quot; otherwise). The function words receiving no rotation are applied identity.</span>
+<span class="sd">            Example: rot = [[&quot;l&quot;, 1, 2], [&quot;r&quot;, 1, 2, 0]] will apply a left rotation of 1 to the word at index 2 and place it back at index 2, and a right rotation of 1 to the word at index 2 and place it at index 0. The other words (1,3,4...) will be applied identity.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">rot</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span> <span class="n">rot</span> <span class="o">=</span> <span class="p">[</span><span class="n">rot</span><span class="p">]</span>  <span class="c1"># if only one rotation is given, transform it into a list of one rotation</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span> <span class="c1"># prepare a table to identify which output indexes are rotated values and which are not</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rot</span><span class="p">:</span>
+            <span class="n">index_in</span><span class="p">,</span> <span class="n">out_index</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">==</span><span class="mi">3</span> <span class="k">else</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">out_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">index_in</span><span class="p">,</span> <span class="n">out_index</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span> <span class="c1"># apply the rotations and the identity where no rotation is applied</span>
+            <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">Rot</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">3</span><span class="p">]]],</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">3</span><span class="p">])))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of Shift, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;. Each shift is a list of shift executions, each execution is composed of three elements plus an optional fourth: [direction, amount, index_in, (index_out)]. A shift execution will take the word of the state located at position &quot;index_in&quot;, apply the shift direction &quot;direction&quot; and amount &quot;amount&quot; and place it in state located at position &quot;index_out&quot; (if defined, &quot;index_in&quot; otherwise). The state words receiving no shift are applied identity. Unlike rotation, a shift is not bijective (bits shifted out are lost).</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ShiftLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a layer &quot;name&quot; of Shift, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            shift (list): A list of shift executions, each execution is composed of three elements plus an optional fourth: [direction, amount, index_in, (index_out)]. A shift execution will take the word of the function located at position &quot;index_in&quot;, apply the shift direction &quot;direction&quot; and amount &quot;amount&quot; and place it in function located at position &quot;index_out&quot; (if defined, &quot;index_in&quot; otherwise). The function words receiving no shift are applied identity. Unlike rotation, a shift is not bijective (bits shifted out are lost).</span>
+<span class="sd">            Example: shift = [[&quot;l&quot;, 1, 2], [&quot;r&quot;, 1, 2, 0]] will apply a left shift of 1 to the word at index 2 and place it back at index 2, and a right shift of 1 to the word at index 2 and place it at index 0. The other words (1,3,4...) will be applied identity.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">shift</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span> <span class="n">shift</span> <span class="o">=</span> <span class="p">[</span><span class="n">shift</span><span class="p">]</span>  <span class="c1"># if only one shift is given, transform it into a list of one shift</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">shift</span><span class="p">:</span>
+            <span class="n">index_in</span><span class="p">,</span> <span class="n">out_index</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">==</span><span class="mi">3</span> <span class="k">else</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">out_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">index_in</span><span class="p">,</span> <span class="n">out_index</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">Shift</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]]],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">3</span><span class="p">]]],</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">3</span><span class="p">])))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a simple identity at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">AddIdentityLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; that passes every word through unchanged.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a Constant addition, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the adding &quot;add_type&quot; and the constant value &quot;constant&quot;.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">AddConstantLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">add_type</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">constant_table</span><span class="p">,</span> <span class="n">modulo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; that adds a round constant to selected words.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            add_type (str): How to add, ``&#39;xor&#39;`` or ``&#39;modadd&#39;``. Anything else raises.</span>
+<span class="sd">            constant (list): One entry per word, in word order; ``None`` leaves that word</span>
+<span class="sd">                unchanged (identity), anything else marks it as receiving a constant. Shorter than</span>
+<span class="sd">                the state is padded with ``None``. Only the positions matter, not the values --</span>
+<span class="sd">                the values come from ``constant_table``.</span>
+<span class="sd">            constant_table (list): The round constants, indexed ``[round][i]`` where ``i`` counts</span>
+<span class="sd">                the non-``None`` positions of ``constant`` from 0. Usually from</span>
+<span class="sd">                ``gen_rounds_constant_table()``; it must have a row per round the layer runs in.</span>
+<span class="sd">            modulo (int, optional): Modulus for ``&#39;modadd&#39;``; defaults to 2^bitsize.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            ``constant = [1, None, 1, None]`` with ``add_type=&#39;xor&#39;`` XORs ``constant_table[r][0]``</span>
+<span class="sd">            into word 0 and ``constant_table[r][1]`` into word 2, leaving words 1 and 3 alone.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">constant</span><span class="p">)</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">():</span> <span class="n">constant</span> <span class="o">=</span> <span class="n">constant</span> <span class="o">+</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">constant</span><span class="p">))</span>
+        <span class="n">table_name</span> <span class="o">=</span> <span class="s2">&quot;RC_&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ch</span> <span class="k">if</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;_&quot;</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">constant</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">add_type</span> <span class="o">==</span> <span class="s1">&#39;xor&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ConstantXOR</span><span class="p">([</span><span class="n">in_var</span><span class="p">],</span> <span class="p">[</span><span class="n">out_var</span><span class="p">],</span> <span class="n">constant_table</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),</span> <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">))</span>
+                <span class="k">elif</span> <span class="n">add_type</span> <span class="o">==</span> <span class="s1">&#39;modadd&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ConstantAdd</span><span class="p">([</span><span class="n">in_var</span><span class="p">],</span> <span class="p">[</span><span class="n">out_var</span><span class="p">],</span> <span class="n">constant_table</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">modulo</span><span class="o">=</span><span class="n">modulo</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),</span> <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AddConstantLayer: unknown add_type &#39;</span><span class="si">{</span><span class="n">add_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a single operator &quot;my_operator&quot; with input indexes &quot;index_in&quot; and output indexes &quot;index_out&quot;, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;. The other output indexes are just being applied identity</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">SingleOperatorLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">my_operator</span><span class="p">,</span> <span class="n">index_in</span><span class="p">,</span> <span class="n">index_out</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; of one operator at selected positions, identity elsewhere.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            my_operator (callable): The operator class, called as</span>
+<span class="sd">                ``my_operator(in_vars, out_vars, ID=...)``. Any ``operators/`` class whose</span>
+<span class="sd">                constructor takes that shape, e.g. ``XOR``, ``AND``, ``Rot``.</span>
+<span class="sd">            index_in (list): Per execution, the input word indexes that operator consumes.</span>
+<span class="sd">            index_out (list): Per execution, where its output goes. Either a list of ints (one</span>
+<span class="sd">                output word each, paired with ``index_in`` by position) or a list of lists (several</span>
+<span class="sd">                output words each). Words absent from ``index_out`` are applied identity.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            ``index_in = [[0, 1]], index_out = [2]`` with ``my_operator=XOR`` writes</span>
+<span class="sd">            ``word2 = word0 ^ word1`` and passes the other words through.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">flat_index_out</span> <span class="o">=</span> <span class="p">[</span><span class="n">idx</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">index_out</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sub</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">sub</span><span class="p">])]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">flat_index_out</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_out</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="n">in_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">index_in</span><span class="p">[</span><span class="n">index_out</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">j</span><span class="p">)]]</span>
+                    <span class="n">out_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_operator</span><span class="p">(</span><span class="n">in_vars</span><span class="p">,</span> <span class="n">out_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_out</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">sub_index</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">index_out</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">sub_index</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                            <span class="n">in_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">index_in</span><span class="p">[</span><span class="nb">id</span><span class="p">]]</span>
+                            <span class="n">out_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sub_index</span><span class="p">]</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_operator</span><span class="p">(</span><span class="n">in_vars</span><span class="p">,</span> <span class="n">out_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a GF2Linear_Trans at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">GF2Linear_TransLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">index_in</span><span class="p">,</span> <span class="n">index_out</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; of a GF(2) linear transform at selected positions.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            index_in (list): One input word index per execution.</span>
+<span class="sd">            index_out (list): One output word index per execution, paired with ``index_in`` by</span>
+<span class="sd">                position. Words absent here are applied identity.</span>
+<span class="sd">            mat (list): The bit-level matrix over GF(2), as rows of 0/1, applied within one word.</span>
+<span class="sd">            constants (list, optional): A constant added after the transform (affine case).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">flat_index_out</span> <span class="o">=</span> <span class="p">[</span><span class="n">idx</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">index_out</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sub</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">sub</span><span class="p">])]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">flat_index_out</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">in_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">index_in</span><span class="p">[</span><span class="n">index_out</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">j</span><span class="p">)]]]</span>
+                <span class="n">out_vars</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">GF2Linear_Trans</span><span class="p">(</span><span class="n">in_vars</span><span class="p">,</span> <span class="n">out_vars</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),</span> <span class="n">constants</span><span class="o">=</span><span class="n">constants</span><span class="p">))</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of a Matrix &quot;mat&quot; (only square matrix), at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, operating in the field GF(2^&quot;bitsize&quot;) with polynomial &quot;polynomial&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">MatrixLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">indexes_list</span><span class="p">,</span> <span class="n">polynomial</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; of a square matrix to one or more groups of words.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            mat (list): A **square** matrix as rows; a non-square shape raises.</span>
+<span class="sd">            indexes_list (list): One group of word indexes per application, each as long as</span>
+<span class="sd">                ``mat``; a wrong length raises. Words absent from every group are applied identity.</span>
+<span class="sd">            polynomial (int, optional): The reduction polynomial when the entries live in</span>
+<span class="sd">                GF(2^bitsize), e.g. AES MixColumns. ``None`` means the entries act over GF(2).</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            AES MixColumns is ``mat`` 4x4 with ``indexes_list`` the four columns of the state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">m</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;MatrixLayer: matrix shape is not square&quot;</span><span class="p">)</span>
+        <span class="n">flat_indexes</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="n">indexes_list</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sublist</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">flat_indexes</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">indexes</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">indexes_list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indexes</span><span class="p">)</span> <span class="o">!=</span> <span class="n">m</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;MatrixLayer: input vector does not match matrix size&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Matrix</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">indexes</span><span class="p">],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">indexes</span><span class="p">],</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">mat</span><span class="p">,</span> <span class="n">polynomial</span> <span class="o">=</span> <span class="n">polynomial</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="p">)</span>
+
+    <span class="c1"># extract a subkey from the external variable, determined by &quot;extraction_mask&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ExtractionLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">extraction_indexes</span><span class="p">,</span> <span class="n">external_variable</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; that copies selected words of an external variable into the state.</span>
+
+<span class="sd">        Used by a key schedule to take a subkey out of the key variable: the state word ``j``</span>
+<span class="sd">        receives ``external_variable[extraction_indexes[j]]``.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            extraction_indexes (list): For each state word in order, which index of</span>
+<span class="sd">                ``external_variable`` it takes. Its length sets how many words are written.</span>
+<span class="sd">            external_variable (list): The variables to read from, e.g. the key input.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">indexes</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">extraction_indexes</span><span class="p">):</span>
+            <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="n">external_variable</span><span class="p">[</span><span class="n">indexes</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">)</span>
+
+    <span class="c1"># apply a layer &quot;name&quot; of an AddRoundKeyLayer addition, at the round &quot;crt_round&quot;, at the layer &quot;crt_layer&quot;, with the adding operator &quot;my_operator&quot;. Only the positions where mask=1 will have the AddRoundKey applied, the rest being just identity</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">AddRoundKeyLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">my_operator</span><span class="p">,</span> <span class="n">sk_function</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a layer &quot;name&quot; that combines the state with a subkey, identity where masked off.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the layer.</span>
+<span class="sd">            crt_round (int): Round number.</span>
+<span class="sd">            crt_layer (int): Layer number.</span>
+<span class="sd">            my_operator (callable): The combining operator, called as</span>
+<span class="sd">                ``my_operator([state_var, subkey_var], [out_var], ID=...)``, e.g. ``XOR``.</span>
+<span class="sd">            sk_function (Layered_Function): The subkey function; its last layer of round</span>
+<span class="sd">                ``crt_round`` supplies the subkey words, consumed in order.</span>
+<span class="sd">            mask (list, optional): One 0/1 per state word; 1 receives a subkey word, 0 is</span>
+<span class="sd">                identity. Defaults to all ones over ``sk_function.nbr_words``, and is padded with</span>
+<span class="sd">                zeros if shorter than the state. ``sum(mask)`` must equal</span>
+<span class="sd">                ``sk_function.nbr_words`` or it raises.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sk_function</span><span class="o">.</span><span class="n">nbr_words</span>
+        <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="o">!=</span> <span class="n">sk_function</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;AddRoundKeyLayer: subkey size does not match the mask&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">():</span> <span class="n">mask</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span>
+        <span class="n">cpt</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total_words</span><span class="p">()):</span>
+            <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">sk_var</span> <span class="o">=</span> <span class="n">sk_function</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">cpt</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">crt_round</span><span class="p">][</span><span class="n">crt_layer</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_operator</span><span class="p">([</span><span class="n">in_var</span><span class="p">,</span> <span class="n">sk_var</span><span class="p">],</span> <span class="p">[</span><span class="n">out_var</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">crt_round</span><span class="p">,</span><span class="n">crt_layer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span>
+                <span class="n">cpt</span> <span class="o">=</span> <span class="n">cpt</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_equal_constraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">crt_round</span><span class="p">,</span> <span class="n">crt_layer</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_var</span><span class="p">,</span> <span class="n">out_var</span><span class="p">)</span>
+
+
+<span class="c1"># ********************* PRIMITIVES ********************* #</span>
+<span class="c1"># Class that represents a primitive object, i.e. a cryptographic algorithm such as a permutation, a block cipher etc.</span>
+<span class="c1"># This object makes the link between what is a specific cryptographic primitive and various &quot;functions&quot;, &quot;variables&quot;, &quot;operators&quot;</span>
+<span class="c1"># These objects are the ones to be instantiated by the user for analysing a cipher</span>
+
+<div class="viewcode-block" id="Primitive">
+<a class="viewcode-back" href="../../api/primitives/primitives.html#primitives.primitives.Primitive">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Primitive</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>                <span class="c1"># name of the primitive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span>            <span class="c1"># list of the inputs of the primitive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span>          <span class="c1"># list of the outputs of the primitive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions</span> <span class="o">=</span> <span class="p">[]</span>             <span class="c1"># list of functions used by the primitive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span> <span class="o">=</span> <span class="p">[]</span>    <span class="c1"># constraints linking the primitive inputs to the functions input variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span> <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># constraints linking the primitive outputs to the functions output variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_vectors</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vars_dictionary</span> <span class="o">=</span> <span class="p">{}</span>             <span class="c1"># dictionary of the variables of all the functions in that primitive, indexed by their ID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints_dictionary</span> <span class="o">=</span> <span class="p">{}</span>      <span class="c1"># dictionary of the constraints of all the functions in that primitive, indexed by their ID</span>
+
+    <span class="c1"># method that performs various operations after the primitive has been fully defined</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">post_initialization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clean_graph</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">copy_operator</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_copy_operators</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">build_dictionaries</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_append_input_links</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">external_vars</span><span class="p">,</span> <span class="n">function_vars</span><span class="p">,</span> <span class="n">id_prefix</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">external_var</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">external_vars</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">Equal</span><span class="p">([</span><span class="n">external_var</span><span class="p">],</span> <span class="p">[</span><span class="n">function_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">ID</span><span class="o">=</span><span class="n">id_prefix</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_append_output_links</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function_vars</span><span class="p">,</span> <span class="n">external_vars</span><span class="p">,</span> <span class="n">id_prefix</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">external_var</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">external_vars</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">Equal</span><span class="p">([</span><span class="n">function_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="p">[</span><span class="n">external_var</span><span class="p">],</span> <span class="n">ID</span><span class="o">=</span><span class="n">id_prefix</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+
+    <span class="c1"># method that builds the variables and constraints dictionaries</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_dictionaries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vars_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>       <span class="c1"># for all functions of the primitive</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>       <span class="c1"># for all the rounds</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># for all the layers</span>
+                    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">]:</span>      <span class="c1"># for all variables in that function</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">vars_dictionary</span><span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                        <span class="k">for</span> <span class="n">v_copy</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">copied_vars</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">vars_dictionary</span><span class="p">[</span><span class="n">v_copy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_copy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">])):</span>   <span class="c1"># for all constraints in that function</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">constraints_dictionary</span><span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constraints_dictionary</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constraints_dictionary</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+    <span class="c1"># method that cleans the graph from dead-end variables linked only to Equal operators</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clean_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">changed</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">while</span> <span class="n">changed</span><span class="p">:</span>
+            <span class="n">changed</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>       <span class="c1"># for all functions of the primitive</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>       <span class="c1"># for all the rounds</span>
+                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># for all the layers</span>
+                        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">]:</span>      <span class="c1"># for all variables in that function</span>
+                            <span class="c1"># find dead-end variables in the graph</span>
+                            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">v</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;Equal&quot;</span><span class="p">:</span>
+                                <span class="n">v_temp</span><span class="o">=</span><span class="n">v</span>
+                                <span class="c1"># follow the chain and remove the corresponding Equal operators</span>
+                                <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">v_temp</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">v_temp</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;Equal&quot;</span><span class="p">:</span>
+                                    <span class="p">(</span><span class="n">new_v</span><span class="p">,</span> <span class="n">new_op</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="o">=</span> <span class="n">v_temp</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                                    <span class="n">v_temp</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                                    <span class="n">index</span> <span class="o">=</span> <span class="n">new_v</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">v_temp</span><span class="p">,</span><span class="n">new_op</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span> <span class="k">if</span> <span class="n">direction</span><span class="o">==</span><span class="s2">&quot;out&quot;</span> <span class="k">else</span> <span class="s2">&quot;out&quot;</span><span class="p">))</span>
+                                    <span class="n">new_v</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                                    <span class="n">new_op</span><span class="o">.</span><span class="n">is_ghost</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># mark the Equal operator as ghost</span>
+                                    <span class="n">v_temp</span> <span class="o">=</span> <span class="n">new_v</span>
+                                    <span class="n">changed</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># remove ghost operators from the constraints lists</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>       <span class="c1"># for all functions of the primitive</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>       <span class="c1"># for all the rounds</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># for all the layers</span>
+                    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">])):</span>
+                        <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">is_ghost</span><span class="p">:</span>
+                            <span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NoneOperator</span><span class="p">(</span><span class="n">input_vars</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">generateID</span><span class="p">(</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># replace the ghost operator by a NoneOperator</span>
+
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">is_ghost</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NoneOperator</span><span class="p">(</span><span class="n">input_vars</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="s2">&quot;NONE_INPUT_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># replace the ghost operator by a NoneOperator</span>
+
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">is_ghost</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NoneOperator</span><span class="p">(</span><span class="n">input_vars</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="s2">&quot;NONE_OUTPUT_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># replace the ghost operator by a NoneOperator</span>
+
+    <span class="c1"># method that add the copy operators where needed in the graph (if function_list is specified, only add copy operators in these functions)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_copy_operators</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">functions_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">functions_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">functions_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>       <span class="c1"># for all the rounds</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># for all the layers</span>
+                    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">]:</span>      <span class="c1"># for all variables in that function</span>
+                        <span class="c1"># find variables that need copy operators</span>
+                        <span class="n">connected_vars_with_unique_operator</span> <span class="o">=</span> <span class="p">[]</span>
+                        <span class="n">added_operators</span> <span class="o">=</span> <span class="p">[]</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="n">vv</span><span class="p">,</span><span class="n">opop</span><span class="p">,</span><span class="n">direction</span><span class="p">)</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">connected_vars</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">direction</span><span class="o">==</span><span class="s1">&#39;in&#39;</span><span class="p">:</span>  <span class="c1"># we only consider the operators where v is an input variable</span>
+                                <span class="k">if</span> <span class="n">opop</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">added_operators</span><span class="p">:</span>
+                                    <span class="n">added_operators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">opop</span><span class="p">)</span>
+                                    <span class="n">connected_vars_with_unique_operator</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">vv</span><span class="p">,</span><span class="n">opop</span><span class="p">,</span><span class="n">direction</span><span class="p">))</span>
+
+                        <span class="c1"># if more than one unique operator is connected to that variable (as an input), then we need copy operators</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">connected_vars_with_unique_operator</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+
+                            <span class="c1">#if there is a direct Equal operator in connected_vars_with_unique_operator, put it on first position</span>
+                            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">connected_vars_with_unique_operator</span><span class="p">)):</span>
+                                <span class="k">if</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;Equal&quot;</span><span class="p">:</span>
+                                    <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                                    <span class="k">break</span>
+
+                            <span class="c1"># create new variables and the copy operator</span>
+                            <span class="n">v_new</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">bitsize</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="n">v</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s2">&quot;_COPY_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">copyorigin</span><span class="o">=</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">connected_vars_with_unique_operator</span><span class="p">))]</span>
+                            <span class="n">op_new</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">CopyOperator</span><span class="p">([</span><span class="n">v</span><span class="p">],</span> <span class="n">v_new</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span> <span class="s2">&quot;COPYOPERATOR_&quot;</span> <span class="o">+</span> <span class="n">v</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+                            <span class="n">f</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op_new</span><span class="p">)</span>      <span class="c1"># save this new operator in the operator list</span>
+                            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">connected_vars_with_unique_operator</span><span class="p">)):</span>
+                                <span class="n">v</span><span class="o">.</span><span class="n">copied_vars</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_new</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">op_new</span><span class="p">))</span>     <span class="c1"># save these new variables and operators</span>
+
+                            <span class="c1"># update the graph connections</span>
+                            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">connected_vars_with_unique_operator</span><span class="p">)):</span>
+                                <span class="p">(</span><span class="n">vv</span><span class="p">,</span> <span class="n">opop</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="o">=</span> <span class="n">connected_vars_with_unique_operator</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                                <span class="k">for</span> <span class="n">v_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">opop</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)):</span> <span class="c1"># update the input of the operator with the new variable</span>
+                                    <span class="k">if</span> <span class="n">opop</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="n">v_index</span><span class="p">]</span><span class="o">==</span><span class="n">v</span><span class="p">:</span> <span class="n">opop</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="n">v_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_new</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+                                <span class="c1">## remove v from connected vars in vv</span>
+                                <span class="n">index</span> <span class="o">=</span> <span class="n">vv</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">v</span><span class="p">,</span> <span class="n">opop</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">))</span>
+                                <span class="n">vv</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+                                <span class="c1">## remove vv from connected vars in v</span>
+                                <span class="n">index</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">vv</span><span class="p">,</span> <span class="n">opop</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">))</span>
+                                <span class="n">v</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+                                <span class="c1">## add v_new[i] in connected vars of vv</span>
+                                <span class="n">vv</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_new</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">opop</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">))</span>
+
+                                <span class="c1">## add vv in connected vars of v_new[i]</span>
+                                <span class="n">v_new</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">connected_vars</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">vv</span><span class="p">,</span> <span class="n">opop</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">))</span></div>
+
+
+
+
+<span class="c1"># ********************************************** FUNCTIONS **********************************************</span>
+<span class="c1"># Subclass that represents a function object</span>
+<span class="c1"># A function is composed of a single internal function</span>
+
+<div class="viewcode-block" id="Function">
+<a class="viewcode-back" href="../../api/primitives/primitives.html#primitives.primitives.Function">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Function</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;IN_&quot;</span><span class="p">:</span><span class="n">s_input</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;OUT_&quot;</span><span class="p">:</span><span class="n">s_output</span><span class="p">})</span>
+        <span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words_input</span><span class="p">,</span> <span class="n">nbr_words_output</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">=</span> <span class="n">nbr_rounds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">nbr_layers</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">nbr_words_input</span><span class="p">,</span> <span class="n">nbr_words_output</span><span class="p">),</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_implementation_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_display_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">]</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">nbr_words_input</span><span class="p">,</span> <span class="s2">&quot;input word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">s_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;IN_LINK_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_words_output</span><span class="p">,</span> <span class="s2">&quot;output word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_output_links</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;FUNCTION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">nbr_rounds</span><span class="p">][</span><span class="n">nbr_layers</span><span class="p">],</span> <span class="n">s_output</span><span class="p">,</span> <span class="s2">&quot;OUT_LINK_EQ_&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># ********************************************** PERMUTATIONS **********************************************</span>
+<span class="c1"># Subclass that represents a permutation object</span>
+<span class="c1"># A permutation is composed of a single function</span>
+<div class="viewcode-block" id="Permutation">
+<a class="viewcode-back" href="../../api/primitives/primitives.html#primitives.primitives.Permutation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Permutation</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;IN_&quot;</span><span class="p">:</span><span class="n">s_input</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;OUT_&quot;</span><span class="p">:</span><span class="n">s_output</span><span class="p">})</span>
+        <span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">=</span> <span class="n">nbr_rounds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">nbr_layers</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="n">nbr_temp_words</span><span class="p">,</span> <span class="n">word_bitsize</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_implementation_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_display_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Permutation&quot;</span><span class="p">,</span> <span class="n">s_input</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="s2">&quot;input word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">s_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;IN_LINK_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Permutation&quot;</span><span class="p">,</span> <span class="n">s_output</span><span class="p">,</span> <span class="n">nbr_words</span><span class="p">,</span> <span class="s2">&quot;output word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_output_links</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">nbr_rounds</span><span class="p">][</span><span class="n">nbr_layers</span><span class="p">],</span> <span class="n">s_output</span><span class="p">,</span> <span class="s2">&quot;OUT_LINK_EQ_&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># ********************************************** BLOCK CIPHERS **********************************************</span>
+<span class="c1"># Subclass that represents a block cipher object</span>
+<span class="c1"># A block cipher is composed of three functions: a permutation (to update the cipher function), a key schedule (to update the key schedule), and a round-key computation (to compute the round key from the key schedule)</span>
+
+<div class="viewcode-block" id="Block_cipher">
+<a class="viewcode-back" href="../../api/primitives/primitives.html#primitives.primitives.Block_cipher">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Block_cipher</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">p_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">c_output</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="n">s_config</span><span class="p">,</span> <span class="n">k_config</span><span class="p">,</span> <span class="n">sk_config</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;plaintext&quot;</span><span class="p">:</span><span class="n">p_input</span><span class="p">,</span> <span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="n">k_input</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;ciphertext&quot;</span><span class="p">:</span><span class="n">c_output</span><span class="p">})</span>
+        <span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span> <span class="o">=</span> <span class="n">s_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">s_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">s_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span> <span class="o">=</span> <span class="n">k_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">k_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">k_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">k_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span> <span class="o">=</span> <span class="n">sk_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sk_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sk_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">sk_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">=</span> <span class="n">nbr_rounds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">s_nbr_layers</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="n">s_nbr_temp_words</span><span class="p">,</span> <span class="n">s_word_bitsize</span><span class="p">),</span> <span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">k_nbr_rounds</span><span class="p">,</span> <span class="n">k_nbr_layers</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="n">k_nbr_temp_words</span><span class="p">,</span> <span class="n">k_word_bitsize</span><span class="p">),</span> <span class="s2">&quot;SUBKEYS&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;SUBKEYS&quot;</span><span class="p">,</span> <span class="s1">&#39;sk&#39;</span><span class="p">,</span> <span class="n">nbr_rounds</span><span class="p">,</span> <span class="n">sk_nbr_layers</span><span class="p">,</span> <span class="n">sk_nbr_words</span><span class="p">,</span> <span class="n">sk_nbr_temp_words</span><span class="p">,</span> <span class="n">sk_word_bitsize</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_implementation_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SUBKEYS&quot;</span><span class="p">,</span> <span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">,</span> <span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_display_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">,</span> <span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">,</span> <span class="s2">&quot;SUBKEYS&quot;</span><span class="p">]</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Block_cipher&quot;</span><span class="p">,</span> <span class="n">p_input</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="s2">&quot;plaintext word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">p_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;IN_LINK_P_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Block_cipher&quot;</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">k_nbr_words</span><span class="p">,</span> <span class="s2">&quot;key word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">k_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;KEY_SCHEDULE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;IN_LINK_K_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Block_cipher&quot;</span><span class="p">,</span> <span class="n">c_output</span><span class="p">,</span> <span class="n">s_nbr_words</span><span class="p">,</span> <span class="s2">&quot;ciphertext word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_output_links</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;PERMUTATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">nbr_rounds</span><span class="p">][</span><span class="n">s_nbr_layers</span><span class="p">],</span> <span class="n">c_output</span><span class="p">,</span> <span class="s2">&quot;OUT_LINK_C_EQ_&quot;</span><span class="p">)</span></div>
+
+
+
+
+<span class="c1"># ********************************************** STREAM CIPHERS **********************************************</span>
+<span class="c1"># Subclass that represents a stream cipher object</span>
+<span class="c1"># A stream cipher is composed of three functions: a initialization function (to initialize the internal state), a state update function (to update the internal state), and a keystream generation function (to generate the keystream from the internal state)</span>
+
+<div class="viewcode-block" id="Stream_cipher">
+<a class="viewcode-back" href="../../api/primitives/primitives.html#primitives.primitives.Stream_cipher">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Stream_cipher</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">iv_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">keystream_output</span><span class="p">,</span> <span class="n">nbr_rounds_init</span><span class="p">,</span> <span class="n">nbr_rounds_update</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span><span class="p">,</span> <span class="n">init_config</span><span class="p">,</span> <span class="n">update_config</span><span class="p">,</span> <span class="n">keystream_config</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;IV&quot;</span><span class="p">:</span><span class="n">iv_input</span><span class="p">,</span> <span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="n">k_input</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;keystream&quot;</span><span class="p">:</span><span class="n">keystream_output</span><span class="p">})</span>
+        <span class="n">init_nbr_layers</span><span class="p">,</span> <span class="n">init_nbr_words</span><span class="p">,</span> <span class="n">init_nbr_temp_words</span><span class="p">,</span> <span class="n">init_word_bitsize</span> <span class="o">=</span> <span class="n">init_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">init_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">init_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">init_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">update_nbr_layers</span><span class="p">,</span> <span class="n">update_nbr_words</span><span class="p">,</span> <span class="n">update_nbr_temp_words</span><span class="p">,</span> <span class="n">update_word_bitsize</span> <span class="o">=</span> <span class="n">update_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">update_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">update_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">update_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">keystream_nbr_layers</span><span class="p">,</span> <span class="n">keystream_nbr_words</span><span class="p">,</span> <span class="n">keystream_nbr_temp_words</span><span class="p">,</span> <span class="n">keystream_word_bitsize</span> <span class="o">=</span> <span class="n">keystream_config</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">keystream_config</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">keystream_config</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">keystream_config</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds_init</span> <span class="o">=</span> <span class="n">nbr_rounds_init</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds_update</span> <span class="o">=</span> <span class="n">nbr_rounds_update</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_rounds_keystream</span> <span class="o">=</span> <span class="n">nbr_rounds_keystream</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">,</span> <span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="n">nbr_rounds_init</span><span class="p">,</span> <span class="n">init_nbr_layers</span><span class="p">,</span> <span class="n">init_nbr_words</span><span class="p">,</span> <span class="n">init_nbr_temp_words</span><span class="p">,</span> <span class="n">init_word_bitsize</span><span class="p">),</span> <span class="s2">&quot;STATE_UPDATE&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;STATE_UPDATE&quot;</span><span class="p">,</span> <span class="s1">&#39;upd&#39;</span><span class="p">,</span> <span class="n">nbr_rounds_update</span><span class="p">,</span> <span class="n">update_nbr_layers</span><span class="p">,</span> <span class="n">update_nbr_words</span><span class="p">,</span> <span class="n">update_nbr_temp_words</span><span class="p">,</span> <span class="n">update_word_bitsize</span><span class="p">),</span> <span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">:</span> <span class="n">Layered_Function</span><span class="p">(</span><span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">,</span> <span class="s1">&#39;ks&#39;</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span><span class="p">,</span> <span class="n">keystream_nbr_layers</span><span class="p">,</span> <span class="n">keystream_nbr_words</span><span class="p">,</span> <span class="n">keystream_nbr_temp_words</span><span class="p">,</span> <span class="n">keystream_word_bitsize</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_implementation_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">,</span> <span class="s2">&quot;STATE_UPDATE&quot;</span><span class="p">,</span> <span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">functions_display_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">,</span> <span class="s2">&quot;STATE_UPDATE&quot;</span><span class="p">,</span> <span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">]</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Stream_cipher&quot;</span><span class="p">,</span> <span class="n">iv_input</span><span class="p">,</span> <span class="n">init_nbr_words</span><span class="p">,</span> <span class="s2">&quot;IV word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">iv_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;IN_LINK_IV_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Stream_cipher&quot;</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">init_nbr_words</span><span class="p">,</span> <span class="s2">&quot;key word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_input_links</span><span class="p">(</span><span class="n">k_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">init_nbr_words</span><span class="p">:],</span> <span class="s2">&quot;IN_LINK_K_EQ_&quot;</span><span class="p">)</span>
+
+        <span class="n">_require_count</span><span class="p">(</span><span class="s2">&quot;Stream_cipher&quot;</span><span class="p">,</span> <span class="n">keystream_output</span><span class="p">,</span> <span class="n">keystream_nbr_words</span><span class="p">,</span> <span class="s2">&quot;keystream word(s)&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_append_output_links</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">nbr_rounds_keystream</span><span class="p">][</span><span class="n">keystream_nbr_layers</span><span class="p">],</span> <span class="n">keystream_output</span><span class="p">,</span> <span class="s2">&quot;OUT_LINK_KS_EQ_&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

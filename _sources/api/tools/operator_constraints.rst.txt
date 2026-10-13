@@ -1,0 +1,6 @@
+operator_constraints
+====================
+
+.. automodule:: tools.operator_constraints
+   :members:
+   :show-inheritance:

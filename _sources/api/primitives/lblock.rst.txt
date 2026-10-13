@@ -1,0 +1,6 @@
+lblock
+======
+
+.. automodule:: primitives.lblock
+   :members:
+   :show-inheritance:

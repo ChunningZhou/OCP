@@ -1,0 +1,6 @@
+paths
+=====
+
+.. automodule:: tools.paths
+   :members:
+   :show-inheritance:

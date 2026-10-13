@@ -1,0 +1,6 @@
+minimize_logic
+==============
+
+.. automodule:: tools.minimize_logic
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+boolean_operators
+=================
+
+.. automodule:: operators.boolean_operators
+   :members:
+   :show-inheritance:

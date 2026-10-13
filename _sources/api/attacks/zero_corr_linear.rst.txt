@@ -1,0 +1,6 @@
+zero_corr_linear
+================
+
+.. automodule:: attacks.zero_corr_linear
+   :members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+API reference
+=============
+
+Reference for OCP's packages, generated from the source docstrings.
+
+.. toctree::
+   :maxdepth: 1
+
+   variables
+   operators
+   primitives
+   attacks
+   solving
+   implementations
+   visualisations
+   tools
+   capabilities
+   recheck

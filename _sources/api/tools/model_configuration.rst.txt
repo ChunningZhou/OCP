@@ -1,0 +1,6 @@
+model_configuration
+===================
+
+.. automodule:: tools.model_configuration
+   :members:
+   :show-inheritance:

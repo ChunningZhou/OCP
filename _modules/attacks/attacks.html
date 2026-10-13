@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attacks.attacks &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/attacks/attacks';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">attacks.attacks</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for attacks.attacks</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;High-level attack interfaces.</span>
+
+<span class="sd">Provides:</span>
+
+<span class="sd">1. differential attacks</span>
+<span class="sd">2. linear attacks</span>
+<span class="sd">3. two-stage differential/linear trail search (truncated- then bit-level)</span>
+<span class="sd">4. integral attacks</span>
+<span class="sd">5. impossible-differential distinguisher search</span>
+<span class="sd">6. zero-correlation linear distinguisher search</span>
+
+<span class="sd">Other types of attacks to be contributed in the future.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.differential_cryptanalysis</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">diff</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.linear_cryptanalysis</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">linear</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.integral_cryptanalysis</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">integral</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.impossible_differential</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">impossible_diff</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.zero_corr_linear</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">zero_corr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.model_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_predefined_constraints</span>
+
+
+<span class="c1"># =================== Differential Attacks ===================</span>
+<div class="viewcode-block" id="diff_attacks">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.diff_attacks">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">diff_attacks</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">,</span>
+    <span class="n">constraints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">objective_target</span><span class="o">=</span><span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for differential trails of the given cipher.</span>
+
+<span class="sd">    See :func:`~attacks.differential_cryptanalysis.search_diff_trail` for the</span>
+<span class="sd">    accepted parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The differential trail objects found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">trails</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">search_diff_trail</span><span class="p">(</span>
+        <span class="n">cipher</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span>
+        <span class="n">objective_target</span><span class="o">=</span><span class="n">objective_target</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trails</span></div>
+
+
+
+<span class="c1"># =================== Linear Attacks ===================</span>
+<div class="viewcode-block" id="linear_attacks">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.linear_attacks">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">linear_attacks</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;LINEARPATH_CORR&quot;</span><span class="p">,</span>
+    <span class="n">constraints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">objective_target</span><span class="o">=</span><span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for linear trails of the given cipher.</span>
+
+<span class="sd">    See :func:`~attacks.linear_cryptanalysis.search_linear_trail` for the</span>
+<span class="sd">    accepted parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The linear trail objects found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">trails</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">search_linear_trail</span><span class="p">(</span>
+        <span class="n">cipher</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span>
+        <span class="n">objective_target</span><span class="o">=</span><span class="n">objective_target</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trails</span></div>
+
+
+
+<span class="c1"># =================== Two-Stage Trail Search ===================</span>
+<div class="viewcode-block" id="two_stage_trail_search">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.two_stage_trail_search">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">two_stage_trail_search</span><span class="p">(</span>
+    <span class="n">cipher_factory</span><span class="p">,</span>
+    <span class="n">r</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">,</span>
+    <span class="n">stage1_config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">stage2_config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">stage1_config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">stage2_config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Two-stage (truncated- then bit-level) trail search for word-oriented ciphers.</span>
+
+<span class="sd">    Stage 1 searches a minimum-active-S-box truncated pattern; stage 2 fixes that</span>
+<span class="sd">    pattern and searches the best bit-level trail on it. Only word-oriented cipher</span>
+<span class="sd">    representations are supported (e.g. the AES or SKINNY permutation).</span>
+
+<span class="sd">    A factory (rather than a cipher instance) is required because each stage runs a</span>
+<span class="sd">    full attack that mutates the cipher (config filling, and the non-idempotent</span>
+<span class="sd">    ``add_copy_operators`` for linear), so every stage needs a fresh cipher.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cipher_factory (callable): ``cipher_factory(r)`` returns a fresh cipher of ``r`` rounds.</span>
+<span class="sd">        r (int): Number of rounds.</span>
+<span class="sd">        goal (str): ``&quot;DIFFERENTIALPATH_PROB&quot;`` or ``&quot;LINEARPATH_CORR&quot;``.</span>
+<span class="sd">        stage1_config_model (dict, optional): Stage-1 model configuration.</span>
+<span class="sd">        stage2_config_model (dict, optional): Stage-2 model configuration.</span>
+<span class="sd">        stage1_config_solver (dict, optional): Stage-1 solver configuration.</span>
+<span class="sd">        stage2_config_solver (dict, optional): Stage-2 solver configuration.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple or None: ``(min_active, best_weight)``, i.e. the stage-1 minimum</span>
+<span class="sd">        active S-box count and the stage-2 best trail weight, or None if no</span>
+<span class="sd">        truncated trail is found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">goal</span> <span class="o">==</span> <span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">:</span>
+        <span class="n">stage1_goal</span><span class="p">,</span> <span class="n">weight_key</span><span class="p">,</span> <span class="n">attack</span> <span class="o">=</span> <span class="s2">&quot;TRUNCATEDDIFF_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="s2">&quot;diff_weight&quot;</span><span class="p">,</span> <span class="n">diff_attacks</span>
+    <span class="k">elif</span> <span class="n">goal</span> <span class="o">==</span> <span class="s2">&quot;LINEARPATH_CORR&quot;</span><span class="p">:</span>
+        <span class="n">stage1_goal</span><span class="p">,</span> <span class="n">weight_key</span><span class="p">,</span> <span class="n">attack</span> <span class="o">=</span> <span class="s2">&quot;TRUNCATEDLINEAR_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="s2">&quot;linear_weight&quot;</span><span class="p">,</span> <span class="n">linear_attacks</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported goal &#39;</span><span class="si">{</span><span class="n">goal</span><span class="si">}</span><span class="s2">&#39; in two-stage search. Expected &#39;DIFFERENTIALPATH_PROB&#39; or &#39;LINEARPATH_CORR&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Stage 1: search the truncated trail with minimum active S-boxes.</span>
+    <span class="n">cipher1</span> <span class="o">=</span> <span class="n">cipher_factory</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">trails1</span> <span class="o">=</span> <span class="n">attack</span><span class="p">(</span>
+        <span class="n">cipher1</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">stage1_goal</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;INPUT_NOT_ZERO&quot;</span><span class="p">],</span>
+        <span class="n">objective_target</span><span class="o">=</span><span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">stage1_config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">stage1_config_solver</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">trails1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] no truncated trail found.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">min_active</span> <span class="o">=</span> <span class="n">trails1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">weight_key</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[Stage 1] minimum active S-boxes = </span><span class="si">{</span><span class="n">min_active</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Stage 2: fix the stage-1 activity pattern and search the best (min-weight) bit-level trail on it.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_fix_activity</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">trail</span><span class="p">):</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="n">trail</span><span class="o">.</span><span class="n">solution_trace</span>
+        <span class="n">cons</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;INPUT_NOT_ZERO&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">S</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">nbr_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">S</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">rr</span><span class="p">][</span><span class="n">l</span><span class="p">]:</span>
+                        <span class="n">active</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+                        <span class="n">kind</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;SUM_AT_LEAST&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">active</span> <span class="k">else</span> <span class="p">(</span><span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                        <span class="n">cons</span> <span class="o">+=</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="p">[</span><span class="n">v</span><span class="p">],</span> <span class="n">val</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cons</span>
+
+    <span class="n">stage2_model_type</span> <span class="o">=</span> <span class="p">(</span><span class="n">stage2_config_model</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_type&quot;</span><span class="p">,</span> <span class="s2">&quot;milp&quot;</span><span class="p">)</span>
+    <span class="n">cipher2</span> <span class="o">=</span> <span class="n">cipher_factory</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">stage2_cons</span> <span class="o">=</span> <span class="n">_fix_activity</span><span class="p">(</span><span class="n">stage2_model_type</span><span class="p">,</span> <span class="n">cipher2</span><span class="p">,</span> <span class="n">trails1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">trails2</span> <span class="o">=</span> <span class="n">attack</span><span class="p">(</span>
+        <span class="n">cipher2</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="n">stage2_cons</span><span class="p">,</span>
+        <span class="n">objective_target</span><span class="o">=</span><span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">stage2_config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">stage2_config_solver</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+    <span class="n">best_weight</span> <span class="o">=</span> <span class="n">trails2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">weight_key</span><span class="p">]</span> <span class="k">if</span> <span class="n">trails2</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[Stage 2] best trail weight = </span><span class="si">{</span><span class="n">best_weight</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">min_active</span><span class="p">,</span> <span class="n">best_weight</span></div>
+
+
+
+<span class="c1"># =================== Integral Attacks ===================</span>
+<div class="viewcode-block" id="integral_attacks">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.integral_attacks">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">integral_attacks</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">,</span>
+    <span class="n">constraints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">objective_target</span><span class="o">=</span><span class="s2">&quot;EXISTENCE&quot;</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for integral distinguishers of the given cipher.</span>
+
+<span class="sd">    See :func:`~attacks.integral_cryptanalysis.search_integral_distinguisher` for</span>
+<span class="sd">    the accepted parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The integral distinguisher objects found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">distinguishers</span> <span class="o">=</span> <span class="n">integral</span><span class="o">.</span><span class="n">search_integral_distinguisher</span><span class="p">(</span>
+        <span class="n">cipher</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span>
+        <span class="n">objective_target</span><span class="o">=</span><span class="n">objective_target</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distinguishers</span></div>
+
+
+
+<span class="c1"># =================== Impossible-Differential Attacks ===================</span>
+<div class="viewcode-block" id="impossible_differential_attacks">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.impossible_differential_attacks">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">impossible_differential_attacks</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;IMPOSSIBLETRUNCATEDDIFF&quot;</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;ENUMERATION&quot;</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for impossible-differential distinguishers of the given cipher.</span>
+
+<span class="sd">    See :func:`~attacks.impossible_differential.search_impossible_differential`</span>
+<span class="sd">    for the accepted strategies and parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The impossible ``(in_positions, out_positions)`` pairs found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">distinguishers</span> <span class="o">=</span> <span class="n">impossible_diff</span><span class="o">.</span><span class="n">search_impossible_differential</span><span class="p">(</span>
+        <span class="n">cipher</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">strategy</span><span class="o">=</span><span class="n">strategy</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distinguishers</span></div>
+
+
+
+<span class="c1"># =================== Zero-Correlation Linear Attacks ===================</span>
+<div class="viewcode-block" id="zero_correlation_attacks">
+<a class="viewcode-back" href="../../api/attacks/attacks.html#attacks.attacks.zero_correlation_attacks">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">zero_correlation_attacks</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">&quot;ZEROCORRELATIONTRUNCATEDLINEAR&quot;</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;ENUMERATION&quot;</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for zero-correlation linear distinguishers of the given cipher.</span>
+
+<span class="sd">    See :func:`~attacks.zero_corr_linear.search_zero_correlation` for the</span>
+<span class="sd">    accepted strategies and parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The zero-correlation ``(in_positions, out_positions)`` pairs found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">distinguishers</span> <span class="o">=</span> <span class="n">zero_corr</span><span class="o">.</span><span class="n">search_zero_correlation</span><span class="p">(</span>
+        <span class="n">cipher</span><span class="p">,</span>
+        <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span>
+        <span class="n">strategy</span><span class="o">=</span><span class="n">strategy</span><span class="p">,</span>
+        <span class="n">config_model</span><span class="o">=</span><span class="n">config_model</span><span class="p">,</span>
+        <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Total Time ---: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distinguishers</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

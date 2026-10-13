@@ -1,0 +1,6 @@
+linear_cryptanalysis
+====================
+
+.. automodule:: attacks.linear_cryptanalysis
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+capabilities
+============
+
+.. automodule:: capabilities
+   :members:
+   :show-inheritance:

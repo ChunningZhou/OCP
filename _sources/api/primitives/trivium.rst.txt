@@ -1,0 +1,6 @@
+trivium
+=======
+
+.. automodule:: primitives.trivium
+   :members:
+   :show-inheritance:

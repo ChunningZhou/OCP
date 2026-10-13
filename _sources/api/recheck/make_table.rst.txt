@@ -1,0 +1,6 @@
+make_table
+==========
+
+.. automodule:: recheck.make_table
+   :members:
+   :show-inheritance:

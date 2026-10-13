@@ -1,0 +1,15 @@
+capabilities
+============
+
+Machine-readable descriptions of what OCP can do, for consumers outside the
+analysis pipeline. Nothing in the pipeline imports this package.
+
+.. toctree::
+   :maxdepth: 1
+
+   capabilities/capabilities
+   capabilities/primitive_capabilities
+   capabilities/layer_capabilities
+   capabilities/operator_capabilities
+   capabilities/analysis_capabilities
+   capabilities/implementation_capabilities

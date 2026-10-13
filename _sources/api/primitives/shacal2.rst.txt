@@ -1,0 +1,6 @@
+shacal2
+=======
+
+.. automodule:: primitives.shacal2
+   :members:
+   :show-inheritance:

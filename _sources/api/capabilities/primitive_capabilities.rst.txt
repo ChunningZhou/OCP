@@ -1,0 +1,6 @@
+primitive_capabilities
+======================
+
+.. automodule:: capabilities.primitive_capabilities
+   :members:
+   :show-inheritance:

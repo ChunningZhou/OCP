@@ -1,0 +1,6 @@
+speck
+=====
+
+.. automodule:: primitives.speck
+   :members:
+   :show-inheritance:

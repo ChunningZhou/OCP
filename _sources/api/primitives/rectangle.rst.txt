@@ -1,0 +1,6 @@
+rectangle
+=========
+
+.. automodule:: primitives.rectangle
+   :members:
+   :show-inheritance:

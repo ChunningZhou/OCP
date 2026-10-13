@@ -1,0 +1,6 @@
+aes
+===
+
+.. automodule:: primitives.aes
+   :members:
+   :show-inheritance:

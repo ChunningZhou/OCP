@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recheck.claim &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/recheck/claim';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">recheck.claim</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for recheck.claim</h1><div class="highlight"><pre>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reading a published-claim file and turning it into the objects OCP works with.</span>
+
+<span class="sd">A claim file is a compact, human-readable JSON that is also a valid shell of an OCP trail JSON:</span>
+<span class="sd">provenance and the per-round values live under ``data``, so the file can be read line by line</span>
+<span class="sd">against the paper it came from. From there one solution feeds both consumers:</span>
+
+<span class="sd">    assignments  -&gt;  {var_id: 0/1}  -&gt;  trail_struct  -&gt;  Trail</span>
+<span class="sd">                                    \-&gt;  model constraints</span>
+
+<span class="sd">That split is the point of the package: the same pinned values that render as a trail for a human</span>
+<span class="sd">to compare against the table are what constrain the model when the solver replays the claim.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">import_module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">attacks.attack_trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">DifferentialTrail</span><span class="p">,</span> <span class="n">LinearTrail</span><span class="p">,</span> <span class="n">extract_trail_structures</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.model_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_predefined_constraints</span><span class="p">,</span> <span class="n">state_bits</span><span class="p">,</span> <span class="n">state_var_ids</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.paths</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_files_dir</span>
+
+
+<span class="c1"># (analysis, model, metric) -&gt; (OCP goal, trail class, the data key holding the weight).</span>
+<span class="c1"># ``model`` is None when the metric does not distinguish a single characteristic from the hull.</span>
+<span class="n">CLAIMS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">):</span>      <span class="p">(</span><span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">,</span> <span class="n">DifferentialTrail</span><span class="p">,</span> <span class="s2">&quot;diff_weight&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">):</span>        <span class="p">(</span><span class="s2">&quot;DIFFERENTIAL_PROB&quot;</span><span class="p">,</span> <span class="n">DifferentialTrail</span><span class="p">,</span> <span class="s2">&quot;diff_weight&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;sbox_count&quot;</span><span class="p">):</span>              <span class="p">(</span><span class="s2">&quot;DIFFERENTIAL_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="n">DifferentialTrail</span><span class="p">,</span> <span class="s2">&quot;diff_weight&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;characteristic&quot;</span><span class="p">,</span> <span class="s2">&quot;correlation&quot;</span><span class="p">):</span>       <span class="p">(</span><span class="s2">&quot;LINEARPATH_CORR&quot;</span><span class="p">,</span> <span class="n">LinearTrail</span><span class="p">,</span> <span class="s2">&quot;linear_weight&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;hull&quot;</span><span class="p">,</span> <span class="s2">&quot;correlation&quot;</span><span class="p">):</span>                 <span class="p">(</span><span class="s2">&quot;LINEARHULL_CORR&quot;</span><span class="p">,</span> <span class="n">LinearTrail</span><span class="p">,</span> <span class="s2">&quot;linear_weight&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;sbox_count&quot;</span><span class="p">):</span>                    <span class="p">(</span><span class="s2">&quot;LINEAR_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="n">LinearTrail</span><span class="p">,</span> <span class="s2">&quot;linear_weight&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="c1"># The per-round series OCP reports alongside each total.</span>
+<span class="n">ROUND_KEY</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;diff_weight&quot;</span><span class="p">:</span> <span class="s2">&quot;rounds_diff_weight&quot;</span><span class="p">,</span> <span class="s2">&quot;linear_weight&quot;</span><span class="p">:</span> <span class="s2">&quot;rounds_linear_weight&quot;</span><span class="p">}</span>
+
+<span class="n">_PRIMITIVES_PACKAGE</span> <span class="o">=</span> <span class="s2">&quot;primitives&quot;</span>
+
+<span class="c1"># Resolved off __file__ rather than the CWD, so they mean the same thing whether an entry point</span>
+<span class="c1"># runs as `python -m recheck.run` or `python recheck/run.py`.</span>
+<span class="c1">#</span>
+<span class="c1"># The claims are **not** in this package: `reference/` is the source-material store (papers, the</span>
+<span class="c1"># claims read out of them, and the format authority EXTRACTION.md), and this package is the code</span>
+<span class="c1"># that replays them. Keeping the two apart means the material can be present without the checker</span>
+<span class="c1"># and the other way round, which `capabilities.recheck_available()` reports separately.</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="s2">&quot;reference&quot;</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span>
+<span class="c1"># The log is a run artifact, so it lands in files/ like every other one -- see AGENTS.md</span>
+<span class="c1"># &quot;Generated artifacts&quot;. It is read back by the table generator, which is why it is named here</span>
+<span class="c1"># rather than inside the runner.</span>
+<span class="n">RESULTS_LOG</span> <span class="o">=</span> <span class="n">get_files_dir</span><span class="p">(</span><span class="s2">&quot;recheck&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;results.jsonl&quot;</span>
+
+<span class="n">SCHEMA_VERSION</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># How far a claim has been checked. A consumer that cannot tell an unread draft from a checked one</span>
+<span class="c1"># will cite it as if it were the paper, so this is a field rather than prose buried in ``via``.</span>
+<span class="n">CLAIM_STATUS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;unverified&quot;</span><span class="p">:</span> <span class="s2">&quot;extracted from a source but not checked against the paper by a person&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;verified&quot;</span><span class="p">:</span> <span class="s2">&quot;a person checked it against the paper; ``verified_by`` says who&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;disputed&quot;</span><span class="p">:</span> <span class="s2">&quot;a known discrepancy -- see ``caveat`` before using it&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;not a published claim at all: a value this project measured, kept as a baseline&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="data_glob">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.data_glob">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">data_glob</span><span class="p">(</span><span class="n">cipher</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The claim-file pattern: every cipher, or one named cipher&#39;s directory.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="n">cipher</span> <span class="o">/</span> <span class="s2">&quot;*.json&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="load">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.load">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a claim file and check the bits this package relies on are present.</span>
+
+<span class="sd">    ``source`` must be an object carrying a ``status`` from ``CLAIM_STATUS``: the key merely</span>
+<span class="sd">    existing used to be enough, so 17 files passed with ``source: null`` -- values this project</span>
+<span class="sd">    measured itself, indistinguishable here from a published claim.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;schema_version&quot;</span><span class="p">,</span> <span class="n">SCHEMA_VERSION</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">!=</span> <span class="n">SCHEMA_VERSION</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: schema_version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">, expected </span><span class="si">{</span><span class="n">SCHEMA_VERSION</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: no &#39;data&#39; object.&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;claim&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: data is missing </span><span class="si">{</span><span class="n">key</span><span class="si">!r}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: source is </span><span class="si">{</span><span class="n">source</span><span class="si">!r}</span><span class="s2">, expected an object with a status.&quot;</span><span class="p">)</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">CLAIM_STATUS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: source.status is </span><span class="si">{</span><span class="n">status</span><span class="si">!r}</span><span class="s2">. &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;Expected one of </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">CLAIM_STATUS</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;verified&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">source</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;verified_by&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: status is &#39;verified&#39; but verified_by is &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">source</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;verified_by&#39;</span><span class="p">)</span><span class="si">!r}</span><span class="s2"> -- say who checked it.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">spec</span></div>
+
+
+
+<div class="viewcode-block" id="resolve_claim">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.resolve_claim">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">resolve_claim</span><span class="p">(</span><span class="n">spec</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;(goal, trail class, weight key) for the spec&#39;s claim.&quot;&quot;&quot;</span>
+    <span class="n">claim</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;analysis&quot;</span><span class="p">),</span> <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">),</span> <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;metric&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">CLAIMS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported claim </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">. Known: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">CLAIMS</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CLAIMS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="build_cipher">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.build_cipher">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Instantiate the primitive the claim is about.</span>
+
+<span class="sd">    A trail claim fixes the round count in ``target.kwargs``. A bound claim states a value per</span>
+<span class="sd">    round instead, so the count is passed in here and injected under ``target.rounds_kwarg``</span>
+<span class="sd">    (``&quot;r&quot;`` unless the primitive names it otherwise).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+    <span class="c1"># The only import in this repository whose target comes from a data file. All 197 claims name</span>
+    <span class="c1"># a `primitives.*` module, but nothing made them: an unchecked `import_module` of whatever a</span>
+    <span class="c1"># file says is a wide door for a corpus that is 155 unreviewed drafts and will later be</span>
+    <span class="c1"># written by an agent.</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;module&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_PRIMITIVES_PACKAGE</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;target.module is </span><span class="si">{</span><span class="n">target</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;module&#39;</span><span class="p">)</span><span class="si">!r}</span><span class="s2">; a claim may only name a &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;module under </span><span class="si">{</span><span class="n">_PRIMITIVES_PACKAGE</span><span class="si">}</span><span class="s2">/.&quot;</span><span class="p">)</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="n">target</span><span class="p">[</span><span class="s2">&quot;module&quot;</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">constructor</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">target</span><span class="p">[</span><span class="s2">&quot;constructor&quot;</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has no </span><span class="si">{</span><span class="n">target</span><span class="p">[</span><span class="s1">&#39;constructor&#39;</span><span class="p">]</span><span class="si">!r}</span><span class="s2">.&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+    <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;kwargs&quot;</span><span class="p">,</span> <span class="p">{}))</span>
+    <span class="k">if</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="n">target</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rounds_kwarg&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">rounds</span>
+    <span class="k">return</span> <span class="n">constructor</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="assignments_to_solution">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.assignments_to_solution">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">assignments_to_solution</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">assignments</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``[{function, round, layer, value, nwords?}]`` -&gt; ``{var_id: 0/1}``.</span>
+
+<span class="sd">    ``value`` is the whole state as ``&quot;0x...&quot;``/``&quot;0b...&quot;``, MSB first. ``nwords`` pins only the</span>
+<span class="sd">    first n words, for a target narrower than the state the paper wrote the value against.</span>
+
+<span class="sd">    The word count and width come from the cipher, never from the claim file, so a claim cannot</span>
+<span class="sd">    disagree with the primitive about how a state splits; a value wider than its target is</span>
+<span class="sd">    rejected rather than truncated.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">assignments</span><span class="p">):</span>
+        <span class="n">where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;assignment[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] (</span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;function&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> round </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;round&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> layer </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;function&quot;</span><span class="p">]]</span>
+            <span class="n">cons_vars</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;round&quot;</span><span class="p">]][</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;layer&quot;</span><span class="p">]]</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: no such function/round/layer.&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+        <span class="n">cons_vars</span> <span class="o">=</span> <span class="n">cons_vars</span><span class="p">[:</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nwords&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">fn</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">]</span>
+        <span class="c1"># The traversal and the bit splitting live in tools; this used to be a second copy of</span>
+        <span class="c1"># the loop in tools/model_constraints._fix_vars_to_bits.</span>
+        <span class="n">solution</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">state_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">],</span> <span class="n">where</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">solution</span></div>
+
+
+
+<div class="viewcode-block" id="solution_to_assignments">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.solution_to_assignments">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solution_to_assignments</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">places</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``[{function, round, layer, value}]`` for the states ``places`` names, read off a solution.</span>
+
+<span class="sd">    The inverse of ``assignments_to_solution``, for writing a claim rather than replaying one.</span>
+<span class="sd">    ``places`` is a list of ``(function, round, layer)`` because a solution covers every variable</span>
+<span class="sd">    in the model while a claim records a chosen few -- the 35 trail claims here hold between 6 and</span>
+<span class="sd">    34, typically each round&#39;s input state plus the subkeys. Both directions read the state in</span>
+<span class="sd">    ``state_var_ids`` order, so a claim written here replays unchanged.</span>
+
+<span class="sd">    Whole states only: ``assignments_to_solution`` takes an ``nwords`` to pin a prefix and</span>
+<span class="sd">    ``places`` cannot say that, so a narrowed claim is not writable from this side. No claim in</span>
+<span class="sd">    the corpus narrows for real -- the six that carry ``nwords`` set it to the state&#39;s own width</span>
+<span class="sd">    -- and a test holds that, since otherwise this would raise about a missing value instead.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">assignments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">function</span><span class="p">,</span> <span class="n">rnd</span><span class="p">,</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">places</span><span class="p">:</span>
+        <span class="n">where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;place (</span><span class="si">{</span><span class="n">function</span><span class="si">}</span><span class="s2"> round </span><span class="si">{</span><span class="n">rnd</span><span class="si">}</span><span class="s2"> layer </span><span class="si">{</span><span class="n">layer</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">function</span><span class="p">]</span>
+            <span class="n">cons_vars</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">rnd</span><span class="p">][</span><span class="n">layer</span><span class="p">][:</span> <span class="n">fn</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">]</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: no such function/round/layer.&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">state_var_ids</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)</span>
+        <span class="n">missing</span> <span class="o">=</span> <span class="p">[</span><span class="n">var_id</span> <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">ids</span> <span class="k">if</span> <span class="n">var_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">solution</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: the solution has no value for </span><span class="si">{</span><span class="n">missing</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39; and others&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">var_id</span><span class="p">]))))</span> <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">bit</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s2">&quot;01&quot;</span> <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">bits</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: the solution holds values other than 0/1.&quot;</span><span class="p">)</span>
+        <span class="c1"># Hex while the width allows it exactly, since that is how the corpus is written; binary</span>
+        <span class="c1"># otherwise, rather than padding to a nibble and changing the width.</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0x</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">4</span><span class="si">}</span><span class="s2">x</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;0b</span><span class="si">{</span><span class="n">bits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">assignments</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="n">function</span><span class="p">,</span> <span class="s2">&quot;round&quot;</span><span class="p">:</span> <span class="n">rnd</span><span class="p">,</span> <span class="s2">&quot;layer&quot;</span><span class="p">:</span> <span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">assignments</span></div>
+
+
+
+<div class="viewcode-block" id="to_trail">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.to_trail">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">to_trail</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">solution</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Materialize the claim as an OCP Trail, so it prints and compares like a found one.&quot;&quot;&quot;</span>
+    <span class="n">goal</span><span class="p">,</span> <span class="n">trail_class</span><span class="p">,</span> <span class="n">weight_key</span> <span class="o">=</span> <span class="n">resolve_claim</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">])</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="n">assignments_to_solution</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;assignments&quot;</span><span class="p">,</span> <span class="p">[]))</span> <span class="k">if</span> <span class="n">solution</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">solution</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;trail_struct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">extract_trail_structures</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="s2">&quot;TRUNCATED&quot;</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;cipher&quot;</span><span class="p">,</span> <span class="n">cipher</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">weight_key</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">trail_class</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="pin_constraints">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.claim.pin_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">pin_constraints</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain every variable the claim pins to the value it pins it to.&quot;&quot;&quot;</span>
+    <span class="n">ones</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">solution</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">zeros</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">solution</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

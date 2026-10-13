@@ -1,0 +1,6 @@
+model_objective
+===============
+
+.. automodule:: tools.model_objective
+   :members:
+   :show-inheritance:

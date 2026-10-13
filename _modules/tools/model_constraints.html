@@ -1,0 +1,1124 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tools.model_constraints &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tools/model_constraints';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">tools.model_constraints</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tools.model_constraints</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Model-level SAT/MILP constraints for cryptanalysis.</span>
+
+<span class="sd">This module provides:</span>
+<span class="sd">1. Model-level constraint encodings</span>
+<span class="sd">   - Predefined value/cardinality constraints (EXACTLY, AT_LEAST, SUM_AT_MOST, ...)</span>
+<span class="sd">   - SAT sequential-counter cardinality encoding</span>
+<span class="sd">   - Matsui&#39;s branch-and-bound constraints for MILP/SAT trail search</span>
+<span class="sd">2. Attack boundary/input constraints shared by the differential and linear cryptanalysis</span>
+<span class="sd">   - Nonzero input constraint builder</span>
+<span class="sd">   - Fixed input/output difference or mask constraints for hull/probability goals</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">import_module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_spec</span>
+
+
+<span class="c1"># ------------------------- PySAT cardinality backend ------------------------- #</span>
+<span class="c1"># PySAT is an optional dependency: at import we only check that it is available</span>
+<span class="c1"># (``find_spec``, no import), and load it on first use, so importing this module never</span>
+<span class="c1"># pulls in PySAT. ``CardEnc``/``vpool`` stay ``None`` until the first SAT cardinality call.</span>
+<span class="n">CardEnc</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">vpool</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">pysat_import</span> <span class="o">=</span> <span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;pysat&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_load_pysat_cardinality_backend</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import PySAT&#39;s CardEnc/IDPool on first use; return ``(CardEnc, vpool)`` or ``(None, None)``.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">CardEnc</span><span class="p">,</span> <span class="n">pysat_import</span><span class="p">,</span> <span class="n">vpool</span>
+
+    <span class="k">if</span> <span class="n">CardEnc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">vpool</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CardEnc</span><span class="p">,</span> <span class="n">vpool</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">CardEnc</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pysat.card&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CardEnc</span>
+        <span class="n">IDPool</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pysat.formula&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">IDPool</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="n">pysat_import</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="n">vpool</span> <span class="o">=</span> <span class="n">IDPool</span><span class="p">(</span><span class="n">start_from</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">pysat_import</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">CardEnc</span><span class="p">,</span> <span class="n">vpool</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_require_pysat_cardenc</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the PySAT ``CardEnc`` backend, raising ``ValueError`` if PySAT is unavailable.&quot;&quot;&quot;</span>
+    <span class="n">card_enc</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_load_pysat_cardinality_backend</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">card_enc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;PySAT is required for SAT cardinality constraints.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">card_enc</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_pysat_cardinality_error_types</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the exception types a PySAT ``CardEnc`` call may raise for an unsupported encoding/bound.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">card_module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;pysat.card&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span>
+        <span class="n">error_type</span>
+        <span class="k">for</span> <span class="n">error_type</span> <span class="ow">in</span> <span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">card_module</span><span class="p">,</span> <span class="s2">&quot;NoSuchEncodingError&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">card_module</span><span class="p">,</span> <span class="s2">&quot;UnsupportedBound&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="ne">ValueError</span><span class="p">,</span>
+            <span class="ne">RuntimeError</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">error_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_readable_cardinality_clauses</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span> <span class="n">reverse_map</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Render PySAT numeric CNF clauses back into named (or ``dummy_*``) model constraint strings.&quot;&quot;&quot;</span>
+    <span class="n">readable_clauses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">cnf</span><span class="o">.</span><span class="n">clauses</span><span class="p">:</span>
+        <span class="n">readable</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">reverse_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">lit</span><span class="p">),</span><span class="w"> </span><span class="sa">f</span><span class="s1">&#39;dummy_</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">lit</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="n">lit</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="k">else</span> <span class="n">reverse_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">lit</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;dummy_</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">lit</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">lit</span> <span class="ow">in</span> <span class="n">clause</span>
+        <span class="p">)</span>
+        <span class="n">readable_clauses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">readable</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">readable_clauses</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_pysat_cardinality_constraints</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">encoder</span><span class="p">,</span> <span class="n">encoder_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build SAT cardinality clauses via a PySAT ``CardEnc`` encoder, returning ``[]`` if the encoding is unsupported.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">encoding</span><span class="p">:</span>
+        <span class="n">encoding</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">card_vpool</span> <span class="o">=</span> <span class="n">_load_pysat_cardinality_backend</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">card_vpool</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;PySAT is required for SAT cardinality constraints.&quot;</span><span class="p">)</span>
+    <span class="n">variable_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)}</span>
+    <span class="n">reverse_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variable_map</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    <span class="n">lits</span> <span class="o">=</span> <span class="p">[</span><span class="n">variable_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">cons_vars</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">cnf</span> <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">lits</span><span class="o">=</span><span class="n">lits</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">cons_value</span><span class="p">,</span> <span class="n">vpool</span><span class="o">=</span><span class="n">card_vpool</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">_pysat_cardinality_error_types</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] CardEnc.</span><span class="si">{</span><span class="n">encoder_name</span><span class="si">}</span><span class="s2"> does not support encoding </span><span class="si">{</span><span class="n">encoding</span><span class="si">}</span><span class="s2">; no constraints generated.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">_readable_cardinality_clauses</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span> <span class="n">reverse_map</span><span class="p">)</span>
+
+
+<span class="c1"># -------------------- Predefined Constraint Generation -------------------- #</span>
+<div class="viewcode-block" id="expand_var_ids">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.expand_var_ids">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Expand a single variable into its per-bit (or whole-word) model variable IDs.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">bitwise</span> <span class="ow">and</span> <span class="n">var</span><span class="o">.</span><span class="n">bitsize</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="o">.</span><span class="n">ID</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">ID</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="expand_constraint_vars">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.expand_constraint_vars">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">expand_constraint_vars</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Expand a list of variable names / Variable objects into model variable IDs.&quot;&quot;&quot;</span>
+    <span class="n">cons_vars_name</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cons_vars</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">cons_vars_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cons_vars_name</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cons_vars_name</span></div>
+
+
+
+<div class="viewcode-block" id="gen_predefined_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_predefined_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_predefined_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate commonly used, predefined model constraints based on type and parameters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_type (str): The model backend, ``&quot;milp&quot;`` or ``&quot;sat&quot;``.</span>
+<span class="sd">        cons_type (str): The constraint type, must be one of the predefined types:</span>
+<span class="sd">            - &quot;EXACTLY&quot;: All selected variables == a target value.</span>
+<span class="sd">            - &quot;AT_LEAST&quot;: All selected variables &gt;= target value.</span>
+<span class="sd">            - &quot;AT_MOST&quot;: All selected variables &lt;= target value.</span>
+<span class="sd">            - &quot;SUM_EXACTLY&quot;: Sum of selected variables == target value.</span>
+<span class="sd">            - &quot;SUM_AT_LEAST&quot;: Sum of selected variables &gt;= target value.</span>
+<span class="sd">            - &quot;SUM_AT_MOST&quot;: Sum of selected variables &lt;= target value.</span>
+<span class="sd">        cons_vars (list): Variable names or Variables objects with ID and bitsize attributes.</span>
+<span class="sd">        cons_value (int): Target value.</span>
+<span class="sd">        bitwise (bool): If True, expand variables by bit.</span>
+<span class="sd">        encoding: SAT cardinality encoding passed to the backend (ignored for MILP;</span>
+<span class="sd">            ``None`` selects the default).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list[str]: List of generated model constraint strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">builders</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;EXACTLY&quot;</span><span class="p">:</span> <span class="n">gen_constraints_exactly</span><span class="p">,</span>
+        <span class="s2">&quot;SUM_EXACTLY&quot;</span><span class="p">:</span> <span class="n">gen_constraints_sum_exactly</span><span class="p">,</span>
+        <span class="s2">&quot;AT_MOST&quot;</span><span class="p">:</span> <span class="n">gen_constraints_at_most</span><span class="p">,</span>
+        <span class="s2">&quot;SUM_AT_MOST&quot;</span><span class="p">:</span> <span class="n">gen_constraints_sum_at_most</span><span class="p">,</span>
+        <span class="s2">&quot;AT_LEAST&quot;</span><span class="p">:</span> <span class="n">gen_constraints_at_least</span><span class="p">,</span>
+        <span class="s2">&quot;SUM_AT_LEAST&quot;</span><span class="p">:</span> <span class="n">gen_constraints_sum_at_least</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">cons_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">builders</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported cons_type &#39;</span><span class="si">{</span><span class="n">cons_type</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="n">cons_vars_name</span> <span class="o">=</span> <span class="n">expand_constraint_vars</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cons_vars_name</span><span class="p">:</span>  <span class="c1"># No variables in scope: nothing to constrain (keeps milp/sat consistent).</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">builders</span><span class="p">[</span><span class="n">cons_type</span><span class="p">](</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars_name</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_no_good_cut">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_no_good_cut">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_no_good_cut</span><span class="p">(</span><span class="n">var_ids</span><span class="p">,</span> <span class="n">bits</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;No-good cut forbidding one 0/1 assignment ``bits`` over ``var_ids``, forcing any later</span>
+<span class="sd">    solution to differ in at least one of these variables (e.g. to enumerate distinct solutions).</span>
+
+<span class="sd">        MILP:  sum_{b=0} v + sum_{b=1} (1 - v) &gt;= 1</span>
+<span class="sd">        SAT :  one blocking clause = OR of the negated literals of the assignment.</span>
+
+<span class="sd">    Returns a list with the single constraint string (empty list if ``var_ids`` is empty).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">var_ids</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_no_good_cut: var_ids and bits differ in length (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">var_ids</span><span class="p">)</span><span class="si">}</span><span class="s2"> vs </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">var_ids</span><span class="p">:</span>  <span class="c1"># nothing to forbid</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="c1"># sum_{b=0} v - sum_{b=1} v &gt;= 1 - (number of b=1): violated only at the given assignment.</span>
+        <span class="n">ones</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bits</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">vid</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_ids</span><span class="p">,</span> <span class="n">bits</span><span class="p">):</span>
+            <span class="n">sign</span> <span class="o">=</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>  <span class="c1"># first term: drop a leading &#39;+&#39;, keep a leading &#39;-&#39;</span>
+                <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vid</span> <span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="s2">&quot;+&quot;</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">vid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sign</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">vid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lhs</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> &gt;= </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ones</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">vid</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">vid</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_ids</span><span class="p">,</span> <span class="n">bits</span><span class="p">))]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_no_good_cut: unknown model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_exactly">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_exactly">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_exactly</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain each selected variable to equal ``cons_value`` (MILP, or SAT for value 0/1).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for EXACTLY constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_sum_exactly">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_exactly">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_sum_exactly</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain the sum of the selected variables to equal ``cons_value``.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)))</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; = </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">pysat_import</span><span class="p">:</span>
+        <span class="c1"># ``None`` is defaulted downstream in ``_pysat_cardinality_constraints``; here we</span>
+        <span class="c1"># only reject an explicitly out-of-range encoding.</span>
+        <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">encoding</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;[ERROR] Invalid encoding = </span><span class="si">{</span><span class="n">encoding</span><span class="si">}</span><span class="s2">, refer &quot;</span>
+                <span class="s2">&quot;https://pysathq.github.io/docs/html/api/card.html&quot;</span>
+            <span class="p">)</span>
+        <span class="n">card_enc</span> <span class="o">=</span> <span class="n">_require_pysat_cardenc</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_pysat_cardinality_constraints</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">card_enc</span><span class="o">.</span><span class="n">equals</span><span class="p">,</span> <span class="s2">&quot;equals&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;SUM_EXACTLY over SAT requires PySAT (pip install python-sat).&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for SUM_EXACTLY constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_at_most">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_at_most">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_at_most</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain each selected variable to be at most ``cons_value`` (MILP, or SAT for value 0/1).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for AT_MOST constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_sum_at_most">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_at_most">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_sum_at_most</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;SEQUENTIAL&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain the sum of the selected variables to be at most ``cons_value``.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)))</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; &lt;= </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">encoding</span> <span class="o">==</span> <span class="s2">&quot;SEQUENTIAL&quot;</span> <span class="ow">or</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">gen_sequential_encoding_sat</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">pysat_import</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoding</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">encoding</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Default to 1 if the encoding is not specified as an integer</span>
+        <span class="n">card_enc</span> <span class="o">=</span> <span class="n">_require_pysat_cardenc</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_pysat_cardinality_constraints</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">card_enc</span><span class="o">.</span><span class="n">atmost</span><span class="p">,</span> <span class="s2">&quot;atmost&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="s2">&quot;SUM_AT_MOST with a numeric PySAT encoding requires PySAT (pip install python-sat); &quot;</span>
+            <span class="s2">&quot;use the default SEQUENTIAL encoding otherwise.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for SUM_AT_MOST constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_at_least">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_at_least">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_at_least</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain each selected variable to be at least ``cons_value`` (MILP, or SAT for value 0/1).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> &gt;= </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for AT_LEAST constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_constraints_sum_at_least">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_at_least">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_constraints_sum_at_least</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constrain the sum of the selected variables to be at least ``cons_value``.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)))</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; &gt;= </span><span class="si">{</span><span class="n">cons_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">cons_value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cons_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)))]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="ow">and</span> <span class="n">pysat_import</span><span class="p">:</span>
+        <span class="n">card_enc</span> <span class="o">=</span> <span class="n">_require_pysat_cardenc</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_pysat_cardinality_constraints</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">cons_value</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">card_enc</span><span class="o">.</span><span class="n">atleast</span><span class="p">,</span> <span class="s2">&quot;atleast&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;SUM_AT_LEAST over SAT requires PySAT (pip install python-sat).&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported model_type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39; for SUM_AT_LEAST constraint.&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># ----------- SAT sequential-counter cardinality encoding ------------- #</span>
+<div class="viewcode-block" id="gen_sequential_encoding_sat">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_sequential_encoding_sat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_sequential_encoding_sat</span><span class="p">(</span><span class="n">hw_list</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">dummy_variables</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate SAT clauses for a sequential counter cardinality encoding.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">gen_sequential_encoding_sat</span><span class="p">,</span> <span class="s2">&quot;_counter&quot;</span><span class="p">):</span>
+        <span class="n">gen_sequential_encoding_sat</span><span class="o">.</span><span class="n">_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hw_list</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">weight</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">weight</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;weight should be an integer: 0 &lt;= weight &lt;= n (n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">), got </span><span class="si">{</span><span class="n">weight</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weight</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">hw_list</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">weight</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">dummy_variables</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">gen_sequential_encoding_sat</span><span class="o">.</span><span class="n">_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;dummy_seq_</span><span class="si">{</span><span class="n">gen_sequential_encoding_sat</span><span class="o">.</span><span class="n">_counter</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">dummy_variables</span> <span class="o">=</span> <span class="p">[[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">weight</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">hw_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span><span class="p">)])</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">hw_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">hw_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+                            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span><span class="p">)])</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+                            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span><span class="p">)])</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">hw_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">weight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">hw_list</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">dummy_variables</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">][</span><span class="n">weight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+
+
+<span class="c1"># ----------- Matsui&#39;s branch-and-bound constraints Generation ------------- #</span>
+<div class="viewcode-block" id="gen_matsui_constraints_milp">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_matsui_constraints_milp">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matsui_constraints_milp</span><span class="p">(</span><span class="n">Round</span><span class="p">,</span> <span class="n">best_obj</span><span class="p">,</span> <span class="n">obj_fun</span><span class="p">,</span> <span class="n">cons_type</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate Matsui branch-and-bound constraints for MILP models.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">Round</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Round = </span><span class="si">{</span><span class="n">Round</span><span class="si">}</span><span class="s2"> must be at least 2.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">best_obj</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Round</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;best_obj = </span><span class="si">{</span><span class="n">best_obj</span><span class="si">}</span><span class="s2"> length must be Round-1 = </span><span class="si">{</span><span class="n">Round</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">obj_fun</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># copy so the caller&#39;s list is not mutated</span>
+        <span class="n">obj_fun</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">obj_fun</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">obj_fun</span> <span class="ow">and</span> <span class="n">obj_fun</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="p">[]:</span>  <span class="c1"># drop trailing empty rounds</span>
+        <span class="n">obj_fun</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">obj_fun</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_fun</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Round</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">obj_fun</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;obj_fun = </span><span class="si">{</span><span class="n">obj_fun</span><span class="si">}</span><span class="s2"> must be a list of lists, and with length equal to Round = </span><span class="si">{</span><span class="n">Round</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cons_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;UPPER&quot;</span><span class="p">,</span> <span class="s2">&quot;LOWER&quot;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cons_type = </span><span class="si">{</span><span class="n">cons_type</span><span class="si">}</span><span class="s2"> must be one of [&#39;ALL&#39;, &#39;UPPER&#39;, &#39;LOWER&#39;].&quot;</span><span class="p">)</span>
+
+    <span class="n">add_cons</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Round</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">best_obj</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">cons_type</span> <span class="o">==</span> <span class="s2">&quot;ALL&quot;</span> <span class="ow">or</span> <span class="n">cons_type</span> <span class="o">==</span> <span class="s2">&quot;UPPER&quot;</span><span class="p">:</span>
+                <span class="n">w_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Round</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">obj_fun</span><span class="p">[</span><span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span>
+                <span class="n">all_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">w_vars</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - obj&quot;</span><span class="p">]</span>
+                <span class="n">add_cons</span> <span class="o">+=</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="s2">&quot;AT_MOST&quot;</span><span class="p">,</span> <span class="n">all_vars</span><span class="p">,</span> <span class="o">-</span><span class="n">best_obj</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">cons_type</span> <span class="o">==</span> <span class="s2">&quot;ALL&quot;</span> <span class="ow">or</span> <span class="n">cons_type</span> <span class="o">==</span> <span class="s2">&quot;LOWER&quot;</span><span class="p">:</span>
+                <span class="n">w_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Round</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">obj_fun</span><span class="p">[</span><span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span>
+                <span class="n">all_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">w_vars</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - obj&quot;</span><span class="p">]</span>
+                <span class="n">add_cons</span> <span class="o">+=</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="s2">&quot;AT_MOST&quot;</span><span class="p">,</span> <span class="n">all_vars</span><span class="p">,</span> <span class="o">-</span><span class="n">best_obj</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">add_cons</span></div>
+
+
+
+<div class="viewcode-block" id="gen_matsui_constraints_sat">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_matsui_constraints_sat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matsui_constraints_sat</span><span class="p">(</span>
+    <span class="n">Round</span><span class="p">,</span>
+    <span class="n">best_obj</span><span class="p">,</span>
+    <span class="n">obj_sat</span><span class="p">,</span>
+    <span class="n">obj_var</span><span class="p">,</span>
+    <span class="n">GroupConstraintChoice</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">GroupNumForChoice</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate Matsui branch-and-bound constraints for SAT models.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">Round</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Round = </span><span class="si">{</span><span class="n">Round</span><span class="si">}</span><span class="s2"> must be at least 2.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">best_obj</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Round</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;best_obj length = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">best_obj</span><span class="p">)</span><span class="si">}</span><span class="s2"> must be (Round-1) = </span><span class="si">{</span><span class="n">Round</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj_sat</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">obj_sat</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;obj_sat = </span><span class="si">{</span><span class="n">obj_sat</span><span class="si">}</span><span class="s2"> must be a positive integer.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">obj_var</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># copy so the caller&#39;s list is not mutated</span>
+        <span class="n">obj_var</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">obj_var</span> <span class="ow">and</span> <span class="n">obj_var</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="p">[]:</span>  <span class="c1"># drop trailing empty rounds</span>
+        <span class="n">obj_var</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">obj_var</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Round</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">obj_var</span><span class="p">):</span>
+        <span class="n">obj_var_len</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span> <span class="k">if</span> <span class="n">obj_var</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;obj_var must be a list of lists, and with length = </span><span class="si">{</span><span class="n">obj_var_len</span><span class="si">}</span><span class="s2"> equal to Round = </span><span class="si">{</span><span class="n">Round</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">GroupConstraintChoice</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Currently only support GroupConstraintChoice = 1, but got </span><span class="si">{</span><span class="n">GroupConstraintChoice</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">GroupNumForChoice</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GroupNumForChoice = </span><span class="si">{</span><span class="n">GroupNumForChoice</span><span class="si">}</span><span class="s2"> must be at least 1.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">gen_matsui_constraints_sat</span><span class="p">,</span> <span class="s2">&quot;_counter&quot;</span><span class="p">):</span>  <span class="c1"># Use function attribute to set global counter</span>
+        <span class="n">gen_matsui_constraints_sat</span><span class="o">.</span><span class="n">_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">best_obj</span><span class="p">)</span> <span class="o">==</span> <span class="n">Round</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">best_obj</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">best_obj</span>
+    <span class="n">Main_Vars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Round</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">[</span><span class="n">Round</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">r</span><span class="p">])):</span>
+            <span class="n">Main_Vars</span> <span class="o">+=</span> <span class="p">[</span><span class="n">obj_var</span><span class="p">[</span><span class="n">Round</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">r</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span>
+    <span class="n">gen_matsui_constraints_sat</span><span class="o">.</span><span class="n">_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">dummy_var</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="sa">f</span><span class="s1">&#39;dummy_matsui_</span><span class="si">{</span><span class="n">gen_matsui_constraints_sat</span><span class="o">.</span><span class="n">_counter</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obj_sat</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Main_Vars</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">gen_sequential_encoding_sat</span><span class="p">(</span><span class="n">hw_list</span><span class="o">=</span><span class="n">Main_Vars</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">obj_sat</span><span class="p">,</span> <span class="n">dummy_variables</span><span class="o">=</span><span class="n">dummy_var</span><span class="p">)</span>
+
+    <span class="n">MatsuiRoundIndex</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">GroupConstraintChoice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GroupNumForChoice</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">round_offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Round</span> <span class="o">-</span> <span class="n">group</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">MatsuiRoundIndex</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">group</span><span class="p">,</span> <span class="n">group</span> <span class="o">+</span> <span class="n">round_offset</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="n">matsui_count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">MatsuiRoundIndex</span><span class="p">)):</span>
+        <span class="n">StartingRound</span> <span class="o">=</span> <span class="n">MatsuiRoundIndex</span><span class="p">[</span><span class="n">matsui_count</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">EndingRound</span> <span class="o">=</span> <span class="n">MatsuiRoundIndex</span><span class="p">[</span><span class="n">matsui_count</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">PartialCardinalityCons</span> <span class="o">=</span> <span class="n">obj_sat</span> <span class="o">-</span> <span class="n">best_obj</span><span class="p">[</span><span class="n">StartingRound</span><span class="p">]</span> <span class="o">-</span> <span class="n">best_obj</span><span class="p">[</span><span class="n">Round</span><span class="o">-</span><span class="n">EndingRound</span><span class="p">]</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Round</span> <span class="o">-</span> <span class="n">StartingRound</span><span class="p">,</span> <span class="n">Round</span><span class="p">))</span>
+        <span class="n">right</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Round</span> <span class="o">-</span> <span class="n">EndingRound</span><span class="p">,</span> <span class="n">Round</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">constraints</span> <span class="o">+=</span> <span class="n">gen_matsui_partial_cardinality_sat</span><span class="p">(</span>
+            <span class="n">Main_Vars</span><span class="p">,</span>
+            <span class="n">dummy_var</span><span class="p">,</span>
+            <span class="n">obj_sat</span><span class="p">,</span>
+            <span class="n">left</span><span class="p">,</span>
+            <span class="n">right</span><span class="p">,</span>
+            <span class="n">PartialCardinalityCons</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+
+
+<div class="viewcode-block" id="gen_matsui_partial_cardinality_sat">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_matsui_partial_cardinality_sat">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matsui_partial_cardinality_sat</span><span class="p">(</span><span class="n">obj_var</span><span class="p">,</span> <span class="n">dummy_var</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate partial cardinality SAT clauses for Matsui constraints.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj_var</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;obj_var must be a non-empty list.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dummy_var</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">dummy_var</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;dummy_var must be a list with length equal to len(obj_var) - 1.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;k must be a positive integer.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;left index must be a non-negative integer.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">right</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;right index = </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2"> out of range of obj_var = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;m=</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> must be a non-negative integer.&quot;</span><span class="p">)</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj_var</span><span class="p">)</span>
+    <span class="n">add_cons</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">add_cons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">obj_var</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">right</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">-</span> <span class="n">m</span><span class="p">):</span>
+                <span class="n">add_cons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">left</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">-</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">add_cons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">left</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">obj_var</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">-</span> <span class="n">m</span><span class="p">):</span>
+                <span class="n">add_cons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">left</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">dummy_var</span><span class="p">[</span><span class="n">right</span><span class="p">][</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">add_cons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">obj_var</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">add_cons</span></div>
+
+
+
+<span class="c1"># ----------- Attack boundary and input constraints ------------- #</span>
+<div class="viewcode-block" id="gen_input_non_zero_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_input_non_zero_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_input_non_zero_constraints</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">,</span> <span class="n">bitwise</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate the standard nonzero input constraint.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cipher: The cipher whose input variables must be non-zero.</span>
+<span class="sd">        config_model (dict): Model configuration (``model_type``, SAT encoding, ...).</span>
+<span class="sd">        bitwise (bool): If True, apply the constraint per bit; otherwise per word</span>
+<span class="sd">            (word-level for truncated goals).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list[str]: The generated model constraint strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cons_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span> <span class="k">for</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">inputs_constraints</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cons</span><span class="o">.</span><span class="n">input_vars</span><span class="p">]</span>
+    <span class="n">model_type</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_type&quot;</span><span class="p">,</span> <span class="s2">&quot;milp&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">encoding</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;atleast_encoding_sat&quot;</span><span class="p">,</span> <span class="s2">&quot;SEQUENTIAL&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span>
+        <span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">,</span>
+        <span class="n">cons_type</span><span class="o">=</span><span class="s2">&quot;SUM_AT_LEAST&quot;</span><span class="p">,</span>
+        <span class="n">cons_vars</span><span class="o">=</span><span class="n">cons_vars</span><span class="p">,</span>
+        <span class="n">cons_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">,</span>
+        <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="n">binary_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var_id</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cons_vars</span> <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">binary_vars</span><span class="p">:</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Binary</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">binary_vars</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_cipher_boundary_vars</span><span class="p">(</span><span class="n">in_out</span><span class="p">,</span> <span class="n">cipher</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the cipher&#39;s boundary variables for ``in_out`` (``&quot;input&quot;`` or ``&quot;output&quot;``).&quot;&quot;&quot;</span>
+    <span class="n">cons_vars</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">in_out</span> <span class="o">==</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;inputs&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;[WARNING] Cipher &#39;inputs&#39; attribute invalid.&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">input_name</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">inputs</span><span class="p">:</span>
+            <span class="n">cons_vars</span> <span class="o">+=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">input_name</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">in_out</span> <span class="o">==</span> <span class="s2">&quot;output&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;outputs&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">outputs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;[WARNING] Cipher &#39;outputs&#39; attribute invalid.&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">output_name</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">outputs</span><span class="p">:</span>
+            <span class="n">cons_vars</span> <span class="o">+=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="n">output_name</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] Invalid in_out: </span><span class="si">{</span><span class="n">in_out</span><span class="si">}</span><span class="s2">. Expected &#39;input&#39; or &#39;output&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cons_vars</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] Cipher has no </span><span class="si">{</span><span class="n">in_out</span><span class="si">}</span><span class="s2"> variables.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cons_vars</span>
+
+
+<div class="viewcode-block" id="normalize_fixed_value_bits">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.normalize_fixed_value_bits">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_fixed_value_bits</span><span class="p">(</span><span class="n">fixed_value</span><span class="p">,</span> <span class="n">bit_count</span><span class="p">,</span> <span class="n">value_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalize a binary or hexadecimal fixed mask/difference string to bits.&quot;&quot;&quot;</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="n">fixed_value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;0b&quot;</span><span class="p">):</span>
+        <span class="n">digits</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s2">&quot;01&quot;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">):</span>  <span class="c1"># 0x validates via int(); 0b must too</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;[WARNING] Invalid </span><span class="si">{</span><span class="n">value_name</span><span class="si">}</span><span class="s2"> format: </span><span class="si">{</span><span class="n">fixed_value</span><span class="si">}</span><span class="s2">. &quot;</span>
+                <span class="s2">&quot;Expected binary (0b...) or hexadecimal (0x...) string.&quot;</span>
+            <span class="p">)</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="n">bit_count</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;0x&quot;</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bits</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">16</span><span class="p">))[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="n">bit_count</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;[WARNING] Invalid </span><span class="si">{</span><span class="n">value_name</span><span class="si">}</span><span class="s2"> format: </span><span class="si">{</span><span class="n">fixed_value</span><span class="si">}</span><span class="s2">. &quot;</span>
+                <span class="s2">&quot;Expected binary (0b...) or hexadecimal (0x...) string.&quot;</span>
+            <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;[WARNING] Invalid </span><span class="si">{</span><span class="n">value_name</span><span class="si">}</span><span class="s2"> format: </span><span class="si">{</span><span class="n">fixed_value</span><span class="si">}</span><span class="s2">. &quot;</span>
+            <span class="s2">&quot;Expected binary (0b...) or hexadecimal (0x...) string.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">bit_count</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;[WARNING] </span><span class="si">{</span><span class="n">value_name</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span><span class="si">}</span><span class="s2"> bits but the </span><span class="si">{</span><span class="n">bit_count</span><span class="si">}</span><span class="s2">-bit boundary was expected.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">bits</span></div>
+
+
+
+<div class="viewcode-block" id="state_bits">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.state_bits">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">state_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``[(var_id, bit)]`` for ``cons_vars`` pinned to ``fixed_value``, MSB first.</span>
+
+<span class="sd">    The traversal anything pinning a state needs: the word count and the word width come from the</span>
+<span class="sd">    variables themselves, so a caller cannot disagree with the primitive about how a state splits.</span>
+<span class="sd">    ``fixed_value`` is the whole state as ``&quot;0x...&quot;`` / ``&quot;0b...&quot;``, MSB first, and must match the</span>
+<span class="sd">    target&#39;s width -- a value wider than its target is rejected, never truncated.</span>
+
+<span class="sd">    Separate from ``_fix_vars_to_bits`` because a caller may want the assignment rather than the</span>
+<span class="sd">    constraints: ``reference/convert.py`` had its own copy of this loop for exactly that reason.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="n">state_var_ids</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">)</span>
+    <span class="n">bits</span> <span class="o">=</span> <span class="n">normalize_fixed_value_bits</span><span class="p">(</span><span class="n">fixed_value</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">),</span> <span class="n">value_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">var_id</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">bit</span><span class="p">))</span> <span class="k">for</span> <span class="n">var_id</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">bits</span><span class="p">)]</span></div>
+
+
+
+<div class="viewcode-block" id="state_var_ids">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.state_var_ids">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">state_var_ids</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The model variable IDs of a state, MSB first -- the order a state&#39;s value is read in.</span>
+
+<span class="sd">    Split out so reading a value off a solution uses the same order as pinning one into a model;</span>
+<span class="sd">    the two directions disagreeing would make a claim written here unreadable there.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">var_id</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cons_vars</span> <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_fix_vars_to_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pin ``cons_vars`` to ``fixed_value`` as model constraints; see ``state_bits``.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">constraint</span>
+            <span class="k">for</span> <span class="n">var_id</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">state_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">value_name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">var_id</span><span class="p">],</span> <span class="n">bit</span><span class="p">,</span>
+                                                         <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+
+
+<div class="viewcode-block" id="gen_fixed_input_output_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_fixed_input_output_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_fixed_input_output_constraints</span><span class="p">(</span><span class="n">in_out</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate constraints that fix input/output differences or masks.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">model_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="s2">&quot;sat&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid model_type: </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">. Expected one of [&#39;milp&#39;, &#39;sat&#39;].&quot;</span><span class="p">)</span>
+
+    <span class="n">cons_vars</span> <span class="o">=</span> <span class="n">_cipher_boundary_vars</span><span class="p">(</span><span class="n">in_out</span><span class="p">,</span> <span class="n">cipher</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_fix_vars_to_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">value_name</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_fixed_activity_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_fixed_activity_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_fixed_activity_constraints</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">active_positions</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fix an activity pattern over ``cons_vars``: positions in ``active_positions`` are 1, the</span>
+<span class="sd">    rest 0.</span>
+
+<span class="sd">    ``bitwise=False`` counts one position per variable (word-level, for a truncated model);</span>
+<span class="sd">    ``bitwise=True`` counts one per bit. Positions index the expanded list, so with ``bitwise``</span>
+<span class="sd">    the i-th position is the i-th BIT across all the variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">vid</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cons_vars</span> <span class="k">for</span> <span class="n">vid</span> <span class="ow">in</span> <span class="n">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">)]</span>
+    <span class="n">active</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">active_positions</span><span class="p">)</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ids</span><span class="p">):</span>
+        <span class="n">constraints</span> <span class="o">+=</span> <span class="n">gen_predefined_constraints</span><span class="p">(</span>
+            <span class="n">model_type</span><span class="p">,</span> <span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">var_id</span><span class="p">],</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">active</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+
+
+<div class="viewcode-block" id="gen_fixed_state_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_fixed_state_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_fixed_state_constraints</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">rnd</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span>
+                                <span class="n">nwords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fix the state of ``function`` at round ``rnd``, layer ``layer`` to ``fixed_value``.</span>
+
+<span class="sd">    Addresses ``cipher.functions[function].vars[rnd][layer]``, so the word count and the word</span>
+<span class="sd">    width are read from the cipher. ``fixed_value`` is the whole state as a ``&quot;0x...&quot;``/``&quot;0b...&quot;`` </span>
+<span class="sd">    string, MSB first, and must match the target&#39;s width. Pick only the first ``nwords`` words.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="s2">&quot;sat&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid model_type: </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">. Expected one of [&#39;milp&#39;, &#39;sat&#39;].&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">function</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown function: </span><span class="si">{</span><span class="n">function</span><span class="si">!r}</span><span class="s2">. Expected one of </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">function</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">rnd</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Round </span><span class="si">{</span><span class="n">rnd</span><span class="si">}</span><span class="s2"> out of range for </span><span class="si">{</span><span class="n">function</span><span class="si">!r}</span><span class="s2"> (0..</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">layer</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">rnd</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer</span><span class="si">}</span><span class="s2"> out of range for </span><span class="si">{</span><span class="n">function</span><span class="si">!r}</span><span class="s2"> round </span><span class="si">{</span><span class="n">rnd</span><span class="si">}</span><span class="s2"> &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;(0..</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">rnd</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nwords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">nwords</span> <span class="o">&lt;=</span> <span class="n">fn</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;nwords </span><span class="si">{</span><span class="n">nwords</span><span class="si">}</span><span class="s2"> out of range for </span><span class="si">{</span><span class="n">function</span><span class="si">!r}</span><span class="s2"> (1..</span><span class="si">{</span><span class="n">fn</span><span class="o">.</span><span class="n">nbr_words</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+
+    <span class="n">cons_vars</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">rnd</span><span class="p">][</span><span class="n">layer</span><span class="p">][:</span> <span class="n">nwords</span> <span class="k">if</span> <span class="n">nwords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">fn</span><span class="o">.</span><span class="n">nbr_words</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">_fix_vars_to_bits</span><span class="p">(</span><span class="n">cons_vars</span><span class="p">,</span> <span class="n">fixed_value</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">value_name</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_required_fixed_boundary_constraints">
+<a class="viewcode-back" href="../../api/tools/model_constraints.html#tools.model_constraints.gen_required_fixed_boundary_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_required_fixed_boundary_constraints</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">input_value</span><span class="p">,</span> <span class="n">output_value</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate constraints fixing the cipher&#39;s input and/or output boundary values.</span>
+
+<span class="sd">    The caller decides when this applies (e.g. a specific goal); at least one of</span>
+<span class="sd">    ``input_value`` / ``output_value`` must be provided.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cipher: The cipher whose input/output boundary is fixed.</span>
+<span class="sd">        input_value: The fixed input value, or None to leave the input free.</span>
+<span class="sd">        output_value: The fixed output value, or None to leave the output free.</span>
+<span class="sd">        model_type (str): ``&quot;milp&quot;`` or ``&quot;sat&quot;``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list[str]: The generated model constraint strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">input_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">output_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Either an input or output value must be specified to fix the boundary.&quot;</span><span class="p">)</span>
+
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">input_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_fixed_input_output_constraints</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">input_value</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">output_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_fixed_input_output_constraints</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">output_value</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

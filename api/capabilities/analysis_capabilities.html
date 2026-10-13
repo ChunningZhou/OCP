@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>analysis_capabilities &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/capabilities/analysis_capabilities';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="implementation_capabilities" href="implementation_capabilities.html" />
+    <link rel="prev" title="operator_capabilities" href="operator_capabilities.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../variables.html">variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../variables/variables.html">variables</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operators.html">operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operators/AESround.html">AESround</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/SHACAL2BooleanFunctions.html">SHACAL2BooleanFunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/Sbox.html">Sbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/boolean_operators.html">boolean_operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/matrix.html">matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/modular_operators.html">modular_operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/operators.html">operators</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../primitives.html">primitives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/aes.html">aes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/ascon.html">ascon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/chacha.html">chacha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/forro.html">forro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/gift.html">gift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/knot.html">knot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/lblock.html">lblock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/led.html">led</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/present.html">present</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/primitives.html">primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/rectangle.html">rectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/rocca.html">rocca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/salsa.html">salsa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/shacal2.html">shacal2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/simeck.html">simeck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/simon.html">simon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/siphash.html">siphash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/skinny.html">skinny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/speck.html">speck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/trivium.html">trivium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/twine.html">twine</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../attacks.html">attacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/attacks.html">attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/attack_trace.html">attack_trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/differential_cryptanalysis.html">differential_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/linear_cryptanalysis.html">linear_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/integral_cryptanalysis.html">integral_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/impossible_differential.html">impossible_differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/zero_corr_linear.html">zero_corr_linear</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solving.html">solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solving/solving.html">solving</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../implementations.html">implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../implementations/implementations.html">implementations</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../visualisations.html">visualisations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visualisations/visualisations.html">visualisations</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tools.html">tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/milp_search.html">milp_search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/minimize_logic.html">minimize_logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_configuration.html">model_configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_constraints.html">model_constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_objective.html">model_objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_templates.html">model_templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/operator_constraints.html">operator_constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/paths.html">paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/polyhedron.html">polyhedron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/resource_monitor.html">resource_monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/sat_search.html">sat_search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/sbox_division_trails.html">sbox_division_trails</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../capabilities.html">capabilities</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitive_capabilities.html">primitive_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layer_capabilities.html">layer_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_capabilities.html">operator_capabilities</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">analysis_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation_capabilities.html">implementation_capabilities</a></li>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../recheck.html">recheck</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/recheck.html">recheck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/claim.html">claim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/checks.html">checks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/cross_check.html">cross_check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/run.html">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recheck/make_table.html">make_table</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../capabilities.html" class="nav-link">capabilities</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">analysis_capabilities</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-capabilities.analysis_capabilities">
+<span id="analysis-capabilities"></span><h1>analysis_capabilities<a class="headerlink" href="#module-capabilities.analysis_capabilities" title="Link to this heading">#</a></h1>
+<p>Which analysis goals a cipher can express, which operators block the rest, and what a run returns.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.resolve_goal">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">resolve_goal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#resolve_goal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.resolve_goal" title="Link to this definition">#</a></dt>
+<dd><p>The goal actually modelled for <code class="docutils literal notranslate"><span class="pre">goal</span></code>: itself, or the middle-round goal it is built on.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.required_version">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">required_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operator_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#required_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.required_version" title="Link to this definition">#</a></dt>
+<dd><p>The model-version suffix <code class="docutils literal notranslate"><span class="pre">goal</span></code> requires for <code class="docutils literal notranslate"><span class="pre">operator_class</span></code>.</p>
+<p>Applies <code class="docutils literal notranslate"><span class="pre">GOAL_MODEL_VERSION_RULES</span></code> as <code class="docutils literal notranslate"><span class="pre">set_model_versions</span></code> does: in order, each matching
+rule overriding the previous. Raises when no rule covers the operator, which means the goal
+is missing its <code class="docutils literal notranslate"><span class="pre">scope=None</span></code> fallback.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.operator_support">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">operator_support</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operator_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#operator_support"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.operator_support" title="Link to this definition">#</a></dt>
+<dd><p>Whether <code class="docutils literal notranslate"><span class="pre">operator_class</span></code> declares the version <code class="docutils literal notranslate"><span class="pre">goal</span></code> needs: one of the three states above.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.model_scope_constraints">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">model_scope_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#model_scope_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.model_scope_constraints" title="Link to this definition">#</a></dt>
+<dd><p>Exactly the operators <code class="docutils literal notranslate"><span class="pre">gen_round_model_constraint_obj_fun</span></code> would generate a model for.</p>
+<p>Mirrors the generation loop, honouring <code class="docutils literal notranslate"><span class="pre">positions</span></code> and the <code class="docutils literal notranslate"><span class="pre">gen_input_model</span></code> /
+<code class="docutils literal notranslate"><span class="pre">gen_output_model</span></code> switches; <code class="docutils literal notranslate"><span class="pre">set_model_versions</span></code> sweeps wider on purpose. A list, not a
+generator: callers make one full pass, and a generator would go empty on a second.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.scope_operator_classes">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">scope_operator_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#scope_operator_classes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.scope_operator_classes" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{class</span> <span class="pre">name:</span> <span class="pre">class}</span></code> for every distinct operator inside the query scope.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.goal_report">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">goal_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope_classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#goal_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.goal_report" title="Link to this definition">#</a></dt>
+<dd><p>A structured answer for one (goal, model_type) pair; <code class="docutils literal notranslate"><span class="pre">capability_report</span></code> gives all of them.</p>
+<p>Keys: <code class="docutils literal notranslate"><span class="pre">feasible</span></code> (nothing in scope declares it cannot), <code class="docutils literal notranslate"><span class="pre">verified</span></code> (and every operator
+declares the required version – about declarations, not an end-to-end check), <code class="docutils literal notranslate"><span class="pre">blockers</span></code>
+and <code class="docutils literal notranslate"><span class="pre">unverified</span></code> as sorted <code class="docutils literal notranslate"><span class="pre">(class,</span> <span class="pre">suffix)</span></code> lists, plus <code class="docutils literal notranslate"><span class="pre">goal</span></code>, <code class="docutils literal notranslate"><span class="pre">modelled_as</span></code>,
+<code class="docutils literal notranslate"><span class="pre">model_type</span></code> and <code class="docutils literal notranslate"><span class="pre">operators</span></code>. Read-only: assigns no <code class="docutils literal notranslate"><span class="pre">model_version</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">modelled_as</span></code> differs from <code class="docutils literal notranslate"><span class="pre">goal</span></code> for the 4 impossible-differential and zero-correlation
+goals: the answer is about the middle-round goal they are built on, which is the only thing
+the operators declare anything about.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.capability_report">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">capability_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#capability_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.capability_report" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{goal:</span> <span class="pre">goal_report(...)}</span></code> for every goal, walking the cipher’s operators only once.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.feasible_goals">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">feasible_goals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_verified</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#feasible_goals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.feasible_goals" title="Link to this definition">#</a></dt>
+<dd><p>The goals <code class="docutils literal notranslate"><span class="pre">cipher</span></code> can express under <code class="docutils literal notranslate"><span class="pre">model_type</span></code>, in <code class="docutils literal notranslate"><span class="pre">ALL_GOALS</span></code> order.</p>
+<p><code class="docutils literal notranslate"><span class="pre">require_verified=True</span></code> (the default) keeps only goals every operator declares. <code class="docutils literal notranslate"><span class="pre">False</span></code>
+also accepts goals held up solely by operators that declare nothing, which are not known to
+work: the late <code class="docutils literal notranslate"><span class="pre">version</span> <span class="pre">...</span> <span class="pre">not</span> <span class="pre">existing</span></code> error is what such an operator produces.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.explain_goal">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">explain_goal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#explain_goal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.explain_goal" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">goal_report</span></code> rendered for a human or an error message; <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> when nothing is wrong.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.goal_support_matrix">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">goal_support_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#goal_support_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.goal_support_matrix" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{goal:</span> <span class="pre">{model_type:</span> <span class="pre">{state:</span> <span class="pre">sorted</span> <span class="pre">class</span> <span class="pre">names}}}</span></code> over every concrete operator class.</p>
+<p>Cipher-independent: what any cipher could express, not what this one can. All three states are
+reported, so an operator that declares nothing stays under <code class="docutils literal notranslate"><span class="pre">UNVERIFIED</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.trace_classes">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">trace_classes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#trace_classes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.trace_classes" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{class</span> <span class="pre">name:</span> <span class="pre">{...}}</span></code> for every <code class="docutils literal notranslate"><span class="pre">AttackTrace</span></code> class, merged along the real MRO.</p>
+<p>Per entry: <code class="docutils literal notranslate"><span class="pre">bases</span></code>; <code class="docutils literal notranslate"><span class="pre">data_keys</span></code>, every key an instance carries; <code class="docutils literal notranslate"><span class="pre">read_keys</span></code>, the subset
+the class bodies read back; <code class="docutils literal notranslate"><span class="pre">constructed_keys</span></code>, the subset its writer sets;
+<code class="docutils literal notranslate"><span class="pre">unresolved_constructed</span></code>, writer keys that are variables and so not statically known; and
+<code class="docutils literal notranslate"><span class="pre">exports</span></code> as <code class="docutils literal notranslate"><span class="pre">{format:</span> <span class="pre">implemented</span> <span class="pre">|</span> <span class="pre">unimplemented</span> <span class="pre">|</span> <span class="pre">abstract}</span></code>. All read out of the
+source, so none of it can disagree with the code.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.export_formats">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">export_formats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#export_formats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.export_formats" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{format:</span> <span class="pre">state}</span></code> for one trace class, or the union over the concrete ones.</p>
+<p><code class="docutils literal notranslate"><span class="pre">unimplemented</span></code> is a method that exists and raises <code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code>: having a
+<code class="docutils literal notranslate"><span class="pre">save_tex</span></code> is not being able to export LaTeX. <code class="docutils literal notranslate"><span class="pre">mixed</span></code> would mean two concrete classes
+disagree, which none do today.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.recheck_available">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">recheck_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#recheck_available"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.recheck_available" title="Link to this definition">#</a></dt>
+<dd><p>What <code class="docutils literal notranslate"><span class="pre">reference/</span></code> offers for independently re-checking a result.</p>
+<p><code class="docutils literal notranslate"><span class="pre">reference</span></code> is an <strong>optional</strong> dependency – published results, not part of the pipeline –
+so its absence is reported rather than raised. <code class="docutils literal notranslate"><span class="pre">analyses</span></code> comes from <code class="docutils literal notranslate"><span class="pre">reference.CLAIMS</span></code>:
+an analysis missing from that vocabulary cannot be recorded as a claim, let alone replayed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.recheck_parameters">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">recheck_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#recheck_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.recheck_parameters" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{check:</span> <span class="pre">{name:</span> <span class="pre">{required,</span> <span class="pre">default}}}</span></code> – what a replay has to be given.</p>
+<p><code class="docutils literal notranslate"><span class="pre">recheck_path</span></code> says which checks apply and never what they need. Read from each check’s own
+signature, so the four turn out to take the same four arguments: the claim <code class="docutils literal notranslate"><span class="pre">spec</span></code>, an
+optional pre-built <code class="docutils literal notranslate"><span class="pre">cipher</span></code>, a <code class="docutils literal notranslate"><span class="pre">model_type</span></code> and a <code class="docutils literal notranslate"><span class="pre">config_solver</span></code>. The round count and
+the bound are not arguments – they come out of the claim, which is why a replay needs the
+claim file and not a configuration of its own.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.recheck_path">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">recheck_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#recheck_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.recheck_path" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">(applicable</span> <span class="pre">checks,</span> <span class="pre">reason)</span></code> for independently re-checking what <code class="docutils literal notranslate"><span class="pre">entry_point</span></code> returns.</p>
+<p>Both the analysis and the shape matter. <code class="docutils literal notranslate"><span class="pre">reference</span></code>’s four checks replay a <strong>trail</strong> – pin
+it into the model, solve, compare – so a result that is not a trail cannot go through them
+whatever its analysis. A bare optimum still has a path: <code class="docutils literal notranslate"><span class="pre">reference.compare_bound</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.entry_point_parameters">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">entry_point_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#entry_point_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.entry_point_parameters" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{name:</span> <span class="pre">{required,</span> <span class="pre">default}}</span></code> for what an entry point takes, from its own signature.</p>
+<p><code class="docutils literal notranslate"><span class="pre">result_shapes</span></code> said what comes back and never what goes in, so a consumer could read the
+goal and the objective-target vocabularies without learning which argument takes which –
+or that <code class="docutils literal notranslate"><span class="pre">two_stage_trail_search</span></code> is handed a <strong>factory and a round count</strong> where the other
+five take a built cipher. Same shape as the A axis reports a factory’s parameters, so the
+two read alike.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.result_shapes">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">result_shapes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#result_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.result_shapes" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">{entry</span> <span class="pre">point:</span> <span class="pre">{...}}</span></code> for the six entry points of <code class="docutils literal notranslate"><span class="pre">attacks/attacks.py</span></code>.</p>
+<p>Per entry: <code class="docutils literal notranslate"><span class="pre">parameters</span></code>, what the call takes (see <code class="docutils literal notranslate"><span class="pre">entry_point_parameters</span></code>);
+<code class="docutils literal notranslate"><span class="pre">returns</span></code> (one of the three shape constants); <code class="docutils literal notranslate"><span class="pre">element</span></code> with the <code class="docutils literal notranslate"><span class="pre">data_keys</span></code>
+and <code class="docutils literal notranslate"><span class="pre">exports</span></code> that come with it, empty when the shape carries no <code class="docutils literal notranslate"><span class="pre">AttackTrace</span></code>; <code class="docutils literal notranslate"><span class="pre">goals</span></code>,
+the goals this entry point accepts; <code class="docutils literal notranslate"><span class="pre">recheck_checks</span></code> with <code class="docutils literal notranslate"><span class="pre">recheck</span></code> giving the reason when
+there are none; and <code class="docutils literal notranslate"><span class="pre">empty_means</span></code>, what an empty result does <strong>not</strong> tell you.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.result_for_goal">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">result_for_goal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#result_for_goal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.result_for_goal" title="Link to this definition">#</a></dt>
+<dd><p>What running <code class="docutils literal notranslate"><span class="pre">goal</span></code> gives back: its entry point’s <code class="docutils literal notranslate"><span class="pre">result_shapes()</span></code> entry.</p>
+<p>The join the two halves of this module exist to make: <code class="docutils literal notranslate"><span class="pre">feasible_goals</span></code> says a goal can be
+expressed, this says what comes back and whether it can be re-checked. Several entry points
+can accept one goal – <code class="docutils literal notranslate"><span class="pre">DIFFERENTIAL_GOALS</span></code> reaches both <code class="docutils literal notranslate"><span class="pre">diff_attacks</span></code> and
+<code class="docutils literal notranslate"><span class="pre">two_stage_trail_search</span></code> – so the answer is a dict keyed by entry point.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.describe_result">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">describe_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#describe_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.describe_result" title="Link to this definition">#</a></dt>
+<dd><p>One <code class="docutils literal notranslate"><span class="pre">result_shapes()</span></code> entry, raising with the valid names if there is no such entry point.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.call_vocabulary">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">call_vocabulary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#call_vocabulary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.call_vocabulary" title="Link to this definition">#</a></dt>
+<dd><p>The other arguments an analysis takes, beside <code class="docutils literal notranslate"><span class="pre">goal</span></code> and <code class="docutils literal notranslate"><span class="pre">model_type</span></code>.</p>
+<p>Re-exported from <code class="docutils literal notranslate"><span class="pre">tools/model_configuration.py</span></code> so a consumer reads one place instead of
+four. Listing the goals without these answered half the question: a goal is not callable
+until <code class="docutils literal notranslate"><span class="pre">objective_target</span></code> and the constraint markers are known, and
+<code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">MOST</span></code> / <code class="docutils literal notranslate"><span class="pre">EXACTLY</span></code> / <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">LEAST</span></code> need a number appended where the bare keywords do not.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.solver_backends">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">solver_backends</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#solver_backends"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.solver_backends" title="Link to this definition">#</a></dt>
+<dd><p>Which solver backends are installed <strong>on this host</strong>, per model type.</p>
+<p>Host state, not a repository fact: the same checkout answers differently elsewhere, so this
+never belongs in a cached manifest without the host it came from. A goal being feasible says
+the model can be built, not that anything here can solve it – a backend that cannot load
+raises rather than returning an empty result, which is deliberate.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TODO.md</span></code> records the known limit: a backend whose module imports but whose native library
+fails to load is still reported available.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.host_dependent_fields">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">host_dependent_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#host_dependent_fields"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.host_dependent_fields" title="Link to this definition">#</a></dt>
+<dd><p>The parts of this module’s answers that come from the host rather than the repository.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="capabilities.analysis_capabilities.shape_asymmetry">
+<span class="sig-prename descclassname"><span class="pre">capabilities.analysis_capabilities.</span></span><span class="sig-name descname"><span class="pre">shape_asymmetry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/capabilities/analysis_capabilities.html#shape_asymmetry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#capabilities.analysis_capabilities.shape_asymmetry" title="Link to this definition">#</a></dt>
+<dd><p>The two things these signatures hide, which no other function here states outright.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="operator_capabilities.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">operator_capabilities</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="implementation_capabilities.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">implementation_capabilities</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.resolve_goal"><code class="docutils literal notranslate"><span class="pre">resolve_goal()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.required_version"><code class="docutils literal notranslate"><span class="pre">required_version()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.operator_support"><code class="docutils literal notranslate"><span class="pre">operator_support()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.model_scope_constraints"><code class="docutils literal notranslate"><span class="pre">model_scope_constraints()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.scope_operator_classes"><code class="docutils literal notranslate"><span class="pre">scope_operator_classes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.goal_report"><code class="docutils literal notranslate"><span class="pre">goal_report()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.capability_report"><code class="docutils literal notranslate"><span class="pre">capability_report()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.feasible_goals"><code class="docutils literal notranslate"><span class="pre">feasible_goals()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.explain_goal"><code class="docutils literal notranslate"><span class="pre">explain_goal()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.goal_support_matrix"><code class="docutils literal notranslate"><span class="pre">goal_support_matrix()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.trace_classes"><code class="docutils literal notranslate"><span class="pre">trace_classes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.export_formats"><code class="docutils literal notranslate"><span class="pre">export_formats()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.recheck_available"><code class="docutils literal notranslate"><span class="pre">recheck_available()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.recheck_parameters"><code class="docutils literal notranslate"><span class="pre">recheck_parameters()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.recheck_path"><code class="docutils literal notranslate"><span class="pre">recheck_path()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.entry_point_parameters"><code class="docutils literal notranslate"><span class="pre">entry_point_parameters()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.result_shapes"><code class="docutils literal notranslate"><span class="pre">result_shapes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.result_for_goal"><code class="docutils literal notranslate"><span class="pre">result_for_goal()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.describe_result"><code class="docutils literal notranslate"><span class="pre">describe_result()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.call_vocabulary"><code class="docutils literal notranslate"><span class="pre">call_vocabulary()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.solver_backends"><code class="docutils literal notranslate"><span class="pre">solver_backends()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.host_dependent_fields"><code class="docutils literal notranslate"><span class="pre">host_dependent_fields()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities.analysis_capabilities.shape_asymmetry"><code class="docutils literal notranslate"><span class="pre">shape_asymmetry()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+salsa
+=====
+
+.. automodule:: primitives.salsa
+   :members:
+   :show-inheritance:

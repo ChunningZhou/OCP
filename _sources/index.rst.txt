@@ -1,0 +1,49 @@
+:html_theme.sidebar_secondary.remove: true
+
+OCP documentation
+==================
+
+**Open Cryptanalysis Platform (OCP)** is an open-source platform for automated
+cryptanalysis of symmetric-key primitives. It provides a unified representation for
+block ciphers, permutations, and stream ciphers as round- and layer-structured
+compositions of variables and operators. From this single representation, OCP
+automatically generates executable Python/C/Verilog implementations, produces structural
+visualization figures, and constructs MILP and SAT models and invokes external
+solvers for cryptanalysis, including differential cryptanalysis and linear
+cryptanalysis.
+
+.. grid:: 1 2 2 2
+   :gutter: 3
+
+   .. grid-item-card:: :octicon:`rocket` Getting started
+      :link: getting_started
+      :link-type: doc
+
+      Install OCP and run your first example.
+
+   .. grid-item-card:: :octicon:`book` User Guide
+      :link: userguide/index
+      :link-type: doc
+
+      Coming soon.
+
+   .. grid-item-card:: :octicon:`code` API reference
+      :link: api/index
+      :link-type: doc
+
+      Full reference for variables, operators, primitives, implementations,
+      visualizations, attacks, solvers, capabilities, and claim re-checking.
+
+   .. grid-item-card:: :octicon:`git-pull-request` Extending & Contributing
+      :link: contributing/index
+      :link-type: doc
+
+      Coming soon.
+
+.. toctree::
+   :hidden:
+
+   getting_started
+   userguide/index
+   api/index
+   contributing/index

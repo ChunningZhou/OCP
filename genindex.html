@@ -1,0 +1,2187 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=fd10adb8"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="icon" href="_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ | <a href="#Z"><strong>Z</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/primitives/aes.html#primitives.aes.AES_block_cipher">AES_block_cipher (class in primitives.aes)</a>
+</li>
+      <li><a href="api/primitives/aes.html#primitives.aes.AES_permutation">AES_permutation (class in primitives.aes)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.AES_Sbox">AES_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/AESround.html#operators.AESround.AESround">AESround (class in operators.AESround)</a>
+</li>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.agreements">agreements() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.AND">AND (class in operators.boolean_operators)</a>
+</li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR">ANDXOR (class in operators.boolean_operators)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.artifact_extensions">artifact_extensions() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/primitives/ascon.html#primitives.ascon.ASCON_permutation">ASCON_permutation (class in primitives.ascon)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.ASCON_Sbox">ASCON_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.assignments_to_solution">assignments_to_solution() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.assignments_to_solution">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.attack_trace
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#module-attacks.attack_trace">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    attacks.attacks
+
+      <ul>
+        <li><a href="api/attacks/attacks.html#module-attacks.attacks">module</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.differential_cryptanalysis
+
+      <ul>
+        <li><a href="api/attacks/differential_cryptanalysis.html#module-attacks.differential_cryptanalysis">module</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.impossible_differential
+
+      <ul>
+        <li><a href="api/attacks/impossible_differential.html#module-attacks.impossible_differential">module</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.integral_cryptanalysis
+
+      <ul>
+        <li><a href="api/attacks/integral_cryptanalysis.html#module-attacks.integral_cryptanalysis">module</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.linear_cryptanalysis
+
+      <ul>
+        <li><a href="api/attacks/linear_cryptanalysis.html#module-attacks.linear_cryptanalysis">module</a>
+</li>
+      </ul></li>
+      <li>
+    attacks.zero_corr_linear
+
+      <ul>
+        <li><a href="api/attacks/zero_corr_linear.html#module-attacks.zero_corr_linear">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace">AttackTrace (class in attacks.attack_trace)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.bin_to_hex">bin_to_hex() (in module attacks.attack_trace)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.binary_declaration">binary_declaration() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.BinaryOperator">BinaryOperator (class in operators.operators)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/primitives/primitives.html#primitives.primitives.Block_cipher">Block_cipher (class in primitives.primitives)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.build_cipher">build_cipher() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.build_cipher">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.cal_round_obj_fun_values_from_solution">cal_round_obj_fun_values_from_solution() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.call_vocabulary">call_vocabulary() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/recheck/run.html#recheck.run.canonical">canonical() (in module recheck.run)</a>
+</li>
+      <li>
+    capabilities
+
+      <ul>
+        <li><a href="api/capabilities/capabilities.html#module-capabilities">module</a>
+</li>
+      </ul></li>
+      <li>
+    capabilities.analysis_capabilities
+
+      <ul>
+        <li><a href="api/capabilities/analysis_capabilities.html#module-capabilities.analysis_capabilities">module</a>
+</li>
+      </ul></li>
+      <li>
+    capabilities.implementation_capabilities
+
+      <ul>
+        <li><a href="api/capabilities/implementation_capabilities.html#module-capabilities.implementation_capabilities">module</a>
+</li>
+      </ul></li>
+      <li>
+    capabilities.layer_capabilities
+
+      <ul>
+        <li><a href="api/capabilities/layer_capabilities.html#module-capabilities.layer_capabilities">module</a>
+</li>
+      </ul></li>
+      <li>
+    capabilities.operator_capabilities
+
+      <ul>
+        <li><a href="api/capabilities/operator_capabilities.html#module-capabilities.operator_capabilities">module</a>
+</li>
+      </ul></li>
+      <li>
+    capabilities.primitive_capabilities
+
+      <ul>
+        <li><a href="api/capabilities/primitive_capabilities.html#module-capabilities.primitive_capabilities">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.capability_report">capability_report() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.CastingOperator">CastingOperator (class in operators.operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.CastingWordtoBitVector">CastingWordtoBitVector (class in operators.operators)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.cdd_eq_to_coeff_rhs">cdd_eq_to_coeff_rhs() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.cdd_ineq_to_coeff_rhs">cdd_ineq_to_coeff_rhs() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/primitives/chacha.html#primitives.chacha.ChaCha_keypermutation">ChaCha_keypermutation (class in primitives.chacha)</a>
+</li>
+      <li><a href="api/primitives/chacha.html#primitives.chacha.ChaCha_permutation">ChaCha_permutation (class in primitives.chacha)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.check_assigned_model_versions">check_assigned_model_versions() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.check_bound">check_bound() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.check_bound">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/checks.html#recheck.checks.check_feasible">check_feasible() (in module recheck.checks)</a>
+</li>
+      <li><a href="api/recheck/checks.html#recheck.checks.check_optimal">check_optimal() (in module recheck.checks)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.check_supported_implementation">check_supported_implementation() (operators.operators.Operator method)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.check_supported_model_version">check_supported_model_version() (operators.operators.Operator method)</a>
+</li>
+      <li><a href="api/recheck/checks.html#recheck.checks.check_unique">check_unique() (in module recheck.checks)</a>
+</li>
+      <li><a href="api/recheck/checks.html#recheck.checks.check_weight">check_weight() (in module recheck.checks)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.CheckResult">CheckResult (class in recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.CheckResult">(class in recheck.checks)</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.cipher_languages">cipher_languages() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.collect">collect() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.collect_cutoffs">collect_cutoffs() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.compare_bound">compare_bound() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.compare_bound">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.computeDDT">computeDDT() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.computeLAT">computeLAT() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.configure_model_version">configure_model_version() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.conflicts">conflicts() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.consistency_report">consistency_report() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/operators/modular_operators.html#operators.modular_operators.ConstantAdd">ConstantAdd (class in operators.modular_operators)</a>
+</li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR">ConstantXOR (class in operators.boolean_operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.CopyOperator">CopyOperator (class in operators.operators)</a>
+</li>
+      <li><a href="api/tools/sat_search.html#tools.sat_search.create_numerical_cnf">create_numerical_cnf() (in module tools.sat_search)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.CustomOP">CustomOP (class in operators.operators)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/recheck.html#recheck.data_glob">data_glob() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.data_glob">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.ddt_to_truthtable_milp">ddt_to_truthtable_milp() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.ddt_to_truthtable_sat">ddt_to_truthtable_sat() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/tools/sat_search.html#tools.sat_search.decimal_objective_combinations">decimal_objective_combinations() (in module tools.sat_search)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.default_model_filename">default_model_filename() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.delegates">delegates() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.describe">describe() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/capabilities/capabilities.html#capabilities.describe_cipher">describe_cipher() (in module capabilities)</a>
+</li>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.describe_layer">describe_layer() (in module capabilities.layer_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.describe_operators">describe_operators() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/primitive_capabilities.html#capabilities.primitive_capabilities.describe_primitive">describe_primitive() (in module capabilities.primitive_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/capabilities.html#capabilities.describe_repository">describe_repository() (in module capabilities)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.describe_result">describe_result() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.CheckResult.detail">detail (recheck.CheckResult attribute)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.CheckResult.detail">(recheck.checks.CheckResult attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.detect_Sbox">detect_Sbox() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.diff_attacks">diff_attacks() (in module attacks.attacks)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.differential_branch_number">differential_branch_number() (operators.matrix.Matrix method)</a>
+
+      <ul>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.differential_branch_number">(operators.Sbox.Sbox method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.DifferentialTrail">DifferentialTrail (class in attacks.attack_trace)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.display">display() (operators.operators.Operator method)</a>
+
+      <ul>
+        <li><a href="api/variables/variables.html#variables.variables.Variable.display">(variables.variables.Variable method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/variables/variables.html#variables.variables.Variable.display_value">display_value() (variables.variables.Variable method)</a>
+</li>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.documentation_gaps">documentation_gaps() (in module capabilities.layer_capabilities)</a>
+</li>
+      <li><a href="api/recheck/run.html#recheck.run.done_keys">done_keys() (in module recheck.run)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.entry_point_parameters">entry_point_parameters() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Equal">Equal (class in operators.operators)</a>
+</li>
+      <li><a href="api/tools/minimize_logic.html#tools.minimize_logic.espresso_pattern_to_ineq">espresso_pattern_to_ineq() (in module tools.minimize_logic)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.evaluate_python">evaluate_python() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.expand_constraint_vars">expand_constraint_vars() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.expand_var_ids">expand_var_ids() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/capabilities/capabilities.html#capabilities.explain">explain() (in module capabilities)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.explain_goal">explain_goal() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.explain_language">explain_language() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.export_formats">export_formats() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.extract_and_format_trails">extract_and_format_trails() (in module attacks.attack_trace)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.extract_equalities_indices">extract_equalities_indices() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.extract_from_source">extract_from_source() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.extract_implementations_from_source">extract_implementations_from_source() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.extract_trail_structures">extract_trail_structures() (in module attacks.attack_trace)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.feasible_goals">feasible_goals() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.feasible_languages">feasible_languages() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.fill_functions_rounds_layers_positions">fill_functions_rounds_layers_positions() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/visualisations/visualisations.html#visualisations.visualisations.find_function_index_from_x_coord">find_function_index_from_x_coord() (in module visualisations.visualisations)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.format_display">format_display() (operators.operators.Operator method)</a>
+
+      <ul>
+        <li><a href="api/variables/variables.html#variables.variables.Variable.format_display">(variables.variables.Variable method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.format_distinguisher">format_distinguisher() (attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.DifferentialTrail.format_trail">format_trail() (attacks.attack_trace.DifferentialTrail method)</a>
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.LinearTrail.format_trail">(attacks.attack_trace.LinearTrail method)</a>
+</li>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.format_trail">(attacks.attack_trace.Trail method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/primitives/forro.html#primitives.forro.Forro_keypermutation">Forro_keypermutation (class in primitives.forro)</a>
+</li>
+      <li><a href="api/primitives/forro.html#primitives.forro.Forro_permutation">Forro_permutation (class in primitives.forro)</a>
+</li>
+      <li><a href="api/primitives/primitives.html#primitives.primitives.Function">Function (class in primitives.primitives)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/make_table.html#recheck.make_table.gather">gather() (in module recheck.make_table)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_at_least">gen_constraints_at_least() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_at_most">gen_constraints_at_most() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_exactly">gen_constraints_exactly() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.gen_constraints_obj_func_from_template">gen_constraints_obj_func_from_template() (in module tools.model_templates)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_at_least">gen_constraints_sum_at_least() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_at_most">gen_constraints_sum_at_most() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_constraints_sum_exactly">gen_constraints_sum_exactly() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_equivalence_constraints">gen_equivalence_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_fixed_activity_constraints">gen_fixed_activity_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_fixed_input_output_constraints">gen_fixed_input_output_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_fixed_state_constraints">gen_fixed_state_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_implication_constraints">gen_implication_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_input_non_zero_constraints">gen_input_non_zero_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.gen_integer_float_weight">gen_integer_float_weight() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_constraints">gen_matrix_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_declarations">gen_matrix_declarations() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_row_constraints">gen_matrix_row_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_matsui_constraints_milp">gen_matsui_constraints_milp() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_matsui_constraints_sat">gen_matsui_constraints_sat() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_matsui_partial_cardinality_sat">gen_matsui_partial_cardinality_sat() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/milp_search.html#tools.milp_search.gen_milp_constraints_from_objective_target">gen_milp_constraints_from_objective_target() (in module tools.milp_search)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_no_good_cut">gen_no_good_cut() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_nxor_constraints">gen_nxor_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.gen_obj_fun_variables">gen_obj_fun_variables() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_or_constraints">gen_or_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_predefined_constraints">gen_predefined_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_required_fixed_boundary_constraints">gen_required_fixed_boundary_constraints() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.gen_round_model_constraint_obj_fun">gen_round_model_constraint_obj_fun() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/tools/sat_search.html#tools.sat_search.gen_sat_constraints_from_objective_target">gen_sat_constraints_from_objective_target() (in module tools.sat_search)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.gen_sequential_encoding_sat">gen_sequential_encoding_sat() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.gen_spectrum">gen_spectrum() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/primitives/trivium.html#primitives.trivium.Trivium_Stream_Cipher.gen_test_vectors">gen_test_vectors() (primitives.trivium.Trivium_Stream_Cipher method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.gen_weight_pattern_sat">gen_weight_pattern_sat() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.gen_weights">gen_weights() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_word_matrix_row_constraints">gen_word_matrix_row_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_word_nxor_constraints">gen_word_nxor_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_word_xor_constraints">gen_word_xor_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.gen_xor_constraints">gen_xor_constraints() (in module tools.operator_constraints)</a>
+</li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.generate_and_save_constraints">generate_and_save_constraints() (in module tools.model_templates)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.generate_bin_matrix">generate_bin_matrix() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.generate_binary_matrix_1">generate_binary_matrix_1() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.generate_binary_matrix_2">generate_binary_matrix_2() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.generate_implementation">generate_implementation() (in module implementations.implementations)</a>
+
+      <ul>
+        <li><a href="api/operators/AESround.html#operators.AESround.AESround.generate_implementation">(operators.AESround.AESround method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.AND.generate_implementation">(operators.boolean_operators.AND method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR.generate_implementation">(operators.boolean_operators.ANDXOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_implementation">(operators.boolean_operators.ConstantXOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.N_XOR.generate_implementation">(operators.boolean_operators.N_XOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.NOT.generate_implementation">(operators.boolean_operators.NOT method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.OR.generate_implementation">(operators.boolean_operators.OR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.XOR.generate_implementation">(operators.boolean_operators.XOR method)</a>
+</li>
+        <li><a href="api/operators/matrix.html#operators.matrix.GF2Linear_Trans.generate_implementation">(operators.matrix.GF2Linear_Trans method)</a>
+</li>
+        <li><a href="api/operators/matrix.html#operators.matrix.Matrix.generate_implementation">(operators.matrix.Matrix method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ConstantAdd.generate_implementation">(operators.modular_operators.ConstantAdd method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModAdd.generate_implementation">(operators.modular_operators.ModAdd method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModMul.generate_implementation">(operators.modular_operators.ModMul method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.CopyOperator.generate_implementation">(operators.operators.CopyOperator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Equal.generate_implementation">(operators.operators.Equal method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.NoneOperator.generate_implementation">(operators.operators.NoneOperator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Operator.generate_implementation">(operators.operators.Operator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Rot.generate_implementation">(operators.operators.Rot method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Shift.generate_implementation">(operators.operators.Shift method)</a>
+</li>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.generate_implementation">(operators.Sbox.Sbox method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Ch.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Ch method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Maj.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Maj method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum0.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum1.generate_implementation">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/AESround.html#operators.AESround.AESround.generate_implementation_header">generate_implementation_header() (operators.AESround.AESround method)</a>
+
+      <ul>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_implementation_header">(operators.boolean_operators.ConstantXOR method)</a>
+</li>
+        <li><a href="api/operators/matrix.html#operators.matrix.Matrix.generate_implementation_header">(operators.matrix.Matrix method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ConstantAdd.generate_implementation_header">(operators.modular_operators.ConstantAdd method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Operator.generate_implementation_header">(operators.operators.Operator method)</a>
+</li>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.generate_implementation_header">(operators.Sbox.Sbox method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Ch.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Ch method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Maj.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Maj method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum0.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum1.generate_implementation_header">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.generate_implementation_header_unique">generate_implementation_header_unique() (operators.matrix.Matrix method)</a>
+
+      <ul>
+        <li><a href="api/operators/operators.html#operators.operators.Rot.generate_implementation_header_unique">(operators.operators.Rot method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/AESround.html#operators.AESround.AESround.generate_model">generate_model() (operators.AESround.AESround method)</a>
+
+      <ul>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.AND.generate_model">(operators.boolean_operators.AND method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR.generate_model">(operators.boolean_operators.ANDXOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_model">(operators.boolean_operators.ConstantXOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.N_XOR.generate_model">(operators.boolean_operators.N_XOR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.NOT.generate_model">(operators.boolean_operators.NOT method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.OR.generate_model">(operators.boolean_operators.OR method)</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.XOR.generate_model">(operators.boolean_operators.XOR method)</a>
+</li>
+        <li><a href="api/operators/matrix.html#operators.matrix.GF2Linear_Trans.generate_model">(operators.matrix.GF2Linear_Trans method)</a>
+</li>
+        <li><a href="api/operators/matrix.html#operators.matrix.Matrix.generate_model">(operators.matrix.Matrix method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ConstantAdd.generate_model">(operators.modular_operators.ConstantAdd method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModAdd.generate_model">(operators.modular_operators.ModAdd method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModMul.generate_model">(operators.modular_operators.ModMul method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.CopyOperator.generate_model">(operators.operators.CopyOperator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Equal.generate_model">(operators.operators.Equal method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.NoneOperator.generate_model">(operators.operators.NoneOperator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Operator.generate_model">(operators.operators.Operator method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Rot.generate_model">(operators.operators.Rot method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Shift.generate_model">(operators.operators.Shift method)</a>
+</li>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.generate_model">(operators.Sbox.Sbox method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Ch.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Ch method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Maj.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Maj method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum0.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum0 method)</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum1.generate_model">(operators.SHACAL2BooleanFunctions.SHACAL2_Sum1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.generate_obj_decimal_coms">generate_obj_decimal_coms() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.generate_pmr_for_mds">generate_pmr_for_mds() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/tools/paths.html#tools.paths.get_files_dir">get_files_dir() (in module tools.paths)</a>
+</li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.get_header_ID">get_header_ID() (operators.boolean_operators.ConstantXOR method)</a>
+
+      <ul>
+        <li><a href="api/operators/matrix.html#operators.matrix.Matrix.get_header_ID">(operators.matrix.Matrix method)</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#operators.modular_operators.ConstantAdd.get_header_ID">(operators.modular_operators.ConstantAdd method)</a>
+</li>
+        <li><a href="api/operators/operators.html#operators.operators.Operator.get_header_ID">(operators.operators.Operator method)</a>
+</li>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.get_header_ID">(operators.Sbox.Sbox method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/paths.html#tools.paths.get_matrix_constraints_files_dir">get_matrix_constraints_files_dir() (in module tools.paths)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.get_platform_info">get_platform_info() (in module tools.resource_monitor)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.RuntimeResourceMonitor.get_runtime_usage">get_runtime_usage() (tools.resource_monitor.RuntimeResourceMonitor method)</a>
+</li>
+      <li><a href="api/tools/paths.html#tools.paths.get_sbox_constraints_files_dir">get_sbox_constraints_files_dir() (in module tools.paths)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.get_solver_version">get_solver_version() (in module solving.solving)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.RuntimeResourceMonitor.get_stats">get_stats() (tools.resource_monitor.RuntimeResourceMonitor method)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.get_var_def_c">get_var_def_c() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.get_var_ID">get_var_ID() (operators.operators.Operator method)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator.get_var_model">get_var_model() (operators.operators.Operator method)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.gf2_inv">gf2_inv() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.gf2_multiply">gf2_multiply() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.gf2_pow">gf2_pow() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.GF2Linear_Trans">GF2Linear_Trans (class in operators.matrix)</a>
+</li>
+      <li><a href="api/primitives/gift.html#primitives.gift.GIFT_block_cipher">GIFT_block_cipher (class in primitives.gift)</a>
+</li>
+      <li><a href="api/primitives/gift.html#primitives.gift.GIFT_permutation">GIFT_permutation (class in primitives.gift)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.GIFT_Sbox">GIFT_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.goal_report">goal_report() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.goal_support_matrix">goal_support_matrix() (in module capabilities.analysis_capabilities)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.has_Sbox_with_decimal_weights">has_Sbox_with_decimal_weights() (in module tools.model_objective)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.host_dependent_fields">host_dependent_fields() (in module capabilities.analysis_capabilities)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    implementations.implementations
+
+      <ul>
+        <li><a href="api/implementations/implementations.html#module-implementations.implementations">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.impossible_differential_attacks">impossible_differential_attacks() (in module attacks.attacks)</a>
+</li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.inequality_to_constraint_milp">inequality_to_constraint_milp() (in module tools.model_templates)</a>
+</li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.inequality_to_constraint_sat">inequality_to_constraint_sat() (in module tools.model_templates)</a>
+</li>
+      <li><a href="api/recheck/make_table.html#recheck.make_table.inject">inject() (in module recheck.make_table)</a>
+</li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.instantiate_constraints_template">instantiate_constraints_template() (in module tools.model_templates)</a>
+</li>
+      <li><a href="api/tools/operator_constraints.html#tools.operator_constraints.integer_declaration">integer_declaration() (in module tools.operator_constraints)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.integral_attacks">integral_attacks() (in module attacks.attacks)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher">IntegralDistinguisher (class in attacks.attack_trace)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.inverse_over_gf2m">inverse_over_gf2m() (operators.matrix.Matrix method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.is_bijective">is_bijective() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.is_c_compiler_available">is_c_compiler_available() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.is_rust_compiler_available">is_rust_compiler_available() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.is_sat">is_sat() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.is_solver_available">is_solver_available() (in module solving.solving)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.is_verilog_compiler_available">is_verilog_compiler_available() (in module implementations.implementations)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/run.html#recheck.run.jobs">jobs() (in module recheck.run)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/primitives/knot.html#primitives.knot.KNOT_permutation">KNOT_permutation (class in primitives.knot)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.KNOT_Sbox">KNOT_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/primitives/knot.html#primitives.knot.knot_version_params">knot_version_params() (in module primitives.knot)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/run.html#recheck.run.label_of">label_of() (in module recheck.run)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.language_report">language_report() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.languages">languages() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.lat_to_truthtable_milp">lat_to_truthtable_milp() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.lat_to_truthtable_sat">lat_to_truthtable_sat() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.layer_examples">layer_examples() (in module capabilities.layer_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.layer_methods">layer_methods() (in module capabilities.layer_capabilities)</a>
+</li>
+      <li><a href="api/primitives/lblock.html#primitives.lblock.LBlock_block_cipher">LBlock_block_cipher (class in primitives.lblock)</a>
+</li>
+      <li><a href="api/primitives/lblock.html#primitives.lblock.LBlock_permutation">LBlock_permutation (class in primitives.lblock)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox0">LBlock_Sbox0 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox1">LBlock_Sbox1 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox2">LBlock_Sbox2 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox3">LBlock_Sbox3 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox4">LBlock_Sbox4 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox5">LBlock_Sbox5 (class in operators.Sbox)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox6">LBlock_Sbox6 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox7">LBlock_Sbox7 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox8">LBlock_Sbox8 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.LBlock_Sbox9">LBlock_Sbox9 (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/primitives/led.html#primitives.led.LED_block_cipher">LED_block_cipher (class in primitives.led)</a>
+</li>
+      <li><a href="api/primitives/led.html#primitives.led.LED_BLOCKCIPHER">LED_BLOCKCIPHER() (in module primitives.led)</a>
+</li>
+      <li><a href="api/primitives/led.html#primitives.led.LED_permutation">LED_permutation (class in primitives.led)</a>
+</li>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.linear_attacks">linear_attacks() (in module attacks.attacks)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.linear_branch_number">linear_branch_number() (operators.matrix.Matrix method)</a>
+
+      <ul>
+        <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.linear_branch_number">(operators.Sbox.Sbox method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.linear_combinations_bounds">linear_combinations_bounds() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.LinearTrail">LinearTrail (class in attacks.attack_trace)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.load">load() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.load">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/model_templates.html#tools.model_templates.load_constraints_template">load_constraints_template() (in module tools.model_templates)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix">Matrix (class in operators.matrix)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.matrix_multiply_mod2">matrix_multiply_mod2() (in module operators.matrix)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.max_feasible_prefix">max_feasible_prefix() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.max_feasible_prefix">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.minimize_constraints_greedy">minimize_constraints_greedy() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModAdd">ModAdd (class in operators.modular_operators)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.model_scope">model_scope() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.model_scope_constraints">model_scope_constraints() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.models_nothing">models_nothing() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/operators/modular_operators.html#operators.modular_operators.ModMul">ModMul (class in operators.modular_operators)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#module-attacks.attack_trace">attacks.attack_trace</a>
+</li>
+        <li><a href="api/attacks/attacks.html#module-attacks.attacks">attacks.attacks</a>
+</li>
+        <li><a href="api/attacks/differential_cryptanalysis.html#module-attacks.differential_cryptanalysis">attacks.differential_cryptanalysis</a>
+</li>
+        <li><a href="api/attacks/impossible_differential.html#module-attacks.impossible_differential">attacks.impossible_differential</a>
+</li>
+        <li><a href="api/attacks/integral_cryptanalysis.html#module-attacks.integral_cryptanalysis">attacks.integral_cryptanalysis</a>
+</li>
+        <li><a href="api/attacks/linear_cryptanalysis.html#module-attacks.linear_cryptanalysis">attacks.linear_cryptanalysis</a>
+</li>
+        <li><a href="api/attacks/zero_corr_linear.html#module-attacks.zero_corr_linear">attacks.zero_corr_linear</a>
+</li>
+        <li><a href="api/capabilities/capabilities.html#module-capabilities">capabilities</a>
+</li>
+        <li><a href="api/capabilities/analysis_capabilities.html#module-capabilities.analysis_capabilities">capabilities.analysis_capabilities</a>
+</li>
+        <li><a href="api/capabilities/implementation_capabilities.html#module-capabilities.implementation_capabilities">capabilities.implementation_capabilities</a>
+</li>
+        <li><a href="api/capabilities/layer_capabilities.html#module-capabilities.layer_capabilities">capabilities.layer_capabilities</a>
+</li>
+        <li><a href="api/capabilities/operator_capabilities.html#module-capabilities.operator_capabilities">capabilities.operator_capabilities</a>
+</li>
+        <li><a href="api/capabilities/primitive_capabilities.html#module-capabilities.primitive_capabilities">capabilities.primitive_capabilities</a>
+</li>
+        <li><a href="api/implementations/implementations.html#module-implementations.implementations">implementations.implementations</a>
+</li>
+        <li><a href="api/operators/AESround.html#module-operators.AESround">operators.AESround</a>
+</li>
+        <li><a href="api/operators/boolean_operators.html#module-operators.boolean_operators">operators.boolean_operators</a>
+</li>
+        <li><a href="api/operators/matrix.html#module-operators.matrix">operators.matrix</a>
+</li>
+        <li><a href="api/operators/modular_operators.html#module-operators.modular_operators">operators.modular_operators</a>
+</li>
+        <li><a href="api/operators/operators.html#module-operators.operators">operators.operators</a>
+</li>
+        <li><a href="api/operators/Sbox.html#module-operators.Sbox">operators.Sbox</a>
+</li>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#module-operators.SHACAL2BooleanFunctions">operators.SHACAL2BooleanFunctions</a>
+</li>
+        <li><a href="api/primitives/aes.html#module-primitives.aes">primitives.aes</a>
+</li>
+        <li><a href="api/primitives/ascon.html#module-primitives.ascon">primitives.ascon</a>
+</li>
+        <li><a href="api/primitives/chacha.html#module-primitives.chacha">primitives.chacha</a>
+</li>
+        <li><a href="api/primitives/forro.html#module-primitives.forro">primitives.forro</a>
+</li>
+        <li><a href="api/primitives/gift.html#module-primitives.gift">primitives.gift</a>
+</li>
+        <li><a href="api/primitives/knot.html#module-primitives.knot">primitives.knot</a>
+</li>
+        <li><a href="api/primitives/lblock.html#module-primitives.lblock">primitives.lblock</a>
+</li>
+        <li><a href="api/primitives/led.html#module-primitives.led">primitives.led</a>
+</li>
+        <li><a href="api/primitives/present.html#module-primitives.present">primitives.present</a>
+</li>
+        <li><a href="api/primitives/primitives.html#module-primitives.primitives">primitives.primitives</a>
+</li>
+        <li><a href="api/primitives/rectangle.html#module-primitives.rectangle">primitives.rectangle</a>
+</li>
+        <li><a href="api/primitives/rocca.html#module-primitives.rocca">primitives.rocca</a>
+</li>
+        <li><a href="api/primitives/salsa.html#module-primitives.salsa">primitives.salsa</a>
+</li>
+        <li><a href="api/primitives/shacal2.html#module-primitives.shacal2">primitives.shacal2</a>
+</li>
+        <li><a href="api/primitives/simeck.html#module-primitives.simeck">primitives.simeck</a>
+</li>
+        <li><a href="api/primitives/simon.html#module-primitives.simon">primitives.simon</a>
+</li>
+        <li><a href="api/primitives/siphash.html#module-primitives.siphash">primitives.siphash</a>
+</li>
+        <li><a href="api/primitives/skinny.html#module-primitives.skinny">primitives.skinny</a>
+</li>
+        <li><a href="api/primitives/speck.html#module-primitives.speck">primitives.speck</a>
+</li>
+        <li><a href="api/primitives/trivium.html#module-primitives.trivium">primitives.trivium</a>
+</li>
+        <li><a href="api/primitives/twine.html#module-primitives.twine">primitives.twine</a>
+</li>
+        <li><a href="api/recheck/recheck.html#module-recheck">recheck</a>
+</li>
+        <li><a href="api/recheck/checks.html#module-recheck.checks">recheck.checks</a>
+</li>
+        <li><a href="api/recheck/claim.html#module-recheck.claim">recheck.claim</a>
+</li>
+        <li><a href="api/recheck/cross_check.html#module-recheck.cross_check">recheck.cross_check</a>
+</li>
+        <li><a href="api/recheck/make_table.html#module-recheck.make_table">recheck.make_table</a>
+</li>
+        <li><a href="api/recheck/run.html#module-recheck.run">recheck.run</a>
+</li>
+        <li><a href="api/solving/solving.html#module-solving.solving">solving.solving</a>
+</li>
+        <li><a href="api/tools/milp_search.html#module-tools.milp_search">tools.milp_search</a>
+</li>
+        <li><a href="api/tools/minimize_logic.html#module-tools.minimize_logic">tools.minimize_logic</a>
+</li>
+        <li><a href="api/tools/model_configuration.html#module-tools.model_configuration">tools.model_configuration</a>
+</li>
+        <li><a href="api/tools/model_constraints.html#module-tools.model_constraints">tools.model_constraints</a>
+</li>
+        <li><a href="api/tools/model_objective.html#module-tools.model_objective">tools.model_objective</a>
+</li>
+        <li><a href="api/tools/model_templates.html#module-tools.model_templates">tools.model_templates</a>
+</li>
+        <li><a href="api/tools/operator_constraints.html#module-tools.operator_constraints">tools.operator_constraints</a>
+</li>
+        <li><a href="api/tools/paths.html#module-tools.paths">tools.paths</a>
+</li>
+        <li><a href="api/tools/polyhedron.html#module-tools.polyhedron">tools.polyhedron</a>
+</li>
+        <li><a href="api/tools/resource_monitor.html#module-tools.resource_monitor">tools.resource_monitor</a>
+</li>
+        <li><a href="api/tools/sat_search.html#module-tools.sat_search">tools.sat_search</a>
+</li>
+        <li><a href="api/tools/sbox_division_trails.html#module-tools.sbox_division_trails">tools.sbox_division_trails</a>
+</li>
+        <li><a href="api/variables/variables.html#module-variables.variables">variables.variables</a>
+</li>
+        <li><a href="api/visualisations/visualisations.html#module-visualisations.visualisations">visualisations.visualisations</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.N_XOR">N_XOR (class in operators.boolean_operators)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.CheckResult.name">name (recheck.CheckResult attribute)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.CheckResult.name">(recheck.checks.CheckResult attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/operators.html#operators.operators.NoneOperator">NoneOperator (class in operators.operators)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.normalize_fixed_value_bits">normalize_fixed_value_bits() (in module tools.model_constraints)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.normalize_inequality">normalize_inequality() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.normalize_milp_solver_name">normalize_milp_solver_name() (in module solving.solving)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.normalize_model_type">normalize_model_type() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.normalize_sat_solver_name">normalize_sat_solver_name() (in module solving.solving)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.normalize_solution_number">normalize_solution_number() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.NOT">NOT (class in operators.boolean_operators)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/make_table.html#recheck.make_table.ocp_series">ocp_series() (in module recheck.make_table)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Operator">Operator (class in operators.operators)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.operator_classes">operator_classes() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.operator_in_scope">operator_in_scope() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.operator_support">operator_support() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li>
+    operators.AESround
+
+      <ul>
+        <li><a href="api/operators/AESround.html#module-operators.AESround">module</a>
+</li>
+      </ul></li>
+      <li>
+    operators.boolean_operators
+
+      <ul>
+        <li><a href="api/operators/boolean_operators.html#module-operators.boolean_operators">module</a>
+</li>
+      </ul></li>
+      <li>
+    operators.matrix
+
+      <ul>
+        <li><a href="api/operators/matrix.html#module-operators.matrix">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    operators.modular_operators
+
+      <ul>
+        <li><a href="api/operators/modular_operators.html#module-operators.modular_operators">module</a>
+</li>
+      </ul></li>
+      <li>
+    operators.operators
+
+      <ul>
+        <li><a href="api/operators/operators.html#module-operators.operators">module</a>
+</li>
+      </ul></li>
+      <li>
+    operators.Sbox
+
+      <ul>
+        <li><a href="api/operators/Sbox.html#module-operators.Sbox">module</a>
+</li>
+      </ul></li>
+      <li>
+    operators.SHACAL2BooleanFunctions
+
+      <ul>
+        <li><a href="api/operators/SHACAL2BooleanFunctions.html#module-operators.SHACAL2BooleanFunctions">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.OR">OR (class in operators.boolean_operators)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.parse_and_set_configs">parse_and_set_configs() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/tools/milp_search.html#tools.milp_search.parse_objective_target">parse_objective_target() (in module tools.milp_search)</a>
+
+      <ul>
+        <li><a href="api/tools/sat_search.html#tools.sat_search.parse_objective_target">(in module tools.sat_search)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tools/model_objective.html#tools.model_objective.parse_objective_term">parse_objective_term() (in module tools.model_objective)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.CheckResult.passed">passed (recheck.CheckResult attribute)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.CheckResult.passed">(recheck.checks.CheckResult attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.patterns_where_a_star_is_forced_zero">patterns_where_a_star_is_forced_zero() (operators.matrix.Matrix method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.pddt_to_truthtable">pddt_to_truthtable() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/primitives/primitives.html#primitives.primitives.Permutation">Permutation (class in primitives.primitives)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.pin_constraints">pin_constraints() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.pin_constraints">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.pinned">pinned() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.plat_to_truthtable">plat_to_truthtable() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/primitives/present.html#primitives.present.PRESENT_block_cipher">PRESENT_block_cipher (class in primitives.present)</a>
+</li>
+      <li><a href="api/primitives/present.html#primitives.present.PRESENT_permutation">PRESENT_permutation (class in primitives.present)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.PRESENT_Sbox">PRESENT_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/primitives/primitives.html#primitives.primitives.Primitive">Primitive (class in primitives.primitives)</a>
+</li>
+      <li><a href="api/capabilities/primitive_capabilities.html#capabilities.primitive_capabilities.primitive_factories">primitive_factories() (in module capabilities.primitive_capabilities)</a>
+</li>
+      <li>
+    primitives.aes
+
+      <ul>
+        <li><a href="api/primitives/aes.html#module-primitives.aes">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.ascon
+
+      <ul>
+        <li><a href="api/primitives/ascon.html#module-primitives.ascon">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.chacha
+
+      <ul>
+        <li><a href="api/primitives/chacha.html#module-primitives.chacha">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.forro
+
+      <ul>
+        <li><a href="api/primitives/forro.html#module-primitives.forro">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.gift
+
+      <ul>
+        <li><a href="api/primitives/gift.html#module-primitives.gift">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.knot
+
+      <ul>
+        <li><a href="api/primitives/knot.html#module-primitives.knot">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.lblock
+
+      <ul>
+        <li><a href="api/primitives/lblock.html#module-primitives.lblock">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    primitives.led
+
+      <ul>
+        <li><a href="api/primitives/led.html#module-primitives.led">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.present
+
+      <ul>
+        <li><a href="api/primitives/present.html#module-primitives.present">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.primitives
+
+      <ul>
+        <li><a href="api/primitives/primitives.html#module-primitives.primitives">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.rectangle
+
+      <ul>
+        <li><a href="api/primitives/rectangle.html#module-primitives.rectangle">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.rocca
+
+      <ul>
+        <li><a href="api/primitives/rocca.html#module-primitives.rocca">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.salsa
+
+      <ul>
+        <li><a href="api/primitives/salsa.html#module-primitives.salsa">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.shacal2
+
+      <ul>
+        <li><a href="api/primitives/shacal2.html#module-primitives.shacal2">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.simeck
+
+      <ul>
+        <li><a href="api/primitives/simeck.html#module-primitives.simeck">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.simon
+
+      <ul>
+        <li><a href="api/primitives/simon.html#module-primitives.simon">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.siphash
+
+      <ul>
+        <li><a href="api/primitives/siphash.html#module-primitives.siphash">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.skinny
+
+      <ul>
+        <li><a href="api/primitives/skinny.html#module-primitives.skinny">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.speck
+
+      <ul>
+        <li><a href="api/primitives/speck.html#module-primitives.speck">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.trivium
+
+      <ul>
+        <li><a href="api/primitives/trivium.html#module-primitives.trivium">module</a>
+</li>
+      </ul></li>
+      <li>
+    primitives.twine
+
+      <ul>
+        <li><a href="api/primitives/twine.html#module-primitives.twine">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.PRINCE_Sbox">PRINCE_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.print_distinguisher">print_distinguisher() (attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.print_trail">print_trail() (attacks.attack_trace.Trail method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/operators.html#operators.operators.raise_unknown_implementation_type">raise_unknown_implementation_type() (in module operators.operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.raise_unknown_model_type">raise_unknown_model_type() (in module operators.operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.RaiseExceptionVersionNotExisting">RaiseExceptionVersionNotExisting() (in module operators.operators)</a>
+</li>
+      <li><a href="api/recheck/make_table.html#recheck.make_table.ranges">ranges() (in module recheck.make_table)</a>
+</li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.read_write_asymmetry">read_write_asymmetry() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.receiver_note">receiver_note() (in module capabilities.layer_capabilities)</a>
+</li>
+      <li>
+    recheck
+
+      <ul>
+        <li><a href="api/recheck/recheck.html#module-recheck">module</a>
+</li>
+      </ul></li>
+      <li>
+    recheck.checks
+
+      <ul>
+        <li><a href="api/recheck/checks.html#module-recheck.checks">module</a>
+</li>
+      </ul></li>
+      <li>
+    recheck.claim
+
+      <ul>
+        <li><a href="api/recheck/claim.html#module-recheck.claim">module</a>
+</li>
+      </ul></li>
+      <li>
+    recheck.cross_check
+
+      <ul>
+        <li><a href="api/recheck/cross_check.html#module-recheck.cross_check">module</a>
+</li>
+      </ul></li>
+      <li>
+    recheck.make_table
+
+      <ul>
+        <li><a href="api/recheck/make_table.html#module-recheck.make_table">module</a>
+</li>
+      </ul></li>
+      <li>
+    recheck.run
+
+      <ul>
+        <li><a href="api/recheck/run.html#module-recheck.run">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.recheck_available">recheck_available() (in module capabilities.analysis_capabilities)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.recheck_parameters">recheck_parameters() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.recheck_path">recheck_path() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/primitives/rectangle.html#primitives.rectangle.RECTANGLE_block_cipher">RECTANGLE_block_cipher (class in primitives.rectangle)</a>
+</li>
+      <li><a href="api/primitives/rectangle.html#primitives.rectangle.RECTANGLE_permutation">RECTANGLE_permutation (class in primitives.rectangle)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.RECTANGLE_Sbox">RECTANGLE_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/variables/variables.html#variables.variables.Variable.remove_round_from_ID">remove_round_from_ID() (variables.variables.Variable method)</a>
+</li>
+      <li><a href="api/recheck/make_table.html#recheck.make_table.replayed">replayed() (in module recheck.make_table)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.require_min_variable_count">require_min_variable_count() (in module operators.operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.require_same_bitsize">require_same_bitsize() (in module operators.operators)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.require_variable_count">require_variable_count() (in module operators.operators)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.required_version">required_version() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.resolve_claim">resolve_claim() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.resolve_claim">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.resolve_goal">resolve_goal() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.result_for_goal">result_for_goal() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.result_shapes">result_shapes() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/primitives/rocca.html#primitives.rocca.Rocca_AD_permutation">Rocca_AD_permutation (class in primitives.rocca)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Rot">Rot (class in operators.operators)</a>
+</li>
+      <li><a href="api/recheck/run.html#recheck.run.run_one">run_one() (in module recheck.run)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.RuntimeResourceMonitor">RuntimeResourceMonitor (class in tools.resource_monitor)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/primitives/salsa.html#primitives.salsa.Salsa_keypermutation">Salsa_keypermutation (class in primitives.salsa)</a>
+</li>
+      <li><a href="api/primitives/salsa.html#primitives.salsa.Salsa_permutation">Salsa_permutation (class in primitives.salsa)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_json">save_json() (attacks.attack_trace.AttackTrace method)</a>
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_json">(attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_json">(attacks.attack_trace.Trail method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_pdf">save_pdf() (attacks.attack_trace.AttackTrace method)</a>
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_pdf">(attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_pdf">(attacks.attack_trace.Trail method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_tex">save_tex() (attacks.attack_trace.AttackTrace method)</a>
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_tex">(attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_tex">(attacks.attack_trace.Trail method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_txt">save_txt() (attacks.attack_trace.AttackTrace method)</a>
+
+      <ul>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_txt">(attacks.attack_trace.IntegralDistinguisher method)</a>
+</li>
+        <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_txt">(attacks.attack_trace.Trail method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox">Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/capabilities/capabilities.html#capabilities.scope">scope() (in module capabilities)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.scope_operator_classes">scope_operator_classes() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.scoped_constraints">scoped_constraints() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/attacks/differential_cryptanalysis.html#attacks.differential_cryptanalysis.search_diff_trail">search_diff_trail() (in module attacks.differential_cryptanalysis)</a>
+</li>
+      <li><a href="api/attacks/impossible_differential.html#attacks.impossible_differential.search_id_distinguisher_enumeration">search_id_distinguisher_enumeration() (in module attacks.impossible_differential)</a>
+</li>
+      <li><a href="api/attacks/impossible_differential.html#attacks.impossible_differential.search_impossible_differential">search_impossible_differential() (in module attacks.impossible_differential)</a>
+</li>
+      <li><a href="api/attacks/integral_cryptanalysis.html#attacks.integral_cryptanalysis.search_integral_distinguisher">search_integral_distinguisher() (in module attacks.integral_cryptanalysis)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.search_key">search_key() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.search_key">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/linear_cryptanalysis.html#attacks.linear_cryptanalysis.search_linear_trail">search_linear_trail() (in module attacks.linear_cryptanalysis)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.search_optimum">search_optimum() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.search_optimum">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+      <li><a href="api/attacks/zero_corr_linear.html#attacks.zero_corr_linear.search_zc_distinguisher_enumeration">search_zc_distinguisher_enumeration() (in module attacks.zero_corr_linear)</a>
+</li>
+      <li><a href="api/attacks/zero_corr_linear.html#attacks.zero_corr_linear.search_zero_correlation">search_zero_correlation() (in module attacks.zero_corr_linear)</a>
+</li>
+      <li><a href="api/tools/model_configuration.html#tools.model_configuration.set_model_versions">set_model_versions() (in module tools.model_configuration)</a>
+</li>
+      <li><a href="api/primitives/shacal2.html#primitives.shacal2.SHACAL2_block_cipher">SHACAL2_block_cipher (class in primitives.shacal2)</a>
+</li>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Ch">SHACAL2_Ch (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Maj">SHACAL2_Maj (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma0">SHACAL2_Sigma0 (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sigma1">SHACAL2_Sigma1 (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum0">SHACAL2_Sum0 (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/SHACAL2BooleanFunctions.html#operators.SHACAL2BooleanFunctions.SHACAL2_Sum1">SHACAL2_Sum1 (class in operators.SHACAL2BooleanFunctions)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.shape_asymmetry">shape_asymmetry() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/operators/operators.html#operators.operators.Shift">Shift (class in operators.operators)</a>
+</li>
+      <li><a href="api/primitives/simeck.html#primitives.simeck.Simeck_block_cipher">Simeck_block_cipher (class in primitives.simeck)</a>
+</li>
+      <li><a href="api/primitives/simeck.html#primitives.simeck.Simeck_permutation">Simeck_permutation (class in primitives.simeck)</a>
+</li>
+      <li><a href="api/primitives/simon.html#primitives.simon.Simon_block_cipher">Simon_block_cipher (class in primitives.simon)</a>
+</li>
+      <li><a href="api/primitives/simon.html#primitives.simon.Simon_permutation">Simon_permutation (class in primitives.simon)</a>
+</li>
+      <li><a href="api/primitives/siphash.html#primitives.siphash.SipHash_permutation">SipHash_permutation (class in primitives.siphash)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Skinny_4bit_Sbox">Skinny_4bit_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Skinny_8bit_Sbox">Skinny_8bit_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/primitives/skinny.html#primitives.skinny.Skinny_block_cipher">Skinny_block_cipher (class in primitives.skinny)</a>
+</li>
+      <li><a href="api/primitives/skinny.html#primitives.skinny.Skinny_permutation">Skinny_permutation (class in primitives.skinny)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.solution_bit">solution_bit() (in module attacks.attack_trace)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.solution_to_assignments">solution_to_assignments() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.solution_to_assignments">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_milp">solve_milp() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_milp_gurobi">solve_milp_gurobi() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_milp_scip">solve_milp_scip() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_sat">solve_sat() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_sat_cpsat">solve_sat_cpsat() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_sat_external">solve_sat_external() (in module solving.solving)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solve_sat_pysat">solve_sat_pysat() (in module solving.solving)</a>
+</li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.solver_backends">solver_backends() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/solving/solving.html#solving.solving.solver_capabilities">solver_capabilities() (in module solving.solving)</a>
+</li>
+      <li>
+    solving.solving
+
+      <ul>
+        <li><a href="api/solving/solving.html#module-solving.solving">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/implementation_capabilities.html#capabilities.implementation_capabilities.source_extensions">source_extensions() (in module capabilities.implementation_capabilities)</a>
+</li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.source_models_nothing">source_models_nothing() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/primitives/speck.html#primitives.speck.Speck_block_cipher">Speck_block_cipher (class in primitives.speck)</a>
+</li>
+      <li><a href="api/primitives/speck.html#primitives.speck.Speck_permutation">Speck_permutation (class in primitives.speck)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.star_ddt_to_truthtable">star_ddt_to_truthtable() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.Sbox.star_lat_to_truthtable">star_lat_to_truthtable() (operators.Sbox.Sbox method)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.RuntimeResourceMonitor.start">start() (tools.resource_monitor.RuntimeResourceMonitor method)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.state_bits">state_bits() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/model_constraints.html#tools.model_constraints.state_var_ids">state_var_ids() (in module tools.model_constraints)</a>
+</li>
+      <li><a href="api/tools/resource_monitor.html#tools.resource_monitor.RuntimeResourceMonitor.stop">stop() (tools.resource_monitor.RuntimeResourceMonitor method)</a>
+</li>
+      <li><a href="api/primitives/primitives.html#primitives.primitives.Stream_cipher">Stream_cipher (class in primitives.primitives)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.test_implementation_c">test_implementation_c() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.test_implementation_python">test_implementation_python() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.test_implementation_rust">test_implementation_rust() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/implementations/implementations.html#implementations.implementations.test_implementation_verilog">test_implementation_verilog() (in module implementations.implementations)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.to_dict">to_dict() (attacks.attack_trace.AttackTrace method)</a>
+</li>
+      <li><a href="api/capabilities/capabilities.html#capabilities.to_manifest">to_manifest() (in module capabilities)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.to_trail">to_trail() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/claim.html#recheck.claim.to_trail">(in module recheck.claim)</a>
+</li>
+      </ul></li>
+      <li>
+    tools.milp_search
+
+      <ul>
+        <li><a href="api/tools/milp_search.html#module-tools.milp_search">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.minimize_logic
+
+      <ul>
+        <li><a href="api/tools/minimize_logic.html#module-tools.minimize_logic">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.model_configuration
+
+      <ul>
+        <li><a href="api/tools/model_configuration.html#module-tools.model_configuration">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.model_constraints
+
+      <ul>
+        <li><a href="api/tools/model_constraints.html#module-tools.model_constraints">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.model_objective
+
+      <ul>
+        <li><a href="api/tools/model_objective.html#module-tools.model_objective">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.model_templates
+
+      <ul>
+        <li><a href="api/tools/model_templates.html#module-tools.model_templates">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.operator_constraints
+
+      <ul>
+        <li><a href="api/tools/operator_constraints.html#module-tools.operator_constraints">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    tools.paths
+
+      <ul>
+        <li><a href="api/tools/paths.html#module-tools.paths">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.polyhedron
+
+      <ul>
+        <li><a href="api/tools/polyhedron.html#module-tools.polyhedron">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.resource_monitor
+
+      <ul>
+        <li><a href="api/tools/resource_monitor.html#module-tools.resource_monitor">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.sat_search
+
+      <ul>
+        <li><a href="api/tools/sat_search.html#module-tools.sat_search">module</a>
+</li>
+      </ul></li>
+      <li>
+    tools.sbox_division_trails
+
+      <ul>
+        <li><a href="api/tools/sbox_division_trails.html#module-tools.sbox_division_trails">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/analysis_capabilities.html#capabilities.analysis_capabilities.trace_classes">trace_classes() (in module capabilities.analysis_capabilities)</a>
+</li>
+      <li><a href="api/attacks/attack_trace.html#attacks.attack_trace.Trail">Trail (class in attacks.attack_trace)</a>
+</li>
+      <li><a href="api/primitives/trivium.html#primitives.trivium.TRIVIUM">TRIVIUM() (in module primitives.trivium)</a>
+</li>
+      <li><a href="api/primitives/trivium.html#primitives.trivium.Trivium_Stream_Cipher">Trivium_Stream_Cipher (class in primitives.trivium)</a>
+</li>
+      <li><a href="api/tools/polyhedron.html#tools.polyhedron.ttb_to_ineq_convex_hull">ttb_to_ineq_convex_hull() (in module tools.polyhedron)</a>
+</li>
+      <li><a href="api/tools/minimize_logic.html#tools.minimize_logic.ttb_to_ineq_logic">ttb_to_ineq_logic() (in module tools.minimize_logic)</a>
+</li>
+      <li><a href="api/primitives/twine.html#primitives.twine.TWINE_block_cipher">TWINE_block_cipher (class in primitives.twine)</a>
+</li>
+      <li><a href="api/primitives/twine.html#primitives.twine.TWINE_permutation">TWINE_permutation (class in primitives.twine)</a>
+</li>
+      <li><a href="api/operators/Sbox.html#operators.Sbox.TWINE_Sbox">TWINE_Sbox (class in operators.Sbox)</a>
+</li>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.two_stage_trail_search">two_stage_trail_search() (in module attacks.attacks)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/operators.html#operators.operators.UnaryOperator">UnaryOperator (class in operators.operators)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/capabilities/layer_capabilities.html#capabilities.layer_capabilities.unused_layers">unused_layers() (in module capabilities.layer_capabilities)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/variables/variables.html#variables.variables.Variable">Variable (class in variables.variables)</a>
+</li>
+      <li>
+    variables.variables
+
+      <ul>
+        <li><a href="api/variables/variables.html#module-variables.variables">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.verification_coverage">verification_coverage() (in module capabilities.operator_capabilities)</a>
+</li>
+      <li><a href="api/recheck/recheck.html#recheck.verify">verify() (in module recheck)</a>
+
+      <ul>
+        <li><a href="api/recheck/checks.html#recheck.checks.verify">(in module recheck.checks)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/cross_check.html#recheck.cross_check.version_label">version_label() (in module recheck.cross_check)</a>
+</li>
+      <li><a href="api/capabilities/primitive_capabilities.html#capabilities.primitive_capabilities.version_tables">version_tables() (in module capabilities.primitive_capabilities)</a>
+</li>
+      <li>
+    visualisations.visualisations
+
+      <ul>
+        <li><a href="api/visualisations/visualisations.html#module-visualisations.visualisations">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recheck/run.html#recheck.run.width_of">width_of() (in module recheck.run)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tools/milp_search.html#tools.milp_search.write_milp_model">write_milp_model() (in module tools.milp_search)</a>
+</li>
+      <li><a href="api/tools/sat_search.html#tools.sat_search.write_sat_model">write_sat_model() (in module tools.sat_search)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/boolean_operators.html#operators.boolean_operators.XOR">XOR (class in operators.boolean_operators)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Z">Z</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/attacks/attacks.html#attacks.attacks.zero_correlation_attacks">zero_correlation_attacks() (in module attacks.attacks)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.zero_star_io_patterns">zero_star_io_patterns() (operators.matrix.Matrix method)</a>
+</li>
+      <li><a href="api/operators/matrix.html#operators.matrix.Matrix.zero_star_patterns_from_output_via_inverse">zero_star_patterns_from_output_via_inverse() (operators.matrix.Matrix method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

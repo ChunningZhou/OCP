@@ -1,0 +1,237 @@
+Installation
+============
+
+This guide provides detailed instructions for installing the Open Cryptanalysis
+Platform (OCP). OCP is developed and tested with **Python 3.8**. Only NumPy is
+mandatory; every other library is optional and only needed when a specific task
+requires it.
+
+
+Dependencies
+------------
+
+The table below lists all dependencies with their category and tested version.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 22 42 36
+
+   * - Dependency
+     - Category
+     - Tested version
+   * - NumPy
+     - Mandatory
+     - 1.24.4
+   * - PyEDA
+     - Optional (S-box modeling)
+     - 0.28.0
+   * - pycddlib
+     - Optional (S-box modeling)
+     - 2.1.8.post1
+   * - Matplotlib
+     - Optional (visualization)
+     - 3.7.1
+   * - psutil
+     - Optional (runtime stats)
+     - 7.2.2
+   * - Gurobi
+     - Optional (MILP solver)
+     - 11.0.3
+   * - SCIP
+     - Optional (MILP solver)
+     - scip 8.0.3, pyscipopt 4.3.0
+   * - OR-Tools
+     - Optional (MILP/SAT solver)
+     - 9.12.4544
+   * - Python-SAT
+     - Optional (SAT solver)
+     - python-sat 1.8.dev16, pycryptosat 5.11.21
+
+
+Prerequisites
+-------------
+
+Before installing OCP, ensure that you have the following:
+
+- **Python 3.8**
+- **pip** (Python package manager, used to install Python libraries)
+- **Git** (to clone the repository)
+
+
+Step 1: Clone the repository
+----------------------------
+
+.. code-block:: bash
+
+   git clone <repository-url>
+   cd OCP
+
+
+Step 2: NumPy
+-------------
+
+NumPy provides support for large, multidimensional arrays and matrices. It is often
+already installed, but if needed you can install it with the commands below.
+
+*Recommended version: numpy=1.24.4*
+
+.. code-block:: bash
+
+   conda install -c conda-forge numpy
+   # if this fails, use pip:
+   pip install numpy
+
+For more details, see the `NumPy website <https://numpy.org/>`_.
+
+
+Step 3: Optional Python tools
+-----------------------------
+
+PyEDA [OPTIONAL]
+~~~~~~~~~~~~~~~~
+
+PyEDA is a library for electronic design automation (EDA). OCP uses it to model
+Boolean functions and S-boxes through Espresso logic minimization. The folder
+``files/sbox_modeling/`` already ships pre-generated MILP and SAT constraint files for
+common S-boxes, so PyEDA is only required if you want to generate new constraints for
+other S-boxes or Boolean functions.
+
+*Recommended version: pyeda=0.28.0*
+
+.. code-block:: bash
+
+   conda install -c conda-forge pyeda
+   # if this fails, use pip:
+   pip3 install pyeda
+
+For more details, see the `PyEDA documentation <https://pyeda.readthedocs.io/>`_.
+
+pycddlib [OPTIONAL]
+~~~~~~~~~~~~~~~~~~~
+
+pycddlib is a Python interface to the CDD library for polyhedral computations. OCP
+uses it to convert Boolean truth tables into convex hull representations and generate
+MILP constraints. As with PyEDA, pre-generated constraint files are already provided,
+so pycddlib is only required to generate new S-box constraints. PyEDA and pycddlib are
+two alternative ways to model S-boxes; either one can be used.
+
+*Recommended version: pycddlib=2.1.8.post1*
+
+.. code-block:: bash
+
+   pip install pycddlib
+
+For more details, see the `pycddlib documentation <https://pypi.org/project/pycddlib/>`_.
+
+Matplotlib [OPTIONAL]
+~~~~~~~~~~~~~~~~~~~~~
+
+Matplotlib is used to generate the structural figures produced by OCP.
+
+*Recommended version: matplotlib=3.7.1*
+
+.. code-block:: bash
+
+   conda install -c conda-forge matplotlib
+   # if this fails, use pip:
+   pip install matplotlib
+
+For more details, see the `Matplotlib website <https://matplotlib.org/>`_.
+
+psutil [OPTIONAL]
+~~~~~~~~~~~~~~~~~
+
+psutil is a cross-platform library for process and system monitoring. OCP uses it to
+record runtime information (CPU usage, number of threads, peak memory, and platform
+details) while building or solving models. It is only needed if you want these runtime
+statistics; OCP runs without it otherwise.
+
+*Recommended version: psutil=7.2.2*
+
+.. code-block:: bash
+
+   conda install -c conda-forge psutil
+   # if this fails, use pip:
+   pip install psutil
+
+For more details, see the `psutil documentation <https://psutil.readthedocs.io/>`_.
+
+
+Step 4: MILP solvers
+--------------------
+
+For solving MILP models, OCP supports three optional solvers: Gurobi, SCIP, and
+OR-Tools. Choose any one of them.
+
+Gurobi [OPTIONAL]
+~~~~~~~~~~~~~~~~~
+
+*Recommended version: gurobi=11.0.3*
+
+.. code-block:: bash
+
+   conda install -c gurobi gurobi   # installs Gurobi and gurobipy
+   grbgetkey xxx                    # activate your Gurobi license
+
+For the Gurobi license and more details, see the
+`Gurobi installation page <https://www.gurobi.com/documentation/>`_.
+
+SCIP [OPTIONAL]
+~~~~~~~~~~~~~~~
+
+*Recommended version: scip=8.0.3, pyscipopt=4.3.0*
+
+.. code-block:: bash
+
+   conda install -c conda-forge scip pyscipopt
+
+For more details, see the `SCIP installation page <https://scipopt.org/>`_.
+
+OR-Tools [OPTIONAL]
+~~~~~~~~~~~~~~~~~~~
+
+OR-Tools is an open-source optimization toolkit developed by Google. It can solve both
+MILP and SAT models.
+
+*Recommended version: ortools=9.12.4544*
+
+.. code-block:: bash
+
+   pip install ortools
+
+For more details, see the
+`OR-Tools installation page <https://github.com/google/or-tools>`_.
+
+
+Step 5: SAT solvers
+-------------------
+
+For solving SAT models, OCP supports two optional solvers: Python-SAT and OR-Tools.
+Choose any one of them.
+
+Python-SAT [OPTIONAL]
+~~~~~~~~~~~~~~~~~~~~~
+
+Python-SAT provides a unified interface to a number of state-of-the-art SAT solvers,
+including CaDiCaL, CryptoMiniSat, Glucose, Lingeling, MapleSAT, MiniSat, and others.
+
+*Recommended version: python-sat=1.8.dev16, pycryptosat=5.11.21*
+
+.. code-block:: bash
+
+   pip install python-sat
+   pip install pycryptosat   # for the CryptoMiniSat solver
+
+For more details, see the `Python-SAT GitHub page <https://github.com/pysathq/pysat>`_.
+
+OR-Tools [OPTIONAL]
+~~~~~~~~~~~~~~~~~~~
+
+See the OR-Tools entry in the MILP solvers section above.
+
+
+Notes
+-----
+
+- Ensure your Python environment is set up and activated before running these commands.
+- Using a virtual environment (recommended) helps isolate and manage dependencies.

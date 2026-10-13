@@ -1,0 +1,6 @@
+knot
+====
+
+.. automodule:: primitives.knot
+   :members:
+   :show-inheritance:

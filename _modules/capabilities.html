@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>capabilities &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/capabilities';</script>
+    <link rel="icon" href="../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">capabilities</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for capabilities</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;One place to ask what OCP can do, composed from the per-axis modules beside this file.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">capabilities</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">analysis_capabilities</span><span class="p">,</span> <span class="n">implementation_capabilities</span><span class="p">,</span> <span class="n">layer_capabilities</span><span class="p">,</span>
+                          <span class="n">operator_capabilities</span><span class="p">,</span> <span class="n">primitive_capabilities</span><span class="p">)</span>
+
+<span class="c1"># Nothing under attacks/, implementations/ or solving/ imports this package: the pipeline does not</span>
+<span class="c1"># need to be told what it can do. The consumers are an LLM working in the repository, OCP-agent&#39;s</span>
+<span class="c1"># manifest, and the documentation. The dependency runs facade -&gt; axis, never the other way, so no</span>
+<span class="c1"># axis module imports this one.</span>
+<span class="n">AXES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;primitives&quot;</span><span class="p">:</span> <span class="n">primitive_capabilities</span><span class="p">,</span>
+    <span class="s2">&quot;layer_methods&quot;</span><span class="p">:</span> <span class="n">layer_capabilities</span><span class="p">,</span>
+    <span class="s2">&quot;operators&quot;</span><span class="p">:</span> <span class="n">operator_capabilities</span><span class="p">,</span>
+    <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="p">,</span>
+    <span class="s2">&quot;implementations&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_analysis_summary</span><span class="p">(</span><span class="n">report</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{feasible, blocked, unverified}`` over a ``capability_report`` -- three groups, not two.</span>
+
+<span class="sd">    A goal held up only by operators that declare nothing is neither feasible nor blocked, and a</span>
+<span class="sd">    two-way summary left it out of both: a consumer could not tell &quot;cannot&quot; from &quot;nobody looked&quot;.</span>
+<span class="sd">    Separate from ``describe_cipher`` so the partition can be checked on a report that *has* an</span>
+<span class="sd">    unverified goal -- today&#39;s operator set has none, so the real reports cannot exercise it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;feasible&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">goal</span> <span class="k">for</span> <span class="n">goal</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">report</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;verified&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;blocked&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">goal</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;blockers&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">goal</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">report</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;blockers&quot;</span><span class="p">]},</span>
+        <span class="s2">&quot;unverified&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">goal</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;unverified&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">goal</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">report</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                       <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;unverified&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;blockers&quot;</span><span class="p">]},</span>
+    <span class="p">}</span>
+
+
+<div class="viewcode-block" id="describe_cipher">
+<a class="viewcode-back" href="../api/capabilities/capabilities.html#capabilities.describe_cipher">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">describe_cipher</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">factory</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Everything the axes know about one cipher, built once and asked once.</span>
+
+<span class="sd">    Joins the catalogue entry, the goals it can express under ``model_type``, and how its</span>
+<span class="sd">    implementation can be emitted. ``kwargs`` go to the factory (``r=`` for the round count);</span>
+<span class="sd">    about 0.2 s, almost all of it walking the operators.</span>
+
+<span class="sd">    ``feasible`` means every operator **declares** the required model version, which is not an</span>
+<span class="sd">    end-to-end check: see ``analysis_capabilities.feasible_goals``. ``unverified`` is the third</span>
+<span class="sd">    group, goals held up only by operators that declare nothing.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="n">primitive_capabilities</span><span class="o">.</span><span class="n">describe_primitive</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">factory</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;error&quot;</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;primitive&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">,</span> <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;implementation&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;cipher&quot;</span><span class="p">)</span>                  <span class="c1"># built by describe_primitive, reused here</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">capability_report</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;primitive&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">,</span>
+        <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">_analysis_summary</span><span class="p">(</span><span class="n">report</span><span class="p">),</span> <span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">,</span> <span class="n">report</span><span class="o">=</span><span class="n">report</span><span class="p">),</span>
+        <span class="s2">&quot;implementation&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">feasible_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">),</span>
+            <span class="s2">&quot;with_automated_kat&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">feasible_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">require_kat</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s2">&quot;operator_languages&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">cipher_languages</span><span class="p">(</span><span class="n">cipher</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">}</span></div>
+
+
+
+<div class="viewcode-block" id="describe_repository">
+<a class="viewcode-back" href="../api/capabilities/capabilities.html#capabilities.describe_repository">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">describe_repository</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The static picture: what exists, without building a single cipher.</span>
+
+<span class="sd">    The answer to &quot;what is this repository&quot; for a consumer that has just arrived. Every count</span>
+<span class="sd">    comes from its axis, so none of them can disagree with the code.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">factories</span> <span class="o">=</span> <span class="n">primitive_capabilities</span><span class="o">.</span><span class="n">primitive_factories</span><span class="p">()</span>
+    <span class="n">operators</span> <span class="o">=</span> <span class="n">operator_capabilities</span><span class="o">.</span><span class="n">operator_classes</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;primitives&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;factories&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">factories</span><span class="p">),</span>
+            <span class="s2">&quot;with_version_table&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">factories</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;version_rounds&quot;</span><span class="p">]),</span>
+            <span class="s2">&quot;in_development&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">f</span> <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="ow">in</span>
+                                     <span class="n">primitive_capabilities</span><span class="o">.</span><span class="n">primitive_factories</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                                     <span class="k">if</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">factories</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="c1"># &quot;layer_methods&quot;, not &quot;layers&quot;: these are Python methods on Layered_Function, which a</span>
+        <span class="c1"># caller invokes directly. OCP-agent&#39;s manifest has a &quot;layers&quot; of its own holding the</span>
+        <span class="c1"># declarative spec vocabulary (add_constant, subcell_sbox, ...) -- near-identical names,</span>
+        <span class="c1"># different things, and a consumer that conflates them writes code against the wrong one.</span>
+        <span class="s2">&quot;layer_methods&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;methods&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">layer_capabilities</span><span class="o">.</span><span class="n">layer_methods</span><span class="p">()),</span>
+            <span class="s2">&quot;unused&quot;</span><span class="p">:</span> <span class="n">layer_capabilities</span><span class="o">.</span><span class="n">unused_layers</span><span class="p">(),</span>
+            <span class="s2">&quot;undocumented_arguments&quot;</span><span class="p">:</span> <span class="n">layer_capabilities</span><span class="o">.</span><span class="n">documentation_gaps</span><span class="p">(),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;operators&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;classes&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">operators</span><span class="p">),</span>
+            <span class="s2">&quot;declaring&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">operator_capabilities</span><span class="o">.</span><span class="n">operator_classes</span><span class="p">(</span><span class="n">declaring_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)),</span>
+            <span class="s2">&quot;declarations_match_source&quot;</span><span class="p">:</span> <span class="ow">not</span> <span class="n">operator_capabilities</span><span class="o">.</span><span class="n">consistency_report</span><span class="p">(),</span>
+            <span class="s2">&quot;verification_coverage&quot;</span><span class="p">:</span> <span class="n">operator_capabilities</span><span class="o">.</span><span class="n">verification_coverage</span><span class="p">(),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;goals&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">ALL_GOALS</span><span class="p">),</span>
+            <span class="s2">&quot;model_types&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">MODEL_TYPES</span><span class="p">),</span>
+            <span class="s2">&quot;support_matrix&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">goal_support_matrix</span><span class="p">(),</span>
+            <span class="s2">&quot;entry_points&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">result_shapes</span><span class="p">(),</span>
+            <span class="s2">&quot;recheck&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">recheck_available</span><span class="p">(),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;implementations&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">languages</span><span class="p">(),</span>
+            <span class="s2">&quot;feasible&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">feasible_languages</span><span class="p">(),</span>
+            <span class="s2">&quot;artifact_extensions&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">artifact_extensions</span><span class="p">(),</span>
+        <span class="p">},</span>
+    <span class="p">}</span></div>
+
+
+
+<div class="viewcode-block" id="explain">
+<a class="viewcode-back" href="../api/capabilities/capabilities.html#capabilities.explain">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">explain</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Why something is unavailable for ``cipher``, in one call; ``&quot;&quot;`` when it is available.</span>
+
+<span class="sd">    Delegates to the axis that owns the question -- ``goal`` to the analysis axis, ``language`` to</span>
+<span class="sd">    the implementation axis -- so the message a consumer sees is the one the axis would give.</span>
+<span class="sd">    ``cipher`` reaches both: asked without it, the implementation axis answers at repository scope</span>
+<span class="sd">    and would blame a missing toolchain for a language the cipher&#39;s operators cannot emit at all.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">goal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">explain_goal</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">explain_language</span><span class="p">(</span><span class="n">language</span><span class="p">,</span> <span class="n">cipher</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message</span> <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span> <span class="k">if</span> <span class="n">message</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># Each entry says what is outside the axes, why, and where the answer is instead. A `where` that</span>
+<span class="c1"># names another repository is still an answer; silence is not.</span>
+<span class="n">OUT_OF_SCOPE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;what&quot;</span><span class="p">:</span> <span class="s2">&quot;the declarative CipherSpec vocabulary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;There are two ways to describe a cipher to OCP and the axes describe only one. &quot;</span>
+               <span class="s2">&quot;`layer_methods` covers the hand-written route: Python methods on &quot;</span>
+               <span class="s2">&quot;Layered_Function. OCP-agent takes a declarative CipherSpec instead -- layer_type &quot;</span>
+               <span class="s2">&quot;names, key archetypes, S-box/diffusion/constant/index construction methods -- and &quot;</span>
+               <span class="s2">&quot;exports it as a primitives/*.py of exactly the kind `layer_methods` describes. &quot;</span>
+               <span class="s2">&quot;So the spec vocabulary is a front end over these methods, not a second set of &quot;</span>
+               <span class="s2">&quot;them, and no package an axis covers defines it: `CipherSpec` and `layer_type` &quot;</span>
+               <span class="s2">&quot;appear nowhere in the packages listed under `covers`. Phrased against those &quot;</span>
+               <span class="s2">&quot;packages rather than against the repository, because OCP-agent merging in would &quot;</span>
+               <span class="s2">&quot;make `agent/` part of the repository without making its vocabulary an axis -- &quot;</span>
+               <span class="s2">&quot;merging the two would fuse two near-identical 11-item vocabularies whose whole &quot;</span>
+               <span class="s2">&quot;value is being distinguishable.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;where&quot;</span><span class="p">:</span> <span class="s2">&quot;OCP-agent&#39;s builder-side capability layer (the one describing the spec &quot;</span>
+                 <span class="s2">&quot;vocabulary); its module path is OCP-agent&#39;s to place, not named here&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;what&quot;</span><span class="p">:</span> <span class="s2">&quot;figures&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;`visualisations/generate_figure` draws a cipher or a trail and no axis mentions &quot;</span>
+               <span class="s2">&quot;it, so a consumer reading the manifest cannot learn that OCP can draw at all.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;where&quot;</span><span class="p">:</span> <span class="s2">&quot;`visualisations/visualisations.py`, undescribed&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;what&quot;</span><span class="p">:</span> <span class="s2">&quot;the variable substrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;`variables/` holds the Variable a state is made of. Every axis above assumes it &quot;</span>
+               <span class="s2">&quot;and none describes it; it is not something a consumer picks, which is why it has &quot;</span>
+               <span class="s2">&quot;stayed undescribed rather than because it is uninteresting.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;where&quot;</span><span class="p">:</span> <span class="s2">&quot;`variables/variables.py`, undescribed&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;what&quot;</span><span class="p">:</span> <span class="s2">&quot;LLM providers and prompting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;Which model to call, with what prompt, and how to parse the reply are OCP-agent&#39;s &quot;</span>
+               <span class="s2">&quot;questions. OCP neither knows nor needs to.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;where&quot;</span><span class="p">:</span> <span class="s2">&quot;OCP-agent, `agent/llm/`&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;what&quot;</span><span class="p">:</span> <span class="s2">&quot;the agent package itself&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;`agent/` is a consumer of the framework, like `capabilities/` and `recheck/`: it &quot;</span>
+               <span class="s2">&quot;imports inwards and nothing in the pipeline imports it. No axis covers it, so it &quot;</span>
+               <span class="s2">&quot;is named here to keep the accounting complete -- every package under the &quot;</span>
+               <span class="s2">&quot;repository root is either described by an axis or declared out of scope. Listed &quot;</span>
+               <span class="s2">&quot;before it exists, so that OCP-agent merging in does not silently arrive &quot;</span>
+               <span class="s2">&quot;undescribed; `test_nothing_in_the_framework_imports_a_consumer` already holds the &quot;</span>
+               <span class="s2">&quot;direction.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;where&quot;</span><span class="p">:</span> <span class="s2">&quot;OCP-agent, `agent/`; its own builder-side capability layer describes it&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="scope">
+<a class="viewcode-back" href="../api/capabilities/capabilities.html#capabilities.scope">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">scope</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;What the axes cover and what they deliberately do not, with where the rest lives.</span>
+
+<span class="sd">    ``axes`` answers &quot;which axes exist&quot;. This answers &quot;what is in the subject matter and what is</span>
+<span class="sd">    outside it&quot; -- a different question, and the one a consumer gets wrong, because a description</span>
+<span class="sd">    that lists only what it knows reads as complete.</span>
+
+<span class="sd">    The case that prompted it: a manifest carrying ``layer_methods`` and no statement of scope let</span>
+<span class="sd">    a reader conclude that writing Python is the only way to describe a cipher to OCP. The note on</span>
+<span class="sd">    ``layer_methods`` did mention OCP-agent&#39;s vocabulary, but phrased as a disambiguation between</span>
+<span class="sd">    two similar names rather than as &quot;there is a second route, and it is over there&quot;.</span>
+
+<span class="sd">    ``covers`` is derived from ``AXES``, so a new axis cannot appear without appearing here.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;covers&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">AXES</span><span class="p">),</span>
+        <span class="s2">&quot;does_not_cover&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">OUT_OF_SCOPE</span><span class="p">],</span>
+    <span class="p">}</span></div>
+
+
+
+<span class="c1"># Bumped when a field is renamed or removed, not when one is added.</span>
+<span class="n">MANIFEST_SCHEMA_VERSION</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<div class="viewcode-block" id="to_manifest">
+<a class="viewcode-back" href="../api/capabilities/capabilities.html#capabilities.to_manifest">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">to_manifest</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Everything the axes know, in a form that survives ``json.dumps`` unchanged.</span>
+
+<span class="sd">    ``describe_repository()`` is already serialisable, but two axis functions are not: the</span>
+<span class="sd">    catalogue is keyed by the ``(module, factory)`` tuple and a block cipher&#39;s ``version_rounds``</span>
+<span class="sd">    by ``(block_size, key_size)``, and JSON has no tuple keys. Both become lists of records here,</span>
+<span class="sd">    so a consumer never has to guess how a tuple was flattened.</span>
+
+<span class="sd">    ``host`` holds the answers that are true of this machine rather than of the repository --</span>
+<span class="sd">    installed solvers, toolchains on PATH, whether the optional ``reference/`` package is here.</span>
+<span class="sd">    Caching those as repository facts is how a manifest comes to describe a machine nobody has.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">factories</span> <span class="o">=</span> <span class="n">primitive_capabilities</span><span class="o">.</span><span class="n">primitive_factories</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">catalogue</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">factory</span><span class="p">),</span> <span class="n">entry</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">factories</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;version_rounds&quot;</span><span class="p">)</span>
+        <span class="n">record</span><span class="p">[</span><span class="s2">&quot;version_rounds&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">table</span> <span class="k">else</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="k">else</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot;rounds&quot;</span><span class="p">:</span> <span class="n">rounds</span><span class="p">}</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">rounds</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">kv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="p">]</span>
+        <span class="n">catalogue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;schema_version&quot;</span><span class="p">:</span> <span class="n">MANIFEST_SCHEMA_VERSION</span><span class="p">,</span>
+        <span class="c1"># `axes` stays a plain list: which axes exist and what the subject matter is are two</span>
+        <span class="c1"># questions, and `scope` is an added field, so no schema bump.</span>
+        <span class="s2">&quot;axes&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">AXES</span><span class="p">),</span>
+        <span class="s2">&quot;scope&quot;</span><span class="p">:</span> <span class="n">scope</span><span class="p">(),</span>
+        <span class="s2">&quot;primitives&quot;</span><span class="p">:</span> <span class="n">catalogue</span><span class="p">,</span>
+        <span class="s2">&quot;layer_methods&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c1"># Spelled out here because a manifest travels without the docs that explain it.</span>
+            <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Python methods on Layered_Function, called as cipher.functions[f].SboxLayer&quot;</span>
+                    <span class="s2">&quot;(...). OCP-agent&#39;s manifest has its own &#39;layers&#39; holding spec layer_type &quot;</span>
+                    <span class="s2">&quot;names (add_constant, subcell_sbox, ...); the two vocabularies are separate.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;methods&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">entry</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">layer_capabilities</span><span class="o">.</span><span class="n">layer_methods</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;operators&quot;</span><span class="p">:</span> <span class="n">operator_capabilities</span><span class="o">.</span><span class="n">describe_operators</span><span class="p">(),</span>
+        <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;goals&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">ALL_GOALS</span><span class="p">),</span>
+            <span class="s2">&quot;goal_middle&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">goal</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">resolve_goal</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">goal</span> <span class="ow">in</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">ALL_GOALS</span><span class="p">},</span>
+            <span class="s2">&quot;model_types&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">MODEL_TYPES</span><span class="p">),</span>
+            <span class="s2">&quot;call_vocabulary&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">call_vocabulary</span><span class="p">(),</span>
+            <span class="s2">&quot;entry_points&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">result_shapes</span><span class="p">(),</span>
+            <span class="s2">&quot;support_matrix&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">goal_support_matrix</span><span class="p">(),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;implementations&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">languages</span><span class="p">(),</span>
+            <span class="s2">&quot;source_extensions&quot;</span><span class="p">:</span> <span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">source_extensions</span><span class="p">(),</span>
+            <span class="s2">&quot;artifact_extensions&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">implementation_capabilities</span><span class="o">.</span><span class="n">artifact_extensions</span><span class="p">()),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;solver_backends&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">solver_backends</span><span class="p">(),</span>
+            <span class="s2">&quot;recheck&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">recheck_available</span><span class="p">(),</span>
+            <span class="s2">&quot;host_dependent&quot;</span><span class="p">:</span> <span class="n">analysis_capabilities</span><span class="o">.</span><span class="n">host_dependent_fields</span><span class="p">(),</span>
+        <span class="p">},</span>
+    <span class="p">}</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+attacks
+=======
+
+The ``attacks`` module groups the automated cryptanalysis methods.
+
+.. toctree::
+   :maxdepth: 1
+
+   attacks/attacks
+   attacks/attack_trace
+   attacks/differential_cryptanalysis
+   attacks/linear_cryptanalysis
+   attacks/integral_cryptanalysis
+   attacks/impossible_differential
+   attacks/zero_corr_linear

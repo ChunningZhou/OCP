@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recheck.checks &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/recheck/checks';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">recheck.checks</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for recheck.checks</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Replaying a published claim through OCP and reporting what the model says about it.</span>
+
+<span class="sd">A trail claim is checked by four functions, cheapest first. What separates them is not the</span>
+<span class="sd">question each asks -- each says that itself -- but two mechanical choices, what gets pinned and</span>
+<span class="sd">what the solver is then asked for:</span>
+
+<span class="sd">    feasible   pin the claim    ask for any solution</span>
+<span class="sd">    weight     pin the claim    demand the claimed weight</span>
+<span class="sd">    optimal    pin nothing      search for the optimum</span>
+<span class="sd">    unique     pin nothing      search, forbid that optimum, search again</span>
+
+<span class="sd">The pinned two stay cheap at high round counts because the trail fixes nearly every variable; the</span>
+<span class="sd">searching two explore the whole space and are realistic only for few rounds.</span>
+
+<span class="sd">A bound claim has no trail to pin, so it takes the other path: ``search_optimum`` for the round</span>
+<span class="sd">count in question, then ``compare_bound`` against the claimed relation. That is **one full search</span>
+<span class="sd">per round**, which is what makes replaying a bounds table expensive -- a ten-row table is ten</span>
+<span class="sd">searches, not one.</span>
+
+<span class="sd">``max_feasible_prefix`` is the diagnostic when a claim comes back infeasible: how far the</span>
+<span class="sd">assignments can be pinned before the model refuses, which separates three causes that otherwise</span>
+<span class="sd">look identical -- the paper is wrong, we transcribed it wrong, or our round/layer mapping is off.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">attacks.attacks</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">attacks</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.model_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_no_good_cut</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">recheck.claim</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">ROUND_KEY</span><span class="p">,</span> <span class="n">assignments_to_solution</span><span class="p">,</span> <span class="n">build_cipher</span><span class="p">,</span>
+                             <span class="n">pin_constraints</span><span class="p">,</span> <span class="n">resolve_claim</span><span class="p">)</span>
+
+<span class="n">CheckResult</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;CheckResult&quot;</span><span class="p">,</span> <span class="s2">&quot;name passed detail&quot;</span><span class="p">)</span>
+
+<span class="n">_ATTACK</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;differential&quot;</span><span class="p">:</span> <span class="n">attacks</span><span class="o">.</span><span class="n">diff_attacks</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="n">attacks</span><span class="o">.</span><span class="n">linear_attacks</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">objective_target</span><span class="p">,</span> <span class="n">constraints</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+    <span class="n">goal</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">weight_key</span> <span class="o">=</span> <span class="n">resolve_claim</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">analysis</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">][</span><span class="s2">&quot;analysis&quot;</span><span class="p">]</span>
+    <span class="n">trails</span> <span class="o">=</span> <span class="n">_ATTACK</span><span class="p">[</span><span class="n">analysis</span><span class="p">](</span>
+        <span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="n">goal</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span> <span class="n">objective_target</span><span class="o">=</span><span class="n">objective_target</span><span class="p">,</span>
+        <span class="n">show_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">config_model</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;model_type&quot;</span><span class="p">:</span> <span class="n">model_type</span><span class="p">},</span> <span class="n">config_solver</span><span class="o">=</span><span class="n">config_solver</span> <span class="ow">or</span> <span class="p">{},</span>
+    <span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">trails</span><span class="p">,</span> <span class="n">weight_key</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_claim_value</span><span class="p">(</span><span class="n">spec</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_pins</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">upto</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constraints pinning the claim, optionally only its first ``upto`` assignments.&quot;&quot;&quot;</span>
+    <span class="n">assignments</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;assignments&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">if</span> <span class="n">upto</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">assignments</span> <span class="o">=</span> <span class="n">assignments</span><span class="p">[:</span><span class="n">upto</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pin_constraints</span><span class="p">(</span><span class="n">assignments_to_solution</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">assignments</span><span class="p">),</span> <span class="n">model_type</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="check_feasible">
+<a class="viewcode-back" href="../../api/recheck/checks.html#recheck.checks.check_feasible">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_feasible</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Does the model admit the published trail at all?&quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">trails</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;EXISTENCE&quot;</span><span class="p">,</span> <span class="n">_pins</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">),</span>
+                        <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;feasible&quot;</span><span class="p">,</span> <span class="nb">bool</span><span class="p">(</span><span class="n">trails</span><span class="p">),</span>
+                       <span class="s2">&quot;admitted&quot;</span> <span class="k">if</span> <span class="n">trails</span> <span class="k">else</span> <span class="s2">&quot;no solution with the claim pinned&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_round_mismatch</span><span class="p">(</span><span class="n">trail</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">want_rounds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Where the per-round series first disagrees, or None.</span>
+
+<span class="sd">    Worth far more than the total: two rounds mis-transcribed in opposite directions leave the</span>
+<span class="sd">    sum intact, so a matching total proves little, while a matching series localizes any error</span>
+<span class="sd">    to one round.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">got_rounds</span> <span class="o">=</span> <span class="n">trail</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ROUND_KEY</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">got_rounds</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;the model reported no per-round series&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">got_rounds</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">want_rounds</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">got_rounds</span><span class="p">)</span><span class="si">}</span><span class="s2"> rounds reported, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">want_rounds</span><span class="p">)</span><span class="si">}</span><span class="s2"> claimed&quot;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">got</span><span class="p">,</span> <span class="n">want</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">got_rounds</span><span class="p">,</span> <span class="n">want_rounds</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">got</span> <span class="o">!=</span> <span class="n">want</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;round </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: model </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> vs claimed </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="check_weight">
+<a class="viewcode-back" href="../../api/recheck/checks.html#recheck.checks.check_weight">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_weight</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Does the published trail achieve the weight the paper states?</span>
+
+<span class="sd">    When the claim also lists ``round_values`` -- the per-round figures papers usually print</span>
+<span class="sd">    beside a trail -- those are compared one by one as well.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">want</span> <span class="o">=</span> <span class="n">_claim_value</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">trails</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;EXACTLY </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">_pins</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">),</span>
+                          <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">trails</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;not feasible at the claimed </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">got</span> <span class="o">=</span> <span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">got</span> <span class="o">!=</span> <span class="n">want</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;model </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> vs claimed </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">want_rounds</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;round_values&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">want_rounds</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> as claimed (no per-round series to check)&quot;</span><span class="p">)</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">_round_mismatch</span><span class="p">(</span><span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">key</span><span class="p">,</span> <span class="n">want_rounds</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">bad</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> as claimed, per-round series matches&quot;</span> <span class="k">if</span> <span class="n">bad</span> <span class="ow">is</span> <span class="kc">None</span>
+                       <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;total </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> matches but </span><span class="si">{</span><span class="n">bad</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="check_optimal">
+<a class="viewcode-back" href="../../api/recheck/checks.html#recheck.checks.check_optimal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_optimal</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Is the claimed value the best the model can do? Searches the whole space -- expensive.&quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">trails</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">trails</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;optimal&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;the unconstrained search found nothing&quot;</span><span class="p">)</span>
+    <span class="n">got</span><span class="p">,</span> <span class="n">want</span> <span class="o">=</span> <span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">_claim_value</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;optimal&quot;</span><span class="p">,</span> <span class="n">got</span> <span class="o">==</span> <span class="n">want</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;optimum </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> vs claimed </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_no_good_cut</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Forbid exactly this assignment, over the variables the solution pins to 0 or 1.</span>
+
+<span class="sd">    The cut itself is ``tools.model_constraints.gen_no_good_cut``; this only selects which</span>
+<span class="sd">    variables it covers. A value that is neither 0 nor 1 is left out rather than rounded in,</span>
+<span class="sd">    which is what the copy this replaced did.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">))))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">solution</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">binary</span> <span class="k">if</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">gen_no_good_cut</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">],</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">],</span> <span class="n">model_type</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="check_unique">
+<a class="viewcode-back" href="../../api/recheck/checks.html#recheck.checks.check_unique">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_unique</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Is the optimum the only solution at that value? Expensive: two full searches.&quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">trails</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">trails</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;unique&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;the unconstrained search found nothing&quot;</span><span class="p">)</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">cut</span> <span class="o">=</span> <span class="n">_no_good_cut</span><span class="p">(</span><span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">solution_trace</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="n">others</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;EXACTLY </span><span class="si">{</span><span class="n">best</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cut</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="s2">&quot;unique&quot;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">others</span><span class="p">,</span>
+                       <span class="sa">f</span><span class="s2">&quot;optimum </span><span class="si">{</span><span class="n">best</span><span class="si">}</span><span class="s2"> is unique&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">others</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;another trail also reaches </span><span class="si">{</span><span class="n">best</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="max_feasible_prefix">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.max_feasible_prefix">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">max_feasible_prefix</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;How many of the claim&#39;s assignments can be pinned before the model turns infeasible.</span>
+
+<span class="sd">    Equal to the number of assignments when the whole claim is feasible; otherwise the index of</span>
+<span class="sd">    the first one that cannot hold, which is where to look for the transcription error.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;assignments&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+    <span class="k">for</span> <span class="n">upto</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">trails</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;EXISTENCE&quot;</span><span class="p">,</span> <span class="n">_pins</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">upto</span><span class="p">),</span>
+                            <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">trails</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">upto</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">total</span></div>
+
+
+
+<span class="n">RELATIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;=&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">got</span><span class="p">,</span> <span class="n">want</span><span class="p">:</span> <span class="n">got</span> <span class="o">==</span> <span class="n">want</span><span class="p">,</span>
+             <span class="s2">&quot;&gt;=&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">got</span><span class="p">,</span> <span class="n">want</span><span class="p">:</span> <span class="n">got</span> <span class="o">&gt;=</span> <span class="n">want</span><span class="p">,</span>
+             <span class="s2">&quot;&lt;=&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">got</span><span class="p">,</span> <span class="n">want</span><span class="p">:</span> <span class="n">got</span> <span class="o">&lt;=</span> <span class="n">want</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="search_key">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.search_key">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">search_key</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">rounds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;What a bound search actually depends on, so identical searches can be shared.</span>
+
+<span class="sd">    Several papers state the same optimum, and each is a separate claim file. The search behind</span>
+<span class="sd">    them is one and the same: it is fixed by the primitive, the round count and the goal, and</span>
+<span class="sd">    knows nothing of who claimed what. Batch runners key a cache on this.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+    <span class="n">claim</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span>
+    <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">target</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;kwargs&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">target</span><span class="p">[</span><span class="s2">&quot;module&quot;</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="s2">&quot;constructor&quot;</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span>
+            <span class="n">claim</span><span class="p">[</span><span class="s2">&quot;analysis&quot;</span><span class="p">],</span> <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">),</span> <span class="n">claim</span><span class="p">[</span><span class="s2">&quot;metric&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="search_optimum">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.search_optimum">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">search_optimum</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The model&#39;s optimal weight over ``rounds`` rounds, or None if nothing was found.&quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="n">rounds</span><span class="p">)</span>
+    <span class="n">trails</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">_search</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="k">if</span> <span class="n">trails</span> <span class="k">else</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="compare_bound">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.compare_bound">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">compare_bound</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">got</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test an already-computed optimum against what the claim says about that round.&quot;&quot;&quot;</span>
+    <span class="n">claim</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span>
+    <span class="n">relation</span> <span class="o">=</span> <span class="n">claim</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;relation&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">relation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">RELATIONS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown relation </span><span class="si">{</span><span class="n">relation</span><span class="si">!r}</span><span class="s2">. Expected one of </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">RELATIONS</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">want</span> <span class="o">=</span> <span class="n">claim</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">][</span><span class="nb">str</span><span class="p">(</span><span class="n">rounds</span><span class="p">)]</span>
+    <span class="n">ok</span> <span class="o">=</span> <span class="n">got</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">RELATIONS</span><span class="p">[</span><span class="n">relation</span><span class="p">](</span><span class="n">got</span><span class="p">,</span> <span class="n">want</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">CheckResult</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;bound r</span><span class="si">{</span><span class="n">rounds</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ok</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;optimum </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">relation</span><span class="si">}</span><span class="s2"> claimed </span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="check_bound">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.check_bound">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_bound</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search the optimum for each round the claim covers and test the stated relation.</span>
+
+<span class="sd">    A bound claim carries no trail: it says what the best value over ``r`` rounds is (``&quot;=&quot;``),</span>
+<span class="sd">    or at least is (``&quot;&gt;=&quot;``, how design documents usually phrase a security argument), or at</span>
+<span class="sd">    most is (``&quot;&lt;=&quot;``, a trail was found but optimality was not proven). Nothing is pinned, so</span>
+<span class="sd">    every round is a full search -- pass ``rounds`` to check only part of the table.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">claim</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;claim&quot;</span><span class="p">]</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">round_key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">claim</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="nb">int</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">round_key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">got</span> <span class="o">=</span> <span class="n">search_optimum</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compare_bound</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">got</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">results</span></div>
+
+
+
+<span class="n">CHECKS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;feasible&quot;</span><span class="p">:</span> <span class="n">check_feasible</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="n">check_weight</span><span class="p">,</span>
+          <span class="s2">&quot;optimal&quot;</span><span class="p">:</span> <span class="n">check_optimal</span><span class="p">,</span> <span class="s2">&quot;unique&quot;</span><span class="p">:</span> <span class="n">check_unique</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="verify">
+<a class="viewcode-back" href="../../api/recheck/recheck.html#recheck.checks.verify">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">verify</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">checks</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;feasible&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">),</span> <span class="n">cipher</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="n">config_solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the named checks against one claim. Defaults to the two cheap ones.&quot;&quot;&quot;</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">cipher</span> <span class="ow">or</span> <span class="n">build_cipher</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">CHECKS</span><span class="p">[</span><span class="n">name</span><span class="p">](</span><span class="n">spec</span><span class="p">,</span> <span class="n">cipher</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">checks</span><span class="p">]</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

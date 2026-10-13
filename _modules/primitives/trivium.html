@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>primitives.trivium &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/primitives/trivium';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">primitives.trivium</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for primitives.trivium</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Trivium: the Trivium stream cipher.</span>
+
+<span class="sd">Not ready for use, still in development.&quot;&quot;&quot;</span>
+
+<span class="n">IN_DEVELOPMENT</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">primitives.primitives</span><span class="w"> </span><span class="kn">import</span> <span class="n">Stream_cipher</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.boolean_operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">XOR</span><span class="p">,</span> <span class="n">AND</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">Equal</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">variables.variables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">var</span>
+
+
+<span class="c1"># Trivium Stream Cipher</span>
+<span class="c1"># Based on the specification from: https://en.wikipedia.org/wiki/Trivium_(cipher)</span>
+<span class="c1"># Trivium has a 288-bit internal state consisting of three shift registers</span>
+<span class="c1"># Key: 80 bits, IV: 80 bits (can be less)</span>
+<span class="c1"># Initialization: 1152 rounds (4 * 288)</span>
+<span class="c1"># Output generation: up to 2^64 bits</span>
+
+<div class="viewcode-block" id="Trivium_Stream_Cipher">
+<a class="viewcode-back" href="../../api/primitives/trivium.html#primitives.trivium.Trivium_Stream_Cipher">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Trivium_Stream_Cipher</span><span class="p">(</span><span class="n">Stream_cipher</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">iv_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">keystream_output</span><span class="p">,</span> <span class="n">nbr_rounds_init</span><span class="o">=</span><span class="mi">1152</span><span class="p">,</span> <span class="n">nbr_rounds_update</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the Trivium stream cipher</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name of the cipher</span>
+<span class="sd">            iv_input: Input IV (80 bits as 80 1-bit variables)</span>
+<span class="sd">            k_input: Input Key (80 bits as 80 1-bit variables)</span>
+<span class="sd">            keystream_output: Output keystream</span>
+<span class="sd">            nbr_rounds_init: Number of initialization rounds (default: 1152)</span>
+<span class="sd">            nbr_rounds_update: Number of state update rounds (default: 1)</span>
+<span class="sd">            nbr_rounds_keystream: Number of keystream generation rounds (default: 1)</span>
+<span class="sd">            represent_mode: Integer specifying the mode of representation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="n">represent_mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Trivium state: 288 bits split into three registers</span>
+            <span class="c1"># Register A: 93 bits</span>
+            <span class="c1"># Register B: 84 bits  </span>
+            <span class="c1"># Register C: 111 bits</span>
+            <span class="c1"># Total: 93 + 84 + 111 = 288 bits</span>
+            
+            <span class="c1"># Configuration for initialization function</span>
+            <span class="c1"># Input: IV (80 bits) + Key (80 bits) = 160 bits</span>
+            <span class="c1"># State: 288 bits (initialized with IV, Key, and fixed pattern)</span>
+            <span class="n">init_nbr_layers</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">init_nbr_words</span> <span class="o">=</span> <span class="mi">288</span>  <span class="c1"># Internal state size</span>
+            <span class="n">init_nbr_temp_words</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">init_word_bitsize</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Bit-level operations</span>
+            
+            <span class="c1"># Configuration for state update function</span>
+            <span class="c1"># Takes 288-bit state and produces updated 288-bit state</span>
+            <span class="n">update_nbr_layers</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Multiple operations per round</span>
+            <span class="n">update_nbr_words</span> <span class="o">=</span> <span class="mi">288</span>
+            <span class="n">update_nbr_temp_words</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># Temporary variables for intermediate XOR/AND results</span>
+            <span class="n">update_word_bitsize</span> <span class="o">=</span> <span class="mi">1</span>
+            
+            <span class="c1"># Configuration for keystream generation function</span>
+            <span class="c1"># Takes 288-bit state and produces keystream bits</span>
+            <span class="n">keystream_nbr_layers</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">keystream_nbr_words</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Output keystream bit(s)</span>
+            <span class="n">keystream_nbr_temp_words</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">keystream_word_bitsize</span> <span class="o">=</span> <span class="mi">1</span>
+            
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">iv_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">keystream_output</span><span class="p">,</span> 
+                           <span class="n">nbr_rounds_init</span><span class="p">,</span> <span class="n">nbr_rounds_update</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span><span class="p">,</span>
+                           <span class="p">[</span><span class="n">init_nbr_layers</span><span class="p">,</span> <span class="n">init_nbr_words</span><span class="p">,</span> <span class="n">init_nbr_temp_words</span><span class="p">,</span> <span class="n">init_word_bitsize</span><span class="p">],</span>
+                           <span class="p">[</span><span class="n">update_nbr_layers</span><span class="p">,</span> <span class="n">update_nbr_words</span><span class="p">,</span> <span class="n">update_nbr_temp_words</span><span class="p">,</span> <span class="n">update_word_bitsize</span><span class="p">],</span>
+                           <span class="p">[</span><span class="n">keystream_nbr_layers</span><span class="p">,</span> <span class="n">keystream_nbr_words</span><span class="p">,</span> <span class="n">keystream_nbr_temp_words</span><span class="p">,</span> <span class="n">keystream_word_bitsize</span><span class="p">])</span>
+            
+            <span class="n">INIT</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;INITIALIZATION&quot;</span><span class="p">]</span>
+            <span class="n">UPDATE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;STATE_UPDATE&quot;</span><span class="p">]</span>
+            <span class="n">KEYSTREAM</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">]</span>
+            
+            <span class="c1"># ==================== INITIALIZATION ====================</span>
+            <span class="c1"># Initialize the 288-bit state with:</span>
+            <span class="c1"># - Bits 0-79: Key (k0...k79)</span>
+            <span class="c1"># - Bits 93-172: IV (v0...v79) </span>
+            <span class="c1"># - Bits 285-287: Three 1&#39;s (rest are 0&#39;s)</span>
+            <span class="c1"># Register layout: [a0...a92, b0...b83, c0...c110]</span>
+            <span class="c1"># a: bits 0-92 (93 bits)</span>
+            <span class="c1"># b: bits 93-176 (84 bits)</span>
+            <span class="c1"># c: bits 177-287 (111 bits)</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds_init</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="c1"># The initialization just sets up the initial state</span>
+                <span class="c1"># All actual work happens in the UPDATE function</span>
+                <span class="c1"># This is a pass-through to maintain the state</span>
+                <span class="n">INIT</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;INIT_PASS&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            
+            <span class="c1"># ==================== STATE UPDATE ====================</span>
+            <span class="c1"># Trivium update equations (from Wikipedia):</span>
+            <span class="c1"># t1 = a65 + a92 + (a90 &amp; a91) + b77</span>
+            <span class="c1"># t2 = b68 + b83 + (b81 &amp; b82) + c86</span>
+            <span class="c1"># t3 = c65 + c110 + (c108 &amp; c109) + a68</span>
+            <span class="c1"># Then shift and update:</span>
+            <span class="c1"># a_new = [t3, a0, a1, ..., a91]  (shift right, insert t3 at position 0)</span>
+            <span class="c1"># b_new = [t1, b0, b1, ..., b82]  (shift right, insert t1 at position 0)</span>
+            <span class="c1"># c_new = [t2, c0, c1, ..., c109] (shift right, insert t2 at position 0)</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds_update</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="c1"># Calculate t1 = a65 + a92 + (a90 &amp; a91) + b77</span>
+                <span class="c1"># Temp vars: [t1_xor1, t1_and, t1_xor2, t2_xor1, t2_and, t2_xor2]</span>
+                <span class="c1"># Index mapping: a is 0-92, b is 93-176, c is 177-287</span>
+                
+                <span class="c1"># t1 component: a65 + a92</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;T1_XOR1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">92</span><span class="p">]],</span> <span class="p">[</span><span class="mi">288</span><span class="p">])</span>
+                
+                <span class="c1"># t1 component: a90 &amp; a91</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;T1_AND&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">AND</span><span class="p">,</span> <span class="p">[[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">91</span><span class="p">]],</span> <span class="p">[</span><span class="mi">289</span><span class="p">])</span>
+                
+                <span class="c1"># t1 component: (a65 + a92) + (a90 &amp; a91)</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;T1_XOR2&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">288</span><span class="p">,</span> <span class="mi">289</span><span class="p">]],</span> <span class="p">[</span><span class="mi">290</span><span class="p">])</span>
+                
+                <span class="c1"># t1 final: t1_xor2 + b77</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;T1_FINAL&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">290</span><span class="p">,</span> <span class="mi">93</span> <span class="o">+</span> <span class="mi">77</span><span class="p">]],</span> <span class="p">[</span><span class="mi">291</span><span class="p">])</span>  <span class="c1"># b77 is at index 93+77=170</span>
+                
+                <span class="c1"># Calculate t2 = b68 + b83 + (b81 &amp; b82) + c86</span>
+                <span class="c1"># t2 component: b68 + b83</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">SingleOperatorLayer</span><span class="p">(</span><span class="s2">&quot;T2_XOR1&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">XOR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">93</span> <span class="o">+</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">93</span> <span class="o">+</span> <span class="mi">83</span><span class="p">]],</span> <span class="p">[</span><span class="mi">292</span><span class="p">])</span>
+                
+                <span class="c1"># TODO: Continue implementing the full update logic</span>
+                <span class="c1"># For now, using identity to maintain structure</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">288</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[]:</span>  <span class="c1"># Will update this list with processed indices</span>
+                        <span class="k">pass</span>
+                
+                <span class="c1"># Placeholder: maintain state through identity</span>
+                <span class="c1"># In a complete implementation, we would shift the registers and insert t1, t2, t3</span>
+                <span class="n">UPDATE</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;UPDATE_PASS&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+            
+            <span class="c1"># ==================== KEYSTREAM GENERATION ====================</span>
+            <span class="c1"># Output bit: z = a65 + a92 + b68 + b83 + c65 + c110</span>
+            <span class="c1"># This is computed from the current state</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="c1"># For simplicity, extracting one bit of keystream</span>
+                <span class="c1"># In practice, you&#39;d compute: z = a65 + a92 + b68 + b83 + c65 + c110</span>
+                <span class="c1"># For now, using a simplified pass-through</span>
+                <span class="n">KEYSTREAM</span><span class="o">.</span><span class="n">AddIdentityLayer</span><span class="p">(</span><span class="s2">&quot;KEYSTREAM_GEN&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    
+<div class="viewcode-block" id="Trivium_Stream_Cipher.gen_test_vectors">
+<a class="viewcode-back" href="../../api/primitives/trivium.html#primitives.trivium.Trivium_Stream_Cipher.gen_test_vectors">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">gen_test_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate test vectors for Trivium</span>
+<span class="sd">        Test vectors can be found in the eSTREAM documentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Example test vector (simplified - actual vectors would come from official sources)</span>
+        <span class="c1"># Key: 80 zero bits, IV: 80 zero bits</span>
+        <span class="c1"># Expected first keystream bits after initialization</span>
+        
+        <span class="c1"># For a proper implementation, add official test vectors here</span>
+        <span class="k">pass</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TRIVIUM">
+<a class="viewcode-back" href="../../api/primitives/trivium.html#primitives.trivium.TRIVIUM">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">TRIVIUM</span><span class="p">(</span><span class="n">nbr_rounds_init</span><span class="o">=</span><span class="mi">1152</span><span class="p">,</span> <span class="n">nbr_rounds_update</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nbr_rounds_keystream</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">represent_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">copy_operator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a Trivium stream cipher instance</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nbr_rounds_init: Number of initialization rounds (default: 1152)</span>
+<span class="sd">        nbr_rounds_update: Number of state update rounds (default: 1)</span>
+<span class="sd">        nbr_rounds_keystream: Number of keystream generation rounds (default: 1)</span>
+<span class="sd">        represent_mode: Representation mode</span>
+<span class="sd">        copy_operator: Whether to add copy operators</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Trivium stream cipher instance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Create IV input: 80 bits</span>
+    <span class="n">iv_input</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="s2">&quot;iv&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">80</span><span class="p">)]</span>
+    
+    <span class="c1"># Create Key input: 80 bits</span>
+    <span class="n">k_input</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="s2">&quot;k&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">80</span><span class="p">)]</span>
+    
+    <span class="c1"># Create Keystream output: variable size (start with 1 bit)</span>
+    <span class="n">keystream_output</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="s2">&quot;ks&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+    
+    <span class="c1"># Create Trivium instance</span>
+    <span class="n">my_cipher</span> <span class="o">=</span> <span class="n">Trivium_Stream_Cipher</span><span class="p">(</span><span class="s2">&quot;TRIVIUM&quot;</span><span class="p">,</span> <span class="n">iv_input</span><span class="p">,</span> <span class="n">k_input</span><span class="p">,</span> <span class="n">keystream_output</span><span class="p">,</span>
+                                      <span class="n">nbr_rounds_init</span><span class="o">=</span><span class="n">nbr_rounds_init</span><span class="p">,</span>
+                                      <span class="n">nbr_rounds_update</span><span class="o">=</span><span class="n">nbr_rounds_update</span><span class="p">,</span>
+                                      <span class="n">nbr_rounds_keystream</span><span class="o">=</span><span class="n">nbr_rounds_keystream</span><span class="p">,</span>
+                                      <span class="n">represent_mode</span><span class="o">=</span><span class="n">represent_mode</span><span class="p">)</span>
+    
+    <span class="c1"># Post-processing</span>
+    <span class="n">my_cipher</span><span class="o">.</span><span class="n">clean_graph</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">copy_operator</span><span class="p">:</span>
+        <span class="n">my_cipher</span><span class="o">.</span><span class="n">add_copy_operators</span><span class="p">()</span>
+    <span class="n">my_cipher</span><span class="o">.</span><span class="n">build_dictionaries</span><span class="p">()</span>
+    <span class="n">my_cipher</span><span class="o">.</span><span class="n">gen_test_vectors</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">my_cipher</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

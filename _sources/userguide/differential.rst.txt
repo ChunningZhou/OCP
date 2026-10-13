@@ -1,0 +1,104 @@
+:orphan:
+
+.. Kept in the source tree while the User Guide is marked "coming soon".
+   ``:orphan:`` stops Sphinx warning that this page sits outside every toctree.
+
+Differential cryptanalysis
+==========================
+
+Search for the best differential trail of a cipher, and benchmark how different
+model and solver configurations affect the solving time.
+
+
+Running a search
+----------------
+
+Every search is a single :func:`~attacks.differential_cryptanalysis.search_diff_trail`
+call (exposed as ``attacks.diff_attacks``): build the cipher, pick a ``config_model``
+(the modeling knobs) and a ``config_solver`` (the backend), and read the trail back.
+Every benchmark below is this *same* call with a different ``config_model``.
+
+.. code-block:: python
+
+   from primitives.speck import SPECK_PERMUTATION
+   from attacks.attacks import diff_attacks
+
+   cipher = SPECK_PERMUTATION(r=5, version=32)
+   config_model  = {"model_type": "milp"}   # modeling knobs (see the tables below)
+   config_solver = {}                        # e.g. {"solver": "SCIP"} or {"solver": "Cadical195"}
+
+   trails = diff_attacks(
+       cipher,
+       goal="DIFFERENTIALPATH_PROB",
+       constraints=["INPUT_NOT_ZERO"],
+       objective_target="OPTIMAL",
+       config_model=config_model,
+       config_solver=config_solver,
+   )
+   print(trails[0].data["diff_weight"])       # the optimal trail weight
+
+See :func:`~attacks.differential_cryptanalysis.search_diff_trail` for every parameter.
+
+
+Benchmarks
+----------
+
+Solving time across configurations and rounds. Each table has a ``W`` (optimal
+trail weight) column and one solving-time column per configuration. The
+configuration table lists the exact ``config_model`` behind each column.
+
+.. note::
+
+   The solving times below are illustrative — they are machine-, solver- and
+   version-specific. A published run should record the environment
+   (*OCP version · CPU · solver versions*) so the numbers stay comparable.
+
+
+SPECK-32 (permutation)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+ARX cipher: the modeling axis is the modular-addition encoding
+(``XORDIFF_1/2/3``); Matsui and the solver choice apply to both backends.
+
+**MILP** (Gurobi, ``milp_scip`` on SCIP)
+
+.. include:: ../../../test/differential_cryptanalysis/benchmarks/result_speck/speck32_milp_configs.rst
+
+.. csv-table::
+   :file: ../../../test/differential_cryptanalysis/benchmarks/result_speck/speck32_milp.csv
+   :header-rows: 1
+   :class: benchmark-table
+
+**SAT** (Cadical195)
+
+.. include:: ../../../test/differential_cryptanalysis/benchmarks/result_speck/speck32_sat_configs.rst
+
+.. csv-table::
+   :file: ../../../test/differential_cryptanalysis/benchmarks/result_speck/speck32_sat.csv
+   :header-rows: 1
+   :class: benchmark-table
+
+
+PRESENT
+~~~~~~~
+
+S-box cipher: the modeling axis is the S-box encoding
+(``polyhedron`` vs ``espresso``), crossed with Matsui.
+
+**MILP** (Gurobi)
+
+.. include:: ../../../test/differential_cryptanalysis/benchmarks/result_present/present_milp_configs.rst
+
+.. csv-table::
+   :file: ../../../test/differential_cryptanalysis/benchmarks/result_present/present_milp.csv
+   :header-rows: 1
+   :class: benchmark-table
+
+**SAT** (Cadical195)
+
+.. include:: ../../../test/differential_cryptanalysis/benchmarks/result_present/present_sat_configs.rst
+
+.. csv-table::
+   :file: ../../../test/differential_cryptanalysis/benchmarks/result_present/present_sat.csv
+   :header-rows: 1
+   :class: benchmark-table

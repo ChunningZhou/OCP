@@ -1,0 +1,6 @@
+integral_cryptanalysis
+======================
+
+.. automodule:: attacks.integral_cryptanalysis
+   :members:
+   :show-inheritance:

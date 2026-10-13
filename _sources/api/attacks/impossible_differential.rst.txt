@@ -1,0 +1,6 @@
+impossible_differential
+=======================
+
+.. automodule:: attacks.impossible_differential
+   :members:
+   :show-inheritance:

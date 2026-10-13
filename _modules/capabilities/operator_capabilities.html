@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>capabilities.operator_capabilities &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/capabilities/operator_capabilities';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../capabilities.html" class="nav-link">capabilities</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">capabilities.operator_capabilities</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for capabilities.operator_capabilities</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;What each operator declares it can model and emit, cross-checked against its source.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">ast</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">NoneOperator</span><span class="p">,</span> <span class="n">Operator</span>
+
+<span class="c1"># Operators that emit nothing, so nothing can be blocked by them. The CLASSES, not their names:</span>
+<span class="c1"># a name would also exempt same-named and derived classes that do emit.</span>
+<span class="n">NO_MODEL_OPERATORS</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="n">NoneOperator</span><span class="p">})</span>
+
+<span class="c1"># The capability surface is SUPPORTED_MODEL_VERSIONS plus SUPPORTED_IMPLEMENTATIONS.</span>
+<span class="n">_OPERATORS_PACKAGE</span> <span class="o">=</span> <span class="s2">&quot;operators&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_modules</span><span class="p">(</span><span class="n">package_name</span><span class="p">,</span> <span class="n">skip</span><span class="p">,</span> <span class="n">include_in_development</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import and return the package&#39;s modules in filename order, skipping unfinished ones.&quot;&quot;&quot;</span>
+    <span class="n">modules</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">package</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">package_name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">package</span><span class="p">)))):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span> <span class="ow">or</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">skip</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">module_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">package_name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Cannot enumerate </span><span class="si">{</span><span class="n">package_name</span><span class="si">}</span><span class="s2">: importing </span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2"> failed: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;IN_DEVELOPMENT&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">include_in_development</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">modules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">modules</span>
+
+
+<div class="viewcode-block" id="operator_classes">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.operator_classes">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">operator_classes</span><span class="p">(</span><span class="n">declaring_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">include_in_development</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{class name: class}`` for every concrete ``Operator`` subclass under ``operators/``.</span>
+
+<span class="sd">    ``declaring_only=True`` keeps the classes with a non-empty declaration, and ``{&quot;milp&quot;: ()}``</span>
+<span class="sd">    counts -- empty version tuples are a statement. Keyed by ``__name__``; two classes sharing it</span>
+<span class="sd">    raise rather than overwrite.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">found</span><span class="p">,</span> <span class="n">origin</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">_modules</span><span class="p">(</span><span class="n">_OPERATORS_PACKAGE</span><span class="p">,</span> <span class="p">(),</span> <span class="n">include_in_development</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">operator_class</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">operator_class</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">==</span> <span class="n">module</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="n">Operator</span><span class="p">)</span>
+                    <span class="ow">and</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="s2">&quot;__abstractmethods__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                <span class="k">continue</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__name__</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">origin</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;[ERROR] Two operator classes are named </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">origin</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="si">}</span><span class="s2"> and &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">operator_class</span><span class="o">.</span><span class="vm">__module__</span><span class="si">}</span><span class="s2">. Operator capabilities are keyed by class name, &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;so rename one of them.&quot;</span>
+                <span class="p">)</span>
+            <span class="n">origin</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__module__</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">declaring_only</span> <span class="ow">or</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="s2">&quot;SUPPORTED_MODEL_VERSIONS&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="n">found</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">operator_class</span>
+    <span class="k">return</span> <span class="n">found</span></div>
+
+
+
+<span class="c1"># --------------------------- declaration reading (runtime) ---------------------------</span>
+<div class="viewcode-block" id="describe_operators">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.describe_operators">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">describe_operators</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{operator: {module, model_versions, implementations}}`` from the declarations themselves.</span>
+
+<span class="sd">    Only classes declaring ``SUPPORTED_MODEL_VERSIONS`` in their own ``__dict__``; one that</span>
+<span class="sd">    inherits it (every named S-box inheriting ``Sbox``) is represented by the declaring base.</span>
+<span class="sd">    ``model_versions`` is the class&#39;s own declaration, ``implementations`` the effective value</span>
+<span class="sd">    after inheritance, and ``implementations_declared_here`` says whether it overrides.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">operator_class</span> <span class="ow">in</span> <span class="n">operator_classes</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="n">include_in_development</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="s2">&quot;SUPPORTED_MODEL_VERSIONS&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">declaration</span> <span class="o">=</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;SUPPORTED_MODEL_VERSIONS&quot;</span><span class="p">]</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;module&quot;</span><span class="p">:</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__module__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;.py&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;model_versions&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">model_type</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">versions</span><span class="p">)</span> <span class="k">for</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">versions</span> <span class="ow">in</span> <span class="n">declaration</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+            <span class="s2">&quot;implementations&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="s2">&quot;SUPPORTED_IMPLEMENTATIONS&quot;</span><span class="p">,</span> <span class="p">())),</span>
+            <span class="s2">&quot;implementations_declared_here&quot;</span><span class="p">:</span> <span class="s2">&quot;SUPPORTED_IMPLEMENTATIONS&quot;</span> <span class="ow">in</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span></div>
+
+
+
+<div class="viewcode-block" id="delegates">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.delegates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">delegates</span><span class="p">(</span><span class="n">operator_class</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether the class declares it passes its ``model_version`` down to inner operators.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="s2">&quot;MODEL_VERSIONS_DELEGATED&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="models_nothing">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.models_nothing">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">models_nothing</span><span class="p">(</span><span class="n">operator_class</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether ``operator_class`` declares every model_type with no supported versions.&quot;&quot;&quot;</span>
+    <span class="n">declaration</span> <span class="o">=</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SUPPORTED_MODEL_VERSIONS&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">declaration</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">declaration</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+
+
+
+<span class="c1"># --------------------------- static extraction (ast cross-check) ---------------------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_model_version_suffixes</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+    <span class="n">suffixes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">BinOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Add</span><span class="p">):</span>
+            <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">sub</span><span class="o">.</span><span class="n">right</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">right</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+                <span class="n">is_class_name</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Attribute</span><span class="p">)</span> <span class="ow">and</span> <span class="n">left</span><span class="o">.</span><span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;__name__&quot;</span><span class="p">)</span>
+                    <span class="ow">or</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">left</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;class_name&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">is_class_name</span><span class="p">:</span>
+                    <span class="n">suffixes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">suffixes</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_called_module_funcs</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">module_funcs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">sub</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Call</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sub</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">id</span> <span class="ow">in</span> <span class="n">module_funcs</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_generate_model_defs</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{class name: (generate_model ast node, module functions)}`` parsed from ``operators/``.&quot;&quot;&quot;</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">package</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">_OPERATORS_PACKAGE</span><span class="p">)</span>
+    <span class="n">operators_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">package</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">operators_dir</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">operators_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="n">module_funcs</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">body</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">)}</span>
+        <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">body</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">ClassDef</span><span class="p">)]:</span>
+            <span class="n">gm</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">body</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;generate_model&quot;</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">gm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">found</span><span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">gm</span><span class="p">,</span> <span class="n">module_funcs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">found</span>
+
+
+<div class="viewcode-block" id="extract_from_source">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.extract_from_source">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_from_source</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{operator: set(model_version_suffixes)}`` statically parsed out of ``generate_model``.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">gm</span><span class="p">,</span> <span class="n">module_funcs</span><span class="p">)</span> <span class="ow">in</span> <span class="n">_generate_model_defs</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">versions</span> <span class="o">=</span> <span class="n">_model_version_suffixes</span><span class="p">(</span><span class="n">gm</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">func_name</span> <span class="ow">in</span> <span class="n">_called_module_funcs</span><span class="p">(</span><span class="n">gm</span><span class="p">,</span> <span class="n">module_funcs</span><span class="p">):</span>
+            <span class="n">versions</span> <span class="o">|=</span> <span class="n">_model_version_suffixes</span><span class="p">(</span><span class="n">module_funcs</span><span class="p">[</span><span class="n">func_name</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">versions</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">versions</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="source_models_nothing">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.source_models_nothing">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">source_models_nothing</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The operators whose ``generate_model`` cannot return anything, parsed statically.</span>
+
+<span class="sd">    A heuristic, not an analysis: the converse is weaker, so the proof is a test that calls them.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">gm</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">_generate_model_defs</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Return</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span><span class="o">.</span><span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">gm</span><span class="p">))}</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_implementation_languages</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The languages an ``implementation_type == &lt;literal&gt;`` comparison names inside ``fn``.</span>
+
+<span class="sd">    Comparisons only: every string constant would include the ``implementation_type=&#39;python&#39;``</span>
+<span class="sd">    default argument, making an operator that handles nothing look like it supports python.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">languages</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Compare</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;implementation_type&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">comparator</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">comparators</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ast</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">comparator</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                        <span class="n">languages</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">languages</span>
+
+
+<div class="viewcode-block" id="extract_implementations_from_source">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.extract_implementations_from_source">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_implementations_from_source</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``{operator: set(languages)}`` that ``generate_implementation`` branches on, statically.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">package</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">_OPERATORS_PACKAGE</span><span class="p">)</span>
+    <span class="n">operators_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">package</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">operators_dir</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">operators_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">body</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">ClassDef</span><span class="p">)]:</span>
+            <span class="n">gi</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">body</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">FunctionDef</span><span class="p">)</span>
+                       <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;generate_implementation&quot;</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">gi</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">_implementation_languages</span><span class="p">(</span><span class="n">gi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="consistency_report">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.consistency_report">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">consistency_report</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Diff the declarations against the source; ``{operator: {...}}``, empty when they agree.</span>
+
+<span class="sd">    Per operator, any of: ``missing`` (the code handles it but the declaration omits it -- real</span>
+<span class="sd">    drift), ``extra`` (declared but not seen statically, usually benign), ``declares_no_model`` /</span>
+<span class="sd">    ``source_has_no_model``, ``implementations_missing`` / ``implementations_extra``. An empty</span>
+<span class="sd">    report does **not** prove the declarations; ``verification_coverage()`` says what it reaches.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">described</span> <span class="o">=</span> <span class="n">describe_operators</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="n">include_in_development</span><span class="p">)</span>
+    <span class="n">declared</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">set</span><span class="p">()</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">versions</span><span class="p">)</span> <span class="k">for</span> <span class="n">versions</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+        <span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">described</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="n">extracted</span> <span class="o">=</span> <span class="n">extract_from_source</span><span class="p">()</span>
+    <span class="n">implemented</span> <span class="o">=</span> <span class="n">extract_implementations_from_source</span><span class="p">()</span>
+    <span class="n">no_model_in_source</span> <span class="o">=</span> <span class="n">source_models_nothing</span><span class="p">()</span>
+    <span class="n">classes</span> <span class="o">=</span> <span class="n">operator_classes</span><span class="p">(</span><span class="n">include_in_development</span><span class="o">=</span><span class="n">include_in_development</span><span class="p">)</span>
+
+    <span class="n">report</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1"># Over EVERY concrete class, not just the declaring ones: an operator that returns nothing is</span>
+    <span class="c1"># exactly the one that declares nothing, which a loop over the declarations would skip.</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">operator_class</span> <span class="ow">in</span> <span class="n">classes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">entry</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">described</span><span class="p">:</span>
+            <span class="n">missing</span> <span class="o">=</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span> <span class="o">-</span> <span class="n">declared</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="n">extra</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="k">if</span> <span class="n">delegates</span><span class="p">(</span><span class="n">operator_class</span><span class="p">)</span> <span class="k">else</span> <span class="n">declared</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">-</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
+                <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;missing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">extra</span><span class="p">:</span>
+                <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;extra&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">extra</span><span class="p">)</span>
+        <span class="n">declares_none</span> <span class="o">=</span> <span class="n">models_nothing</span><span class="p">(</span><span class="n">operator_class</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">declares_none</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">no_model_in_source</span><span class="p">:</span>
+            <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;declares_no_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;every model_type declared empty, but generate_model returns a value&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">declares_none</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">no_model_in_source</span><span class="p">:</span>
+            <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;source_has_no_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;every generate_model branch raises; declare empty version tuples&quot;</span>
+
+        <span class="c1"># An operator that emits nothing names no language: absence of evidence, not a mismatch.</span>
+        <span class="n">source_languages</span> <span class="o">=</span> <span class="n">implemented</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">source_languages</span> <span class="ow">and</span> <span class="n">operator_class</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">NO_MODEL_OPERATORS</span><span class="p">:</span>
+            <span class="n">declared_languages</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="s2">&quot;SUPPORTED_IMPLEMENTATIONS&quot;</span><span class="p">,</span> <span class="p">())</span> <span class="ow">or</span> <span class="p">())</span>
+            <span class="k">if</span> <span class="n">source_languages</span> <span class="o">-</span> <span class="n">declared_languages</span><span class="p">:</span>
+                <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;implementations_missing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">source_languages</span> <span class="o">-</span> <span class="n">declared_languages</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">declared_languages</span> <span class="o">-</span> <span class="n">source_languages</span><span class="p">:</span>
+                <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;implementations_extra&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">declared_languages</span> <span class="o">-</span> <span class="n">source_languages</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="p">:</span>
+            <span class="n">report</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">entry</span>
+    <span class="k">return</span> <span class="n">report</span></div>
+
+
+
+<div class="viewcode-block" id="verification_coverage">
+<a class="viewcode-back" href="../../api/capabilities/operator_capabilities.html#capabilities.operator_capabilities.verification_coverage">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">verification_coverage</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;What ``consistency_report()`` actually proves, and what it leaves unverified.&quot;&quot;&quot;</span>
+    <span class="n">described</span> <span class="o">=</span> <span class="n">describe_operators</span><span class="p">()</span>
+    <span class="n">extracted</span> <span class="o">=</span> <span class="n">extract_from_source</span><span class="p">()</span>
+    <span class="n">implemented</span> <span class="o">=</span> <span class="n">extract_implementations_from_source</span><span class="p">()</span>
+    <span class="n">classes</span> <span class="o">=</span> <span class="n">operator_classes</span><span class="p">()</span>
+
+    <span class="n">declared_versions</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+        <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">()</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="nb">set</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">described</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">confirmed_versions</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+        <span class="nb">len</span><span class="p">((</span><span class="nb">set</span><span class="p">()</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;model_versions&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="nb">set</span><span class="p">())</span>
+            <span class="o">&amp;</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">set</span><span class="p">()))</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">described</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">delegated</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">classes</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">delegates</span><span class="p">(</span><span class="bp">cls</span><span class="p">))</span>
+    <span class="n">languages_unconfirmable</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
+        <span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">described</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">implemented</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">classes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">NO_MODEL_OPERATORS</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;versions_declared&quot;</span><span class="p">:</span> <span class="n">declared_versions</span><span class="p">,</span>
+        <span class="s2">&quot;versions_confirmed_in_source&quot;</span><span class="p">:</span> <span class="n">confirmed_versions</span><span class="p">,</span>
+        <span class="s2">&quot;versions_delegated&quot;</span><span class="p">:</span> <span class="n">delegated</span><span class="p">,</span>
+        <span class="s2">&quot;per_model_type_split&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;NOT VERIFIED. The diff is over the union of the model types, and it cannot be &quot;</span>
+            <span class="s2">&quot;otherwise: most operators put their version branches under a combined &quot;</span>
+            <span class="s2">&quot;`if model_type in [&#39;sat&#39;, &#39;milp&#39;]`, so the source does not say which backend a &quot;</span>
+            <span class="s2">&quot;version belongs to. A version moved between backends, or dropped from one, passes.&quot;</span>
+        <span class="p">),</span>
+        <span class="s2">&quot;languages_unconfirmable&quot;</span><span class="p">:</span> <span class="n">languages_unconfirmable</span><span class="p">,</span>
+        <span class="s2">&quot;generate_model_bodies&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;NOT ANALYSED. Versions are recognised only as `self.__class__.__name__ + </span><span class="se">\&quot;</span><span class="s2">_X</span><span class="se">\&quot;</span><span class="s2">` &quot;</span>
+            <span class="s2">&quot;string concatenation, and helper calls only one level deep into module-level &quot;</span>
+            <span class="s2">&quot;functions of the same file. A dynamically built version, or one reached through a &quot;</span>
+            <span class="s2">&quot;method helper or a second level of delegation, is invisible here.&quot;</span>
+        <span class="p">),</span>
+    <span class="p">}</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

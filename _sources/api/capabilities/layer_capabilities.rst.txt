@@ -1,0 +1,6 @@
+layer_capabilities
+==================
+
+.. automodule:: capabilities.layer_capabilities
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+cross_check
+===========
+
+.. automodule:: recheck.cross_check
+   :members:
+   :show-inheritance:

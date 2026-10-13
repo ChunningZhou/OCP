@@ -1,0 +1,6 @@
+chacha
+======
+
+.. automodule:: primitives.chacha
+   :members:
+   :show-inheritance:

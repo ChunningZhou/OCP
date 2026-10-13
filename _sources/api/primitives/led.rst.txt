@@ -1,0 +1,6 @@
+led
+===
+
+.. automodule:: primitives.led
+   :members:
+   :show-inheritance:

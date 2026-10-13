@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tools.operator_constraints &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tools/operator_constraints';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">tools.operator_constraints</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tools.operator_constraints</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;SAT/MILP constraint of the operators.</span>
+
+<span class="sd">These are the building blocks each operator uses to generate its model: XOR / n-XOR /</span>
+<span class="sd">matrix constraints (bit and word level), the MILP ``Binary`` declaration.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">combinations</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_require_string_variables</span><span class="p">(</span><span class="o">*</span><span class="n">variables</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variables </span><span class="si">{</span><span class="n">variables</span><span class="si">}</span><span class="s2"> must be strings&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_require_string_list</span><span class="p">(</span><span class="n">variables</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variables </span><span class="si">{</span><span class="n">variables</span><span class="si">}</span><span class="s2"> must be provided as a list of strings&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_iter_group_vars</span><span class="p">(</span><span class="n">var_groups</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Yield every variable name from the groups, rejecting bare strings and non-strings.</span>
+
+<span class="sd">    Each group must be a list/tuple of variable-name strings. A bare string (which</span>
+<span class="sd">    would otherwise iterate character by character) or a non-string variable is an error.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">var_groups</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;each variable group must be a list of names, not a bare string </span><span class="si">{</span><span class="n">group</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">group</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable </span><span class="si">{</span><span class="n">v</span><span class="si">!r}</span><span class="s2"> must be a string&quot;</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="binary_declaration">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.binary_declaration">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">binary_declaration</span><span class="p">(</span><span class="o">*</span><span class="n">var_groups</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the MILP ``Binary`` declaration for the given variable groups.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s1">&#39;Binary</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_iter_group_vars</span><span class="p">(</span><span class="n">var_groups</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="integer_declaration">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.integer_declaration">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">integer_declaration</span><span class="p">(</span><span class="o">*</span><span class="n">var_groups</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the MILP ``Integer`` declaration for the given variable groups.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s1">&#39;Integer</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_iter_group_vars</span><span class="p">(</span><span class="n">var_groups</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="gen_equivalence_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_equivalence_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the constraints enforcing ``var_in[i] == var_out[i]`` bitwise.</span>
+
+<span class="sd">    SAT returns the clause pair ``-a b`` / ``a -b`` per bit; MILP returns ``a - b = 0`` per bit.</span>
+
+<span class="sd">    Valid propagations (in -&gt; out): 0 -&gt; 0, 1 -&gt; 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">var_in</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">var_out</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_equivalence_constraints: var_in and var_out must have equal length, got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">var_in</span><span class="p">)</span><span class="si">}</span><span class="s2"> vs </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">var_out</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;sat&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">clause</span> <span class="k">for</span> <span class="n">vin</span><span class="p">,</span> <span class="n">vout</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">)</span> <span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">vin</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vin</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vin</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2"> = 0&quot;</span> <span class="k">for</span> <span class="n">vin</span><span class="p">,</span> <span class="n">vout</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">)]</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_equivalence_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_or_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_or_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_or_constraints</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the boolean OR ``vin1 | vin2 = vout``.</span>
+
+<span class="sd">    Valid propagations ((vin1, vin2) -&gt; vout):</span>
+<span class="sd">    (0,0) -&gt; 0, (0,1) -&gt; 1, (1,0) -&gt; 1, (1,1) -&gt; 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;sat&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_or_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_implication_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_implication_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_implication_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the implication ``vin -&gt; vout`` (i.e. ``vin &lt;= vout``).</span>
+
+<span class="sd">    Valid propagations (vin -&gt; vout): 0 -&gt; 0, 0 -&gt; 1, 1 -&gt; 1  (1 -&gt; 0 is forbidden).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;sat&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_implication_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_xor_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_xor_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_xor_constraints</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the bitwise XOR ``vin1 ^ vin2 = vout``.</span>
+
+<span class="sd">    Valid propagations ((vin1, vin2) -&gt; vout):</span>
+<span class="sd">    (0,0) -&gt; 0, (0,1) -&gt; 1, (1,0) -&gt; 1, (1,1) -&gt; 0.</span>
+<span class="sd">    Different versions encode the same relation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for XOR in SAT.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &lt;= 2&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - 2 </span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &lt;= 2&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - 2 </span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for XOR in MILP.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_xor_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_word_xor_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_word_xor_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_word_xor_constraints</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the word-level (truncated) XOR of the activity bits vin1, vin2 -&gt; vout.</span>
+
+<span class="sd">    Valid propagations on activity ((vin1, vin2) -&gt; vout), 0 = inactive / 1 = active:</span>
+<span class="sd">    (0,0) -&gt; 0, (0,1) -&gt; 1, (1,0) -&gt; 1, (1,1) -&gt; 0 or 1  (both active: output activity undetermined).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vin1</span><span class="p">,</span> <span class="n">vin2</span><span class="p">,</span> <span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for Word-wise XOR in SAT.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> - 2 </span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vin2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for Word-wise XOR in MILP.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_word_xor_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_nxor_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_nxor_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_nxor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the n-ary bitwise XOR ``vin[0] ^ ... ^ vin[n-1] = vout``.</span>
+
+<span class="sd">    Valid propagations (vin -&gt; vout): vout = vin[0] ^ ... ^ vin[n-1],</span>
+<span class="sd">    iff ``sum(vin) + vout`` is even. E.g. n=3: (0,0,0) -&gt; 0, (1,1,0) -&gt; 0, (1,0,0) -&gt; 1, (1,1,1) -&gt; 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_list</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vout</span><span class="p">)</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># All subsets (0 to n elements)</span>
+            <span class="k">for</span> <span class="n">comb</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                <span class="n">is_odd_parity</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">comb</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">clause</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">is_odd_parity</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="n">clause</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">comb</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vin</span><span class="p">]</span>
+                <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clause</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">constraints</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="n">constraints</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; + &quot;</span> <span class="o">+</span> <span class="n">vout</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; - 2 </span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s2"> = 0&quot;</span><span class="p">]</span>
+            <span class="n">constraints</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span><span class="p">]</span>
+            <span class="n">constraints</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_dummy</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">constraints</span>
+        <span class="k">elif</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Reference: MILP-aided cryptanalysis of the future block cipher.</span>
+            <span class="n">_require_string_list</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+            <span class="n">lhs</span> <span class="o">=</span> <span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vin</span> <span class="o">+</span> <span class="p">[</span><span class="n">vout</span><span class="p">])</span>
+            <span class="n">lhs</span> <span class="o">+=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">v_dummy</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = 0&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for n-XOR in MILP.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_nxor_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_word_nxor_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_word_nxor_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_word_nxor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for the word-level (truncated) n-ary XOR of ``vin`` into ``vout``.</span>
+
+<span class="sd">    Valid propagations (activity of inputs -&gt; output): the number of active variables among</span>
+<span class="sd">    ``vin`` and ``vout`` together is never exactly 1 -- it is 0 (all inactive) or &gt;= 2. E.g. n=3:</span>
+<span class="sd">    (0,0,0) -&gt; 0; (1,1,0) -&gt; 0 or 1; (1,0,0) -&gt; 1  (a lone active input with vout=0 is forbidden).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_list</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vout</span><span class="p">)</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span><span class="p">:</span>  <span class="c1"># Reference: Related-Key Differential Analysis of the AES.</span>
+        <span class="n">constraints</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">ik</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vin</span><span class="p">):</span>
+            <span class="n">others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">k</span><span class="p">]</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">others</span><span class="p">)</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">ik</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constraints</span>
+    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;sat&quot;</span><span class="p">:</span>
+        <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">vin</span><span class="p">)))</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">ik</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vin</span><span class="p">):</span>
+            <span class="n">others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">k</span><span class="p">]</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">others</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">vout</span><span class="si">}</span><span class="s2"> -</span><span class="si">{</span><span class="n">ik</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constraints</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gen_word_nxor_constraints: unknown model type &#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_matrix_row_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_row_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matrix_row_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for one output bit = XOR of the input bits ``vin`` (a binary-matrix row).</span>
+
+<span class="sd">    Dispatches by number of inputs: 1 -&gt; equivalence, 2 -&gt; XOR, &gt;=3 -&gt; n-XOR.</span>
+<span class="sd">    Valid propagations (vin -&gt; vout): vout = XOR of all vin bits (valid iff ``sum(vin) + vout`` is even).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_list</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="p">[</span><span class="n">vout</span><span class="p">],</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">gen_xor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+            <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">v_dummy</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">gen_nxor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="n">v_dummy</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;gen_matrix_row_constraints: at least one input variable is required.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_word_matrix_row_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_word_matrix_row_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_word_matrix_row_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Word-level (truncated) version of :func:`gen_matrix_row_constraints`, on activity variables.</span>
+
+<span class="sd">    Dispatches by number of inputs: 1 -&gt; equivalence, 2 -&gt; word-XOR, &gt;=3 -&gt; word n-XOR.</span>
+<span class="sd">    Valid propagations (activity): 1 input -&gt; vout equals it; &gt;=2 inputs -&gt; the number of active</span>
+<span class="sd">    variables among ``vin`` and ``vout`` is 0 or &gt;= 2 (never exactly 1).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_require_string_list</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span>
+    <span class="n">_require_string_variables</span><span class="p">(</span><span class="n">vout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="p">[</span><span class="n">vout</span><span class="p">],</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">gen_word_xor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">vin</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">gen_word_nxor_constraints</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span> <span class="n">vout</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;gen_word_matrix_row_constraints: at least one input variable is required.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_matrix_constraints">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matrix_constraints</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SAT/MILP constraints for a whole binary matrix: ``target_bits[i]`` = XOR of the ``source_bits[j]``</span>
+<span class="sd">    with ``bin_matrix[i][j] == 1`` (one row per target bit, dispatched by :func:`gen_matrix_row_constraints`).</span>
+
+<span class="sd">    Pure relation, returns CONSTRAINTS ONLY. For MILP, pair with :func:`gen_matrix_declarations` to</span>
+<span class="sd">    obtain the Binary/Integer declaration lines. ``dummy_prefix`` names the per-row n-XOR dummy</span>
+<span class="sd">    (row ``i`` -&gt; ``f&quot;{dummy_prefix}_{i}&quot;``) and is required for MILP when any row has &gt;=3 active inputs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">):</span>
+        <span class="n">var_in</span> <span class="o">=</span> <span class="p">[</span><span class="n">source_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">v_dummy</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dummy_prefix</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">dummy_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_matrix_row_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="n">v_dummy</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">model_list</span></div>
+
+
+
+<div class="viewcode-block" id="gen_matrix_declarations">
+<a class="viewcode-back" href="../../api/tools/operator_constraints.html#tools.operator_constraints.gen_matrix_declarations">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_matrix_declarations</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;MILP Binary/Integer declarations matching :func:`gen_matrix_constraints`.</span>
+
+<span class="sd">    Every bit appearing in a constraint is Binary; each row with &gt;=3 active inputs contributes one</span>
+<span class="sd">    Integer n-XOR dummy (``f&quot;{dummy_prefix}_{i}&quot;``). Returns the declaration line(s) to append.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">binary_vars</span> <span class="o">=</span> <span class="p">{}</span>       <span class="c1"># order-preserving set of every bit that appears in a constraint</span>
+    <span class="n">integer_dummies</span> <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># rows with &gt;=3 active inputs use an integer n-XOR dummy</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">):</span>
+        <span class="n">var_in</span> <span class="o">=</span> <span class="p">[</span><span class="n">source_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">var_in</span> <span class="o">+</span> <span class="p">[</span><span class="n">target_bits</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
+            <span class="n">binary_vars</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">var_in</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">integer_dummies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dummy_prefix</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">declarations</span> <span class="o">=</span> <span class="p">[</span><span class="n">binary_declaration</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">binary_vars</span><span class="p">))]</span>
+    <span class="k">if</span> <span class="n">integer_dummies</span><span class="p">:</span>
+        <span class="n">declarations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">integer_declaration</span><span class="p">(</span><span class="n">integer_dummies</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">declarations</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

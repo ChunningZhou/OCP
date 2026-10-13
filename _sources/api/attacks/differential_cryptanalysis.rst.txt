@@ -1,0 +1,6 @@
+differential_cryptanalysis
+==========================
+
+.. automodule:: attacks.differential_cryptanalysis
+   :members:
+   :show-inheritance:

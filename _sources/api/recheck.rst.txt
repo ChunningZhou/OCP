@@ -1,0 +1,16 @@
+recheck
+=======
+
+Independent re-checking of published results: a claim recorded in
+``reference/data`` is pinned into the model and re-solved. Optional, and
+reported as absent rather than raising when it is not installed.
+
+.. toctree::
+   :maxdepth: 1
+
+   recheck/recheck
+   recheck/claim
+   recheck/checks
+   recheck/cross_check
+   recheck/run
+   recheck/make_table

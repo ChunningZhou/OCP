@@ -1,0 +1,6 @@
+milp_search
+===========
+
+.. automodule:: tools.milp_search
+   :members:
+   :show-inheritance:

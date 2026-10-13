@@ -1,0 +1,6 @@
+sbox_division_trails
+====================
+
+.. automodule:: tools.sbox_division_trails
+   :members:
+   :show-inheritance:

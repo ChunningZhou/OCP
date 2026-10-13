@@ -1,0 +1,340 @@
+Quickstart
+==========
+
+Your first examples with OCP. From a cipher representation of the SPECK permutation,
+OCP generates an executable implementation, a structural figure, and MILP/SAT models
+for differential and linear cryptanalysis. All these features are integrated within
+``OCP.py``.
+
+.. note::
+   Install OCP first. See the :doc:`installation guide <installation>` for the
+   dependency list and install commands.
+
+
+Generate code and figures
+--------------------------
+
+
+Example 1: generate an implementation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OCP compiles the representation into Python and C code, rolled and unrolled, and
+validates each against the test vectors.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import implementations.implementations as imp
+
+   cipher = speck.SPECK_PERMUTATION(version=32)   # full rounds (r=22)
+   tv = cipher.test_vectors[0]                     # an (input, output) test vector
+
+   # Python, rolled
+   imp.generate_implementation(cipher, f"files/{cipher.name}.py", "python")
+   imp.test_implementation_python(cipher, cipher.name, tv[0], tv[1])
+
+   # Python, unrolled
+   imp.generate_implementation(cipher, f"files/{cipher.name}_unrolled.py", "python", True)
+   imp.test_implementation_python(cipher, f"{cipher.name}_unrolled", tv[0], tv[1])
+
+   # C, rolled
+   imp.generate_implementation(cipher, f"files/{cipher.name}.c", "c")
+   imp.test_implementation_c(cipher, cipher.name, tv[0], tv[1])
+
+   # C, unrolled
+   imp.generate_implementation(cipher, f"files/{cipher.name}_unrolled.c", "c", True)
+   imp.test_implementation_c(cipher, f"{cipher.name}_unrolled", tv[0], tv[1])
+
+Each generated file is written to ``files/``, run, and checked against the expected
+output:
+
+.. dropdown:: Expected output
+
+   .. code-block:: text
+
+      ****************TEST PYTHON IMPLEMENTATION of SPECK32_PERM****************
+      Test input =  ['0x6574', '0x694c']
+      Test output =  ['0x689d', '0x44b7']
+      Test result =  ['0x689d', '0x44b7']
+      Test passed.
+
+      ****************TEST PYTHON IMPLEMENTATION of SPECK32_PERM_unrolled****************
+      Test input =  ['0x6574', '0x694c']
+      Test output =  ['0x689d', '0x44b7']
+      Test result =  ['0x689d', '0x44b7']
+      Test passed.
+
+      ****************TEST C IMPLEMENTATION of SPECK32_PERM****************
+      Test input =  ['0x6574', '0x694c']
+      Test output =  ['0x689d', '0x44b7']
+      Test result =  ['0x689d', '0x44b7']
+      Test passed.
+
+      ****************TEST C IMPLEMENTATION of SPECK32_PERM_unrolled****************
+      Test input =  ['0x6574', '0x694c']
+      Test output =  ['0x689d', '0x44b7']
+      Test result =  ['0x689d', '0x44b7']
+      Test passed.
+
+.. note::
+   Validating the C code requires a C compiler. OCP can also generate Verilog
+   implementations.
+
+
+Example 2: generate a figure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OCP renders the cipher structure as a figure.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import visualisations.visualisations as vis
+
+   cipher = speck.SPECK_PERMUTATION(r=2, version=32)   # 2 rounds for a compact figure
+
+   vis.generate_figure(cipher, f"files/{cipher.name}.pdf")
+
+The figure is written to ``files/`` as a PDF.
+
+.. dropdown:: Preview figure
+
+   .. raw:: html
+
+      <object data="_static/SPECK32_PERM.pdf" type="application/pdf"
+              width="100%" height="640px"
+              style="border:1px solid var(--pst-color-border); border-radius:6px;">
+        <p>PDF preview is unavailable in this browser.
+           <a href="_static/SPECK32_PERM.pdf">Download the figure (PDF)</a>.</p>
+      </object>
+
+
+Search for trails
+-----------------
+
+
+Example 3: MILP-based search for differential trails
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Build an MILP model for the best differential trail and solve it with an MILP solver.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import attacks.attacks as attacks
+
+   cipher = speck.SPECK_PERMUTATION(r=5, version=32)   # 5 rounds for a fast search
+
+   trails = attacks.diff_attacks(
+       cipher,
+       goal="DIFFERENTIALPATH_PROB",    # default: best differential trail (max probability)
+       constraints=["INPUT_NOT_ZERO"],  # default: remove the trivial all-zero trail
+       objective_target="OPTIMAL",      # default: minimize the trail weight
+       config_model=None,               # default: MILP model
+       config_solver=None,              # default: MILP solver (Gurobi)
+       show_mode=0,                     # default: print the first and last round of the trail
+   )
+
+The generated model and the solution's ``.txt`` and ``.json`` files are written to ``files/``.
+
+.. dropdown:: Expected output
+
+   .. code-block:: text
+
+      [INFO] Found 1 solution from Gurobi.
+      --- solving_time(s) ---: 5.13
+      ========== Trail ==========
+      Type: differential (hexadecimal)
+      Cipher: 5_round_SPECK32_PERM
+      Show Mode: First Layer of First and Last Round.
+      ######## Input: ########
+      IN_: 02110a04
+      ######## Function: PERMUTATION ########
+      Round 1:
+      Layer 0: 02110a04
+      Round 5:
+      Layer 0: 81008102
+      ######## Output: ########
+      OUT_: 8000840a
+
+      Total Weight: 9.0
+      rounds_diff_weight: [4.0, 2.0, 0.0, 1.0, 2.0]
+
+
+Example 4: SAT-based search for differential trails
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Build a SAT model for the best differential trail and solve it with a SAT solver.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import attacks.attacks as attacks
+
+   cipher = speck.SPECK_PERMUTATION(r=5, version=32)   # 5 rounds for a fast search
+
+   trails = attacks.diff_attacks(
+       cipher,
+       goal="DIFFERENTIALPATH_PROB",        # default: best differential trail (max probability)
+       constraints=["INPUT_NOT_ZERO"],      # default: remove the trivial all-zero trail
+       objective_target="OPTIMAL",          # default: minimize the trail weight
+       config_model={"model_type": "sat"},  # switch to a SAT model
+       config_solver=None,                  # default: SAT solver via PySAT
+       show_mode=0,                         # default: print the first and last round of the trail
+   )
+
+The generated model and the solution's ``.txt`` and ``.json`` files are written to ``files/``.
+
+.. dropdown:: Expected output
+
+   .. code-block:: text
+
+      [INFO] Current SAT objective value:  0
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  1
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  2
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  3
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  4
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  5
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  6
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  7
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  8
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  9
+      [INFO] Found 1 solution(s) from PySAT.
+      --- solving_time(s) ---: 0.2
+      ========== Trail ==========
+      Type: differential (hexadecimal)
+      Cipher: 5_round_SPECK32_PERM
+      Show Mode: First Layer of First and Last Round.
+      ######## Input: ########
+      IN_: 28000010
+      ######## Function: PERMUTATION ########
+      Round 1:
+      Layer 0: 28000010
+      Round 5:
+      Layer 0: 8000840a
+      ######## Output: ########
+      OUT_: 850a9520
+
+      Total Weight: 9
+      rounds_diff_weight: [2, 0, 1, 2, 4]
+
+
+Example 5: MILP-based search for linear trails
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Build an MILP model for the best linear trail and solve it with an MILP solver.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import attacks.attacks as attacks
+
+   cipher = speck.SPECK_PERMUTATION(r=5, version=32)   # 5 rounds for a fast search
+
+   trails = attacks.linear_attacks(
+       cipher,
+       goal="LINEARPATH_CORR",          # default: best linear trail (max correlation)
+       constraints=["INPUT_NOT_ZERO"],  # default: remove the trivial all-zero trail
+       objective_target="OPTIMAL",      # default: minimize the trail weight
+       config_model=None,               # default: MILP model
+       config_solver=None,              # default: MILP solver (Gurobi)
+       show_mode=0,                     # default: print the first and last round of the trail
+   )
+
+The generated model and the solution's ``.txt`` and ``.json`` files are written to ``files/``.
+
+.. dropdown:: Expected output
+
+   .. code-block:: text
+
+      [INFO] Found 1 solution from Gurobi.
+      --- solving_time(s) ---: 1.43
+      ========== Trail ==========
+      Type: linear (hexadecimal)
+      Cipher: 5_round_SPECK32_PERM
+      Show Mode: First Layer of First and Last Round.
+      ######## Input: ########
+      IN_: 1000062f
+      ######## Function: PERMUTATION ########
+      Round 1:
+      Layer 0: 1000062f
+      Round 5:
+      Layer 0: 00800080
+      ######## Output: ########
+      OUT_: 02050204
+
+      Total Weight: 5.0
+      rounds_linear_weight: [1.0, 2.0, 2.0, 0.0, 0.0]
+
+
+Example 6: SAT-based search for linear trails
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Build a SAT model for the best linear trail and solve it with a SAT solver.
+
+.. code-block:: python
+
+   import primitives.speck as speck
+   import attacks.attacks as attacks
+
+   cipher = speck.SPECK_PERMUTATION(r=5, version=32)   # 5 rounds for a fast search
+
+   trails = attacks.linear_attacks(
+       cipher,
+       goal="LINEARPATH_CORR",              # default: best linear trail (max correlation)
+       constraints=["INPUT_NOT_ZERO"],      # default: remove the trivial all-zero trail
+       objective_target="OPTIMAL",          # default: minimize the trail weight
+       config_model={"model_type": "sat"},  # switch to a SAT model
+       config_solver=None,                  # default: SAT solver via PySAT
+       show_mode=0,                         # default: print the first and last round of the trail
+   )
+
+The generated model and the solution's ``.txt`` and ``.json`` files are written to ``files/``.
+
+.. dropdown:: Expected output
+
+   .. code-block:: text
+
+      [INFO] Current SAT objective value:  0
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  1
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  2
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  3
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  4
+      [INFO] Found 0 solution(s) from PySAT.
+      [INFO] Current SAT objective value:  5
+      [INFO] Found 1 solution(s) from PySAT.
+      --- solving_time(s) ---: 0.21
+      ========== Trail ==========
+      Type: linear (hexadecimal)
+      Cipher: 5_round_SPECK32_PERM
+      Show Mode: First Layer of First and Last Round.
+      ######## Input: ########
+      IN_: 1800062a
+      ######## Function: PERMUTATION ########
+      Round 1:
+      Layer 0: 1800062a
+      Round 5:
+      Layer 0: 00800080
+      ######## Output: ########
+      OUT_: 02050204
+
+      Total Weight: 5
+      rounds_linear_weight: [1, 2, 2, 0, 0]
+
+
+All six examples are available in
+:download:`quickstart_examples.py <_static/quickstart_examples.py>`.
+Run it from the OCP repository root.

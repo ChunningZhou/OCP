@@ -1,0 +1,6 @@
+polyhedron
+==========
+
+.. automodule:: tools.polyhedron
+   :members:
+   :show-inheritance:

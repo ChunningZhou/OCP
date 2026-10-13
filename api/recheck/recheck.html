@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>recheck &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/recheck/recheck';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="claim" href="claim.html" />
+    <link rel="prev" title="recheck" href="../recheck.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../variables.html">variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../variables/variables.html">variables</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operators.html">operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operators/AESround.html">AESround</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/SHACAL2BooleanFunctions.html">SHACAL2BooleanFunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/Sbox.html">Sbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/boolean_operators.html">boolean_operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/matrix.html">matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/modular_operators.html">modular_operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators/operators.html">operators</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../primitives.html">primitives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/aes.html">aes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/ascon.html">ascon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/chacha.html">chacha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/forro.html">forro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/gift.html">gift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/knot.html">knot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/lblock.html">lblock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/led.html">led</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/present.html">present</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/primitives.html">primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/rectangle.html">rectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/rocca.html">rocca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/salsa.html">salsa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/shacal2.html">shacal2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/simeck.html">simeck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/simon.html">simon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/siphash.html">siphash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/skinny.html">skinny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/speck.html">speck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/trivium.html">trivium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitives/twine.html">twine</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../attacks.html">attacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/attacks.html">attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/attack_trace.html">attack_trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/differential_cryptanalysis.html">differential_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/linear_cryptanalysis.html">linear_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/integral_cryptanalysis.html">integral_cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/impossible_differential.html">impossible_differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../attacks/zero_corr_linear.html">zero_corr_linear</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solving.html">solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solving/solving.html">solving</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../implementations.html">implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../implementations/implementations.html">implementations</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../visualisations.html">visualisations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visualisations/visualisations.html">visualisations</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tools.html">tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/milp_search.html">milp_search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/minimize_logic.html">minimize_logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_configuration.html">model_configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_constraints.html">model_constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_objective.html">model_objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/model_templates.html">model_templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/operator_constraints.html">operator_constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/paths.html">paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/polyhedron.html">polyhedron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/resource_monitor.html">resource_monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/sat_search.html">sat_search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/sbox_division_trails.html">sbox_division_trails</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../capabilities.html">capabilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/capabilities.html">capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/primitive_capabilities.html">primitive_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/layer_capabilities.html">layer_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/operator_capabilities.html">operator_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/analysis_capabilities.html">analysis_capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/implementation_capabilities.html">implementation_capabilities</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recheck.html">recheck</a><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">recheck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claim.html">claim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checks.html">checks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_check.html">cross_check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run.html">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_table.html">make_table</a></li>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../recheck.html" class="nav-link">recheck</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">recheck</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-recheck">
+<span id="recheck"></span><h1>recheck<a class="headerlink" href="#module-recheck" title="Link to this heading">#</a></h1>
+<p>Replaying published cryptanalysis results through OCP.</p>
+<p>The results themselves are not here. <code class="docutils literal notranslate"><span class="pre">reference/</span></code> is the source-material store – the papers,
+the claims read out of them under <code class="docutils literal notranslate"><span class="pre">reference/data/</span></code>, and <code class="docutils literal notranslate"><span class="pre">reference/EXTRACTION.md</span></code>, which is
+the authority on the claim format. This package is only the machinery: it turns such a claim into
+OCP objects, pins it, and reports whether the model agrees.</p>
+<p>The split is so that the two can be present independently – material without a checker, or a
+checker with no material – which <code class="docutils literal notranslate"><span class="pre">capabilities.recheck_available()</span></code> reports as separate facts.</p>
+<p>OCP has no knowledge of this package; the dependency runs one way, and
+<code class="docutils literal notranslate"><span class="pre">test/operators/test_module_boundaries.py</span></code> keeps it that way.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.build_cipher">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">build_cipher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#build_cipher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.build_cipher" title="Link to this definition">#</a></dt>
+<dd><p>Instantiate the primitive the claim is about.</p>
+<p>A trail claim fixes the round count in <code class="docutils literal notranslate"><span class="pre">target.kwargs</span></code>. A bound claim states a value per
+round instead, so the count is passed in here and injected under <code class="docutils literal notranslate"><span class="pre">target.rounds_kwarg</span></code>
+(<code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> unless the primitive names it otherwise).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.data_glob">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">data_glob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#data_glob"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.data_glob" title="Link to this definition">#</a></dt>
+<dd><p>The claim-file pattern: every cipher, or one named cipher’s directory.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.load">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.load" title="Link to this definition">#</a></dt>
+<dd><p>Read a claim file and check the bits this package relies on are present.</p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span></code> must be an object carrying a <code class="docutils literal notranslate"><span class="pre">status</span></code> from <code class="docutils literal notranslate"><span class="pre">CLAIM_STATUS</span></code>: the key merely
+existing used to be enough, so 17 files passed with <code class="docutils literal notranslate"><span class="pre">source:</span> <span class="pre">null</span></code> – values this project
+measured itself, indistinguishable here from a published claim.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.resolve_claim">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">resolve_claim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#resolve_claim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.resolve_claim" title="Link to this definition">#</a></dt>
+<dd><p>(goal, trail class, weight key) for the spec’s claim.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.assignments_to_solution">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">assignments_to_solution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignments</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#assignments_to_solution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.assignments_to_solution" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">[{function,</span> <span class="pre">round,</span> <span class="pre">layer,</span> <span class="pre">value,</span> <span class="pre">nwords?}]</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">{var_id:</span> <span class="pre">0/1}</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">value</span></code> is the whole state as <code class="docutils literal notranslate"><span class="pre">&quot;0x...&quot;</span></code>/<code class="docutils literal notranslate"><span class="pre">&quot;0b...&quot;</span></code>, MSB first. <code class="docutils literal notranslate"><span class="pre">nwords</span></code> pins only the
+first n words, for a target narrower than the state the paper wrote the value against.</p>
+<p>The word count and width come from the cipher, never from the claim file, so a claim cannot
+disagree with the primitive about how a state splits; a value wider than its target is
+rejected rather than truncated.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.pin_constraints">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">pin_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#pin_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.pin_constraints" title="Link to this definition">#</a></dt>
+<dd><p>Constrain every variable the claim pins to the value it pins it to.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.solution_to_assignments">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">solution_to_assignments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">places</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#solution_to_assignments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.solution_to_assignments" title="Link to this definition">#</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">[{function,</span> <span class="pre">round,</span> <span class="pre">layer,</span> <span class="pre">value}]</span></code> for the states <code class="docutils literal notranslate"><span class="pre">places</span></code> names, read off a solution.</p>
+<p>The inverse of <code class="docutils literal notranslate"><span class="pre">assignments_to_solution</span></code>, for writing a claim rather than replaying one.
+<code class="docutils literal notranslate"><span class="pre">places</span></code> is a list of <code class="docutils literal notranslate"><span class="pre">(function,</span> <span class="pre">round,</span> <span class="pre">layer)</span></code> because a solution covers every variable
+in the model while a claim records a chosen few – the 35 trail claims here hold between 6 and
+34, typically each round’s input state plus the subkeys. Both directions read the state in
+<code class="docutils literal notranslate"><span class="pre">state_var_ids</span></code> order, so a claim written here replays unchanged.</p>
+<p>Whole states only: <code class="docutils literal notranslate"><span class="pre">assignments_to_solution</span></code> takes an <code class="docutils literal notranslate"><span class="pre">nwords</span></code> to pin a prefix and
+<code class="docutils literal notranslate"><span class="pre">places</span></code> cannot say that, so a narrowed claim is not writable from this side. No claim in
+the corpus narrows for real – the six that carry <code class="docutils literal notranslate"><span class="pre">nwords</span></code> set it to the state’s own width
+– and a test holds that, since otherwise this would raise about a missing value instead.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.to_trail">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">to_trail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cipher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/claim.html#to_trail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.to_trail" title="Link to this definition">#</a></dt>
+<dd><p>Materialize the claim as an OCP Trail, so it prints and compares like a found one.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="recheck.CheckResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">CheckResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recheck.CheckResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="recheck.CheckResult.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><a class="headerlink" href="#recheck.CheckResult.detail" title="Link to this definition">#</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="recheck.CheckResult.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#recheck.CheckResult.name" title="Link to this definition">#</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="recheck.CheckResult.passed">
+<span class="sig-name descname"><span class="pre">passed</span></span><a class="headerlink" href="#recheck.CheckResult.passed" title="Link to this definition">#</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.check_bound">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">check_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#check_bound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.check_bound" title="Link to this definition">#</a></dt>
+<dd><p>Search the optimum for each round the claim covers and test the stated relation.</p>
+<p>A bound claim carries no trail: it says what the best value over <code class="docutils literal notranslate"><span class="pre">r</span></code> rounds is (<code class="docutils literal notranslate"><span class="pre">&quot;=&quot;</span></code>),
+or at least is (<code class="docutils literal notranslate"><span class="pre">&quot;&gt;=&quot;</span></code>, how design documents usually phrase a security argument), or at
+most is (<code class="docutils literal notranslate"><span class="pre">&quot;&lt;=&quot;</span></code>, a trail was found but optimality was not proven). Nothing is pinned, so
+every round is a full search – pass <code class="docutils literal notranslate"><span class="pre">rounds</span></code> to check only part of the table.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.compare_bound">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">compare_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">got</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#compare_bound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.compare_bound" title="Link to this definition">#</a></dt>
+<dd><p>Test an already-computed optimum against what the claim says about that round.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.max_feasible_prefix">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">max_feasible_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cipher</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#max_feasible_prefix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.max_feasible_prefix" title="Link to this definition">#</a></dt>
+<dd><p>How many of the claim’s assignments can be pinned before the model turns infeasible.</p>
+<p>Equal to the number of assignments when the whole claim is feasible; otherwise the index of
+the first one that cannot hold, which is where to look for the transcription error.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.search_key">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">search_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#search_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.search_key" title="Link to this definition">#</a></dt>
+<dd><p>What a bound search actually depends on, so identical searches can be shared.</p>
+<p>Several papers state the same optimum, and each is a separate claim file. The search behind
+them is one and the same: it is fixed by the primitive, the round count and the goal, and
+knows nothing of who claimed what. Batch runners key a cache on this.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.search_optimum">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">search_optimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#search_optimum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.search_optimum" title="Link to this definition">#</a></dt>
+<dd><p>The model’s optimal weight over <code class="docutils literal notranslate"><span class="pre">rounds</span></code> rounds, or None if nothing was found.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recheck.verify">
+<span class="sig-prename descclassname"><span class="pre">recheck.</span></span><span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('feasible',</span> <span class="pre">'weight')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cipher</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'milp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/recheck/checks.html#verify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#recheck.verify" title="Link to this definition">#</a></dt>
+<dd><p>Run the named checks against one claim. Defaults to the two cheap ones.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../recheck.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">recheck</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="claim.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">claim</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.build_cipher"><code class="docutils literal notranslate"><span class="pre">build_cipher()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.data_glob"><code class="docutils literal notranslate"><span class="pre">data_glob()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.load"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.resolve_claim"><code class="docutils literal notranslate"><span class="pre">resolve_claim()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.assignments_to_solution"><code class="docutils literal notranslate"><span class="pre">assignments_to_solution()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.pin_constraints"><code class="docutils literal notranslate"><span class="pre">pin_constraints()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.solution_to_assignments"><code class="docutils literal notranslate"><span class="pre">solution_to_assignments()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.to_trail"><code class="docutils literal notranslate"><span class="pre">to_trail()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.CheckResult"><code class="docutils literal notranslate"><span class="pre">CheckResult</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.CheckResult.detail"><code class="docutils literal notranslate"><span class="pre">CheckResult.detail</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.CheckResult.name"><code class="docutils literal notranslate"><span class="pre">CheckResult.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.CheckResult.passed"><code class="docutils literal notranslate"><span class="pre">CheckResult.passed</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.check_bound"><code class="docutils literal notranslate"><span class="pre">check_bound()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.compare_bound"><code class="docutils literal notranslate"><span class="pre">compare_bound()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.max_feasible_prefix"><code class="docutils literal notranslate"><span class="pre">max_feasible_prefix()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.search_key"><code class="docutils literal notranslate"><span class="pre">search_key()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.search_optimum"><code class="docutils literal notranslate"><span class="pre">search_optimum()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recheck.verify"><code class="docutils literal notranslate"><span class="pre">verify()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

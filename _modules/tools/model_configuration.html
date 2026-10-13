@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tools.model_configuration &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tools/model_configuration';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">tools.model_configuration</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tools.model_configuration</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Model-building configuration for cipher analysis.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.Sbox</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sbox</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.paths</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_files_dir</span>
+
+
+<span class="c1"># Each goal maps to a tuple of (version, operator_name) rules applied in order. A ``None``</span>
+<span class="c1"># operator_name targets every operator; &quot;Sbox&quot; matches any *Sbox class; &quot;AESround&quot; carries</span>
+<span class="c1"># the S-box-level version onto the composite AES round (its inner S-boxes then inherit it).</span>
+<span class="n">GOAL_MODEL_VERSION_RULES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;DIFFERENTIAL_SBOXCOUNT&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_A&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_A&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;DIFFERENTIAL_PROB&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XORDIFF_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;LINEAR_SBOXCOUNT&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_A&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_A&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;LINEARPATH_CORR&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;LINEARHULL_CORR&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;LINEAR_PR&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">)),</span>
+    <span class="s2">&quot;TRUNCATEDDIFF_SBOXCOUNT&quot;</span><span class="p">:</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDDIFF_A&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDDIFF_A&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;TRUNCATEDLINEAR_SBOXCOUNT&quot;</span><span class="p">:</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDLINEAR_A&quot;</span><span class="p">,</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;TRUNCATEDLINEAR_A&quot;</span><span class="p">,</span> <span class="s2">&quot;AESround&quot;</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),),</span>
+<span class="p">}</span>
+
+<span class="c1"># Goal vocabularies, partitioned by the attack that accepts them.</span>
+<span class="n">DIFFERENTIAL_GOALS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;DIFFERENTIAL_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="s2">&quot;DIFFERENTIALPATH_PROB&quot;</span><span class="p">,</span> <span class="s2">&quot;DIFFERENTIAL_PROB&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;TRUNCATEDDIFF_SBOXCOUNT&quot;</span><span class="p">)</span>
+<span class="n">LINEAR_GOALS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;LINEAR_SBOXCOUNT&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEARPATH_CORR&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEARHULL_CORR&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;TRUNCATEDLINEAR_SBOXCOUNT&quot;</span><span class="p">)</span>
+<span class="n">INTEGRAL_GOALS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">,)</span>
+
+<span class="c1"># These two searches are strategies over a middle-round goal rather than models of their own, so</span>
+<span class="c1"># each goal names the goal it is modelled as.</span>
+<span class="n">IMPOSSIBLE_GOAL_MIDDLE</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;IMPOSSIBLETRUNCATEDDIFF&quot;</span><span class="p">:</span> <span class="s2">&quot;TRUNCATEDDIFF_SBOXCOUNT&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;IMPOSSIBLEDIFF&quot;</span><span class="p">:</span> <span class="s2">&quot;DIFFERENTIAL_SBOXCOUNT&quot;</span><span class="p">}</span>
+<span class="n">ZEROCORR_GOAL_MIDDLE</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ZEROCORRELATIONTRUNCATEDLINEAR&quot;</span><span class="p">:</span> <span class="s2">&quot;TRUNCATEDLINEAR_SBOXCOUNT&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;ZEROCORRELATIONLINEAR&quot;</span><span class="p">:</span> <span class="s2">&quot;LINEAR_SBOXCOUNT&quot;</span><span class="p">}</span>
+
+<span class="c1"># objective_target comes in two forms: a bare keyword, or a keyword plus a number (&quot;AT MOST 12&quot;).</span>
+<span class="n">OBJECTIVE_TARGETS_BARE</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;OPTIMAL&quot;</span><span class="p">,</span> <span class="s2">&quot;EXISTENCE&quot;</span><span class="p">)</span>
+<span class="n">OBJECTIVE_TARGETS_WITH_VALUE</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;AT MOST&quot;</span><span class="p">,</span> <span class="s2">&quot;EXACTLY&quot;</span><span class="p">,</span> <span class="s2">&quot;AT LEAST&quot;</span><span class="p">)</span>
+<span class="n">OBJECTIVE_TARGETS</span> <span class="o">=</span> <span class="n">OBJECTIVE_TARGETS_BARE</span> <span class="o">+</span> <span class="n">OBJECTIVE_TARGETS_WITH_VALUE</span>
+
+<span class="c1"># Symbolic markers that the `constraints` list expands.</span>
+<span class="n">ANALYSIS_CONSTRAINT_MARKERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;INPUT_NOT_ZERO&quot;</span><span class="p">:</span> <span class="s2">&quot;add an input difference/mask non-zero constraint (differential, linear)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TWO_SUBSET_INIT&quot;</span><span class="p">:</span> <span class="s2">&quot;set the two-subset division-property initial state (integral)&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">SHOW_MODES</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># SAT only: how modeling_solving_optimal_intobj walks the objective bound.</span>
+<span class="n">SAT_OPTIMAL_STRATEGIES</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;INCREASING FROM AT MOST&quot;</span><span class="p">,</span> <span class="s2">&quot;INCREASING FROM EXACTLY&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;DECREASING FROM AT MOST&quot;</span><span class="p">,</span> <span class="s2">&quot;ADAPTIVE FROM AT MOST&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="fill_functions_rounds_layers_positions">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.fill_functions_rounds_layers_positions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">fill_functions_rounds_layers_positions</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">functions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">rounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">layers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">positions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fill in functions, rounds, layers, and positions to full coverage when the corresponding argument is None; otherwise, keep user-supplied values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cipher (object): The cipher object.</span>
+<span class="sd">        functions (list[str]): List of functions. If None, use all functions of the cipher. Example: [&quot;PERMUTATION&quot;, &quot;KEY_SCHEDULE&quot;, &quot;SUBKEYS&quot;].</span>
+<span class="sd">        rounds (dict): Dictionary specifying rounds. If None, use all. Example: {&quot;PERMUTATION&quot;: [1, 2, 3]}.</span>
+<span class="sd">        layers (dict): Dictionary specifying layers. If None, use all. Example: {&quot;PERMUTATION&quot;: {1: [0, 1], 2: [0, 1], 3: [0, 1]}}.</span>
+<span class="sd">        positions (dict): Dictionary specifying positions. If None, use all. Example: {&quot;PERMUTATION&quot;: {1: {0: [0, 1], 1: [0, 1]}, 2: {0: [0, 1], 1: [0, 1]}, 3: {0: [0, 1], 1: [0, 1]}}}.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (functions, rounds, layers, positions)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">functions</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">functions</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">rounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">rounds</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">}</span>
+    <span class="k">if</span> <span class="n">layers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">f</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">nbr_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">[</span><span class="n">f</span><span class="p">]}</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions</span>
+        <span class="p">}</span>
+    <span class="k">if</span> <span class="n">positions</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">f</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">r</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="n">l</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">])))</span>
+                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">r</span><span class="p">]</span>
+                <span class="p">}</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+            <span class="p">}</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">functions</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">positions</span></div>
+
+
+
+<div class="viewcode-block" id="configure_model_version">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.configure_model_version">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">configure_model_version</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assign each in-scope constraint the model version required by ``goal``.</span>
+
+<span class="sd">    Applies the ``(version, operator_name)`` rules from ``GOAL_MODEL_VERSION_RULES``,</span>
+<span class="sd">    then any explicit overrides in ``config_model[&quot;model_version&quot;]``. The override is a</span>
+<span class="sd">    ``{operator_name: version}`` dict, so different operators can take different versions;</span>
+<span class="sd">    a ``None`` key targets every operator and is applied first, so named-operator entries</span>
+<span class="sd">    win on overlap (e.g. ``{None: &quot;XORDIFF&quot;, &quot;Sbox&quot;: &quot;XORDIFF_PR&quot;}``).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">functions</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;functions&quot;</span><span class="p">)</span>
+    <span class="n">rounds</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rounds&quot;</span><span class="p">)</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;layers&quot;</span><span class="p">)</span>
+    <span class="n">positions</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;positions&quot;</span><span class="p">)</span>
+    <span class="n">missing</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;functions&quot;</span><span class="p">,</span> <span class="s2">&quot;rounds&quot;</span><span class="p">,</span> <span class="s2">&quot;layers&quot;</span><span class="p">,</span> <span class="s2">&quot;positions&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;config_model is missing required scope keys: </span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">goal</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">GOAL_MODEL_VERSION_RULES</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid goal: </span><span class="si">{</span><span class="n">goal</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">version</span><span class="p">,</span> <span class="n">operator_name</span> <span class="ow">in</span> <span class="n">GOAL_MODEL_VERSION_RULES</span><span class="p">[</span><span class="n">goal</span><span class="p">]:</span>
+        <span class="n">set_model_versions</span><span class="p">(</span>
+            <span class="n">cipher</span><span class="p">,</span>
+            <span class="n">version</span><span class="p">,</span>
+            <span class="n">functions</span><span class="p">,</span>
+            <span class="n">rounds</span><span class="p">,</span>
+            <span class="n">layers</span><span class="p">,</span>
+            <span class="n">positions</span><span class="p">,</span>
+            <span class="n">operator_name</span><span class="o">=</span><span class="n">operator_name</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="n">overrides</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_version&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">operator_name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">overrides</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">set_model_versions</span><span class="p">(</span>
+            <span class="n">cipher</span><span class="p">,</span>
+            <span class="n">overrides</span><span class="p">[</span><span class="n">operator_name</span><span class="p">],</span>
+            <span class="n">functions</span><span class="p">,</span>
+            <span class="n">rounds</span><span class="p">,</span>
+            <span class="n">layers</span><span class="p">,</span>
+            <span class="n">positions</span><span class="p">,</span>
+            <span class="n">operator_name</span><span class="o">=</span><span class="n">operator_name</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="operator_in_scope">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.operator_in_scope">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">operator_in_scope</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="n">operator_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether ``operator_class`` is covered by the ``operator_name`` scope of a version rule.</span>
+
+<span class="sd">    ``None`` covers every operator. ``&quot;Sbox&quot;`` covers every S-box.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">operator_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">operator_name</span> <span class="o">==</span> <span class="s2">&quot;Sbox&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span> <span class="n">Sbox</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">operator_name</span> <span class="o">==</span> <span class="n">operator_class</span><span class="o">.</span><span class="vm">__name__</span></div>
+
+
+
+<div class="viewcode-block" id="scoped_constraints">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.scoped_constraints">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">scoped_constraints</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">functions</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">layers</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Every operator of ``cipher`` inside the given scope, inputs and outputs included.&quot;&quot;&quot;</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">[</span><span class="n">f</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">r</span><span class="p">]:</span>
+                <span class="n">constraints</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">constraints</span></div>
+
+
+
+<div class="viewcode-block" id="set_model_versions">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.set_model_versions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_model_versions</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">functions</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">operator_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assign a model version to matching constraints in the selected cipher scope.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">scoped_constraints</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">functions</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">layers</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">operator_in_scope</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cons</span><span class="p">),</span> <span class="n">operator_name</span><span class="p">):</span>
+            <span class="n">cons</span><span class="o">.</span><span class="n">model_version</span> <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">version</span></div>
+
+
+
+<div class="viewcode-block" id="model_scope">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.model_scope">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">model_scope</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;``[(round, cons)]`` for exactly the operators a model will be generated for.</span>
+
+<span class="sd">    ``round`` is ``None`` for the boundary constraints. Shared with the check below so the two</span>
+<span class="sd">    cannot disagree about scope: ``set_model_versions`` assigns more broadly, and checking that</span>
+<span class="sd">    wider set would reject requests that generate fine. A list, so both passes see it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scope</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">switch</span><span class="p">,</span> <span class="n">boundary</span> <span class="ow">in</span> <span class="p">((</span><span class="s2">&quot;gen_input_model&quot;</span><span class="p">,</span> <span class="n">cipher</span><span class="o">.</span><span class="n">inputs_constraints</span><span class="p">),</span>
+                             <span class="p">(</span><span class="s2">&quot;gen_output_model&quot;</span><span class="p">,</span> <span class="n">cipher</span><span class="o">.</span><span class="n">outputs_constraints</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">switch</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="n">scope</span><span class="o">.</span><span class="n">extend</span><span class="p">((</span><span class="kc">None</span><span class="p">,</span> <span class="n">cons</span><span class="p">)</span> <span class="k">for</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">boundary</span><span class="p">)</span>
+    <span class="n">functions</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;functions&quot;</span><span class="p">)</span>
+    <span class="n">rounds</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rounds&quot;</span><span class="p">)</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;layers&quot;</span><span class="p">)</span>
+    <span class="n">positions</span> <span class="o">=</span> <span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;positions&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rounds</span><span class="p">[</span><span class="n">f</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">r</span><span class="p">]:</span>
+                <span class="n">scope</span><span class="o">.</span><span class="n">extend</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+                             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">scope</span></div>
+
+
+
+<div class="viewcode-block" id="check_assigned_model_versions">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.check_assigned_model_versions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_assigned_model_versions</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Raise once, naming **every** operator left with a version it does not declare.</span>
+
+<span class="sd">    Reads the versions actually assigned, not the goal&#39;s rules, so a ``model_version`` override is</span>
+<span class="sd">    accepted when it works. Exemptions match ``Operator.check_supported_model_version``: nothing</span>
+<span class="sd">    new is refused, only refused before any model is built.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">model_type</span> <span class="o">=</span> <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;model_type&quot;</span><span class="p">]</span>
+    <span class="n">blocked</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">model_scope</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+        <span class="n">declared</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cons</span><span class="p">),</span> <span class="s2">&quot;SUPPORTED_MODEL_VERSIONS&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="p">())</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">declared</span> <span class="ow">or</span> <span class="n">cons</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">allowed</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">cons</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">declared</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">cons</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">:</span>
+            <span class="n">blocked</span><span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="n">cons</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">model_version</span>
+    <span class="k">if</span> <span class="n">blocked</span><span class="p">:</span>
+        <span class="n">listed</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> (assigned </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">blocked</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;[ERROR] </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">blocked</span><span class="p">)</span><span class="si">}</span><span class="s2"> operator(s) do not model the version this request needs &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;under model_type=&#39;</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">listed</span><span class="si">}</span><span class="s2">. Nothing was generated. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;capabilities.analysis_capabilities.explain_goal says the same thing before a &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;config is built.&quot;</span>
+        <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_round_model_constraint_obj_fun">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.gen_round_model_constraint_obj_fun">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_round_model_constraint_obj_fun</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate constraints and objective-function variables for selected rounds.&quot;&quot;&quot;</span>
+    <span class="n">model_type</span> <span class="o">=</span> <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;model_type&quot;</span><span class="p">]</span>
+    <span class="n">configure_model_version</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">config_model</span><span class="p">)</span>
+    <span class="n">check_assigned_model_versions</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">)</span>
+    <span class="n">constraint</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">obj_fun</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">model_scope</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">config_model</span><span class="p">):</span>
+        <span class="c1"># Operator-specific params, if any: {cons_class_name: {param_name: param_value}}.</span>
+        <span class="c1"># Example: config_model[&quot;model_params&quot;] = {&quot;PRESENT_Sbox&quot;: {&quot;tool_type&quot;: &quot;polyhedron&quot;}}</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">(</span><span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_params&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">constraint</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">generate_model</span><span class="p">(</span><span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cons</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">):</span>
+            <span class="n">obj_fun</span><span class="p">[</span><span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">constraint</span><span class="p">,</span> <span class="n">obj_fun</span></div>
+
+
+
+<span class="c1"># ------------------- Attack-search configuration ------------------- #</span>
+<div class="viewcode-block" id="normalize_model_type">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.normalize_model_type">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_model_type</span><span class="p">(</span><span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Lower-case a ``model_type`` and validate it is ``&quot;milp&quot;`` or ``&quot;sat&quot;``, returning it.&quot;&quot;&quot;</span>
+
+    <span class="n">normalized</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">normalized</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;milp&quot;</span><span class="p">,</span> <span class="s2">&quot;sat&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid model_type: </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">. Expected one of [&#39;milp&#39;, &#39;sat&#39;].&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">normalized</span></div>
+
+
+
+<div class="viewcode-block" id="default_model_filename">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.default_model_filename">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">default_model_filename</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">objective_target</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the default runtime model filename for a configured attack.&quot;&quot;&quot;</span>
+
+    <span class="n">suffix</span> <span class="o">=</span> <span class="s2">&quot;milp_model.lp&quot;</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s2">&quot;milp&quot;</span> <span class="k">else</span> <span class="s2">&quot;sat_model.cnf&quot;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span>
+        <span class="n">get_files_dir</span><span class="p">()</span>
+        <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cipher</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="si">}</span><span class="s2">round_</span><span class="si">{</span><span class="n">cipher</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">goal</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">objective_target</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="normalize_solution_number">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.normalize_solution_number">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_solution_number</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Validate that a solver ``solution_number`` is a positive integer, returning it.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid solution_number: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">. Expected a positive integer.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span></div>
+
+
+
+<div class="viewcode-block" id="parse_and_set_configs">
+<a class="viewcode-back" href="../../api/tools/model_configuration.html#tools.model_configuration.parse_and_set_configs">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_and_set_configs</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">objective_target</span><span class="p">,</span> <span class="n">config_model</span><span class="p">,</span> <span class="n">config_solver</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply common model and solver defaults and return ``(config_model, config_solver)``.</span>
+
+<span class="sd">    Goal-specific defaults (e.g. a large ``solution_number`` for many-trail searches) are</span>
+<span class="sd">    applied by each attack frontend after calling this.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">config_model</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config_model</span> <span class="ow">or</span> <span class="p">{})</span>
+    <span class="n">config_solver</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config_solver</span> <span class="ow">or</span> <span class="p">{})</span>
+    <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;model_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">normalize_model_type</span><span class="p">(</span><span class="n">config_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_type&quot;</span><span class="p">,</span> <span class="s2">&quot;milp&quot;</span><span class="p">))</span>
+
+    <span class="n">functions</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">positions</span> <span class="o">=</span> <span class="n">fill_functions_rounds_layers_positions</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
+    <span class="n">config_model</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;functions&quot;</span><span class="p">,</span> <span class="n">functions</span><span class="p">)</span>
+    <span class="n">config_model</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;rounds&quot;</span><span class="p">,</span> <span class="n">rounds</span><span class="p">)</span>
+    <span class="n">config_model</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;layers&quot;</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
+    <span class="n">config_model</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;positions&quot;</span><span class="p">,</span> <span class="n">positions</span><span class="p">)</span>
+    <span class="n">config_solver</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">)</span>
+
+    <span class="n">config_model</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span>
+        <span class="s2">&quot;filename&quot;</span><span class="p">,</span>
+        <span class="n">default_model_filename</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">objective_target</span><span class="p">,</span> <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;model_type&quot;</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;solution_number&quot;</span> <span class="ow">in</span> <span class="n">config_solver</span><span class="p">:</span>
+        <span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solution_number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">normalize_solution_number</span><span class="p">(</span><span class="n">config_solver</span><span class="p">[</span><span class="s2">&quot;solution_number&quot;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">config_model</span><span class="p">,</span> <span class="n">config_solver</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

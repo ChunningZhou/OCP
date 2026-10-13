@@ -1,0 +1,6 @@
+visualisations
+==============
+
+.. automodule:: visualisations.visualisations
+   :members:
+   :show-inheritance:

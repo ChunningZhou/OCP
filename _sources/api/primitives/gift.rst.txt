@@ -1,0 +1,6 @@
+gift
+====
+
+.. automodule:: primitives.gift
+   :members:
+   :show-inheritance:

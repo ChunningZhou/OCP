@@ -1,0 +1,6 @@
+simon
+=====
+
+.. automodule:: primitives.simon
+   :members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+User Guide
+==========
+
+.. note::
+
+   Coming soon.
+
+..
+   Original content, commented out rather than deleted. Restore by removing the
+   ``..`` comment marker above this block and deleting the note above.
+
+   How to use each of OCP's capabilities, with runnable examples and benchmark
+   results across ciphers and parameter settings.
+
+   .. toctree::
+      :maxdepth: 1
+
+      differential

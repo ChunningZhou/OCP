@@ -1,0 +1,1341 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operators.matrix &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/operators/matrix';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">operators.matrix</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for operators.matrix</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Linear-layer operators over GF(2): ``Matrix`` (binary / MDS / polynomial matrices) and</span>
+<span class="sd">``GF2Linear_Trans``.</span>
+
+<span class="sd">Provides binary-matrix generation (including MDS polynomial-matrix expansion to a bit matrix),</span>
+<span class="sd">python/C/Verilog code generation, and SAT/MILP models built row by row as XOR constraints over</span>
+<span class="sd">the active input bits.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">Operator</span><span class="p">,</span> <span class="n">UnaryOperator</span><span class="p">,</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">,</span> <span class="n">raise_unknown_implementation_type</span><span class="p">,</span> <span class="n">raise_unknown_model_type</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.operator_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_matrix_constraints</span><span class="p">,</span> <span class="n">gen_matrix_declarations</span><span class="p">,</span> <span class="n">binary_declaration</span><span class="p">,</span> <span class="n">integer_declaration</span><span class="p">,</span> <span class="n">gen_equivalence_constraints</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.model_templates</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_and_save_constraints</span><span class="p">,</span> <span class="n">gen_constraints_obj_func_from_template</span><span class="p">,</span> <span class="n">instantiate_constraints_template</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.paths</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_matrix_constraints_files_dir</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">product</span>
+
+
+<div class="viewcode-block" id="gf2_multiply">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.gf2_multiply">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gf2_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiply two elements of GF(2^m) modulo ``mod_poly``.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">^=</span> <span class="n">a</span>
+        <span class="n">a</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">degree</span><span class="p">):</span>  <span class="c1"># If `a` exceeds m bits, reduce modulo `mod_poly`.</span>
+            <span class="n">a</span> <span class="o">^=</span> <span class="n">mod_poly</span>
+        <span class="n">b</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="o">&amp;</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">degree</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_normalize_mod_poly</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Normalize the irreducible polynomial.</span>
+
+<span class="sd">    The polynomial can be provided as an int or as a string</span>
+<span class="sd">    (e.g. &quot;0x11b&quot;, &quot;0b100011011&quot;). This function ensures that the</span>
+<span class="sd">    highest term x^degree is present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">mod_poly</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">sig_degree</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">degree</span><span class="p">)</span>
+
+    <span class="c1"># Ensure the polynomial contains the term x^degree</span>
+    <span class="k">if</span> <span class="n">mod_poly</span> <span class="o">&lt;</span> <span class="n">sig_degree</span><span class="p">:</span>
+        <span class="n">mod_poly</span> <span class="o">+=</span> <span class="n">sig_degree</span>
+
+    <span class="k">return</span> <span class="n">mod_poly</span>
+
+
+<div class="viewcode-block" id="gf2_pow">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.gf2_pow">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gf2_pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute a^e in GF(2^m) using binary exponentiation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">a</span>
+
+    <span class="k">while</span> <span class="n">e</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+        <span class="n">base</span> <span class="o">=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="gf2_inv">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.gf2_inv">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">gf2_inv</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the multiplicative inverse of a in GF(2^m).</span>
+
+<span class="sd">    Using the identity:</span>
+<span class="sd">        a^{-1} = a^(2^m - 2)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s2">&quot;Inverse of 0 does not exist in GF(2^m).&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">gf2_pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">degree</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_is_irreducible_gf2</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test whether ``poly`` (with its x^degree term) is irreducible over GF(2).&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">poly_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">a</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">db</span><span class="p">:</span>
+            <span class="n">a</span> <span class="o">^=</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">-</span> <span class="n">db</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">degree</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">poly_mod</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+
+<div class="viewcode-block" id="generate_binary_matrix_1">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.generate_binary_matrix_1">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_binary_matrix_1</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Identity matrix -- the bit-matrix of the GF(2^m) element 1.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span></div>
+
+
+
+<div class="viewcode-block" id="generate_binary_matrix_2">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.generate_binary_matrix_2">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_binary_matrix_2</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Companion &quot;multiply-by-x&quot; bit-matrix for GF(2^m), derived from the modulus polynomial.&quot;&quot;&quot;</span>
+    <span class="n">mod_poly</span> <span class="o">=</span> <span class="n">_normalize_mod_poly</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span>
+    <span class="n">coefficients</span> <span class="o">=</span> <span class="p">[(</span><span class="n">mod_poly</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+        <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">[</span><span class="n">degree</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+        <span class="n">matrix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">matrix</span></div>
+
+
+
+<div class="viewcode-block" id="matrix_multiply_mod2">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.matrix_multiply_mod2">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">matrix_multiply_mod2</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiply two matrices over GF(2) (entrywise mod 2); supports non-square shapes.&quot;&quot;&quot;</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">B</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">A</span>
+    <span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="generate_pmr_for_mds">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.generate_pmr_for_mds">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_pmr_for_mds</span><span class="p">(</span><span class="n">mds</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Expand a word-level GF(2^m) matrix into its bit-level binary (PMR) form.</span>
+
+<span class="sd">    multiply-by-c is linear over GF(2): its bit-matrix is the XOR of the companion &quot;multiply-by-x&quot;</span>
+<span class="sd">    powers selected by the bits of c. This handles c == 0 (zero block) and needs no discrete logs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mod_poly</span> <span class="o">=</span> <span class="n">_normalize_mod_poly</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">_is_irreducible_gf2</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;mod_poly </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not irreducible over GF(2), so GF(2^</span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">) is not a field (check that degree matches the word bitsize)&quot;</span>
+    <span class="n">field_size</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">degree</span>
+    <span class="n">companion_x</span> <span class="o">=</span> <span class="n">generate_binary_matrix_2</span><span class="p">(</span><span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>        <span class="c1"># binary matrix of multiply-by-x</span>
+    <span class="n">powers</span> <span class="o">=</span> <span class="p">[</span><span class="n">generate_binary_matrix_1</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span>                     <span class="c1"># powers[k] = companion_x^k, built incrementally</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+        <span class="n">powers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">matrix_multiply_mod2</span><span class="p">(</span><span class="n">powers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">companion_x</span><span class="p">))</span>
+    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mult_by</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>                                                 <span class="c1"># binary matrix of multiply-by-c</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">field_size</span><span class="p">):</span>                              <span class="c1"># a coefficient must be a valid GF(2^degree) element</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;generate_pmr_for_mds: coefficient </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> is out of range for GF(2^</span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">); &quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;expected 0 &lt;= c &lt; </span><span class="si">{</span><span class="n">field_size</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+            <span class="n">acc</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">degree</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">acc</span> <span class="o">=</span> <span class="p">[[</span><span class="n">acc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">^</span> <span class="n">powers</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">)]</span>
+            <span class="n">cache</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">acc</span>
+        <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mds</span><span class="p">)</span>
+    <span class="n">pmr</span> <span class="o">=</span> <span class="p">[[</span><span class="n">mult_by</span><span class="p">(</span><span class="n">mds</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+    <span class="n">pmr_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span> <span class="o">*</span> <span class="n">degree</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span> <span class="o">*</span> <span class="n">degree</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">row_offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+            <span class="n">base_index</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">degree</span> <span class="o">+</span> <span class="n">row_offset</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+                <span class="n">start_index</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="n">degree</span>
+                <span class="n">pmr_new</span><span class="p">[</span><span class="n">base_index</span><span class="p">][</span><span class="n">start_index</span><span class="p">:</span><span class="n">start_index</span> <span class="o">+</span> <span class="n">degree</span><span class="p">]</span> <span class="o">=</span> <span class="n">pmr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">row_offset</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pmr_new</span></div>
+
+
+
+<div class="viewcode-block" id="generate_bin_matrix">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.generate_bin_matrix">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_bin_matrix</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">bitsize</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Expand a GF(2) word-level matrix into block-binary form (1 -&gt; identity block, 0 -&gt; zero block).&quot;&quot;&quot;</span>
+    <span class="n">bin_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+            <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">bitsize</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">bitsize</span><span class="p">,</span> <span class="n">bitsize</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;generate_bin_matrix expects a binary (0/1) matrix, but got </span><span class="si">{</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s2"> at (</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+        <span class="n">bin_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Matrix">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Matrix multiplication operator: apply the matrix ``mat`` (stored as a list of lists) to the input</span>
+<span class="sd">    vector of variables, towards the output vector of variables.</span>
+
+<span class="sd">    The optional ``polynomial`` defines the GF(2^m) reduction polynomial (e.g. 0x1b for AES); when</span>
+<span class="sd">    omitted, ``mat`` is interpreted over GF(2). See :meth:`__init__` for the three supported matrix layouts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_2&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR_2&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_2&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR_2&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="n">SUPPORTED_IMPLEMENTATIONS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+
+                          <span class="c1"># The optional &quot;polynomial&quot; allors to define the polynomial reduction (not implemted yet)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">polynomial</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Matrix operator applying ``mat`` to the input word vector.</span>
+
+<span class="sd">        Three matrix definitions are currently supported:</span>
+<span class="sd">          1. GF(2^m) word-level matrix with a reduction polynomial (not None): mat is n*n over GF(2^m),</span>
+<span class="sd">             entries are field elements (e.g. AES MixColumns [[2,3,1,1],...] with polynomial=0x1b, bitsize=8).</span>
+<span class="sd">          2. GF(2) word-level matrix: mat is n*n with entries in {0,1} and len(input_vars) == len(mat)</span>
+<span class="sd">             (e.g. the SKINNY MixColumns 4*4 binary matrix [[1,0,1,1],...], applied per column).</span>
+<span class="sd">          3. Bit-level binary matrix: mat is already the full (n*bitsize)*(n*bitsize) {0,1} matrix, detected</span>
+<span class="sd">             by bitsize*len(input_vars) == len(mat) (e.g. SKINNY-64 MixColumns on one column, expanded to 16*16).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: matrix size not consistent&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_vars</span><span class="p">)</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: input vector does not match matrix size&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_vars</span><span class="p">)</span> <span class="o">!=</span> <span class="n">r</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: output vector does not match matrix size&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mat</span> <span class="o">=</span> <span class="n">mat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span> <span class="o">=</span> <span class="n">polynomial</span> <span class="c1"># For AES, polynomial = 0x1b, degree = 8. For SKINNY, polynomial = None, degree = None (i.e. binary matrix over GF(2))</span>
+
+<div class="viewcode-block" id="Matrix.inverse_over_gf2m">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.inverse_over_gf2m">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">inverse_over_gf2m</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compute the inverse of the matrix over GF(2^m) using</span>
+<span class="sd">        Gauss–Jordan elimination.</span>
+
+<span class="sd">        The field arithmetic uses the irreducible polynomial</span>
+<span class="sd">        stored in self.polynomial.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Matrix must be square to be invertible.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;self.polynomial is required to invert over GF(2^m).&quot;</span><span class="p">)</span>
+
+        <span class="n">degree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span>
+        <span class="n">mod_poly</span> <span class="o">=</span> <span class="n">_normalize_mod_poly</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+        <span class="c1"># Copy of the matrix</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[:]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">]</span>
+
+        <span class="c1"># Identity matrix</span>
+        <span class="n">I</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">r</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+            <span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="c1"># Gauss–Jordan elimination</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+
+            <span class="c1"># Search for a non-zero pivot</span>
+            <span class="n">pivot</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">pivot</span> <span class="o">=</span> <span class="n">row</span>
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="n">pivot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Matrix is not invertible (singular) over GF(2^m).&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Swap rows if necessary</span>
+            <span class="k">if</span> <span class="n">pivot</span> <span class="o">!=</span> <span class="n">col</span><span class="p">:</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">pivot</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+                <span class="n">I</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">I</span><span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">=</span> <span class="n">I</span><span class="p">[</span><span class="n">pivot</span><span class="p">],</span> <span class="n">I</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+
+            <span class="c1"># Normalize pivot row so that pivot becomes 1</span>
+            <span class="n">piv_val</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
+            <span class="n">inv_piv</span> <span class="o">=</span> <span class="n">gf2_inv</span><span class="p">(</span><span class="n">piv_val</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">inv_piv</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+                <span class="n">I</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">inv_piv</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+            <span class="c1"># Eliminate the pivot column in all other rows</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+
+                <span class="k">if</span> <span class="n">row</span> <span class="o">==</span> <span class="n">col</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">factor</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># In characteristic 2, subtraction = addition (XOR)</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+                    <span class="n">A</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">^=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">factor</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+                    <span class="n">I</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">^=</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">factor</span><span class="p">,</span> <span class="n">I</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">I</span></div>
+
+
+<div class="viewcode-block" id="Matrix.differential_branch_number">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.differential_branch_number">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">differential_branch_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Differential branch number of the matrix (not implemented).&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Matrix differential branch number computation is not implemented.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Matrix.linear_branch_number">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.linear_branch_number">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">linear_branch_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Linear branch number of the matrix (not implemented).&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Matrix linear branch number computation is not implemented.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Matrix.zero_star_io_patterns">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.zero_star_io_patterns">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zero_star_io_patterns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enumerate all input patterns (x1..xn) avec xi in {0, &#39;*&#39;}</span>
+<span class="sd">        et deduce the output pattern (y1..ym) with the rules:</span>
+
+<span class="sd">            y_i = 0  iff  for all j such that mat[i][j] != 0, we have x_j == 0</span>
+<span class="sd">            y_i = &#39;*&#39; otherwise</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[tuple] : list of tuples (x1..xn, y1..ym) with values 0 or &#39;*&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span>   <span class="c1"># nb columns</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">)</span>  <span class="c1"># nb rows</span>
+
+        <span class="n">patterns</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="n">forced_zero</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+                        <span class="n">forced_zero</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">break</span>
+                <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">forced_zero</span> <span class="k">else</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
+            <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">patterns</span></div>
+
+
+<div class="viewcode-block" id="Matrix.zero_star_patterns_from_output_via_inverse">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.zero_star_patterns_from_output_via_inverse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zero_star_patterns_from_output_via_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enumerate all output patterns y = (y1..yn) with yi in {0, &#39;*&#39;}</span>
+<span class="sd">        and deduce the corresponding input pattern x = (x1..xn) induced by x = M^{-1} y.</span>
+
+<span class="sd">        Rule (support-based):</span>
+<span class="sd">            x_j is forced to 0 iff for every i such that (M^{-1})[j][i] != 0, we have y_i == 0.</span>
+<span class="sd">            Otherwise x_j is &#39;*&#39;.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[tuple]: list of tuples (x1..xn, y1..yn) with entries 0 or &#39;*&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">inv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inverse_over_gf2m</span><span class="p">()</span>
+
+        <span class="n">n_rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">inv</span><span class="p">)</span>
+        <span class="n">n_cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">inv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># For x = M^{-1} y, inv must be n x n (square)</span>
+        <span class="k">if</span> <span class="n">n_rows</span> <span class="o">!=</span> <span class="n">n_cols</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;M^{-1} must be square for x = M^{-1} y with same dimension.&quot;</span><span class="p">)</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n_rows</span>
+
+        <span class="n">patterns</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">forced_zero</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">inv</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+                        <span class="n">forced_zero</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">break</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">forced_zero</span> <span class="k">else</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
+
+            <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">patterns</span></div>
+
+
+<div class="viewcode-block" id="Matrix.patterns_where_a_star_is_forced_zero">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.patterns_where_a_star_is_forced_zero">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">patterns_where_a_star_is_forced_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enumerate all (x_pattern, y_pattern) in {0,&#39;*&#39;}^n x {0,&#39;*&#39;}^m.</span>
+<span class="sd">        Keep only those for which at least one &#39;*&#39; coordinate is provably forced to 0</span>
+<span class="sd">        by the linear constraint Mx + y = 0, i.e. (M|I) (x||y) = 0.</span>
+
+<span class="sd">        Method for a given pattern:</span>
+<span class="sd">          - Build A = (M | I)</span>
+<span class="sd">          - Remove columns fixed to 0 by the pattern -&gt; A_z</span>
+<span class="sd">          - Compute RREF(A_z) over GF(2^m) (or GF(2) if no polynomial)</span>
+<span class="sd">          - If some unit vector e_i is in the row space (equivalently, RREF has a row equal to e_i),</span>
+<span class="sd">            then the corresponding variable z_i must be 0 in every solution.</span>
+<span class="sd">          - We keep the pattern iff at least one such forced variable corresponds to a &#39;*&#39; in the pattern.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[tuple[tuple, tuple]]: list of (x_pattern, y_pattern) pairs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Dimensions</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># x size</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>     <span class="c1"># y size</span>
+
+        <span class="c1"># ---- Field parameters ----</span>
+        <span class="n">degree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">use_gf2m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">use_gf2m</span><span class="p">:</span>
+            <span class="n">mod_poly</span> <span class="o">=</span> <span class="n">_normalize_mod_poly</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">gf2_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_inv</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">gf2_inv</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">mod_poly</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># GF(2) fallback</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>  <span class="c1"># assuming 0/1 coefficients</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">f_inv</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s2">&quot;Inverse of 0 does not exist in GF(2).&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="mi">1</span>
+
+        <span class="c1"># ---- Build augmented matrix A = (M | I), size m x (n+m) ----</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+        <span class="n">total_cols</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="n">m</span>
+
+        <span class="c1"># Cache: key = tuple(kept_cols) -&gt; set of kept-column indices (0..k-1) that are forced to zero</span>
+        <span class="c1"># (i.e., those i for which e_i is in row space of A_z)</span>
+        <span class="n">cache_forced_indices</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">rref_forced_unit_positions</span><span class="p">(</span><span class="n">Az</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Given Az (rows x cols), compute which column positions i (0..cols-1)</span>
+<span class="sd">            satisfy e_i in row space, i.e. RREF has a row exactly equal to e_i.</span>
+<span class="sd">            Return a set of such i.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">R</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[:]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">Az</span><span class="p">]</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+            <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">R</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">rows</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">forced</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">cols</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">forced</span>
+
+            <span class="n">pivot_row</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">pivot_col_for_row</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">rows</span>
+
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                <span class="c1"># Find pivot</span>
+                <span class="n">sel</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pivot_row</span><span class="p">,</span> <span class="n">rows</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">sel</span> <span class="o">=</span> <span class="n">r</span>
+                        <span class="k">break</span>
+                <span class="k">if</span> <span class="n">sel</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Swap</span>
+                <span class="k">if</span> <span class="n">sel</span> <span class="o">!=</span> <span class="n">pivot_row</span><span class="p">:</span>
+                    <span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">],</span> <span class="n">R</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">sel</span><span class="p">],</span> <span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">]</span>
+
+                <span class="c1"># Normalize pivot to 1</span>
+                <span class="n">pv</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
+                <span class="n">inv_pv</span> <span class="o">=</span> <span class="n">f_inv</span><span class="p">(</span><span class="n">pv</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                    <span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">f_mul</span><span class="p">(</span><span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">inv_pv</span><span class="p">)</span>
+
+                <span class="c1"># Eliminate in other rows</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="n">pivot_row</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="n">factor</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                        <span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">f_add</span><span class="p">(</span><span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">f_mul</span><span class="p">(</span><span class="n">factor</span><span class="p">,</span> <span class="n">R</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">][</span><span class="n">j</span><span class="p">]))</span>
+
+                <span class="n">pivot_col_for_row</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">]</span> <span class="o">=</span> <span class="n">col</span>
+                <span class="n">pivot_row</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">pivot_row</span> <span class="o">==</span> <span class="n">rows</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+            <span class="c1"># Detect unit rows</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+                <span class="n">pc</span> <span class="o">=</span> <span class="n">pivot_col_for_row</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">pc</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">is_unit</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">pc</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">is_unit</span> <span class="o">=</span> <span class="kc">False</span>
+                            <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">R</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="n">is_unit</span> <span class="o">=</span> <span class="kc">False</span>
+                            <span class="k">break</span>
+                <span class="k">if</span> <span class="n">is_unit</span><span class="p">:</span>
+                    <span class="n">forced</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">pc</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">forced</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Enumerate all patterns for x and y</span>
+        <span class="k">for</span> <span class="n">x_pattern</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">y_pattern</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="n">m</span><span class="p">):</span>
+
+                <span class="c1"># Build kept columns list (those with &#39;*&#39;)</span>
+                <span class="n">kept_cols</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">kept_meta</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># map kept position -&gt; (&#39;x&#39;/&#39;y&#39;, original_index)</span>
+
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">x_pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+                        <span class="n">kept_cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                        <span class="n">kept_meta</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">y_pattern</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+                        <span class="n">kept_cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+                        <span class="n">kept_meta</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+
+                <span class="c1"># If no remaining variables, nothing can be forced among &#39;*&#39;</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">kept_cols</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">key</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">kept_cols</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">cache_forced_indices</span><span class="p">:</span>
+                    <span class="n">forced_positions</span> <span class="o">=</span> <span class="n">cache_forced_indices</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Build Az by selecting kept columns</span>
+                    <span class="n">Az</span> <span class="o">=</span> <span class="p">[[</span><span class="n">row</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">kept_cols</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
+                    <span class="n">forced_positions</span> <span class="o">=</span> <span class="n">rref_forced_unit_positions</span><span class="p">(</span><span class="n">Az</span><span class="p">)</span>
+                    <span class="n">cache_forced_indices</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">forced_positions</span>
+
+                <span class="c1"># Keep the pattern iff at least one forced position corresponds to a &#39;*&#39;</span>
+                <span class="c1"># (by construction, all kept positions are &#39;*&#39; already)</span>
+                <span class="k">if</span> <span class="n">forced_positions</span><span class="p">:</span>
+                    <span class="c1"># sanity: forced_positions are indices in 0..len(kept_cols)-1</span>
+                    <span class="c1"># so they always correspond to &#39;*&#39;</span>
+                    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x_pattern</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">y_pattern</span><span class="p">),</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x_pattern</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">y_pattern</span><span class="p">),</span> <span class="s1">&#39;0&#39;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">results</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_word_model_vars</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return (var_in, var_out) as word-level (activity) model variables for every input/output word.&quot;&quot;&quot;</span>
+        <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)):</span>
+            <span class="n">var_in</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">)):</span>
+            <span class="n">var_out</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_binary_matrix_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the bit-level GF(2) matrix, dispatching on the three ``mat`` definitions (see __init__).&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">:</span>  <span class="c1"># case 1: GF(2^m) word matrix -&gt; expand to its primitive matrix representation</span>
+            <span class="k">return</span> <span class="n">generate_pmr_for_mds</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">):</span>  <span class="c1"># case 2: GF(2) word matrix -&gt; block expansion (1 -&gt; I, 0 -&gt; 0)</span>
+            <span class="k">return</span> <span class="n">generate_bin_matrix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">):</span>  <span class="c1"># case 3: already a bit-level matrix</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Matrix </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="si">}</span><span class="s2"> not supported.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_bit_matrix_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">bin_matrix</span><span class="p">,</span> <span class="n">source_vars</span><span class="p">,</span> <span class="n">target_vars</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Per output bit, constrain it to the XOR of the input bits selected by ``bin_matrix``; for MILP</span>
+<span class="sd">        append the Binary declaration (and Integer dummies for rows with &gt;=3 active inputs).</span>
+
+<span class="sd">        Flattens the word/bit variables into plain bit-name lists and delegates the row-by-row</span>
+<span class="sd">        modeling to the matrix-level helpers in operator_constraints.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bits_per_source</span> <span class="o">=</span> <span class="n">source_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span>
+        <span class="n">bits_per_target</span> <span class="o">=</span> <span class="n">target_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span>
+        <span class="n">source_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">sv</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">bits_per_source</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                       <span class="k">for</span> <span class="n">sv</span> <span class="ow">in</span> <span class="n">source_vars</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bits_per_source</span><span class="p">)]</span>
+        <span class="n">target_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">tv</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">bits_per_target</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                       <span class="k">for</span> <span class="n">tv</span> <span class="ow">in</span> <span class="n">target_vars</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bits_per_target</span><span class="p">)]</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="n">gen_matrix_constraints</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span> <span class="o">+=</span> <span class="n">gen_matrix_declarations</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model_list</span>
+
+<div class="viewcode-block" id="Matrix.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Emit a call to the matrix macro: ``(out...) = name(in...)`` (python) or ``name(in..., out...);`` (c).&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">input_args</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)))</span>
+        <span class="n">output_args</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">output_args</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">input_args</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">input_args</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">output_args</span><span class="si">}</span><span class="s2">);&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Matrix.get_header_ID">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.get_header_ID">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_header_ID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Identity used to de-duplicate headers: class, version, bitsize, matrix and polynomial.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Matrix.generate_implementation_header_unique">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.generate_implementation_header_unique">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation_header_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Emit the shared GF(2^m) multiplication macro (GMUL), once per distinct header.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#Galois Field Multiplication Macro&quot;</span><span class="p">,</span> <span class="s2">&quot;def GMUL(a, b, p, d):</span><span class="se">\n\t</span><span class="s2">result = 0</span><span class="se">\n\t</span><span class="s2">while b &gt; 0:</span><span class="se">\n\t\t</span><span class="s2">if b &amp; 1:</span><span class="se">\n\t\t\t</span><span class="s2">result ^= a</span><span class="se">\n\t\t</span><span class="s2">a &lt;&lt;= 1</span><span class="se">\n\t\t</span><span class="s2">if a &amp; (1 &lt;&lt; d):</span><span class="se">\n\t\t\t</span><span class="s2">a ^= p</span><span class="se">\n\t\t</span><span class="s2">b &gt;&gt;= 1</span><span class="se">\n\t</span><span class="s2">return result &amp; ((1 &lt;&lt; d) - 1)</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;//Galois Field Multiplication Macro&quot;</span><span class="p">,</span> <span class="s2">&quot;#define GMUL(a, b, p, d) ({ </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">unsigned int result = 0; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">unsigned int temp_a = a; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">unsigned int temp_b = b; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">while (temp_b &gt; 0) { </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">if (temp_b &amp; 1) </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">result ^= temp_a; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">temp_a &lt;&lt;= 1; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">if (temp_a &amp; (1 &lt;&lt; d)) </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">temp_a ^= p; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">temp_b &gt;&gt;= 1; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">} </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">result &amp; ((1 &lt;&lt; d) - 1); </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;})&quot;</span><span class="p">];</span>
+        <span class="k">return</span> <span class="n">model_list</span></div>
+
+
+<div class="viewcode-block" id="Matrix.generate_implementation_header">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.generate_implementation_header">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Emit the matrix&#39;s macro definition (each output word = XOR / GMUL of the input words).&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#Matrix Macro &quot;</span><span class="p">]</span>
+            <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;def &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">]))])[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="o">+</span> <span class="s2">&quot;):&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">out_v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">):</span>
+                <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;y&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span><span class="p">:</span>
+                            <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                            <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">else</span><span class="p">:</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot; ^ &quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span><span class="p">:</span>
+                            <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot;GMUL(&quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+                            <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">else</span><span class="p">:</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot; ^ &quot;</span> <span class="o">+</span> <span class="s2">&quot;GMUL(&quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+            <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">return (&quot;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;y&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">))])[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">model_list</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;//Matrix Macro &quot;</span><span class="p">]</span>
+            <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;#define &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">]))])[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span>  <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;y&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">))])[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;)  { </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">out_v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">):</span>
+                <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;y&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">in_v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span><span class="p">:</span>
+                            <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                            <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">else</span><span class="p">:</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot; ^ &quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span><span class="p">:</span>
+                            <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot;GMUL(&quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+                            <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                        <span class="k">else</span><span class="p">:</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="s2">&quot; ^ &quot;</span> <span class="o">+</span> <span class="s2">&quot;GMUL(&quot;</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polynomial</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span> <span class="o">+</span> <span class="s2">&quot;; </span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;} &quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">model_list</span></div>
+
+
+<div class="viewcode-block" id="Matrix.generate_model">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.Matrix.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="n">branch_num</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tool_type</span><span class="o">=</span><span class="s2">&quot;minimize_logic&quot;</span><span class="p">,</span> <span class="n">filename_load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate the SAT/MILP model. XORDIFF/LINEAR use the bit-matrix; the TRUNCATED* versions use</span>
+<span class="sd">        either the branch-number inequalities (when ``branch_num`` is given) or the valid-pattern template.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="c1"># Modeling for differential / linear cryptanalysis</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">]:</span>
+            <span class="n">bin_matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_binary_matrix_representation</span><span class="p">()</span>
+            <span class="n">dummy_prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_d&#39;</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="c1"># XORDIFF: each output bit = XOR of the input bits (rows of the bit-matrix).</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_bit_matrix_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">bin_matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="c1"># LINEAR: masks propagate through the transpose (input mask = XOR of output masks).</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_bit_matrix_constraints</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">bin_matrix</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+
+        <span class="c1"># Modeling for truncated differential / linear cryptanalysis</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_2&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_2&quot;</span><span class="p">]:</span>
+            <span class="c1"># If a branch number is provided, use the MILP branch-number model.</span>
+            <span class="c1"># TODO: auto-compute branch_num via differential_branch_number()/linear_branch_number() (not implemented).</span>
+            <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="n">branch_num</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_1&quot;</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_model_truncated_diff_linear_branch_num</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">branch_num</span><span class="p">)</span>
+            <span class="c1"># Otherwise fall back to the exact valid-pattern model (the _2 variant).</span>
+            <span class="n">effective_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_1&quot;</span><span class="p">]:</span>
+                <span class="n">effective_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_2&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] The </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2"> model for differential branch number = </span><span class="si">{</span><span class="n">branch_num</span><span class="si">}</span><span class="s2"> is not implemented. Turn to model_version </span><span class="si">{</span><span class="n">effective_version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_1&quot;</span><span class="p">]:</span>
+                <span class="n">effective_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_2&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] The </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2"> model for linear branch number = </span><span class="si">{</span><span class="n">branch_num</span><span class="si">}</span><span class="s2"> is not implemented. Turn to model_version </span><span class="si">{</span><span class="n">effective_version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="c1"># Generate the model describing all valid input/output patterns.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model_filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_matrix_constraints_files_dir</span><span class="p">()</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;constraints_</span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">effective_version</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">tool_type</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">filename_load</span> <span class="o">=</span> <span class="n">filename_load</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_model_truncated_diff_linear_valid_patterns</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="n">tool_type</span><span class="p">,</span> <span class="n">effective_version</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_model_truncated_diff_linear_branch_num</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">branch_num</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;MILP truncated model from the matrix branch number: it lower-bounds the total number of active</span>
+<span class="sd">        input/output words whenever the propagation is nonzero (word-level activity variables).&quot;&quot;&quot;</span>
+        <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_word_model_vars</span><span class="p">()</span>
+        <span class="n">var_d</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="si">}</span><span class="s2">_d&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+            <span class="c1"># The first type of modeling. Reference: Nicky Mouha, Qingju Wang, Dawu Gu, and Bart Preneel. Differential and linear cryptanalysis using mixed-integer linear programming.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">]:</span>
+                <span class="n">model_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_in</span> <span class="o">+</span> <span class="n">var_out</span><span class="p">)</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="n">branch_num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">var_d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span><span class="p">]</span>
+                <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var_d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">var_in</span> <span class="o">+</span> <span class="n">var_out</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_d</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># The second type of modeling. Reference: [1] Christina Boura, Patrick Derbez and Margot Funk. Related-Key Differential Analysis of the AES. [2] Patrick Derbez, Marie Euler, Pierre-Alain Fouque, Phuong Hoa Nguyen. Revisiting Related-Key Boomerang attacks on AES using computer-aided tool.</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_1&quot;</span><span class="p">]:</span>
+                <span class="n">model_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_in</span> <span class="o">+</span> <span class="n">var_out</span><span class="p">)</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="n">branch_num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">var_d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> &gt;= 0&quot;</span><span class="p">]</span>
+                <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_in</span> <span class="o">+</span> <span class="n">var_out</span><span class="p">)</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">var_in</span><span class="o">+</span><span class="n">var_out</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">var_d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> &lt;= 0&quot;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_d</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_model_truncated_diff_linear_valid_patterns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">tool_type</span><span class="p">,</span> <span class="n">effective_version</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;MILP/SAT truncated model from the exact set of valid word-activity patterns: build the truth table</span>
+<span class="sd">        of feasible (x,y) patterns, then compile it to constraints (cached to a template file).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">input_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span>
+        <span class="n">output_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">)</span>
+        <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_word_model_vars</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename_load</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model_filename</span><span class="p">):</span>
+            <span class="n">model_list</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">gen_constraints_obj_func_from_template</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model_filename</span><span class="p">,</span> <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">model_list</span>
+
+        <span class="k">if</span> <span class="n">effective_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_2&quot;</span><span class="p">]:</span>
+            <span class="n">all_patterns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patterns_where_a_star_is_forced_zero</span><span class="p">()</span>
+            <span class="n">patterns</span> <span class="o">=</span> <span class="p">[(</span><span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">)</span> <span class="k">for</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">all_patterns</span> <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">]</span>
+            <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="mi">0</span><span class="p">,)</span> <span class="o">*</span> <span class="n">input_words</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span> <span class="o">*</span> <span class="n">output_words</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">effective_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR_2&quot;</span><span class="p">]:</span>
+            <span class="n">mat</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>
+            <span class="n">mat_trans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mat</span> <span class="o">=</span> <span class="n">mat_trans</span>
+            <span class="n">all_patterns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patterns_where_a_star_is_forced_zero</span><span class="p">()</span>
+            <span class="n">patterns</span> <span class="o">=</span> <span class="p">[(</span><span class="n">yp</span><span class="p">,</span> <span class="n">xp</span><span class="p">)</span> <span class="k">for</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">all_patterns</span> <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">]</span>
+            <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="mi">0</span><span class="p">,)</span> <span class="o">*</span> <span class="n">input_words</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span> <span class="o">*</span> <span class="n">output_words</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mat</span> <span class="o">=</span> <span class="n">mat</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">effective_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+
+        <span class="n">pattern_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+        <span class="n">truth_bits</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">input_words</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s1">&#39;*&#39;</span> <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;0</span><span class="si">{</span><span class="n">input_words</span><span class="si">}</span><span class="s2">b&quot;</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">output_words</span><span class="p">):</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s1">&#39;*&#39;</span> <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">format</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;0</span><span class="si">{</span><span class="n">output_words</span><span class="si">}</span><span class="s2">b&quot;</span><span class="p">))</span>
+                <span class="n">pattern</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">truth_bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;1&quot;</span> <span class="k">if</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">pattern_set</span> <span class="k">else</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+        <span class="n">ttable</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">truth_bits</span><span class="p">)</span>
+
+        <span class="n">input_variables</span><span class="p">,</span> <span class="n">output_variables</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;a</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">var_in</span><span class="p">))],</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;b</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">var_out</span><span class="p">))]</span>
+        <span class="n">constraints</span><span class="p">,</span> <span class="n">template_obj_fun</span> <span class="o">=</span> <span class="n">generate_and_save_constraints</span><span class="p">(</span>
+            <span class="n">model_type</span><span class="p">,</span>
+            <span class="n">tool_type</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span>
+            <span class="n">ttable</span><span class="p">,</span>
+            <span class="n">input_variables</span><span class="p">,</span>
+            <span class="n">output_variables</span><span class="p">,</span>
+            <span class="n">model_filename</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model_filename</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">model_list</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">instantiate_constraints_template</span><span class="p">(</span>
+            <span class="n">constraints</span><span class="p">,</span>
+            <span class="n">template_obj_fun</span><span class="p">,</span>
+            <span class="n">var_in</span><span class="p">,</span>
+            <span class="n">var_out</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">model_list</span></div>
+
+
+
+<div class="viewcode-block" id="GF2Linear_Trans">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.GF2Linear_Trans">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">GF2Linear_Trans</span><span class="p">(</span><span class="n">UnaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Linear transformation over GF(2^n) defined by a binary matrix (y = M*x).&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="n">SUPPORTED_IMPLEMENTATIONS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build a GF(2)-linear transform y = M*x defined by the square binary matrix ``mat`` (optional constants).&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;GF2Linear_Trans: the matrix should be square.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mat</span> <span class="o">=</span> <span class="n">mat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constants</span> <span class="o">=</span> <span class="n">constants</span>
+
+
+<div class="viewcode-block" id="GF2Linear_Trans.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.GF2Linear_Trans.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Emit y = M*x expanded bit-by-bit (each output bit = XOR of the selected input bits, plus any constant).&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">var_in</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span>
+        <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">var_out</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;((&quot;</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; ^ &quot;</span>
+                        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;((</span><span class="si">{</span><span class="n">var_in</span><span class="si">}</span><span class="s2"> &gt;&gt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">) &amp; 1)&quot;</span>
+                        <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; ^ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">) &lt;&lt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">) | &quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;) &lt;&lt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">) | &quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">var_out</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;(&quot;</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">first</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; ^ &quot;</span>
+                        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;((</span><span class="si">{</span><span class="n">var_in</span><span class="si">}</span><span class="s2"> &gt;&gt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">) &amp; 1)&quot;</span>
+                        <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; ^ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">) &lt;&lt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> | &quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;) &lt;&lt; </span><span class="si">{</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> | &quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_bit_diff_linear_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">source_id</span><span class="p">,</span> <span class="n">target_id</span><span class="p">,</span> <span class="n">model_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Per target bit i, constrain it to the XOR of the source bits j with ``matrix[i][j] == 1``.</span>
+
+<span class="sd">        Builds the source/target bit-name lists for this single-word transform and delegates to the</span>
+<span class="sd">        matrix-level helpers in operator_constraints.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">source_bits</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">source_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span>
+        <span class="n">target_bits</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">))]</span>
+        <span class="n">dummy_prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_d&#39;</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="n">gen_matrix_constraints</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+            <span class="n">model_list</span> <span class="o">+=</span> <span class="n">gen_matrix_declarations</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">source_bits</span><span class="p">,</span> <span class="n">target_bits</span><span class="p">,</span> <span class="n">dummy_prefix</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model_list</span>
+
+<div class="viewcode-block" id="GF2Linear_Trans.generate_model">
+<a class="viewcode-back" href="../../api/operators/matrix.html#operators.matrix.GF2Linear_Trans.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;SAT/MILP model: XORDIFF/LINEAR expand each bit as an XOR over the (transposed for LINEAR) matrix row;</span>
+<span class="sd">        the TRUNCATED* versions collapse to a single word-activity equality when the matrix is (near-)a permutation.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">]:</span>
+            <span class="c1"># Differential: each output bit = XOR of the input bits selected by its matrix row.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_diff_linear_constraints</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+            <span class="c1"># Linear: masks propagate through the transposed matrix (input mask = XOR of output masks).</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_diff_linear_constraints</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+            <span class="c1"># Truncated: if the matrix is (near-)a permutation of unit rows, model as a single word-activity equality.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">]:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="n">unit_vectors</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">):</span>
+                        <span class="n">unit_vectors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unit_vectors</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mat</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">model_list</span> <span class="o">=</span> <span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                        <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                    <span class="k">return</span> <span class="n">model_list</span>
+                <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

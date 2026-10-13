@@ -1,0 +1,6 @@
+operator_capabilities
+=====================
+
+.. automodule:: capabilities.operator_capabilities
+   :members:
+   :show-inheritance:

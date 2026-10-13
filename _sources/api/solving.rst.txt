@@ -1,0 +1,9 @@
+solving
+=======
+
+Automated solving backends (MILP, SAT, CP).
+
+.. toctree::
+   :maxdepth: 1
+
+   solving/solving

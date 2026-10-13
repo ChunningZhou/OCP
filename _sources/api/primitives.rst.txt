@@ -1,0 +1,29 @@
+primitives
+==========
+
+Cryptographic primitives (permutations and block ciphers).
+
+.. toctree::
+   :maxdepth: 1
+
+   primitives/aes
+   primitives/ascon
+   primitives/chacha
+   primitives/forro
+   primitives/gift
+   primitives/knot
+   primitives/lblock
+   primitives/led
+   primitives/present
+   primitives/primitives
+   primitives/rectangle
+   primitives/rocca
+   primitives/salsa
+   primitives/shacal2
+   primitives/simeck
+   primitives/simon
+   primitives/siphash
+   primitives/skinny
+   primitives/speck
+   primitives/trivium
+   primitives/twine

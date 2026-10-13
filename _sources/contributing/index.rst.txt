@@ -1,0 +1,24 @@
+Extending & Contributing
+========================
+
+.. note::
+
+   Coming soon.
+
+..
+   Original content, commented out rather than deleted. Restore by removing the
+   ``..`` comment marker above this block and deleting the note above.
+
+   How to extend OCP with new primitives, operators, and attacks, and how to
+   reproduce the paper's results.
+
+   .. note::
+
+      This section is under construction. The guides below are planned.
+
+   - **Add a new primitive** — model a new cipher, following the AES / SPECK examples.
+   - **Add a new operator / encoding** — expose a new ``model_version`` for an operator.
+   - **Add a new attack** — ``operators/`` → ``attacks/`` → ``test/``, reusing the
+     representation, model generation, and solving pipeline unchanged.
+   - **Reproduce the paper's results** — exact commands and configurations.
+   - **Contributing** — code style and the pull-request workflow.

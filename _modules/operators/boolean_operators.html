@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operators.boolean_operators &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/operators/boolean_operators';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">operators.boolean_operators</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for operators.boolean_operators</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Bitwise boolean operators: AND, OR, XOR, N_XOR (n-ary XOR), NOT, ConstantXOR, and ANDXOR.</span>
+
+<span class="sd">Each provides python/C/Verilog code generation and SAT/MILP model generation across the</span>
+<span class="sd">differential / linear / truncated / integral model versions.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">operators.operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">Operator</span><span class="p">,</span> <span class="n">BinaryOperator</span><span class="p">,</span> <span class="n">UnaryOperator</span><span class="p">,</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">,</span> <span class="n">raise_unknown_implementation_type</span><span class="p">,</span> <span class="n">raise_unknown_model_type</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.operator_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_xor_constraints</span><span class="p">,</span> <span class="n">gen_word_xor_constraints</span><span class="p">,</span> <span class="n">gen_nxor_constraints</span><span class="p">,</span> <span class="n">gen_word_nxor_constraints</span><span class="p">,</span> <span class="n">binary_declaration</span><span class="p">,</span> <span class="n">integer_declaration</span><span class="p">,</span> <span class="n">gen_equivalence_constraints</span><span class="p">,</span> <span class="n">gen_or_constraints</span><span class="p">,</span> <span class="n">gen_implication_constraints</span>
+
+
+<div class="viewcode-block" id="AND">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.AND">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AND</span><span class="p">(</span><span class="n">BinaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bitwise AND of the two input variables into the output.&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="AND.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.AND.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">lhs</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> &amp; </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> &amp; </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;assign </span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> &amp; </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AND.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.AND.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">var_p</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_p_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">):</span>
+            <span class="c1"># Differential: the weight bit is active iff either input difference is (p = i1 OR i2),</span>
+            <span class="c1"># and the output difference can only be active where p is (o -&gt; p).</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_or_constraints</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Linear: each input mask implies the weight bit, which equals the output mask (p = o).</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">i2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">([</span><span class="n">p</span><span class="p">],</span> <span class="p">[</span><span class="n">o</span><span class="p">],</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Two-subset integral: the output division-property bit is i1 OR i2.</span>
+            <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_INTEGRAL_TWOSUBSET&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">):</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_or_constraints</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="OR">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.OR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">OR</span><span class="p">(</span><span class="n">BinaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bitwise OR of the two input variables into the output.&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="OR.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.OR.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">lhs</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;assign </span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OR.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.OR.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">var_p</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_p_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">):</span>
+            <span class="c1"># OR shares AND&#39;s activity-propagation model (support behaves the same under XOR / masks).</span>
+            <span class="c1"># Differential: p = i1 OR i2, and o -&gt; p.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_or_constraints</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Linear: each input mask implies the weight bit, which equals the output mask (p = o).</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_implication_constraints</span><span class="p">(</span><span class="n">i2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">([</span><span class="n">p</span><span class="p">],</span> <span class="p">[</span><span class="n">o</span><span class="p">],</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span> <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="k">else</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="XOR">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.XOR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">XOR</span><span class="p">(</span><span class="n">BinaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bitwise XOR of the two input variables into the output.&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_2&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_2&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;INTEGRAL_TWOSUBSET&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="XOR.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.XOR.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">lhs</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;assign </span><span class="si">{</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">left</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">right</span><span class="si">}</span><span class="s2">;&quot;</span><span class="p">]</span>
+        <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="XOR.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.XOR.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">]:</span>
+            <span class="c1"># Modeling for differential cryptanalysis</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_2&quot;</span><span class="p">]:</span>
+                <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">version</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+                <span class="n">dummies</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">var_in1</span><span class="p">)):</span>
+                    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="n">version</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_d_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="n">dummies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_xor_constraints</span><span class="p">(</span><span class="n">var_in1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">var_in2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">var_out</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">dummies</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for word truncated differential cryptanalysis</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF_1&quot;</span><span class="p">]:</span>
+                <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>  <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="n">version</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="n">version</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_d&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">d</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_word_xor_constraints</span><span class="p">(</span><span class="n">var_in1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">var_in2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">var_out</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="k">if</span> <span class="n">d</span> <span class="k">else</span> <span class="p">[]))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for linear cryptanalysis: both input masks equal the output mask.</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for two-subset integral cryptanalysis (MILP only)</span>
+            <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_INTEGRAL_TWOSUBSET&quot;</span><span class="p">:</span>
+                <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for word truncated linear cryptanalysis: both input activities equal the output.</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">:</span>
+                <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">else</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="N_XOR">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.N_XOR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">N_XOR</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;N-ary XOR of all input variables into the output (a_0 xor a_1 xor ... xor a_n = b).&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="N_XOR.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.N_XOR.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="n">expression</span> <span class="o">=</span> <span class="s2">&quot; ^ &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="n">expression</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="n">expression</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;assign &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="n">expression</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="N_XOR.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.N_XOR.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">]:</span>
+            <span class="c1"># Modeling for differential cryptanalysis</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_1&quot;</span><span class="p">]:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+                <span class="n">all_in</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="p">[])</span>  <span class="c1"># every input bit, for the Binary declaration</span>
+                <span class="n">var_in</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">var_in</span><span class="p">)]</span>
+                <span class="n">version</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+                <span class="n">integer_dummies</span><span class="p">,</span> <span class="n">binary_dummies</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="n">version</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_d_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="n">integer_dummies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>  <span class="c1"># version 0 uses a single integer dummy per bit</span>
+                    <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span> <span class="ow">and</span> <span class="n">version</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="si">}</span><span class="s2">_d_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))]</span>
+                        <span class="n">binary_dummies</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>  <span class="c1"># version 1 uses binary dummies</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_nxor_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">var_out</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">v_dummy</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">all_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">binary_dummies</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">integer_dummies</span><span class="p">:</span>
+                        <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">integer_declaration</span><span class="p">(</span><span class="n">integer_dummies</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for word truncated differential cryptanalysis</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">:</span>  <span class="c1"># Reference: Related-Key Differential Analysis of the AES.</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">iv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">iv</span> <span class="ow">in</span> <span class="n">var_in</span><span class="p">]</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">var_out</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_word_nxor_constraints</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="p">[</span><span class="n">output</span><span class="p">]))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for linear cryptanalysis: every input mask equals the output mask.</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">input_bits</span> <span class="ow">in</span> <span class="n">var_in</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_out</span><span class="p">,</span> <span class="n">input_bits</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="c1"># Modeling for word truncated linear cryptanalysis</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">))],</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">input_word</span> <span class="ow">in</span> <span class="n">var_in</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_out</span><span class="p">,</span> <span class="n">input_word</span><span class="p">,</span> <span class="n">model_type</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">else</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="NOT">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.NOT">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NOT</span><span class="p">(</span><span class="n">UnaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bitwise NOT of the input variable into the output.&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="NOT.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.NOT.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; ^ &#39;</span> <span class="o">+</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; ^ &#39;</span> <span class="o">+</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;assign &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = ~&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="NOT.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.NOT.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">]:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+                <span class="n">model_list</span> <span class="o">=</span> <span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                    <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">else</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ConstantXOR">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConstantXOR</span><span class="p">(</span><span class="n">UnaryOperator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;XOR a round constant into the input variable (constant addition via XOR).&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;TRUNCATEDLINEAR&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">constant_table</span><span class="p">,</span> <span class="nb">round</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">table_name</span> <span class="o">=</span> <span class="s2">&quot;RC&quot;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">constant_table</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table_r</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_i</span> <span class="o">=</span> <span class="nb">round</span><span class="p">,</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span> <span class="o">=</span> <span class="n">table_name</span>
+
+<div class="viewcode-block" id="ConstantXOR.get_header_ID">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.get_header_ID">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_header_ID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="ConstantXOR.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unroll</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span> <span class="n">my_constant</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">table_r</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">table_i</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">my_constant</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_name</span><span class="si">}</span><span class="s2">[i][</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table_i</span><span class="si">}</span><span class="s2">]&quot;</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; ^ &#39;</span> <span class="o">+</span> <span class="n">my_constant</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; ^ &#39;</span> <span class="o">+</span> <span class="n">my_constant</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;//&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;assign &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; ^ &#39;</span> <span class="o">+</span> <span class="n">my_constant</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ConstantXOR.generate_implementation_header">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_implementation_header">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_name</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;#Constraints List</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="n">bit_size</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+            <span class="n">var_def_c</span> <span class="o">=</span> <span class="s1">&#39;uint8_t&#39;</span> <span class="k">if</span> <span class="n">bit_size</span> <span class="o">&lt;=</span> <span class="mi">8</span> <span class="k">else</span> <span class="s2">&quot;uint32_t&quot;</span> <span class="k">if</span> <span class="n">bit_size</span> <span class="o">&lt;=</span> <span class="mi">32</span> <span class="k">else</span> <span class="s2">&quot;uint64_t&quot;</span> <span class="k">if</span> <span class="n">bit_size</span> <span class="o">&lt;=</span> <span class="mi">64</span> <span class="k">else</span> <span class="s2">&quot;uint128_t&quot;</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;// Constraints List</span><span class="se">\n</span><span class="si">{</span><span class="n">var_def_c</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">[][</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">] = </span><span class="se">{{\n</span><span class="s2">    &quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;{ &quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">row</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; }&quot;</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">};&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="n">bit_size</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+            <span class="k">return</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;// Constraints List</span><span class="se">\n</span><span class="s2">reg [</span><span class="si">{</span><span class="n">bit_size</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">:0] </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> [0:</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">][0:</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">];&quot;</span><span class="p">,</span> <span class="s2">&quot;initial begin&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;    </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">][</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">bit_size</span><span class="si">}</span><span class="s2">&#39;h</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s2">X</span><span class="si">}</span><span class="s2">;&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;end&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="ConstantXOR.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ConstantXOR.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;milp&#39;</span><span class="p">):</span>
+            <span class="c1"># Each branch only selects the variable granularity; the equivalence and the single</span>
+            <span class="c1"># Binary declaration are emitted once below.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">]:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDDIFF&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_TRUNCATEDLINEAR&quot;</span><span class="p">]:</span>
+                <span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+            <span class="n">model_list</span> <span class="o">=</span> <span class="n">gen_equivalence_constraints</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in</span><span class="p">,</span> <span class="n">var_out</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">model_list</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ANDXOR">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ANDXOR</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bitwise AND-XOR: out = (in0 &amp; in1) ^ in2.&quot;&quot;&quot;</span>
+
+    <span class="n">SUPPORTED_MODEL_VERSIONS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sat&quot;</span><span class="p">:</span>  <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;milp&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;XORDIFF&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_1&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_2&quot;</span><span class="p">,</span> <span class="s2">&quot;XORDIFF_3&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;LINEAR_1&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_vars</span><span class="p">,</span> <span class="n">output_vars</span><span class="p">,</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ANDXOR.generate_implementation">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR.generate_implementation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_implementation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">implementation_type</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">unroll</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_implementation</span><span class="p">(</span><span class="n">implementation_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = (&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &amp; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;) ^ &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = (&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &amp; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;) ^ &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">implementation_type</span> <span class="o">==</span> <span class="s1">&#39;verilog&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;assign &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; = (&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &amp; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;) ^ &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_var_ID</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">unroll</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_implementation_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">implementation_type</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ANDXOR.generate_model">
+<a class="viewcode-back" href="../../api/operators/boolean_operators.html#operators.boolean_operators.ANDXOR.generate_model">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;sat&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_supported_model_version</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">model_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_var_model</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">var_p</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">+</span> <span class="s1">&#39;_p_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_vars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bitsize</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;sat&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span>
+                        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-</span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> -</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">var_p</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;milp&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_1&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_2&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 1 -&gt; </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &gt;= 1&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_XORDIFF_3&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> = 0 -&gt; </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> = 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &lt;= 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;_LINEAR_1&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i3</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">):</span>
+                    <span class="n">model_list</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i3</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> &gt;= 0&#39;</span><span class="p">]</span>
+                <span class="n">model_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary_declaration</span><span class="p">(</span><span class="n">var_in1</span><span class="p">,</span> <span class="n">var_in2</span><span class="p">,</span> <span class="n">var_in3</span><span class="p">,</span> <span class="n">var_out</span><span class="p">,</span> <span class="n">var_p</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">var_p</span><span class="p">)]</span>
+                <span class="k">return</span> <span class="n">model_list</span>
+            <span class="k">else</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;cp&#39;</span><span class="p">:</span> <span class="n">RaiseExceptionVersionNotExisting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_version</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">raise_unknown_model_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_eval_bit</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  <span class="c1"># x = in0 || in1 || in2</span>
+        <span class="n">in0</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+        <span class="n">in1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+        <span class="n">in2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">in0</span> <span class="o">&amp;</span> <span class="n">in1</span><span class="p">)</span> <span class="o">^</span> <span class="n">in2</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_andxor_ddt</span><span class="p">():</span>
+        <span class="n">ddt</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">dx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+                <span class="n">dy</span> <span class="o">=</span> <span class="n">ANDXOR</span><span class="o">.</span><span class="n">_eval_bit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">^</span> <span class="n">ANDXOR</span><span class="o">.</span><span class="n">_eval_bit</span><span class="p">(</span><span class="n">x</span> <span class="o">^</span> <span class="n">dx</span><span class="p">)</span>
+                <span class="n">ddt</span><span class="p">[</span><span class="n">dx</span><span class="p">][</span><span class="n">dy</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">ddt</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_andxor_lat</span><span class="p">():</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">parity</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">bin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+
+        <span class="n">lat</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+                    <span class="n">exponent</span> <span class="o">=</span> <span class="n">parity</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="o">^</span> <span class="n">parity</span><span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="n">ANDXOR</span><span class="o">.</span><span class="n">_eval_bit</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+                    <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">exponent</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="n">lat</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span>
+        <span class="k">return</span> <span class="n">lat</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_andxor_diff_truth_table</span><span class="p">():</span>
+        <span class="n">ddt</span> <span class="o">=</span> <span class="n">ANDXOR</span><span class="o">.</span><span class="n">bit_andxor_ddt</span><span class="p">()</span>
+        <span class="n">ttable</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">wbit</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="n">ddt</span><span class="p">[</span><span class="n">dx</span><span class="p">][</span><span class="n">dy</span><span class="p">]</span>
+            <span class="n">ttable</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">wbit</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">wbit</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="k">return</span> <span class="n">ttable</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_andxor_linear_truth_table</span><span class="p">():</span>
+        <span class="n">lat</span> <span class="o">=</span> <span class="n">ANDXOR</span><span class="o">.</span><span class="n">bit_andxor_lat</span><span class="p">()</span>
+        <span class="n">ttable</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="n">mx</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>
+            <span class="n">my</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">wbit</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lat</span><span class="p">[</span><span class="n">mx</span><span class="p">][</span><span class="n">my</span><span class="p">])</span>
+            <span class="n">ttable</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">wbit</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">wbit</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="k">return</span> <span class="n">ttable</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

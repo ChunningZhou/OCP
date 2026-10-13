@@ -1,0 +1,10 @@
+Getting started
+===============
+
+Install OCP and run your first examples.
+
+.. toctree::
+   :maxdepth: 1
+
+   installation
+   quickstart

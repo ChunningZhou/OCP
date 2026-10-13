@@ -1,0 +1,6 @@
+matrix
+======
+
+.. automodule:: operators.matrix
+   :members:
+   :show-inheritance:

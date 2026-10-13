@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attacks.attack_trace &#8212; OCP documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=36006938" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/attacks/attack_trace';</script>
+    <link rel="icon" href="../../_static/logo_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_icon.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_icon.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">OCP</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Extending & Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Open-CP/OCP" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">attacks.attack_trace</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for attacks.attack_trace</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Attack results: representation, formatting, and persistence.</span>
+
+<span class="sd">Defines the ``AttackTrace`` abstract base and its concrete trails (``DifferentialTrail`` /</span>
+<span class="sd">``LinearTrail``) built from a solver solution, plus the shared helpers used to turn a solution</span>
+<span class="sd">into per-round trail structures and render/save them.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.paths</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_files_dir</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tools.model_constraints</span><span class="w"> </span><span class="kn">import</span> <span class="n">expand_var_ids</span>
+
+
+<div class="viewcode-block" id="bin_to_hex">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.bin_to_hex">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">bin_to_hex</span><span class="p">(</span><span class="n">bits</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format a bit string as hexadecimal, keeping ``&quot;-&quot;`` for unknown nibbles.</span>
+
+<span class="sd">    ``bits`` is read most-significant-bit first. Each 4-bit group (nibble) becomes one</span>
+<span class="sd">    hex digit. A nibble is rendered as ``&quot;-&quot;`` whenever it contains any unknown bit</span>
+<span class="sd">    (``&quot;-&quot;``); this is lossy, since a partially unknown nibble such as ``&quot;1-01&quot;`` cannot</span>
+<span class="sd">    be represented exactly. When the length is not a multiple of 4, the input is padded</span>
+<span class="sd">    with leading ``&quot;0&quot;`` (on the high/MSB side) so that the represented value is</span>
+<span class="sd">    preserved. A warning is printed when padding is added or when a mixed nibble is</span>
+<span class="sd">    collapsed to ``&quot;-&quot;``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bits (str): A string of ``&quot;0&quot;`` / ``&quot;1&quot;`` / ``&quot;-&quot;`` characters, MSB first.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The hex string, one character per nibble.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; bin_to_hex(&quot;1010&quot;)</span>
+<span class="sd">        &#39;a&#39;</span>
+<span class="sd">        &gt;&gt;&gt; bin_to_hex(&quot;----&quot;)    # fully-unknown nibble</span>
+<span class="sd">        &#39;-&#39;</span>
+<span class="sd">        &gt;&gt;&gt; bin_to_hex(&quot;1-01&quot;)    # mixed unknown bits -&gt; lossy &#39;-&#39; (warns)</span>
+<span class="sd">        &#39;-&#39;</span>
+<span class="sd">        &gt;&gt;&gt; bin_to_hex(&quot;101&quot;)     # left-padded to &quot;0101&quot; (warns)</span>
+<span class="sd">        &#39;5&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">pad</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">*</span> <span class="n">pad</span> <span class="o">+</span> <span class="n">bits</span>  <span class="c1"># Left-pad with zeros (high/MSB side) to align nibbles, preserving the value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] Padded </span><span class="si">{</span><span class="n">pad</span><span class="si">}</span><span class="s2"> leading &#39;0&#39;(s) to align to 4-bit nibbles for hex formatting.&quot;</span><span class="p">)</span>
+    <span class="n">hex_digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Convert each 4-bit group to hex, but keep &quot;-&quot; when any bit is unknown.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">),</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="n">bits</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">&quot;-&quot;</span> <span class="ow">in</span> <span class="n">chunk</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">chunk</span> <span class="o">!=</span> <span class="s2">&quot;----&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARNING] Nibble &#39;</span><span class="si">{</span><span class="n">chunk</span><span class="si">}</span><span class="s2">&#39; contains mixed unknown bits; using &#39;-&#39; as a lossy representation.&quot;</span><span class="p">)</span>
+            <span class="n">hex_digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hex_digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="mi">2</span><span class="p">))[</span><span class="mi">2</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hex_digits</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AttackTrace">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AttackTrace</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base for an attack result.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        attack_type (str): The type of the trail (e.g. ``&quot;differential&quot;``, ``&quot;linear&quot;``, ``&quot;integral&quot;``).</span>
+<span class="sd">        data (dict): Attack data. Must contain ``&quot;cipher&quot;`` (str, cipher name,</span>
+<span class="sd">            e.g. ``&quot;AES&quot;``); other keys are read on demand by the concrete subclasses.</span>
+<span class="sd">        solution_trace (dict, optional): Mapping from variable name to its value,</span>
+<span class="sd">            e.g. the solution returned by a MILP/SAT solver. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attack_type</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">&quot;cipher&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must contain &#39;cipher&#39;&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">attack_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solution_trace</span> <span class="o">=</span> <span class="n">solution_trace</span> <span class="ow">or</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="AttackTrace.to_dict">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the attack result as a JSON-serializable dictionary.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A mapping with the keys ``&quot;type&quot;`` (uppercased attack type),</span>
+<span class="sd">            ``&quot;data&quot;``, ``&quot;solution_trace&quot;``, and ``&quot;tool&quot;`` (the OCP version tag).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">config_model</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;config_model&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config_model</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;decimal_objective_function&quot;</span> <span class="ow">in</span> <span class="n">config_model</span><span class="p">:</span>
+            <span class="n">config_model</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config_model</span><span class="p">)</span>
+            <span class="n">config_model</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;decimal_objective_function&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;config_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_model</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span>
+            <span class="s2">&quot;solution_trace&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solution_trace</span><span class="p">),</span>
+            <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="s2">&quot;OCP1.0&quot;</span><span class="p">,</span>
+        <span class="p">}</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_output_filenames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">suffix</span><span class="p">):</span>
+        <span class="c1"># Set output filenames to &quot;&lt;name&gt;_&lt;type&gt;_&lt;solver&gt;_&lt;suffix&gt;.{json,txt,pdf,tex}&quot;:</span>
+        <span class="n">config_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;config_model&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">solver_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;config_solver&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;solver&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;filename&quot;</span> <span class="ow">in</span> <span class="n">config_model</span><span class="p">:</span>
+            <span class="n">model_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">])</span>
+            <span class="n">stem</span> <span class="o">=</span> <span class="n">model_path</span><span class="o">.</span><span class="n">stem</span>
+            <span class="n">base_name</span> <span class="o">=</span> <span class="n">stem</span><span class="p">[:</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;_model&quot;</span><span class="p">)]</span> <span class="k">if</span> <span class="n">stem</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;_model&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">stem</span>
+            <span class="n">base_path</span> <span class="o">=</span> <span class="n">model_path</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">solver_name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base_path</span> <span class="o">=</span> <span class="n">get_files_dir</span><span class="p">()</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cipher&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">solver_name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">json_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">.json&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txt_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">.txt&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pdf_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">.pdf&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tex_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">.tex&quot;</span>
+
+<div class="viewcode-block" id="AttackTrace.save_json">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_json">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the attack result to a ``.json`` file.&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="AttackTrace.save_txt">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_txt">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_txt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the attack result as human-readable text to a ``.txt`` file.&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="AttackTrace.save_tex">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_tex">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_tex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the attack result as a LaTeX ``.tex`` file.&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="AttackTrace.save_pdf">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.AttackTrace.save_pdf">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the attack result to a ``.pdf`` file.&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Trail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Trail</span><span class="p">(</span><span class="n">AttackTrace</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base for trail-type attack results (differential, linear, ...).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        attack_type (str): See :class:`AttackTrace`.</span>
+<span class="sd">        data (dict): In addition to the base keys, may contain ``&quot;functions&quot;`` </span>
+<span class="sd">            (list of str, e.g. ``[&quot;PERMUTATION&quot;, &quot;KEY_SCHEDULE&quot;]``), ``&quot;config_model&quot;`` </span>
+<span class="sd">            (model configuration), and ``&quot;config_solver&quot;`` (solver configuration).</span>
+<span class="sd">        solution_trace (dict, optional): See :class:`AttackTrace`. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attack_type</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">attack_type</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution_trace</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_output_filenames</span><span class="p">(</span><span class="s2">&quot;trail&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Trail.print_trail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.print_trail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">print_trail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Format the trail and print it to stdout.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            show_mode (int): Level of detail, see :meth:`format_trail`.</span>
+<span class="sd">            hex_format (bool): If True, format the values in hexadecimal; otherwise, in binary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format_trail</span><span class="p">(</span><span class="n">show_mode</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="n">hex_format</span><span class="p">))</span></div>
+
+    
+<div class="viewcode-block" id="Trail.save_json">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_json">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">trail_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json_filename</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json_filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">trail_dict</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
+                      <span class="n">default</span><span class="o">=</span><span class="k">lambda</span> <span class="n">o</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">o</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&gt;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Trail.save_txt">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_txt">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_txt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the trail as human-readable text to a ``.txt`` file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            show_mode (int): Level of detail, see :meth:`format_trail`.</span>
+<span class="sd">            hex_format (bool): If True, format the values in hexadecimal; otherwise, in binary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_trail</span><span class="p">(</span><span class="n">show_mode</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="n">hex_format</span><span class="p">)</span>
+        <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txt_filename</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txt_filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lines</span></div>
+
+
+<div class="viewcode-block" id="Trail.save_tex">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_tex">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_tex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># TO DO</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;LaTeX export is not implemented yet.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Trail.save_pdf">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.save_pdf">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># TO DO</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;PDF export is not implemented yet.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Trail.format_trail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.Trail.format_trail">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_trail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the trail as a human-readable string.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            show_mode (int): Level of detail:</span>
+
+<span class="sd">                * ``0`` - first and last round only (first layer), excluding temporary variables.</span>
+<span class="sd">                * ``1`` - all rounds (first layer only), excluding temporary variables.</span>
+<span class="sd">                * ``2`` - all rounds and all layers, excluding temporary variables.</span>
+<span class="sd">                * ``3`` - all rounds and all layers, including temporary variables.</span>
+
+<span class="sd">            hex_format (bool): If True, format the values in hexadecimal; otherwise, in binary.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The formatted trail.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="s2">&quot;========== Trail ==========</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="s1">&#39;hexadecimal&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">hex_format</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;binary&#39;</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Cipher: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cipher&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;Show Mode: First Layer of First and Last Round.</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">elif</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;Show Mode: First Layer of All Rounds (layer 0)</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">elif</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;Show Mode: All Layers of All Rounds</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">elif</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;Show Mode: All Layers of All Rounds (Including Temporary Words)</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;[ERROR] Invalid show_mode </span><span class="si">{</span><span class="n">show_mode</span><span class="si">}</span><span class="s2">. Cannot format the trail.</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">return</span> <span class="n">lines</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">_validate_trail_struct</span><span class="p">(</span><span class="n">trail_struct</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Validate the basic structure of trail_struct. For example:</span>
+<span class="sd">            trail_struct = {</span>
+<span class="sd">                            &quot;inputs&quot;: {...},</span>
+<span class="sd">                            &quot;outputs&quot;: {...},</span>
+<span class="sd">                            &quot;functions&quot;: {</span>
+<span class="sd">                                &quot;PERMUTATION&quot;: {</span>
+<span class="sd">                                    &quot;rounds&quot;: [],</span>
+<span class="sd">                                    &quot;nbr_words&quot;: ...,</span>
+<span class="sd">                                    &quot;nbr_temp_words&quot;: ...,</span>
+<span class="sd">                                    1: {...},</span>
+<span class="sd">                                    2: {...},</span>
+<span class="sd">                                    3: {...},</span>
+<span class="sd">                                },</span>
+<span class="sd">                                ...</span>
+<span class="sd">                            }</span>
+<span class="sd">                        }</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trail_struct</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">return</span> <span class="s2">&quot;[WARNING] trail_struct is not a dictionary. Cannot format the trail structure.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;inputs&quot;</span><span class="p">,</span> <span class="s2">&quot;functions&quot;</span><span class="p">,</span> <span class="s2">&quot;outputs&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">trail_struct</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trail_struct</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] trail_struct[&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39;] is not a dictionary.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">if</span> <span class="s2">&quot;functions&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;[WARNING] trail_struct does not contain &#39;functions&#39;. Cannot format the trail structure.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">for</span> <span class="n">fun</span><span class="p">,</span> <span class="n">fun_struct</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] trail_struct[&#39;functions&#39;][&#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;] is not a dictionary.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+                <span class="k">if</span> <span class="s2">&quot;rounds&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fun_struct</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">],</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] &#39;rounds&#39; is missing or invalid for function &#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+                <span class="k">if</span> <span class="s2">&quot;nbr_words&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fun_struct</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;nbr_words&quot;</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] &#39;nbr_words&#39; is missing or invalid for function &#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+                <span class="k">if</span> <span class="s2">&quot;nbr_temp_words&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fun_struct</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;nbr_temp_words&quot;</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] &#39;nbr_temp_words&#39; is missing or invalid for function &#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fun_struct</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] Round </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2"> is missing for function &#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fun_struct</span><span class="p">[</span><span class="n">r</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[WARNING] trail_struct[&#39;functions&#39;][&#39;</span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2">&#39;][</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">] is not a dictionary.</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">trail_struct</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;trail_struct&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">warning</span> <span class="o">=</span> <span class="n">_validate_trail_struct</span><span class="p">(</span><span class="n">trail_struct</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">warning</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="n">warning</span>
+            <span class="k">return</span> <span class="n">lines</span>
+
+        <span class="c1"># Print inputs</span>
+        <span class="k">if</span> <span class="s2">&quot;inputs&quot;</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;######## Input: ########</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">node_list</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;inputs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;bin_values&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node_list</span><span class="p">)</span>
+                <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">bin_to_hex</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="k">if</span> <span class="n">hex_format</span> <span class="k">else</span> <span class="n">state</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="c1"># Print functions</span>
+        <span class="k">for</span> <span class="n">fun</span><span class="p">,</span> <span class="n">fun_struct</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;######## Function: </span><span class="si">{</span><span class="n">fun</span><span class="si">}</span><span class="s2"> ########</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="n">rounds</span> <span class="o">=</span> <span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">show_rounds</span> <span class="o">=</span> <span class="p">[</span><span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rounds</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rounds</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[</span><span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">show_rounds</span> <span class="o">=</span> <span class="n">rounds</span>
+
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">show_rounds</span><span class="p">:</span>
+                <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Round </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">fun_struct</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">show_mode</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span> <span class="ow">and</span> <span class="n">l</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">fun</span> <span class="o">!=</span> <span class="s2">&quot;SUBKEYS&quot;</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+                    <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">l</span><span class="si">}</span><span class="s2">: &quot;</span>
+
+                    <span class="n">nbr_words</span> <span class="o">=</span> <span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;nbr_words&quot;</span><span class="p">]</span>
+                    <span class="n">nbr_temp_words</span> <span class="o">=</span> <span class="n">fun_struct</span><span class="p">[</span><span class="s2">&quot;nbr_temp_words&quot;</span><span class="p">]</span>
+                    <span class="n">layer_nodes</span> <span class="o">=</span> <span class="n">fun_struct</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">l</span><span class="p">]</span>
+
+                    <span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">layer_nodes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;bin_values&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_words</span><span class="p">))</span>
+                    <span class="n">lines</span> <span class="o">+=</span> <span class="n">bin_to_hex</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="k">if</span> <span class="n">hex_format</span> <span class="k">else</span> <span class="n">state</span>
+
+                    <span class="k">if</span> <span class="n">show_mode</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">nbr_temp_words</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">temp_state</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">layer_nodes</span><span class="p">[</span><span class="n">nbr_words</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="s2">&quot;bin_values&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_temp_words</span><span class="p">))</span>
+                        <span class="n">lines</span> <span class="o">+=</span> <span class="n">bin_to_hex</span><span class="p">(</span><span class="n">temp_state</span><span class="p">)</span> <span class="k">if</span> <span class="n">hex_format</span> <span class="k">else</span> <span class="n">temp_state</span>
+                    <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="c1"># Print outputs</span>
+        <span class="k">if</span> <span class="s2">&quot;outputs&quot;</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="s2">&quot;######## Output: ########</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">node_list</span> <span class="ow">in</span> <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;outputs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;bin_values&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node_list</span><span class="p">)</span>
+                <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">bin_to_hex</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="k">if</span> <span class="n">hex_format</span> <span class="k">else</span> <span class="n">state</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">return</span> <span class="n">lines</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DifferentialTrail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.DifferentialTrail">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DifferentialTrail</span><span class="p">(</span><span class="n">Trail</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A differential trail.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (dict): In addition to the base keys, may contain ``&quot;diff_weight&quot;``</span>
+<span class="sd">            (float, int, or None; the trail weight, i.e. the negative base-2</span>
+<span class="sd">            logarithm of the differential probability, e.g. ``2``),</span>
+<span class="sd">            ``&quot;rounds_diff_weight&quot;`` (list of float or None; per-round weights,</span>
+<span class="sd">            e.g. ``[0, 1, 1]``), and ``&quot;trail_struct&quot;`` (dict; the trail structure).</span>
+<span class="sd">        solution_trace (dict, optional): See :class:`AttackTrace`. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;differential&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution_trace</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="DifferentialTrail.format_trail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.DifferentialTrail.format_trail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_trail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">format_trail</span><span class="p">(</span><span class="n">show_mode</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="n">hex_format</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;diff_weight&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;diff_weight&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total Weight: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;diff_weight&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;rounds_diff_weight&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;rounds_diff_weight&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;rounds_diff_weight: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;rounds_diff_weight&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">lines</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="LinearTrail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.LinearTrail">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LinearTrail</span><span class="p">(</span><span class="n">Trail</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A linear trail.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (dict): In addition to the base keys, may contain ``&quot;linear_weight&quot;``</span>
+<span class="sd">            (float, int, or None; the trail weight, i.e. the negative base-2</span>
+<span class="sd">            logarithm of the linear correlation, e.g. ``2``),</span>
+<span class="sd">            ``&quot;rounds_linear_weight&quot;`` (list of float or None; per-round weights,</span>
+<span class="sd">            e.g. ``[0, 1, 1]``), and ``&quot;trail_struct&quot;`` (dict; the trail structure).</span>
+<span class="sd">        solution_trace (dict, optional): See :class:`AttackTrace`. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution_trace</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="LinearTrail.format_trail">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.LinearTrail.format_trail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_trail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">format_trail</span><span class="p">(</span><span class="n">show_mode</span><span class="p">,</span> <span class="n">hex_format</span><span class="o">=</span><span class="n">hex_format</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;linear_weight&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;linear_weight&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total Weight: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;linear_weight&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;rounds_linear_weight&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;rounds_linear_weight&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;rounds_linear_weight: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;rounds_linear_weight&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">lines</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="IntegralDistinguisher">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">IntegralDistinguisher</span><span class="p">(</span><span class="n">AttackTrace</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An integral (division-property) distinguisher result.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (dict): In addition to the base keys, may contain ``&quot;goal&quot;``,</span>
+<span class="sd">            ``&quot;status&quot;``, ``&quot;balanced_bits&quot;`` (list), ``&quot;config_model&quot;``, and</span>
+<span class="sd">            ``&quot;config_solver&quot;``.</span>
+<span class="sd">        solution_trace (dict, optional): See :class:`AttackTrace`. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;integral&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution_trace</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_output_filenames</span><span class="p">(</span><span class="s2">&quot;distinguisher&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="IntegralDistinguisher.format_distinguisher">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.format_distinguisher">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_distinguisher</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the distinguisher as a human-readable string.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The formatted distinguisher.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;========== Integral Distinguisher ==========&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cipher: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cipher&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Goal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;goal&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Balanced bits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;balanced_bits&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;config_model&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="IntegralDistinguisher.print_distinguisher">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.print_distinguisher">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">print_distinguisher</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Format the distinguisher and print it to stdout.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format_distinguisher</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="IntegralDistinguisher.save_json">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_json">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json_filename</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json_filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="IntegralDistinguisher.save_txt">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_txt">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_txt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_distinguisher</span><span class="p">()</span>
+        <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txt_filename</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txt_filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="IntegralDistinguisher.save_tex">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_tex">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_tex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># TO DO</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;LaTeX export is not implemented yet.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="IntegralDistinguisher.save_pdf">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.IntegralDistinguisher.save_pdf">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># TO DO</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;PDF export is not implemented yet.&quot;</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="c1"># -------------------- Trail extraction from solver assignments -------------------- #</span>
+<div class="viewcode-block" id="solution_bit">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.solution_bit">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">solution_bit</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="n">var_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map a solver value to &#39;0&#39;, &#39;1&#39;, or &#39;-&#39;.&quot;&quot;&quot;</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">var_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;-&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;1&quot;</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;0&quot;</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">OverflowError</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;-&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="extract_trail_structures">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.extract_trail_structures">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_trail_structures</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">truncated_marker</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extract a structured trail from a solver assignment.&quot;&quot;&quot;</span>
+
+    <span class="n">bitwise</span> <span class="o">=</span> <span class="n">truncated_marker</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">goal</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">node</span><span class="p">(</span><span class="n">var</span><span class="p">):</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">expand_var_ids</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bitwise</span><span class="o">=</span><span class="n">bitwise</span><span class="p">)</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">solution_bit</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="n">var_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">var_id</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;var_ID&quot;</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">var</span><span class="p">)),</span>
+            <span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ids</span><span class="p">,</span>
+            <span class="s2">&quot;bin_values&quot;</span><span class="p">:</span> <span class="n">bits</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="n">trail_struct</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bitwise&quot;</span><span class="p">:</span> <span class="n">bitwise</span><span class="p">,</span>
+        <span class="s2">&quot;inputs&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;functions&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;inputs&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">var_list</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;inputs&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">var_list</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="s2">&quot;outputs&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">outputs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">var_list</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;outputs&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">var_list</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">fun</span> <span class="ow">in</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">:</span>
+        <span class="n">cipher_function</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">fun</span><span class="p">]</span>
+        <span class="n">fun_store</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;rounds&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cipher_function</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+            <span class="s2">&quot;nbr_words&quot;</span><span class="p">:</span> <span class="n">cipher_function</span><span class="o">.</span><span class="n">nbr_words</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher_function</span><span class="p">,</span> <span class="s2">&quot;nbr_words&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;nbr_temp_words&quot;</span><span class="p">:</span> <span class="n">cipher_function</span><span class="o">.</span><span class="n">nbr_temp_words</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cipher_function</span><span class="p">,</span> <span class="s2">&quot;nbr_temp_words&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">round_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cipher_function</span><span class="o">.</span><span class="n">nbr_rounds</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">round_store</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">layer_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cipher_function</span><span class="o">.</span><span class="n">nbr_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">round_store</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">cipher_function</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">round_index</span><span class="p">][</span><span class="n">layer_index</span><span class="p">]]</span>
+            <span class="n">fun_store</span><span class="p">[</span><span class="n">round_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">round_store</span>
+        <span class="n">trail_struct</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">][</span><span class="n">fun</span><span class="p">]</span> <span class="o">=</span> <span class="n">fun_store</span>
+    <span class="k">return</span> <span class="n">trail_struct</span></div>
+
+
+
+<div class="viewcode-block" id="extract_and_format_trails">
+<a class="viewcode-back" href="../../api/attacks/attack_trace.html#attacks.attack_trace.extract_and_format_trails">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_and_format_trails</span><span class="p">(</span>
+    <span class="n">cipher</span><span class="p">,</span>
+    <span class="n">goal</span><span class="p">,</span>
+    <span class="n">config_model</span><span class="p">,</span>
+    <span class="n">config_solver</span><span class="p">,</span>
+    <span class="n">show_mode</span><span class="p">,</span>
+    <span class="n">solutions</span><span class="p">,</span>
+    <span class="n">trail_class</span><span class="p">,</span>
+    <span class="n">truncated_marker</span><span class="p">,</span>
+    <span class="n">weight_key</span><span class="p">,</span>
+    <span class="n">rounds_weight_key</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build each distinct trail and immediately save it; return the deduplicated list.</span>
+
+<span class="sd">    The goal-specific aggregate (differential total probability, linear ELP, ...) is</span>
+<span class="sd">    computed by the caller from the returned trails.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">trails</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">trail_structs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">solution</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">solutions</span><span class="p">):</span>
+        <span class="n">trail_struct</span> <span class="o">=</span> <span class="n">extract_trail_structures</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">truncated_marker</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">trail_struct</span> <span class="ow">in</span> <span class="n">trail_structs</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">trail_structs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trail_struct</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;cipher&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cipher</span><span class="o">.</span><span class="n">nbr_rounds</span><span class="si">}</span><span class="s2">_round_</span><span class="si">{</span><span class="n">cipher</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;functions&quot;</span><span class="p">:</span> <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;rounds&quot;</span><span class="p">:</span> <span class="n">config_model</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;config_model&quot;</span><span class="p">:</span> <span class="n">config_model</span><span class="p">,</span>
+            <span class="s2">&quot;config_solver&quot;</span><span class="p">:</span> <span class="n">config_solver</span><span class="p">,</span>
+            <span class="s2">&quot;trail_struct&quot;</span><span class="p">:</span> <span class="n">trail_struct</span><span class="p">,</span>
+            <span class="n">weight_key</span><span class="p">:</span> <span class="n">solution</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;obj_fun_value&quot;</span><span class="p">),</span>
+            <span class="n">rounds_weight_key</span><span class="p">:</span> <span class="n">solution</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rounds_obj_fun_values&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;integer_obj_fun_value&quot;</span><span class="p">:</span> <span class="n">solution</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;integer_obj_fun_value&quot;</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="n">trail</span> <span class="o">=</span> <span class="n">trail_class</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">solution_trace</span><span class="o">=</span><span class="n">solution</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Saving the </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">-th Trail.&quot;</span><span class="p">)</span>
+            <span class="n">trail</span><span class="o">.</span><span class="n">json_filename</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">trail</span><span class="o">.</span><span class="n">json_filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">trail</span><span class="o">.</span><span class="n">json_filename</span>
+                <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_files_dir</span><span class="p">()</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">trail</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cipher&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">_trail_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">trail</span><span class="o">.</span><span class="n">txt_filename</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">trail</span><span class="o">.</span><span class="n">txt_filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">trail</span><span class="o">.</span><span class="n">txt_filename</span>
+                <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_files_dir</span><span class="p">()</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">trail</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cipher&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">_trail_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">trail</span><span class="o">.</span><span class="n">print_trail</span><span class="p">(</span><span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">)</span>
+        <span class="n">trail</span><span class="o">.</span><span class="n">save_json</span><span class="p">()</span>
+        <span class="n">trail</span><span class="o">.</span><span class="n">save_txt</span><span class="p">(</span><span class="n">show_mode</span><span class="o">=</span><span class="n">show_mode</span><span class="p">)</span>
+        <span class="n">trails</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trail</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trails</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OCP authors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
